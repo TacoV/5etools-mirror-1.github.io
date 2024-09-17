@@ -1,7 +1,9 @@
+@use "vars/vars";
+
 @import "includes/statgen";
 @import "includes/statgen-night";
 
-@media (max-width: 991px) {
+@media screen and (width <= #{vars.$width-screen-md}) {
 	.viewport-wrapper {
 		bottom: 0;
 		height: 100vh;

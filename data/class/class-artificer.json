@@ -77,7 +77,7 @@
 				"armor": [
 					"light",
 					"medium",
-					"{@item shield|phb|shields}"
+					"shield"
 				],
 				"weapons": [
 					"simple",
@@ -163,7 +163,7 @@
 					"armor": [
 						"light",
 						"medium",
-						"{@item shield|phb|shields}"
+						"shield"
 					],
 					"tools": [
 						"{@item thieves' tools|PHB}",
@@ -476,146 +476,8 @@
 				"Soul of Artifice|Artificer|TCE|20"
 			],
 			"subclassTitle": "Artificer Specialist",
-			"fluff": [
-				{
-					"name": "Artificer",
-					"type": "section",
-					"entries": [
-						"Masters of invention, artificers use ingenuity and magic to unlock extraordinary capabilities in objects. They see magic as a complex system waiting to be decoded and then harnessed in their spells and inventions. You can find everything you need to play one of these inventors in the next few sections. Artificers use a variety of tools to channel their arcane power. To cast a spell, an artificer might use alchemist's supplies to create a potent elixir, calligrapher's supplies to inscribe a sigil of power, or tinker's tools to craft a temporary charm. The magic of artificers is tied to their tools and their talents, and few other characters can produce the right tool for a job as well as an artificer.",
-						{
-							"type": "entries",
-							"entries": [
-								{
-									"type": "entries",
-									"name": "Artificers in Many Worlds",
-									"entries": [
-										"Throughout the D&D multiverse, artificers create inventions and magic items of peace and war. Many lives have been brightened or saved because of the work of kind artificers, but countless lives have also been lost because of the mass destruction unleashed by certain artificers' creations.",
-										"In the Forgotten Realms, the island of Lantan is home to many artificers, and in the world of Dragonlance, tinker gnomes are often members of this class. The strange technologies in the Barrier Peaks of the world of Greyhawk have inspired some folk to walk the path of the artificer, and in Mystara, various nations employ artificers to keep airships and other wondrous devices operational.",
-										"Artificers in the City of Sigil share discoveries from throughout the multiverse, and from there, the gnome artificer Vi runs a cosmos-spanning business that hires adventurers to fix problems that others deem unfixable. In Vi's home world, Eberron, magic is harnessed as a form of science and deployed throughout society, largely as a result of the wondrous ingenuity of artificers."
-									]
-								},
-								{
-									"type": "entries",
-									"name": "Creating an Artificer",
-									"entries": [
-										"To create an artificer, consult the subsections which give you hit points, proficiencies, and starting equipment. Then look at the Artificer table to see which features you get at each level. The descriptions of those features appear below."
-									]
-								},
-								{
-									"type": "quote",
-									"entries": [
-										"Artificers invent cutting-edge problems, then try to solve them-loudly and often with collateral damage."
-									],
-									"by": "Tasha"
-								},
-								{
-									"type": "entries",
-									"name": "Multiclassing and the Artificer",
-									"entries": [
-										"If your group uses the optional rule on multiclassing in the {@book Player's Handbook|PHB}, here's what you need to know if you choose artificer as one of your classes.",
-										{
-											"type": "entries",
-											"name": "Ability Score Minimum",
-											"entries": [
-												"As a multiclass character, you must have at least an Intelligence score of 13 to take a level in this class, or to take a level in another class if you are already an artificer."
-											]
-										},
-										{
-											"type": "entries",
-											"name": "Proficiencies Gained",
-											"entries": [
-												"If artificer isn't your initial class, here are the proficiencies you gain when you take your first level as an artificer: light armor, medium armor, shields, {@item thieves' tools|PHB}, {@item tinker's tools|PHB}."
-											]
-										},
-										{
-											"type": "entries",
-											"name": "Spell Slots",
-											"entries": [
-												"Add half your levels (rounded up) in the artificer class to the appropriate levels from other classes to determine your available spell slots."
-											]
-										}
-									]
-								}
-							]
-						}
-					],
-					"source": "TCE"
-				},
-				{
-					"name": "Artificer",
-					"type": "section",
-					"entries": [
-						"Masters of unlocking magic in everyday objects, artificers are supreme inventors. They see magic as a complex system waiting to be decoded and controlled. Artificers use tools to channel arcane power, crafting magical objects. To cast a spell, an artificer could use {@item alchemist's supplies|PHB} to create a potent elixir, {@item calligrapher's supplies|PHB} to inscribe a sigil of power on an ally's armor, or {@item tinker's tools|PHB} to craft a temporary charm. The magic of artificers is tied to their tools and their talents.",
-						{
-							"type": "entries",
-							"name": "Arcane Science",
-							"entries": [
-								"In the world of Eberron, arcane magic has been harnessed as a form of science and deployed throughout society. Artificers reflect this development. Their knowledge of magical devices, and their ability to infuse mundane items with magic, allows Eberron's most miraculous projects to continue.",
-								"During the Last War, artificers were marshaled on a massive scale. Many lives were saved because of the inventions of brave artificers, but countless lives were also lost because of the mass destruction unleashed by their creations."
-							]
-						},
-						{
-							"type": "entries",
-							"name": "Seekers of New Lore",
-							"entries": [
-								"Nothing excites an artificer quite like uncovering a new metal or discovering a source of elemental energy. In artificer circles, new inventions and strange discoveries create the most excitement. Artificers who wish to make their mark must innovate, creating something fresh, rather than iterating on familiar designs.",
-								"This drive for novelty pushes artificers to become adventurers. Eberron's main travel routes and populated regions have long since been explored. Thus, artificers seek the frontiers of civilization in hopes of making the next great discovery in arcane research."
-							]
-						},
-						{
-							"type": "entries",
-							"name": "Creating an Artificer",
-							"entries": [
-								"When creating an artificer, think about your character's relationship with the artisan who taught them their craft. Does the character have a rival? Talk to your DM about the role played by artificers in the campaign and the sort of organizations you might have ties to.",
-								{
-									"type": "inset",
-									"name": "Artificers in Other Worlds",
-									"entries": [
-										"Eberron is the world most associated with artificers, yet the class can be found throughout the D&D multiverse. In the Forgotten Realms, for example, the island of Lantan is home to many artificers, and in the world of Dragonlance, tinker gnomes are often members of this class. The strange technologies in the Barrier Peaks of the World of Greyhawk have inspired some folk to walk the path of the artificer, and in Mystara, various nations employ artificers to keep airships and other wondrous devices operational. In the City of Sigil, artificers share discoveries from throughout the cosmos, and one in particular\u2014the gnome inventor Vi\u2014has run a multiverse-spanning business from there since leaving the world of her birth, Eberron. In the world-city Ravnica, the Izzet League trains numerous artificers, the destructiveness of whom is unparalleled in other worlds\u2014except, perhaps, by the tinker gnomes of Krynn."
-									]
-								},
-								{
-									"type": "entries",
-									"name": "Quick Build",
-									"entries": [
-										"You can make an artificer quickly by following these suggestions. First, put your highest ability score in Intelligence, followed by Constitution or Dexterity. Second, choose the {@background guild artisan} background."
-									]
-								},
-								{
-									"type": "entries",
-									"name": "Optional Rule: Multiclassing",
-									"entries": [
-										"If your group uses the optional rule on multiclassing in the {@book Player's Handbook|PHB}, here's what you need to know if you choose artificer as one of your classes.",
-										{
-											"type": "entries",
-											"name": "Ability Score Minimum",
-											"entries": [
-												"As a multiclass character, you must have at least an Intelligence score of 13 to take a level in this class, or to take a level in another class if you are already an artificer."
-											]
-										},
-										{
-											"type": "entries",
-											"name": "Proficiencies Gained",
-											"entries": [
-												"If artificer isn't your initial class, here are the proficiencies you gain when you take your first level as an artificer: light armor, medium armor, shields, {@item thieves' tools|PHB}, {@item tinker's tools|PHB}."
-											]
-										},
-										{
-											"type": "entries",
-											"name": "Spell Slots",
-											"entries": [
-												"Add half your levels (rounded up) in the artificer class to the appropriate levels from other classes to determine your available spell slots."
-											]
-										}
-									]
-								}
-							]
-						}
-					],
-					"source": "ERLW",
-					"page": 54
-				}
-			]
+			"hasFluff": true,
+			"hasFluffImages": true
 		}
 	],
 	"subclass": [
@@ -663,7 +525,8 @@
 				"Alchemical Savant|Artificer|TCE|Alchemist|TCE|5",
 				"Restorative Reagents|Artificer|TCE|Alchemist|TCE|9",
 				"Chemical Mastery|Artificer|TCE|Alchemist|TCE|15"
-			]
+			],
+			"hasFluffImages": true
 		},
 		{
 			"name": "Armorer",
@@ -703,7 +566,8 @@
 				"Extra Attack|Artificer|TCE|Armorer|TCE|5",
 				"Armor Modifications|Artificer|TCE|Armorer|TCE|9",
 				"Perfected Armor|Artificer|TCE|Armorer|TCE|15"
-			]
+			],
+			"hasFluffImages": true
 		},
 		{
 			"name": "Artillerist",
@@ -749,7 +613,8 @@
 				"Arcane Firearm|Artificer|TCE|Artillerist|TCE|5",
 				"Explosive Cannon|Artificer|TCE|Artillerist|TCE|9",
 				"Fortified Position|Artificer|TCE|Artillerist|TCE|15"
-			]
+			],
+			"hasFluffImages": true
 		},
 		{
 			"name": "Battle Smith",
@@ -795,7 +660,8 @@
 				"Extra Attack|Artificer|TCE|Battle Smith|TCE|5",
 				"Arcane Jolt|Artificer|TCE|Battle Smith|TCE|9",
 				"Improved Defender|Artificer|TCE|Battle Smith|TCE|15"
-			]
+			],
+			"hasFluffImages": true
 		}
 	],
 	"classFeature": [
@@ -813,7 +679,8 @@
 			"classSource": "TCE",
 			"level": 1,
 			"entries": [
-				"At 1st level, you learn how to invest a spark of magic into mundane objects. To use this ability, you must have {@item thieves' tools|PHB} or {@item artisan's tools|PHB} in hand. You then touch a Tiny nonmagical object as an action and give it one of the following magical properties of your choice:",
+				"{@i 1st-level artificer feature}",
+				"You've learned how to invest a spark of magic into mundane objects. To use this ability, you must have {@item thieves' tools|PHB} or {@item artisan's tools|PHB} in hand. You then touch a Tiny nonmagical object as an action and give it one of the following magical properties of your choice:",
 				{
 					"type": "list",
 					"items": [
@@ -858,7 +725,8 @@
 			"classSource": "TCE",
 			"level": 1,
 			"entries": [
-				"You have studied the workings of magic and how to channel it through objects. As a result, you have gained the ability to cast spells. To observers, you don't appear to be casting spells in a conventional way; you look as if you're producing wonders using mundane items or outlandish inventions.",
+				"{@i 1st-level artificer feature}",
+				"You've studied the workings of magic and how to cast spells, channeling the magic through objects. To observers, you don't appear to be casting spells in a conventional way; you appear to produce wonders from mundane items and outlandish inventions.",
 				{
 					"type": "entries",
 					"name": "Tools Required",
@@ -938,7 +806,8 @@
 			"classSource": "TCE",
 			"level": 2,
 			"entries": [
-				"At 2nd level, you gain the ability to imbue mundane items with certain magical infusions. The magic items you create with this feature are effectively prototypes of permanent items.",
+				"{@i 2nd-level artificer feature}",
+				"You've gained the ability to imbue mundane items with certain magical infusions, turning those objects into magic items.",
 				{
 					"type": "refClassFeature",
 					"classFeature": "Infusions Known|Artificer|TCE|2"
@@ -957,10 +826,10 @@
 					"type": "entries",
 					"name": "Infusing an Item",
 					"entries": [
-						"Whenever you finish a long rest, you can touch a nonmagical object and imbue it with one of your artificer infusions, turning it into a magic item. An infusion works on only certain kinds of objects, as specified in the infusion's description. If the item requires attunement, you can attune yourself to it the instant you infuse the item. If you decide to attune to the item later, you must do so using the normal process for attunement (see \"Attunement\" in chapter 7 of the {@book Dungeon Master's Guide|DMG}).",
+						"Whenever you finish a long rest, you can touch a nonmagical object and imbue it with one of your artificer infusions, turning it into a magic item. An infusion works on only certain kinds of objects, as specified in the infusion's description. If the item requires attunement, you can attune yourself to it the instant you infuse the item. If you decide to attune to the item later, you must do so using the normal process for attunement (see \"{@book Attunement|DMG|7|Attunement}\" in chapter 7 of the {@book Dungeon Master's Guide|DMG}).",
 						"Your infusion remains in an item indefinitely, but when you die, the infusion vanishes after a number of days have passed equal to your Intelligence modifier (minimum of 1 day). The infusion also vanishes if you give up your knowledge of the infusion for another one.",
 						"You can infuse more than one nonmagical object at the end of a long rest; the maximum number of objects appears in the Infused Items column of the Artificer table. You must touch each of the objects, and each of your infusions can be in only one object at a time. Moreover, no object can bear more than one of your infusions at a time. If you try to exceed your maximum number of infusions, the oldest infusion immediately ends, and then the new infusion applies.",
-						"If an infusion ends on an item that contains other things, like a bag of holding, its contents harmlessly appear in and around its space."
+						"If an infusion ends on an item that contains other things, like a {@item bag of holding}, its contents harmlessly appear in and around its space."
 					]
 				}
 			]
@@ -998,7 +867,8 @@
 			"classSource": "TCE",
 			"level": 3,
 			"entries": [
-				"At 3rd level, you choose the type of specialist you are, each of which is detailed at the end of the class's description. Your choice grants you features at 5th level and again at 9th and 15th level."
+				"{@i 3rd-level artificer feature}",
+				"Choose the type of specialist you are, each of which is detailed at the end of the class's description. Your choice grants you features at 5th level and again at 9th and 15th level."
 			]
 		},
 		{
@@ -1015,7 +885,8 @@
 			"classSource": "TCE",
 			"level": 3,
 			"entries": [
-				"At 3rd level, you learn how to produce exactly the tool you need: with {@item thieves' tools|PHB} or {@item artisan's tools|PHB} in hand, you can magically create one set of {@item artisan's tools|PHB} in an unoccupied space within 5 feet of you. This creation requires 1 hour of uninterrupted work, which can coincide with a short or long rest. Though the product of magic, the tools are nonmagical, and they vanish when you use this feature again."
+				"{@i 3rd-level artificer feature}",
+				"You've learned how to produce exactly the tool you need: with {@item thieves' tools|PHB} or {@item artisan's tools|PHB} in hand, you can magically create one set of {@item artisan's tools|PHB} in an unoccupied space within 5 feet of you. This creation requires 1 hour of uninterrupted work, which can coincide with a short or long rest. Though the product of magic, the tools are nonmagical, and they vanish when you use this feature again."
 			]
 		},
 		{
@@ -1032,6 +903,7 @@
 			"classSource": "TCE",
 			"level": 4,
 			"entries": [
+				"{@i 4th-level artificer feature}",
 				"When you reach 4th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
 				"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
 			]
@@ -1050,7 +922,8 @@
 			"classSource": "TCE",
 			"level": 5,
 			"entries": [
-				"At 5th level, you gain a feature granted by your Artificer Specialist choice."
+				"{@i 5th-level artificer feature}",
+				"You gain a feature granted by your Artificer Specialist choice."
 			]
 		},
 		{
@@ -1067,7 +940,8 @@
 			"classSource": "TCE",
 			"level": 6,
 			"entries": [
-				"Starting at 6th level, your proficiency bonus is doubled for any ability check you make that uses your proficiency with a tool."
+				"{@i 6th-level artificer feature}",
+				"Your proficiency bonus is now doubled for any ability check you make that uses your proficiency with a tool."
 			]
 		},
 		{
@@ -1084,7 +958,8 @@
 			"classSource": "TCE",
 			"level": 7,
 			"entries": [
-				"Starting at 7th level, you gain the ability to come up with solutions under pressure. When you or another creature you can see within 30 feet of you makes an ability check or a saving throw, you can use your reaction to add your Intelligence modifier to the roll.",
+				"{@i 7th-level artificer feature}",
+				"You've gained the ability to come up with solutions under pressure. When you or another creature you can see within 30 feet of you makes an ability check or a saving throw, you can use your reaction to add your Intelligence modifier to the roll.",
 				"You can use this feature a number of times equal to your Intelligence modifier (minimum of once). You regain all expended uses when you finish a long rest."
 			]
 		},
@@ -1102,6 +977,7 @@
 			"classSource": "TCE",
 			"level": 8,
 			"entries": [
+				"{@i 8th-level artificer feature}",
 				"When you reach 8th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
 				"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
 			]
@@ -1120,7 +996,8 @@
 			"classSource": "TCE",
 			"level": 9,
 			"entries": [
-				"At 9th level, you gain a feature granted by your Artificer Specialist choice."
+				"{@i 9th-level artificer feature}",
+				"You gain a feature granted by your Artificer Specialist choice."
 			]
 		},
 		{
@@ -1137,7 +1014,8 @@
 			"classSource": "TCE",
 			"level": 10,
 			"entries": [
-				"When you reach 10th level, you achieve a profound understanding of how to use and make magic items:",
+				"{@i 10th-level artificer feature}",
+				"You've achieved a profound understanding of how to use and make magic items:",
 				{
 					"type": "list",
 					"items": [
@@ -1161,7 +1039,8 @@
 			"classSource": "TCE",
 			"level": 11,
 			"entries": [
-				"At 11th level, you learn how to store a spell in an object. Whenever you finish a long rest, you can touch one {@filter simple or martial weapon|items|source=phb|category=basic|type=martial weapon;simple weapon} or one item that you can use as a spellcasting focus, and you store a spell in it, choosing a 1st- or 2nd-level spell from the {@filter artificer spell list|spells|class=Artificer|cast time=action|level=1;2} that requires 1 action to cast (you needn't have it prepared).",
+				"{@i 11th-level artificer feature}",
+				"You can now store a spell in an object. Whenever you finish a long rest, you can touch one {@filter simple or martial weapon|items|source=phb|category=basic|type=martial weapon;simple weapon} or one item that you can use as a spellcasting focus, and you store a spell in it, choosing a 1st- or 2nd-level spell from the {@filter artificer spell list|spells|class=Artificer|cast time=action|level=1;2} that requires 1 action to cast (you needn't have it prepared).",
 				"While holding the object, a creature can take an action to produce the spell's effect from it, using your spellcasting ability modifier. If the spell requires {@status concentration}, the creature must concentrate. The spell stays in the object until it's been used a number of times equal to twice your Intelligence modifier (minimum of twice) or until you use this feature again to store a spell in an object."
 			]
 		},
@@ -1179,6 +1058,7 @@
 			"classSource": "TCE",
 			"level": 12,
 			"entries": [
+				"{@i 12th-level artificer feature}",
 				"When you reach 12th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
 				"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
 			]
@@ -1197,7 +1077,8 @@
 			"classSource": "TCE",
 			"level": 14,
 			"entries": [
-				"At 14th level, your skill with magic items deepens more:",
+				"{@i 14th-level artificer feature}",
+				"Your skill with magic items deepens:",
 				{
 					"type": "list",
 					"items": [
@@ -1221,7 +1102,8 @@
 			"classSource": "TCE",
 			"level": 15,
 			"entries": [
-				"At 15th level, you gain a feature granted by your Artificer Specialist choice."
+				"{@i 15th-level artificer feature}",
+				"You gain a feature granted by your Artificer Specialist choice."
 			]
 		},
 		{
@@ -1238,6 +1120,7 @@
 			"classSource": "TCE",
 			"level": 16,
 			"entries": [
+				"{@i 16th-level artificer feature}",
 				"When you reach 16th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
 				"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
 			]
@@ -1256,7 +1139,8 @@
 			"classSource": "TCE",
 			"level": 18,
 			"entries": [
-				"Starting at 18th level, you can attune to up to six magic items at once."
+				"{@i 18th-level artificer feature}",
+				"You can now attune to up to six magic items at once."
 			]
 		},
 		{
@@ -1273,6 +1157,7 @@
 			"classSource": "TCE",
 			"level": 19,
 			"entries": [
+				"{@i 19th-level artificer feature}",
 				"When you reach 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
 				"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
 			]
@@ -1291,7 +1176,8 @@
 			"classSource": "TCE",
 			"level": 20,
 			"entries": [
-				"At 20th level, you develop a mystical connection to your magic items, which you can draw on for protection:",
+				"{@i 20th-level artificer feature}",
+				"You have developed a mystical connection to your magic items, which you can draw on for protection:",
 				{
 					"type": "list",
 					"items": [
@@ -2083,7 +1969,7 @@
 				{
 					"type": "list",
 					"items": [
-						"You and your allies have half cover while within 10 feet of a cannon you create with Eldritch Cannon, as a result of a shimmering field of magical protection that the cannon emits.",
+						"You and your allies have {@quickref Cover||3||half cover} while within 10 feet of a cannon you create with Eldritch Cannon, as a result of a shimmering field of magical protection that the cannon emits.",
 						"You can now have two cannons at the same time. You can create two with the same action (but not the same spell slot), and you can activate both of them with the same bonus action. You determine whether the cannons are identical to each other or different. You can't create a third cannon while you have two."
 					]
 				}

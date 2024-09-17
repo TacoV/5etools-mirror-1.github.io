@@ -437,6 +437,7 @@
 				"S"
 			],
 			"miscTags": [
+				"DIS",
 				"MW",
 				"RCH"
 			],
@@ -848,6 +849,7 @@
 			"spellcasting": [
 				{
 					"name": "Spellcasting",
+					"type": "spellcasting",
 					"headerEntries": [
 						"Asmodeus casts one of the following spells, requiring no material components and using Wisdom as the spellcasting ability (spell save {@dc 27}):"
 					],
@@ -927,7 +929,7 @@
 					]
 				},
 				{
-					"name": "Infernal Word: Stun (Recharge 4-6)",
+					"name": "Infernal Word: Stun {@recharge 4}",
 					"entries": [
 						"Asmodeus targets a creature he can see within 120 feet of him. The target must make a {@dc 24} Intelligence saving throw, taking 45 ({@damage 10d8}) force damage on a failed save, or half as much damage on a successful one. A creature that failed the save is {@condition stunned} for up to 1 minute. The {@condition stunned} creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success, but taking the damage again on a failed save."
 					]
@@ -1449,7 +1451,7 @@
 					"name": "Burrow {@recharge}",
 					"entries": [
 						"The ayperobo swarm makes a Bite attack. On a hit, the swarm burrows inside the creature, dealing an additional 35 ({@damage 10d6}) necrotic damage and taking control of the creature. At the start of each of its turns, the target may make a {@dc 17} Constitution saving throw, expelling the ayperobo swarm and taking 14 ({@damage 4d6}) piercing damage on a success.",
-						"While burrowed inside a creature, the ayperobo swarm has total cover against attacks targeting them, and no longer acts on their own initiative. Instead, they take total control over their host, gaining all of its abilities, attacks, and equipment.",
+						"While burrowed inside a creature, the ayperobo swarm has {@quickref Cover||3||total cover} against attacks targeting them, and no longer acts on their own initiative. Instead, they take total control over their host, gaining all of its abilities, attacks, and equipment.",
 						"They act during the host's turn, taking actions based on their host. If a host dies while the ayperobo swarm is burrowed, they leave the host at the end of the host's turn, rolling initiative if necessary. Creatures acting as hosts to the ayperobo swarm are fully aware of their actions and surroundings, but are incapable of physically operating their body."
 					]
 				}
@@ -1574,6 +1576,7 @@
 			"spellcasting": [
 				{
 					"name": "Spellcasting (Winged Form Only)",
+					"type": "spellcasting",
 					"headerEntries": [
 						"Baalzebul casts one of the following spells, requiring no material components and using Charisma as the spellcasting ability (spell save {@dc 24}):"
 					],
@@ -1953,6 +1956,7 @@
 			"spellcasting": [
 				{
 					"name": "Spellcasting",
+					"type": "spellcasting",
 					"headerEntries": [
 						"Bel casts one of the following spells, requiring no material components and using Charisma as the spellcasting ability (spell save {@dc 24}):"
 					],
@@ -2608,7 +2612,7 @@
 				{
 					"name": "Devil's Sight",
 					"entries": [
-						"Magical darkness doesn't impede Adramalech's darkvision."
+						"Magical darkness doesn't impede Morax's darkvision."
 					]
 				},
 				{
@@ -3006,6 +3010,7 @@
 			"spellcasting": [
 				{
 					"name": "Spellcasting",
+					"type": "spellcasting",
 					"headerEntries": [
 						"The paeliryon casts one of the following spells, requiring no material components and using Intelligence as the spellcasting ability (spell save {@dc 17}):"
 					],
@@ -3224,7 +3229,7 @@
 				{
 					"name": "Ooze Cube",
 					"entries": [
-						"Devorastus takes up its entire space. Other creatures can enter the space, but a creature that does so is subjected to Engulf and has disadvantage on the saving throw. Creatures inside the cube can be seen but have total cover. A creature within 5 feet of the cube can take an action to pull a creature or object out of the cube. Doing so requires a successful {@dc 21} Strength check, and the creature making the attempt takes 35 ({@damage 10d6}) acid damage. The cube can hold only one Huge creature or up to six Large or smaller creatures inside it at a time."
+						"Devorastus takes up its entire space. Other creatures can enter the space, but a creature that does so is subjected to Engulf and has disadvantage on the saving throw. Creatures inside the cube can be seen but have {@quickref Cover||3||total cover}. A creature within 5 feet of the cube can take an action to pull a creature or object out of the cube. Doing so requires a successful {@dc 21} Strength check, and the creature making the attempt takes 35 ({@damage 10d6}) acid damage. The cube can hold only one Huge creature or up to six Large or smaller creatures inside it at a time."
 					]
 				},
 				{
@@ -3236,7 +3241,7 @@
 				{
 					"name": "Transparent",
 					"entries": [
-						"Even when Devorastus is in plain sight, it takes a successful {@dc 15} Wisdom (Perception) check to spot Devorastus if it has neither moved nor attacked. A creature that tries to enter Devorastus' space while unaware of Devorastus is surprised by it."
+						"Even when Devorastus is in plain sight, it takes a successful {@dc 15} Wisdom ({@skill Perception}) check to spot Devorastus if it has neither moved nor attacked. A creature that tries to enter Devorastus' space while unaware of Devorastus is surprised by it."
 					]
 				}
 			],
@@ -3715,6 +3720,7 @@
 			"spellcasting": [
 				{
 					"name": "Spellcasting",
+					"type": "spellcasting",
 					"headerEntries": [
 						"Ekengarik casts one of the following spells, requiring no material components and using Charisma as the spellcasting ability (spell save {@dc 18}):"
 					],
@@ -3776,7 +3782,7 @@
 			],
 			"reaction": [
 				{
-					"name": "Hardened Carapace (Recharge 4-6)",
+					"name": "Hardened Carapace {@recharge 4}",
 					"entries": [
 						"When hit with an attack, Ekengarik temporarily hardens her carapace, reducing her speed to 0 and increasing her AC by 5 until the start of her next turn."
 					]
@@ -4405,7 +4411,7 @@
 				{
 					"name": "Bite",
 					"entries": [
-						"{@atk mw} {@hit 15} to hit, reach 10 ft., one target. {@h}18 ({@damage 3d6 + 8}) piercing damage and 7 ({@damage 2d6}) fire damage. If the target is a Large or smaller creature {@condition grappled} by the kraken, the creature is swallowed and the grapple ends. While swallowed, a creature has the {@condition blinded} and {@condition restrained} conditions, has total cover against attacks and other effects outside the kraken, and takes 42 ({@damage 12d6}) fire damage at the start of the kraken's turns. If the kraken takes 50 damage or more on a single turn from a creature inside it, it must succeed on a {@dc 23} Constitution saving throw or regurgitate all swallowed creatures, which fall into a space within 10 feet of the kraken and now have the {@condition prone} condition. If the kraken dies, a swallowed creature is no longer {@condition restrained} by it and can escape from the corpse using 15 feet of movement, exiting with the {@condition prone} condition."
+						"{@atk mw} {@hit 15} to hit, reach 10 ft., one target. {@h}18 ({@damage 3d6 + 8}) piercing damage and 7 ({@damage 2d6}) fire damage. If the target is a Large or smaller creature {@condition grappled} by the kraken, the creature is swallowed and the grapple ends. While swallowed, a creature has the {@condition blinded} and {@condition restrained} conditions, has {@quickref Cover||3||total cover} against attacks and other effects outside the kraken, and takes 42 ({@damage 12d6}) fire damage at the start of the kraken's turns. If the kraken takes 50 damage or more on a single turn from a creature inside it, it must succeed on a {@dc 23} Constitution saving throw or regurgitate all swallowed creatures, which fall into a space within 10 feet of the kraken and now have the {@condition prone} condition. If the kraken dies, a swallowed creature is no longer {@condition restrained} by it and can escape from the corpse using 15 feet of movement, exiting with the {@condition prone} condition."
 					]
 				},
 				{
@@ -5256,6 +5262,7 @@
 			"spellcasting": [
 				{
 					"name": "Spellcasting",
+					"type": "spellcasting",
 					"headerEntries": [
 						"Jenevere casts one of the following spells, requiring no material components and using Charisma as the spellcasting ability (spell save {@dc 21}):"
 					],
@@ -5396,6 +5403,7 @@
 			"spellcasting": [
 				{
 					"name": "Spellcasting",
+					"type": "spellcasting",
 					"headerEntries": [
 						"Koh Tam casts one of the following spells, using Wisdom as the spellcasting ability (spell save {@dc 17}):"
 					],
@@ -5743,6 +5751,7 @@
 			"spellcasting": [
 				{
 					"name": "Spellcasting",
+					"type": "spellcasting",
 					"headerEntries": [
 						"Levistus casts one of the following spells, requiring no material components and using Intelligence as the spellcasting ability (spell save {@dc 23}):"
 					],
@@ -5826,7 +5835,7 @@
 				{
 					"name": "Amnesia",
 					"entries": [
-						"Levistus selects a {@condition stunned} creature that he can see. The creature must succeed on a {@dc 23} Charisma saving throw or Levistus erases a specific memory from the target. The memory must be one that the target experienced in the last 24 hours and that lasted no more than 10 minutes. The memory can only be restored with a Remove Curse or a {@spell Greater Restoration} spell."
+						"Levistus selects a {@condition stunned} creature that he can see. The creature must succeed on a {@dc 23} Charisma saving throw or Levistus erases a specific memory from the target. The memory must be one that the target experienced in the last 24 hours and that lasted no more than 10 minutes. The memory can only be restored with a {@spell Remove Curse} or a {@spell Greater Restoration} spell."
 					]
 				},
 				{
@@ -5877,7 +5886,8 @@
 				"O"
 			],
 			"miscTags": [
-				"AOE"
+				"AOE",
+				"CUR"
 			],
 			"conditionInflict": [
 				"stunned"
@@ -6358,6 +6368,7 @@
 			"spellcasting": [
 				{
 					"name": "Spellcasting",
+					"type": "spellcasting",
 					"headerEntries": [
 						"Mephistopheles casts one of the following spells, requiring no material components and using Intelligence as the spellcasting ability (spell save {@dc 26}):"
 					],
@@ -7024,6 +7035,7 @@
 			"spellcasting": [
 				{
 					"name": "Spellcasting",
+					"type": "spellcasting",
 					"headerEntries": [
 						"Ramius casts one of the following spells, using Charisma as the spellcasting ability (spell save {@dc 17}):"
 					],
@@ -7432,6 +7444,7 @@
 			"spellcasting": [
 				{
 					"name": "Spellcasting",
+					"type": "spellcasting",
 					"headerEntries": [
 						"Sarevok casts one of the following spells, using Wisdom as the spellcasting ability (spell save {@dc 18}):"
 					],
@@ -7546,6 +7559,7 @@
 				"O"
 			],
 			"miscTags": [
+				"CUR",
 				"MLW",
 				"MW"
 			],
@@ -7946,7 +7960,7 @@
 				{
 					"name": "Detect",
 					"entries": [
-						"The dragon makes a Wisdom (Perception) check."
+						"The dragon makes a Wisdom ({@skill Perception}) check."
 					]
 				},
 				{
@@ -7984,6 +7998,7 @@
 				"P"
 			],
 			"miscTags": [
+				"DIS",
 				"MW",
 				"RCH"
 			],
@@ -8058,6 +8073,7 @@
 			"spellcasting": [
 				{
 					"name": "Spellcasting",
+					"type": "spellcasting",
 					"headerEntries": [
 						"Tiax casts one of the following spells, using Wisdom as the spellcasting ability (spell save {@dc 16}):"
 					],
@@ -8098,7 +8114,7 @@
 				{
 					"name": "Special Equipment",
 					"entries": [
-						"Tiax wears a Ring of Resistance that grants him resistance to radiant damage."
+						"Tiax wears a {@item Ring of Resistance} that grants him resistance to radiant damage."
 					]
 				}
 			],
@@ -9040,6 +9056,7 @@
 			"spellcasting": [
 				{
 					"name": "Spellcasting",
+					"type": "spellcasting",
 					"headerEntries": [
 						"Zariel casts one of the following spells, requiring no material components and using Charisma as the spellcasting ability (spell save {@dc 26}):"
 					],
@@ -9270,6 +9287,7 @@
 			"spellcasting": [
 				{
 					"name": "Spellcasting",
+					"type": "spellcasting",
 					"headerEntries": [
 						"Zythan casts one of the following spells, using Intelligence as the spellcasting ability (spell save {@dc 18})."
 					],

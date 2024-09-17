@@ -3,18 +3,17 @@
 class TablesSublistManager extends SublistManager {
 	constructor () {
 		super({
-			sublistClass: "subtablesdata",
 			sublistListOptions: {
 				sortByInitial: "sortName",
 			},
 		});
 	}
 
-	static get _ROW_TEMPLATE () {
+	static _getRowTemplate () {
 		return [
 			new SublistCellTemplate({
 				name: "Name",
-				css: "bold col-12 px-0",
+				css: "bold ve-col-12 px-0",
 				colStyle: "",
 			}),
 		];
@@ -24,7 +23,7 @@ class TablesSublistManager extends SublistManager {
 		const cellsText = [it.name];
 
 		const $ele = $(`<div class="lst__row lst__row--sublist ve-flex-col">
-			<a href="#${hash}" class="lst--border lst__row-inner" title="${it.name}">
+			<a href="#${hash}" class="lst__row-border lst__row-inner" title="${it.name}">
 				${this.constructor._getRowCellsHtml({values: cellsText})}
 			</a>
 		</div>`)
@@ -55,14 +54,11 @@ class TablesPage extends ListPage {
 
 			pageFilter,
 
-			listClass: "tablesdata",
 			listOptions: {
 				sortByInitial: "sortName",
 			},
 
 			dataProps: ["table", "tableGroup"],
-
-			isMarkdownPopout: true,
 
 			listSyntax: new ListSyntaxTables({fnGetDataList: () => this._dataList}),
 		});
@@ -118,9 +114,9 @@ class TablesPage extends ListPage {
 		const source = Parser.sourceJsonToAbv(it.source);
 		const hash = UrlUtil.autoEncodeHash(it);
 
-		eleLi.innerHTML = `<a href="#${hash}" class="lst--border lst__row-inner">
-			<span class="bold col-10 pl-0">${it.name}</span>
-			<span class="col-2 ve-text-center ${Parser.sourceJsonToColor(it.source)} pr-0" title="${Parser.sourceJsonToFull(it.source)}" ${Parser.sourceJsonToStyle(it.source)}>${source}</span>
+		eleLi.innerHTML = `<a href="#${hash}" class="lst__row-border lst__row-inner">
+			<span class="bold ve-col-10 pl-0 pr-1">${it.name}</span>
+			<span class="ve-col-2 ve-text-center ${Parser.sourceJsonToSourceClassname(it.source)} pl-1 pr-0" title="${Parser.sourceJsonToFull(it.source)}" ${Parser.sourceJsonToStyle(it.source)}>${source}</span>
 		</a>`;
 
 		const listItem = new ListItem(

@@ -475,7 +475,7 @@
 											"type": "image",
 											"href": {
 												"type": "internal",
-												"path": "adventure/WDH/Waterdeep-DM.jpg"
+												"path": "adventure/WDH/Waterdeep-DM.webp"
 											},
 											"title": "Waterdeep",
 											"width": 1429,
@@ -490,7 +490,7 @@
 											"type": "image",
 											"href": {
 												"type": "internal",
-												"path": "adventure/WDH/Waterdeep-NW-DM.jpg"
+												"path": "adventure/WDH/Waterdeep-NW-DM.webp"
 											},
 											"title": "Waterdeep NW",
 											"width": 2000,
@@ -505,7 +505,7 @@
 											"type": "image",
 											"href": {
 												"type": "internal",
-												"path": "adventure/WDH/Waterdeep-SW-DM.jpg"
+												"path": "adventure/WDH/Waterdeep-SW-DM.webp"
 											},
 											"title": "Waterdeep SW",
 											"width": 2000,
@@ -520,7 +520,7 @@
 											"type": "image",
 											"href": {
 												"type": "internal",
-												"path": "adventure/WDH/Waterdeep-W-DM.jpg"
+												"path": "adventure/WDH/Waterdeep-W-DM.webp"
 											},
 											"title": "Waterdeep W",
 											"width": 2000,
@@ -535,7 +535,7 @@
 											"type": "image",
 											"href": {
 												"type": "internal",
-												"path": "adventure/WDH/Waterdeep-E-DM.jpg"
+												"path": "adventure/WDH/Waterdeep-E-DM.webp"
 											},
 											"title": "Waterdeep E",
 											"width": 2000,
@@ -550,7 +550,7 @@
 											"type": "image",
 											"href": {
 												"type": "internal",
-												"path": "adventure/WDH/Waterdeep-NE-DM.jpg"
+												"path": "adventure/WDH/Waterdeep-NE-DM.webp"
 											},
 											"title": "Waterdeep NE",
 											"width": 2000,
@@ -565,7 +565,7 @@
 											"type": "image",
 											"href": {
 												"type": "internal",
-												"path": "adventure/WDH/Waterdeep-SE-DM.jpg"
+												"path": "adventure/WDH/Waterdeep-SE-DM.webp"
 											},
 											"title": "Waterdeep SE",
 											"width": 2000,
@@ -592,7 +592,7 @@
 											"type": "image",
 											"href": {
 												"type": "internal",
-												"path": "adventure/WDH/Waterdeep-Players.jpg"
+												"path": "adventure/WDH/Waterdeep-Players.webp"
 											},
 											"title": "Player Version",
 											"width": 1429,
@@ -609,7 +609,7 @@
 											"type": "image",
 											"href": {
 												"type": "internal",
-												"path": "adventure/WDH/Waterdeep-NW-Players.jpg"
+												"path": "adventure/WDH/Waterdeep-NW-Players.webp"
 											},
 											"title": "Player Version",
 											"width": 2000,
@@ -626,7 +626,7 @@
 											"type": "image",
 											"href": {
 												"type": "internal",
-												"path": "adventure/WDH/Waterdeep-SW-Players.jpg"
+												"path": "adventure/WDH/Waterdeep-SW-Players.webp"
 											},
 											"title": "Player Version",
 											"width": 2000,
@@ -643,7 +643,7 @@
 											"type": "image",
 											"href": {
 												"type": "internal",
-												"path": "adventure/WDH/Waterdeep-W-Players.jpg"
+												"path": "adventure/WDH/Waterdeep-W-Players.webp"
 											},
 											"title": "Player Version",
 											"width": 2000,
@@ -660,7 +660,7 @@
 											"type": "image",
 											"href": {
 												"type": "internal",
-												"path": "adventure/WDH/Waterdeep-E-Players.jpg"
+												"path": "adventure/WDH/Waterdeep-E-Players.webp"
 											},
 											"title": "Player Version",
 											"width": 2000,
@@ -677,7 +677,7 @@
 											"type": "image",
 											"href": {
 												"type": "internal",
-												"path": "adventure/WDH/Waterdeep-NE-Players.jpg"
+												"path": "adventure/WDH/Waterdeep-NE-Players.webp"
 											},
 											"title": "Player Version",
 											"width": 2000,
@@ -694,7 +694,7 @@
 											"type": "image",
 											"href": {
 												"type": "internal",
-												"path": "adventure/WDH/Waterdeep-SE-Players.jpg"
+												"path": "adventure/WDH/Waterdeep-SE-Players.webp"
 											},
 											"title": "Player Version",
 											"width": 2000,
@@ -1729,15 +1729,6 @@
 							"height": 1724
 						},
 						{
-							"type": "image",
-							"href": {
-								"type": "internal",
-								"path": "adventure/WDH/Yawning-Portal-Key.webp"
-							},
-							"width": 1000,
-							"height": 587
-						},
-						{
 							"type": "entries",
 							"name": "Familiar Faces",
 							"page": 20,
@@ -2114,7 +2105,7 @@
 									},
 									"href": {
 										"type": "internal",
-										"path": "adventure/WDH/Zhent-Warehouse-DM.jpg"
+										"path": "adventure/WDH/Zhent-Warehouse-DM.webp"
 									},
 									"title": "Zhent Warehouse",
 									"width": 1000,
@@ -2299,7 +2290,7 @@
 									},
 									"href": {
 										"type": "internal",
-										"path": "adventure/WDH/Zhent-Warehouse-Lower-Players.jpg"
+										"path": "adventure/WDH/Zhent-Warehouse-Lower-Players.webp"
 									},
 									"title": "Zhent Warehouse, Lower (Player Version)",
 									"width": 950,
@@ -2418,7 +2409,7 @@
 									},
 									"href": {
 										"type": "internal",
-										"path": "adventure/WDH/Zhent-Warehouse-Upper-Players.jpg"
+										"path": "adventure/WDH/Zhent-Warehouse-Upper-Players.webp"
 									},
 									"title": "Zhent Warehouse, Upper (Player Version)",
 									"width": 800,
@@ -2553,7 +2544,7 @@
 									},
 									"href": {
 										"type": "internal",
-										"path": "adventure/WDH/Xanathar-Guild-Hideout-DM.jpg"
+										"path": "adventure/WDH/Xanathar-Guild-Hideout-DM.webp"
 									},
 									"title": "Xanathar Guild Hideout",
 									"width": 1158,
@@ -2967,7 +2958,7 @@
 									},
 									"href": {
 										"type": "internal",
-										"path": "adventure/WDH/Xanathar-Guild-Hideout-Players.jpg"
+										"path": "adventure/WDH/Xanathar-Guild-Hideout-Players.webp"
 									},
 									"title": "Player Version",
 									"width": 1650,
@@ -3001,7 +2992,7 @@
 								"The main sewer tunnel expands into a circular hub with a pair of arrow slits carved into its outer walls, directly across from each other. Two passages continue on to the north and south. A stone door is set into the back wall of a stone ledge to the west."
 							]
 						},
-						"If the characters talk loudly or otherwise make a lot of noise here, the goblin sentries in areas Q2a and Q2b awaken and shoot arrows at them through the arrow slits. The slits provide the goblins with three-quarters cover.",
+						"If the characters talk loudly or otherwise make a lot of noise here, the goblin sentries in areas Q2a and Q2b awaken and shoot arrows at them through the arrow slits. The slits provide the goblins with {@quickref Cover||3||three-quarters cover}.",
 						{
 							"type": "entries",
 							"name": "Secret Door",
@@ -3303,7 +3294,7 @@
 									},
 									"href": {
 										"type": "internal",
-										"path": "adventure/WDH/Trollskull-Alley-DM.jpg"
+										"path": "adventure/WDH/Trollskull-Alley-DM.webp"
 									},
 									"title": "Trollskull Alley",
 									"width": 1000,
@@ -3580,7 +3571,7 @@
 									},
 									"href": {
 										"type": "internal",
-										"path": "adventure/WDH/Trollskull-Alley-Players.jpg"
+										"path": "adventure/WDH/Trollskull-Alley-Players.webp"
 									},
 									"title": "Player Version",
 									"width": 1000,
@@ -3597,52 +3588,7 @@
 							"page": 31,
 							"id": "096",
 							"entries": [
-								"See {@adventure appendix C|WDH|12} for a handout showing the floor plan of this building. Give a copy of this handout to your players as their characters begin to explore Trollskull Manor.",
-								{
-									"type": "gallery",
-									"images": [
-										{
-											"type": "image",
-											"imageType": "map",
-											"grid": {
-												"type": "square",
-												"size": 57,
-												"offsetY": 19,
-												"scale": 2
-											},
-											"href": {
-												"type": "internal",
-												"path": "adventure/WDH/Trollskull-Manor-DM.jpg"
-											},
-											"title": "Trollskull Manor",
-											"width": 589,
-											"height": 800,
-											"id": "528"
-										},
-										{
-											"type": "image",
-											"imageType": "mapPlayer",
-											"grid": {
-												"type": "square",
-												"size": 71,
-												"offsetX": 2,
-												"offsetY": 28,
-												"scale": 2
-											},
-											"href": {
-												"type": "internal",
-												"path": "adventure/WDH/Trollskull-Manor-Players.jpg"
-											},
-											"title": "Player Version",
-											"width": 737,
-											"height": 1000,
-											"mapParent": {
-												"id": "528",
-												"autoScale": true
-											}
-										}
-									]
-								},
+								"See {@adventure appendix C|WDH|13|Trollskull Manor} for a handout showing the floor plan of this building. Give a copy of this handout to your players as their characters begin to explore Trollskull Manor.",
 								"Four stories tall and boasting balconies, a turret, and five chimneys, the abandoned building is one of the grandest in Trollskull Alley. Characters can refurnish, rebuild, rename, and otherwise personalize their new stronghold to their hearts' content.",
 								{
 									"type": "entries",
@@ -3970,7 +3916,7 @@
 													},
 													"href": {
 														"type": "internal",
-														"path": "adventure/WDH/Basement.jpg"
+														"path": "adventure/WDH/Basement.webp"
 													},
 													"title": "Trollskull Alley, Basement",
 													"width": 880,
@@ -3985,7 +3931,7 @@
 													},
 													"href": {
 														"type": "internal",
-														"path": "adventure/WDH/Taproom.jpg"
+														"path": "adventure/WDH/Taproom.webp"
 													},
 													"title": "Trollskull Alley, Taproom",
 													"width": 550,
@@ -5216,7 +5162,7 @@
 											},
 											"href": {
 												"type": "internal",
-												"path": "adventure/WDH/Gralhund-Villa-DM.jpg"
+												"path": "adventure/WDH/Gralhund-Villa-DM.webp"
 											},
 											"title": "Gralhund Villa",
 											"width": 800,
@@ -5944,7 +5890,7 @@
 											},
 											"href": {
 												"type": "internal",
-												"path": "adventure/WDH/Gralhund-Villa-Players.jpg"
+												"path": "adventure/WDH/Gralhund-Villa-Players.webp"
 											},
 											"title": "Gralhund Villa, Ground Floor (Player Version)",
 											"width": 2000,
@@ -5961,7 +5907,7 @@
 											},
 											"href": {
 												"type": "internal",
-												"path": "adventure/WDH/Gralhund-Villa-Upper-Players.jpg"
+												"path": "adventure/WDH/Gralhund-Villa-Upper-Players.webp"
 											},
 											"title": "Gralhund Villa, Upper Floor (Player Version)",
 											"width": 1050,
@@ -6553,25 +6499,27 @@
 													},
 													"href": {
 														"type": "internal",
-														"path": "adventure/WDH/Dock-Ward.jpg"
+														"path": "adventure/WDH/Dock-Ward.webp"
 													},
 													"title": "Dock Ward",
 													"width": 574,
-													"height": 500
+													"height": 500,
+													"id": "53f"
 												},
 												{
 													"type": "image",
 													"imageType": "map",
 													"href": {
 														"type": "internal",
-														"path": "adventure/WDH/City-of-the-Dead-Map.jpg"
+														"path": "adventure/WDH/City-of-the-Dead-Map.webp"
 													},
 													"title": "City of the Dead Map",
 													"grid": {
 														"type": "none"
 													},
 													"width": 512,
-													"height": 800
+													"height": 800,
+													"id": "540"
 												},
 												{
 													"type": "image",
@@ -6581,11 +6529,12 @@
 													},
 													"href": {
 														"type": "internal",
-														"path": "adventure/WDH/Trades-Ward-Map.jpg"
+														"path": "adventure/WDH/Trades-Ward-Map.webp"
 													},
 													"title": "Trades Ward Map",
 													"width": 600,
-													"height": 900
+													"height": 900,
+													"id": "541"
 												},
 												{
 													"type": "image",
@@ -6595,11 +6544,12 @@
 													},
 													"href": {
 														"type": "internal",
-														"path": "adventure/WDH/Field-Ward-Map.jpg"
+														"path": "adventure/WDH/Field-Ward-Map.webp"
 													},
 													"title": "Field Ward Map",
 													"width": 600,
-													"height": 600
+													"height": 600,
+													"id": "542"
 												}
 											]
 										}
@@ -7144,7 +7094,7 @@
 									},
 									"href": {
 										"type": "internal",
-										"path": "adventure/WDH/Alley-DM.jpg"
+										"path": "adventure/WDH/Alley-DM.webp"
 									},
 									"title": "Alley",
 									"width": 1000,
@@ -7160,7 +7110,7 @@
 									},
 									"href": {
 										"type": "internal",
-										"path": "adventure/WDH/Alley-Players.jpg"
+										"path": "adventure/WDH/Alley-Players.webp"
 									},
 									"title": "Player Version",
 									"width": 1800,
@@ -7347,7 +7297,7 @@
 									"id": "147",
 									"entries": [
 										"Parked in the middle of the alley is a hire-coach pulled by two {@creature draft horse||draft horses}. The driver, Haru Hamatori (LG male Kozakuran human commoner), wears a feathered cap and matching outfit.",
-										"Lord Cassalanter's {@creature doppelganger} valet, in the guise of an elderly tiefling named {@creature Willifort Crowelle|WDH}, sits in the passenger cab, which grants half cover. Standing next to the hire-coach is a {@creature bearded devil} disguised as a cloaked human bodyguard wearing a wide-brimmed hat, and perched on the coach are three {@condition invisible} {@creature imp||imps}. Any {@creature spined devil||spined devils} that survived the previous encounter are also present, having just delivered the {@item Stone of Golorr|WDH} to Willifort.",
+										"Lord Cassalanter's {@creature doppelganger} valet, in the guise of an elderly tiefling named {@creature Willifort Crowelle|WDH}, sits in the passenger cab, which grants {@quickref Cover||3||half cover}. Standing next to the hire-coach is a {@creature bearded devil} disguised as a cloaked human bodyguard wearing a wide-brimmed hat, and perched on the coach are three {@condition invisible} {@creature imp||imps}. Any {@creature spined devil||spined devils} that survived the previous encounter are also present, having just delivered the {@item Stone of Golorr|WDH} to Willifort.",
 										"When he sees the characters, Willifort orders the imps and the spined devils to attack. The bearded devil stays close to Willifort and engages any character who tries to reach the hire-coach.",
 										"The hire-coach has AC 14, 45 hit points, and immunity to poison and psychic damage.",
 										"If there's any chance that the characters might obtain the {@item Stone of Golorr|WDH} as the encounter progresses, Willifort orders the driver to move the hire-coach out of the alley as quickly as possible. If the driver is {@condition incapacitated} or killed, the bearded devil climbs into the driver's seat on the back of the coach and steers the vehicle. If the bearded devil is unable to replace the driver, the doppelganger takes the reins. Willifort flees on foot if the hirecoach is destroyed or its horses are unable to move."
@@ -7465,7 +7415,7 @@
 									"page": 64,
 									"id": "153",
 									"entries": [
-										"At the end of a dead-end side alley south of areas L1 and L2 is an iron grate that covers an opening to the sewers under the North Ward. Five {@creature bugbear||bugbears} have quietly climbed up through the grate and concealed themselves in the side alley. They pour out and attack the characters, hoping to gain surprise in the blizzard. Characters who have a passive Perception score of 16 or higher aren't {@quickref Surprise|PHB|3|0|surprised}.",
+										"At the end of a dead-end side alley south of areas L1 and L2 is an iron grate that covers an opening to the sewers under the North Ward. Five {@creature bugbear||bugbears} have quietly climbed up through the grate and concealed themselves in the side alley. They pour out and attack the characters, hoping to gain surprise in the blizzard. Characters who have a passive Perception score of 16 or higher aren't {@status surprised}.",
 										"The bugbears were sent by {@creature Xanathar|WDH} to retrieve a prisoner being held in the Zhent safe house, but they're too bloodthirsty to pass up the chance to murder a band of adventurers standing in their way. The wind and snow render the City Watch oblivious to the danger."
 									]
 								},
@@ -7533,7 +7483,7 @@
 											},
 											"href": {
 												"type": "internal",
-												"path": "adventure/WDH/Mistshore-DM.jpg"
+												"path": "adventure/WDH/Mistshore-DM.webp"
 											},
 											"title": "Mistshore",
 											"width": 1000,
@@ -7728,7 +7678,7 @@
 											},
 											"href": {
 												"type": "internal",
-												"path": "adventure/WDH/Mistshore-Players.jpg"
+												"path": "adventure/WDH/Mistshore-Players.webp"
 											},
 											"title": "Player Version",
 											"width": 1350,
@@ -7986,7 +7936,7 @@
 									"id": "170",
 									"entries": [
 										"If Willifort flees in a hire-coach, his getaway is thwarted on the third round of the chase when a large crowd blocks the road, forcing the hire-coach to stop. (If the chase occurs on Founders' Day, the crowd is part of the holiday celebration.) The doppelganger jumps out of the hire-coach on his next turn and makes his way through the crowd on foot.",
-										"Any creature in the crowd has half cover, and any attack that misses the creature because of the cover hits an innocent {@creature commoner} instead.",
+										"Any creature in the crowd has {@quickref Cover||3||half cover}, and any attack that misses the creature because of the cover hits an innocent {@creature commoner} instead.",
 										"If Willifort is {@condition incapacitated}, a raven abruptly swoops down, acting next in the initiative count. It snatches the stone and flees with it. This raven is a shapechanged {@creature imp} that works for Lady Cassalanter."
 									]
 								},
@@ -8074,7 +8024,7 @@
 											},
 											"href": {
 												"type": "internal",
-												"path": "adventure/WDH/Mausoleum-DM.jpg"
+												"path": "adventure/WDH/Mausoleum-DM.webp"
 											},
 											"title": "Mausoleum",
 											"width": 800,
@@ -8515,7 +8465,7 @@
 											},
 											"href": {
 												"type": "internal",
-												"path": "adventure/WDH/Mausoleum-Players.jpg"
+												"path": "adventure/WDH/Mausoleum-Players.webp"
 											},
 											"title": "Mausoleum, Ground (Player Version)",
 											"width": 1050,
@@ -8532,7 +8482,7 @@
 											},
 											"href": {
 												"type": "internal",
-												"path": "adventure/WDH/Crypt-Players.jpg"
+												"path": "adventure/WDH/Crypt-Players.webp"
 											},
 											"title": "Mausoleum, Catacombs (Player Version)",
 											"width": 800,
@@ -8882,7 +8832,7 @@
 											},
 											"href": {
 												"type": "internal",
-												"path": "adventure/WDH/Theater-DM.jpg"
+												"path": "adventure/WDH/Theater-DM.webp"
 											},
 											"title": "Theater",
 											"width": 1000,
@@ -9217,7 +9167,7 @@
 											},
 											"href": {
 												"type": "internal",
-												"path": "adventure/WDH/Theater-Players.jpg"
+												"path": "adventure/WDH/Theater-Players.webp"
 											},
 											"title": "Player Version",
 											"width": 1650,
@@ -9496,11 +9446,12 @@
 											},
 											"href": {
 												"type": "internal",
-												"path": "adventure/WDH/Tower-DM.jpg"
+												"path": "adventure/WDH/Tower-DM.webp"
 											},
 											"title": "Tower",
 											"width": 1000,
-											"height": 691
+											"height": 691,
+											"id": "543"
 										},
 										{
 											"type": "image",
@@ -9511,7 +9462,7 @@
 											},
 											"href": {
 												"type": "internal",
-												"path": "adventure/WDH/Tower-First-Players.jpg"
+												"path": "adventure/WDH/Tower-First-Players.webp"
 											},
 											"title": "Tower, First Floor (Player Version)",
 											"width": 550,
@@ -9526,7 +9477,7 @@
 											},
 											"href": {
 												"type": "internal",
-												"path": "adventure/WDH/Tower-Second-Players.jpg"
+												"path": "adventure/WDH/Tower-Second-Players.webp"
 											},
 											"title": "Tower, Second Floor (Player Version)",
 											"width": 550,
@@ -9541,7 +9492,7 @@
 											},
 											"href": {
 												"type": "internal",
-												"path": "adventure/WDH/Cellar-Players.jpg"
+												"path": "adventure/WDH/Cellar-Players.webp"
 											},
 											"title": "Tower, Cellar (Player Version)",
 											"width": 550,
@@ -9555,11 +9506,12 @@
 											},
 											"href": {
 												"type": "internal",
-												"path": "adventure/WDH/Tower-View.jpg"
+												"path": "adventure/WDH/Tower-View.webp"
 											},
 											"title": "Tower, View",
 											"width": 556,
-											"height": 800
+											"height": 800,
+											"id": "544"
 										}
 									]
 								},
@@ -9637,7 +9589,7 @@
 											"rows": [
 												[
 													"1",
-													"A charred {@item wand of magic missiles} (each time a charge is expended, there's a {@chance 50|50 percent} chance that nothing happens and the charge is wasted)"
+													"A charred {@item wand of magic missiles} (each time a charge is expended, there's a {@chance 50} chance that nothing happens and the charge is wasted)"
 												],
 												[
 													"2",
@@ -9925,7 +9877,7 @@
 											},
 											"href": {
 												"type": "internal",
-												"path": "adventure/WDH/Courthouse-DM.jpg"
+												"path": "adventure/WDH/Courthouse-DM.webp"
 											},
 											"title": "Courthouse",
 											"width": 1000,
@@ -10469,7 +10421,7 @@
 											},
 											"href": {
 												"type": "internal",
-												"path": "adventure/WDH/Courthouse-Main-Players.jpg"
+												"path": "adventure/WDH/Courthouse-Main-Players.webp"
 											},
 											"title": "Courthouse, Main Level (Player Version)",
 											"width": 950,
@@ -10484,7 +10436,7 @@
 											},
 											"href": {
 												"type": "internal",
-												"path": "adventure/WDH/Courthouse-Lower-Players.jpg"
+												"path": "adventure/WDH/Courthouse-Lower-Players.webp"
 											},
 											"title": "Courthouse, Lower Level (Player Version)",
 											"width": 800,
@@ -10836,7 +10788,7 @@
 											},
 											"href": {
 												"type": "internal",
-												"path": "adventure/WDH/Cellar-Complex-DM.jpg"
+												"path": "adventure/WDH/Cellar-Complex-DM.webp"
 											},
 											"title": "Cellar Complex",
 											"width": 1000,
@@ -11723,7 +11675,7 @@
 											},
 											"href": {
 												"type": "internal",
-												"path": "adventure/WDH/Cellar-Complex-Players.jpg"
+												"path": "adventure/WDH/Cellar-Complex-Players.webp"
 											},
 											"title": "Player Version",
 											"width": 1700,
@@ -11778,7 +11730,7 @@
 									"page": 84,
 									"id": "1e6",
 									"entries": [
-										"A brick wall with arrow slits was added to this room at some point. The arrow slits are designed to allow archers to fire at intruders who come through the door at {@area B4|1e5}. The arrow slits provide three-quarters cover."
+										"A brick wall with arrow slits was added to this room at some point. The arrow slits are designed to allow archers to fire at intruders who come through the door at {@area B4|1e5}. The arrow slits provide {@quickref Cover||3||three-quarters cover}."
 									]
 								},
 								{
@@ -12194,7 +12146,7 @@
 											},
 											"href": {
 												"type": "internal",
-												"path": "adventure/WDH/Windmill-DM.jpg"
+												"path": "adventure/WDH/Windmill-DM.webp"
 											},
 											"title": "Windmill",
 											"width": 1000,
@@ -13199,7 +13151,7 @@
 											},
 											"href": {
 												"type": "internal",
-												"path": "adventure/WDH/Windmill-First-Players.jpg"
+												"path": "adventure/WDH/Windmill-First-Players.webp"
 											},
 											"title": "Windmill, Ground Floor (Player Version)",
 											"width": 1050,
@@ -13214,7 +13166,7 @@
 											},
 											"href": {
 												"type": "internal",
-												"path": "adventure/WDH/Windmill-Second-Players.jpg"
+												"path": "adventure/WDH/Windmill-Second-Players.webp"
 											},
 											"title": "Windmill, Upper Floor (Player Version)",
 											"width": 650,
@@ -13894,7 +13846,7 @@
 											},
 											"href": {
 												"type": "internal",
-												"path": "adventure/WDH/Vault-of-Dragons-DM.jpg"
+												"path": "adventure/WDH/Vault-of-Dragons-DM.webp"
 											},
 											"title": "Vault of Dragons",
 											"width": 1000,
@@ -14637,7 +14589,7 @@
 											},
 											"href": {
 												"type": "internal",
-												"path": "adventure/WDH/Vault-Main-Players.jpg"
+												"path": "adventure/WDH/Vault-Main-Players.webp"
 											},
 											"title": "Vault of Dragons, Main Level (Player Version)",
 											"width": 950,
@@ -14652,7 +14604,7 @@
 											},
 											"href": {
 												"type": "internal",
-												"path": "adventure/WDH/Vault-Lower-Players.jpg"
+												"path": "adventure/WDH/Vault-Lower-Players.webp"
 											},
 											"title": "Vault of Dragons, Lower Level (Player Version)",
 											"width": 900,
@@ -14667,7 +14619,7 @@
 											},
 											"href": {
 												"type": "internal",
-												"path": "adventure/WDH/Vault-Upper-Players.jpg"
+												"path": "adventure/WDH/Vault-Upper-Players.webp"
 											},
 											"title": "Vault of Dragons, Upper Level (Player Version)",
 											"width": 1150,
@@ -14879,7 +14831,7 @@
 											"id": "24a",
 											"entries": [
 												"A successful DC 17 Intelligence (Religion) check enables a character to recognize the statue as a depiction of Gorm Gulthyn, the dwarven god of vigilance also known as Fire Eyes. The statue melds seamlessly with the floor and can't be toppled. It also seems impervious to damage. A {@spell detect magic} spell reveals an aura of evocation magic on the statue.",
-												"The trapdoor is false and can't be lifted. Anyone who touches the trapdoor or its pull ring must succeed on a DC 18 Dexterity saving throw or be struck by rays of magical fire that spring from the statue's eyes, dealing 22 ({@dice 4d10}) fire damage. The trap doesn't trigger if the target has total cover."
+												"The trapdoor is false and can't be lifted. Anyone who touches the trapdoor or its pull ring must succeed on a DC 18 Dexterity saving throw or be struck by rays of magical fire that spring from the statue's eyes, dealing 22 ({@dice 4d10}) fire damage. The trap doesn't trigger if the target has {@quickref Cover||3||total cover}."
 											]
 										},
 										{
@@ -15378,7 +15330,7 @@
 											},
 											"href": {
 												"type": "internal",
-												"path": "adventure/WDH/Xanathar-Lair-DM.jpg"
+												"path": "adventure/WDH/Xanathar-Lair-DM.webp"
 											},
 											"title": "Xanathar Lair",
 											"width": 737,
@@ -17209,7 +17161,7 @@
 											},
 											"href": {
 												"type": "internal",
-												"path": "adventure/WDH/Xanathar-L1-Players.jpg"
+												"path": "adventure/WDH/Xanathar-L1-Players.webp"
 											},
 											"title": "Xanathar Lair, Level 1 (Player Version)",
 											"width": 2050,
@@ -17224,7 +17176,7 @@
 											},
 											"href": {
 												"type": "internal",
-												"path": "adventure/WDH/Xanathar-L2-Players.jpg"
+												"path": "adventure/WDH/Xanathar-L2-Players.webp"
 											},
 											"title": "Xanathar Lair, Level 2 (Player Version)",
 											"width": 2050,
@@ -18820,7 +18772,7 @@
 											},
 											"href": {
 												"type": "internal",
-												"path": "adventure/WDH/Cassalanter-Villa-DM.jpg"
+												"path": "adventure/WDH/Cassalanter-Villa-DM.webp"
 											},
 											"title": "Cassalanter Villa",
 											"width": 1000,
@@ -20076,7 +20028,7 @@
 											},
 											"href": {
 												"type": "internal",
-												"path": "adventure/WDH/Villa-Main-Players.jpg"
+												"path": "adventure/WDH/Villa-Main-Players.webp"
 											},
 											"title": "Cassalanter Villa, Main Area (Player Version)",
 											"width": 2000,
@@ -20103,7 +20055,7 @@
 													},
 													"href": {
 														"type": "internal",
-														"path": "adventure/WDH/Guest-Second-Players.jpg"
+														"path": "adventure/WDH/Guest-Second-Players.webp"
 													},
 													"title": "Cassalanter Villa, Guest Second Floor (Player Version)",
 													"width": 850,
@@ -20118,7 +20070,7 @@
 													},
 													"href": {
 														"type": "internal",
-														"path": "adventure/WDH/Guest-Third-Players.jpg"
+														"path": "adventure/WDH/Guest-Third-Players.webp"
 													},
 													"title": "Cassalanter Villa, Guest Third Floor (Player Version)",
 													"width": 750,
@@ -20526,7 +20478,7 @@
 											},
 											"href": {
 												"type": "internal",
-												"path": "adventure/WDH/Villa-Two-Players.jpg"
+												"path": "adventure/WDH/Villa-Two-Players.webp"
 											},
 											"title": "Cassalanter Villa, Second Floor (Player Version)",
 											"width": 1100,
@@ -20667,7 +20619,7 @@
 											},
 											"href": {
 												"type": "internal",
-												"path": "adventure/WDH/Villa-Three-Players.jpg"
+												"path": "adventure/WDH/Villa-Three-Players.webp"
 											},
 											"title": "Cassalanter Villa, Third Floor (Player Version)",
 											"width": 1050,
@@ -20836,7 +20788,7 @@
 											},
 											"href": {
 												"type": "internal",
-												"path": "adventure/WDH/Villa-Garret-Players.jpg"
+												"path": "adventure/WDH/Villa-Garret-Players.webp"
 											},
 											"title": "Cassalanter Villa, Garret (Player Version)",
 											"width": 1050,
@@ -20931,7 +20883,7 @@
 											},
 											"href": {
 												"type": "internal",
-												"path": "adventure/WDH/Villa-Cellar-Players.jpg"
+												"path": "adventure/WDH/Villa-Cellar-Players.webp"
 											},
 											"title": "Cassalanter Villa, Cellar (Player Version)",
 											"width": 850,
@@ -21055,7 +21007,7 @@
 											},
 											"href": {
 												"type": "internal",
-												"path": "adventure/WDH/Temple-of-Asmodeus-DM.jpg"
+												"path": "adventure/WDH/Temple-of-Asmodeus-DM.webp"
 											},
 											"title": "Temple of Asmodeus",
 											"width": 1000,
@@ -22841,7 +22793,7 @@
 											},
 											"href": {
 												"type": "internal",
-												"path": "adventure/WDH/Temple-of-Asmodeus-Players.jpg"
+												"path": "adventure/WDH/Temple-of-Asmodeus-Players.webp"
 											},
 											"title": "Temple of Asmodeus, Lower Level (Player Version)",
 											"width": 2350,
@@ -22856,7 +22808,7 @@
 											},
 											"href": {
 												"type": "internal",
-												"path": "adventure/WDH/Temple-of-Asmodeus-Upper-Players.jpg"
+												"path": "adventure/WDH/Temple-of-Asmodeus-Upper-Players.webp"
 											},
 											"title": "Temple of Asmodeus, Upper Level (Player Version)",
 											"width": 1550,
@@ -23413,7 +23365,7 @@
 											},
 											"href": {
 												"type": "internal",
-												"path": "adventure/WDH/Ships-DM.jpg"
+												"path": "adventure/WDH/Ships-DM.webp"
 											},
 											"title": "Ships",
 											"width": 737,
@@ -25022,7 +24974,7 @@
 											},
 											"href": {
 												"type": "internal",
-												"path": "adventure/WDH/Main-Deck-Players.jpg"
+												"path": "adventure/WDH/Main-Deck-Players.webp"
 											},
 											"title": "Ships, Main Deck (Player Version)",
 											"width": 600,
@@ -25157,7 +25109,7 @@
 											},
 											"href": {
 												"type": "internal",
-												"path": "adventure/WDH/Fore-and-Aft-Players.jpg"
+												"path": "adventure/WDH/Fore-and-Aft-Players.webp"
 											},
 											"title": "Ships, Fore and Aft (Player Version)",
 											"width": 550,
@@ -25269,7 +25221,7 @@
 											},
 											"href": {
 												"type": "internal",
-												"path": "adventure/WDH/Aft-Castle-Players.jpg"
+												"path": "adventure/WDH/Aft-Castle-Players.webp"
 											},
 											"title": "Ships, Aft Castle (Player Version)",
 											"width": 500,
@@ -25308,7 +25260,7 @@
 											},
 											"href": {
 												"type": "internal",
-												"path": "adventure/WDH/Orlop-Deck-Players.jpg"
+												"path": "adventure/WDH/Orlop-Deck-Players.webp"
 											},
 											"title": "Ships, Orlop Deck (Player Version)",
 											"width": 600,
@@ -25442,7 +25394,7 @@
 													},
 													"href": {
 														"type": "internal",
-														"path": "adventure/WDH/Upper-Hold-Players.jpg"
+														"path": "adventure/WDH/Upper-Hold-Players.webp"
 													},
 													"title": "Ships, Upper Hold (Player Version)",
 													"width": 550,
@@ -25525,7 +25477,7 @@
 											"type": "image",
 											"href": {
 												"type": "internal",
-												"path": "adventure/WDH/Upper-Hold-Heartbreaker.jpg"
+												"path": "adventure/WDH/Upper-Hold-Heartbreaker.webp"
 											},
 											"title": "Ships, Heartbreakers' Upper Hold (Player Version)",
 											"width": 500,
@@ -25638,7 +25590,7 @@
 											},
 											"href": {
 												"type": "internal",
-												"path": "adventure/WDH/Lower-Hold-Players.jpg"
+												"path": "adventure/WDH/Lower-Hold-Players.webp"
 											},
 											"title": "Ships, Lower Hold (Player Version)",
 											"width": 500,
@@ -25761,7 +25713,7 @@
 											},
 											"href": {
 												"type": "internal",
-												"path": "adventure/WDH/Lower-Hold-Eyecatcher.jpg"
+												"path": "adventure/WDH/Lower-Hold-Eyecatcher.webp"
 											},
 											"title": "Ships, Eyecatchers' Lower Hold (Player Version)",
 											"width": 500,
@@ -26038,7 +25990,7 @@
 											},
 											"href": {
 												"type": "internal",
-												"path": "adventure/WDH/Scarlet-Marpenoth-DM.jpg"
+												"path": "adventure/WDH/Scarlet-Marpenoth-DM.webp"
 											},
 											"title": "Scarlet Marpenoth",
 											"width": 1000,
@@ -26639,7 +26591,7 @@
 											},
 											"href": {
 												"type": "internal",
-												"path": "adventure/WDH/Scarlet-Marpenoth-Upper-Deck.jpg"
+												"path": "adventure/WDH/Scarlet-Marpenoth-Upper-Deck.webp"
 											},
 											"title": "Scarlet Marpenoth, Upper Deck (Player Version)",
 											"width": 800,
@@ -26654,7 +26606,7 @@
 											},
 											"href": {
 												"type": "internal",
-												"path": "adventure/WDH/Scarlet-Marpenoth-Lower-Deck.jpg"
+												"path": "adventure/WDH/Scarlet-Marpenoth-Lower-Deck.webp"
 											},
 											"title": "Scarlet Marpenoth, Lower Deck (Player Version)",
 											"width": 500,
@@ -26857,7 +26809,7 @@
 											},
 											"href": {
 												"type": "internal",
-												"path": "adventure/WDH/Scarlet-Marpenoth-Lower-Deck.jpg"
+												"path": "adventure/WDH/Scarlet-Marpenoth-Lower-Deck.webp"
 											},
 											"title": "Scarlet Marpenoth, Lower Deck (Player Version)",
 											"width": 500,
@@ -27266,7 +27218,7 @@
 											},
 											"href": {
 												"type": "internal",
-												"path": "adventure/WDH/Kolat-Towers-DM.jpg"
+												"path": "adventure/WDH/Kolat-Towers-DM.webp"
 											},
 											"title": "Kolat Towers",
 											"width": 737,
@@ -28492,7 +28444,7 @@
 											},
 											"href": {
 												"type": "internal",
-												"path": "adventure/WDH/Kolat-Towers-L1.jpg"
+												"path": "adventure/WDH/Kolat-Towers-L1.webp"
 											},
 											"title": "Kolat Towers, Level 1 (Player Version)",
 											"width": 2050,
@@ -28665,7 +28617,7 @@
 											},
 											"href": {
 												"type": "internal",
-												"path": "adventure/WDH/Kolat-Towers-L2.jpg"
+												"path": "adventure/WDH/Kolat-Towers-L2.webp"
 											},
 											"title": "Kolat Towers, Level 2 (Player Version)",
 											"width": 1450,
@@ -28838,7 +28790,7 @@
 											},
 											"href": {
 												"type": "internal",
-												"path": "adventure/WDH/Kolat-Towers-L3.jpg"
+												"path": "adventure/WDH/Kolat-Towers-L3.webp"
 											},
 											"title": "Kolat Towers, Level 3 (Player Version)",
 											"width": 1200,
@@ -28960,7 +28912,7 @@
 											},
 											"href": {
 												"type": "internal",
-												"path": "adventure/WDH/Kolat-Towers-L4.jpg"
+												"path": "adventure/WDH/Kolat-Towers-L4.webp"
 											},
 											"title": "Kolat Towers, Level 4 (Player Version)",
 											"width": 650,
@@ -28993,7 +28945,7 @@
 											},
 											"href": {
 												"type": "internal",
-												"path": "adventure/WDH/Kolat-Towers-L5.jpg"
+												"path": "adventure/WDH/Kolat-Towers-L5.webp"
 											},
 											"title": "Kolat Towers, Level 5 (Player Version)",
 											"width": 600,
@@ -29045,7 +28997,7 @@
 											},
 											"href": {
 												"type": "internal",
-												"path": "adventure/WDH/Kolat-Towers-L6.jpg"
+												"path": "adventure/WDH/Kolat-Towers-L6.webp"
 											},
 											"title": "Kolat Towers, Level 6 (Player Version)",
 											"width": 650,
@@ -29160,7 +29112,7 @@
 											},
 											"href": {
 												"type": "internal",
-												"path": "adventure/WDH/Kolat-Towers-Outer.jpg"
+												"path": "adventure/WDH/Kolat-Towers-Outer.webp"
 											},
 											"title": "Kolat Towers, Level Outer (Player Version)",
 											"width": 1150,
@@ -29315,7 +29267,7 @@
 											},
 											"href": {
 												"type": "internal",
-												"path": "adventure/WDH/Sanctum-DM.jpg"
+												"path": "adventure/WDH/Sanctum-DM.webp"
 											},
 											"title": "Sanctum",
 											"width": 1000,
@@ -30343,7 +30295,7 @@
 											},
 											"href": {
 												"type": "internal",
-												"path": "adventure/WDH/Sanctum-Players.jpg"
+												"path": "adventure/WDH/Sanctum-Players.webp"
 											},
 											"title": "Player Version",
 											"width": 1800,
@@ -33288,62 +33240,194 @@
 			"id": "4e6",
 			"entries": [
 				{
-					"type": "image",
-					"href": {
-						"type": "internal",
-						"path": "adventure/WDH/Friendly-Faces.webp"
-					},
-					"title": "Yawning Portal Friendly Faces",
-					"width": 1000,
-					"height": 1276
+					"type": "entries",
+					"name": "Yawning Portal Friendly Faces",
+					"entries": [
+						{
+							"type": "image",
+							"href": {
+								"type": "internal",
+								"path": "adventure/WDH/Friendly-Faces.webp"
+							},
+							"width": 1000,
+							"height": 1276
+						}
+					],
+					"id": "53b"
 				},
 				{
-					"type": "image",
-					"href": {
-						"type": "internal",
-						"path": "adventure/WDH/The-Code-Legal.webp"
-					},
-					"title": "The Code Legal",
-					"width": 2201,
-					"height": 2714
+					"type": "entries",
+					"name": "The Code Legal",
+					"entries": [
+						{
+							"type": "image",
+							"href": {
+								"type": "internal",
+								"path": "adventure/WDH/The-Code-Legal.webp"
+							},
+							"width": 2201,
+							"height": 2714
+						}
+					],
+					"id": "53c"
 				},
 				{
-					"type": "image",
-					"imageType": "mapPlayer",
-					"href": {
-						"type": "internal",
-						"path": "adventure/WDH/Trollskull-Manor-Players.jpg"
-					},
-					"title": "Trollskull Manor",
-					"width": 737,
-					"height": 1000,
-					"grid": {
-						"type": "square",
-						"size": 71,
-						"offsetX": 2,
-						"offsetY": 28,
-						"scale": 2
-					}
+					"type": "entries",
+					"name": "Trollskull Manor",
+					"entries": [
+						{
+							"type": "gallery",
+							"images": [
+								{
+									"type": "image",
+									"imageType": "map",
+									"href": {
+										"type": "internal",
+										"path": "adventure/WDH/Trollskull-Manor-DM.webp"
+									},
+									"title": "Trollskull Manor",
+									"id": "528",
+									"width": 2513,
+									"height": 3338,
+									"grid": {
+										"type": "square",
+										"size": 104,
+										"offsetX": 69,
+										"offsetY": 69
+									}
+								},
+								{
+									"type": "image",
+									"imageType": "mapPlayer",
+									"href": {
+										"type": "internal",
+										"path": "adventure/WDH/Trollskull-Manor-Players.webp"
+									},
+									"title": "Trollskull Manor (Player Version)",
+									"width": 2100,
+									"height": 2850,
+									"grid": {
+										"type": "square",
+										"size": 101,
+										"offsetX": 3,
+										"offsetY": 49
+									}
+								}
+							]
+						}
+					],
+					"id": "53d"
 				},
 				{
-					"type": "image",
-					"href": {
-						"type": "internal",
-						"path": "adventure/WDH/The-Yawning-Portal.webp"
-					},
-					"title": "The Yawning Portal",
-					"width": 2400,
-					"height": 1724
-				},
-				{
-					"type": "image",
-					"href": {
-						"type": "internal",
-						"path": "adventure/WDH/Yawning-Portal-Key.webp"
-					},
-					"title": "The Yawning Portal Key",
-					"width": 1000,
-					"height": 587
+					"type": "entries",
+					"name": "Key to the Yawning Portal",
+					"page": 224,
+					"entries": [
+						"Here are the names of the numbered characters featured in the Yawning Portal illustration in the Introduction.",
+						{
+							"type": "list",
+							"style": "list-hang-notitle",
+							"columns": 2,
+							"items": [
+								"1. Victoro Cassalanter",
+								"2. Ammalia Cassalanter",
+								"3. Vajra Safahr",
+								"4. Renaer Neverember",
+								"5. Laeral Silverhand",
+								"6. Mordenkainen",
+								"7. Qilué Veladorn",
+								"8. Alustriel Silverhand",
+								"9. The Simbul",
+								"10. Elminster",
+								"11. Harkle Harpell",
+								"12. Storm Silverhand",
+								"13. Syluné Silverhand",
+								"14. Dove Falconhand",
+								"15. Florin Falconhand",
+								"16. Illistyl Elventree",
+								"17. Jhessail Silventree",
+								"18. Merith Strongbow",
+								"19. Lanseril Snowmantle",
+								"20. Artus Cimber",
+								"21. Volothamp Geddarm",
+								"22. Minsc and Boo",
+								"23. Krydle",
+								"24. Delina",
+								"25. Vartan Hai Sylvar",
+								"26. Priam Agrivar",
+								"27. Ishi Barasume",
+								"28. Minder",
+								"29. Foxilon Cardluck",
+								"30. Shandie",
+								"31. Obaya Uday",
+								"32. Manshoon",
+								"33. Yoshimo",
+								"34. The Nameless One",
+								"35. Valygar Corthala",
+								"36. Abdel Adrian",
+								"37. Hexxat",
+								"38. Pikel Bouldershoulder",
+								"39. Ivan Bouldershoulder",
+								"40. Cadderly Bonaduce",
+								"41. Hrolf",
+								"42. Drizzt Do'Urden",
+								"43. Guenhwyvar",
+								"44. Ruqiah",
+								"45. Reginald Roundshield",
+								"46. Krebbyg Masq'il'yr",
+								"47. Spider Parrafin",
+								"48. Arkhan the Cruel",
+								"49. Tyril Tallguy",
+								"50. Dagny Halvor",
+								"51. Jamilah",
+								"52. Hitch",
+								"53. Dragonbait",
+								"54. Brawlwin Chainminer",
+								"55. Durnan (proprietor)",
+								"56. Skip Brickard",
+								"57. Diath Woodrow",
+								"58. Evelyn Marthain",
+								"59. Strix",
+								"60. Alias",
+								"61. Akabar Bel Akash",
+								"62. Olive Rustkettle",
+								"63. Mirt",
+								"64. The Black Viper",
+								"65. Artemis Entreri",
+								"66. Joppa",
+								"67. Fel'rekt Lafeen",
+								"68. Soluun Xibrindas",
+								"69. Jarlaxle Baenre",
+								"70. Danilo Thann",
+								"71. Paultin Seppa",
+								"72. Calliope",
+								"73. Ziraj the Hunter",
+								"74. Skeemo Weirdbottle",
+								"75. Davil Starsong",
+								"76. Tashlyn Yafeera",
+								"77. Istrid Horn",
+								"78. Nihiloor",
+								"79. Noska Ur'gray",
+								"80. Nar'l Xibrindas",
+								"81. Ahmaergo",
+								"82. Thorvin Twinbeard",
+								"83. Ott Steeltoes",
+								"84. Xanathar",
+								"85. Matthew Mercer"
+							]
+						},
+						{
+							"type": "image",
+							"href": {
+								"type": "internal",
+								"path": "adventure/WDH/The-Yawning-Portal.webp"
+							},
+							"title": "The Yawning Portal",
+							"width": 2400,
+							"height": 1724
+						}
+					],
+					"id": "53e"
 				}
 			]
 		},
@@ -33363,7 +33447,7 @@
 							},
 							"href": {
 								"type": "internal",
-								"path": "adventure/WDH/poster-map-dm.jpg"
+								"path": "adventure/WDH/poster-map-dm.webp"
 							},
 							"title": "Poster Map",
 							"width": 6429,
@@ -33378,7 +33462,7 @@
 							},
 							"href": {
 								"type": "internal",
-								"path": "adventure/WDH/poster-map-player.jpg"
+								"path": "adventure/WDH/poster-map-player.webp"
 							},
 							"title": "Player Version",
 							"width": 6429,
@@ -33391,6 +33475,161 @@
 				}
 			],
 			"id": "4e7"
+		},
+		{
+			"type": "section",
+			"name": "Credits",
+			"entries": [
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Lead Designer",
+							"entries": [
+								"Christopher Perkins"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Designers",
+							"entries": [
+								"James J. Haeck, James Introcaso, Adam Lee, Matt Sernett"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Rules Development",
+							"entries": [
+								"Jeremy Crawford, Ben Petrisor, Kate Welch"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Story Consultants",
+							"entries": [
+								"Matthew Mercer, Charles Sanders"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Managing Editor",
+							"entries": [
+								"Jeremy Crawford"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Lead Editor",
+							"entries": [
+								"Christopher Perkins"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Editors",
+							"entries": [
+								"Michele Carter, Scott Fitzgerald Gray, Kim Mohan"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Art Director",
+							"entries": [
+								"Kate Irwin"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Additional Art Direction",
+							"entries": [
+								"Shauna Narciso, Richard Whitters"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Graphic Designer",
+							"entries": [
+								"Emi Tanji"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Cover Illustrator",
+							"entries": [
+								"Tyler Jacobson"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Interior Illustrators",
+							"entries": [
+								"Mark Behm, Eric Belisle, Zoltan Boros, Clint Cearley, Sidharth Chaturvedi, Daarken, Eric Deschamps, Olga Drebas, Leesha Hannigan, Ralph Horsley, Tyler Jacobson, Sam Keiser, Julian Kok, Alayna Lemmer, Christopher Moeller, Scott Murphy, Jim Pavelec, Claudio Pozas, Vincent Proce, Ned Rogers, Craig J Spearing, Jason Thompson, Cory Trego-Erdner, Richard Whitters, Mark Winters, Shawn Wood, Bayard Wu, Kieran Yanner"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Interior Cartographer",
+							"entries": [
+								"Dyson Logos"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Poster Map",
+							"entries": [
+								"Jason Engle"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Producers",
+							"entries": [
+								"Daniel Tovar, Matt Warren, Stan!"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Product Engineer",
+							"entries": [
+								"Cynda Callaway"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Imaging Technicians",
+							"entries": [
+								"Carmen Cheung, Kevin Yee"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Art Administration",
+							"entries": [
+								"David Gershman"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Prepress Specialist",
+							"entries": [
+								"Jefferson Dunlap"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Other D&D Team Members",
+							"entries": [
+								"Bart Carroll, Pelham Greene, Ari Levitch, Chris Lindsay, Jeremy Martin, Shelly Mazzanoble, Mike Mearls, Hilary Ross, Liz Schuh, Nathan Stewart, Greg Tito, Trish Yochum"
+							]
+						},
+						"Gratitude to Elliott Zastrow for his extensive research.",
+						"Special thanks to the hundreds of playtesters whose feedback made this adventure more fun at every turn."
+					]
+				}
+			],
+			"id": "53a"
 		}
 	]
 }

@@ -592,7 +592,8 @@
 						"path": "adventure/AitFR-FCD/thumbnail/16_1476395147.webp"
 					},
 					"id": "053",
-					"credit": "Will Hindmarch"
+					"credit": "Will Hindmarch",
+					"expectsLightBackground": true
 				},
 				{
 					"type": "entries",
@@ -1049,7 +1050,6 @@
 								"The keystone for this fortress is fitted into the arched ceiling here, 10 feet above the ground.",
 								{
 									"type": "entries",
-									"name": "",
 									"entries": [
 										{
 											"type": "entries",
@@ -1269,7 +1269,8 @@
 							},
 							"credit": "Russ Nicholson",
 							"width": 1243,
-							"height": 1060
+							"height": 1060,
+							"expectsLightBackground": true
 						},
 						{
 							"type": "image",
@@ -1279,12 +1280,54 @@
 							},
 							"credit": "Justine Jones",
 							"width": 1927,
-							"height": 1624
+							"height": 1624,
+							"expectsLightBackground": true
 						}
 					]
 				}
 			],
 			"id": "052"
+		},
+		{
+			"type": "section",
+			"name": "Credits",
+			"entries": [
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Adventure Writing & Maps",
+							"entries": [
+								"Will Hindmarch"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Adventure Graphic Designer",
+							"entries": [
+								"Bree Heiss"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Illustrators",
+							"entries": [
+								"Justine Jones, Russ Nicholson, Anna Steinbauer, and Gabor Szikszai"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Adventures in the Forgotten Realms Set Leads",
+							"entries": [
+								"James Wyatt (narrative), Zach Stella (art), with contributions from Tyler Jacobson"
+							]
+						}
+					]
+				}
+			],
+			"id": "054"
 		}
 	]
 }

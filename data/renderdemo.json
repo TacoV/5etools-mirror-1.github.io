@@ -21,7 +21,7 @@
 				{
 					"type": "list",
 					"items": [
-						"Style tags; {@bold some text to be bolded} (alternative {@b shorthand}), {@italic some text to be italicised} (alternative {@i shorthand}), {@underline some text to be underlined} (alternative {@u shorthand}), {@strike some text to strike-through}, (alternative {@s shorthand}), {@color color|e40707}/{@color color variable|--rgb-name} tags, {@highlight highlight} tags, {@sup superscript} tags, {@sub subscript} tags, {@kbd keyboard} tags, {@code print(&quot;hello world&quot;)} tags, misc {@style Style|small-caps;small;capitalize;dnd-font} tags, {@font alternate font|Comic Sans MS} tags",
+						"Style tags; {@bold some text to be bolded} (alternative {@b shorthand}), {@italic some text to be italicised} (alternative {@i shorthand}), {@underline some text to be underlined} (alternative {@u shorthand}), {@underlineDouble some text to be underlined} (alternative {@u2 shorthand}), {@strike some text to strike-through}, (alternative {@s shorthand}), , {@strikeDouble some text to strike-through}, (alternative {@s2 shorthand}), {@color color|e40707}/{@color color variable|--rgb-name} tags, {@highlight highlight} tags, {@sup superscript} tags, {@sub subscript} tags, {@kbd keyboard} tags, {@code print(&quot;hello world&quot;)} tags, misc {@style Style|small-caps;small;capitalize;dnd-font} tags, {@font alternate font|Comic Sans MS} tags",
 						"Additionally, {@note note tags}, used for adding errata or Twitter \"designer footnotes,\" and {@tip tooltip tags|a note}.",
 						"Dice roller tags; {@dice 1d2-2+2d3+5} for regular dice rolls ({@dice 1d6;2d6} for multiple options; {@dice 1d6 + #$prompt_number:min=1,title=Enter a Number!,default=123$#} for input prompts), with extended {@dice 1d20+2|display text} and {@dice 1d20+2|display text|rolled by name}, and a special 'hit' version which assumes a d20 is to be rolled {@hit +7} (and rolls advantage on {@kbd SHIFT}+click, disadvantage on {@kbd ALT}+click). There's also {@damage 1d12+3} which will roll critical hits on {@kbd SHIFT}+click and half damage (rounding down) on {@kbd ALT}+click, and {@d20 -4} which will also roll advantage/disadvantage, although @hit tags are preferred where appropriate. Spells can have scaling-dice tags, (damage of 2d6 or 3d6 at level 1, add an extra {@scaledamage 2d6;3d6|2-9|1d6} for each level beyond 2nd; or, roll 2d6 when using 1 psi point, add an {@scaledice 2d6|1,3,5,7,9|1d6|psi|extra amount} for each additional psi point spent), for when a spell effect scales at higher levels. {@ability str 20}, {@savingThrow str 5}, and {@skillCheck animal_handling 5} are used as internal shorthand, but may be useful elsewhere.",
 						"Auto dice tags; as above, but a result is automatically rolled upon rendering: {@autodice 2d10+2}.",
@@ -85,8 +85,8 @@
 								"{@filter Creatures with a Strength score of 18 or more|bestiary|strength=[18;]}",
 								"{@filter Divination and Evocation spells|spells|school=D;V}",
 								"{@filter All uncommon magic items|items|source=|type=|rarity=uncommon|miscellaneous=Magic}",
-								"{@filter Simple melee weapons|items|source=phb|category=basic|type=simple weapon;melee weapon=u~u~sand}",
-								"Meta-options can be set; inline for individual filters, and using 'fbmt' for filtering meta-options {@filter filter meta example|spells|level=1;2=sor~sand~b1|fbmt=sor|fbmh=source}",
+								"{@filter Simple melee weapons|items|source=phb|category=basic|type=simple weapon;melee weapon=sand}",
+								"Meta-options can be set; inline for individual filters, and using 'fbmt' for filtering meta-options {@filter filter meta example|spells|level=1;2=sor~sand|fbmt=sor|fbmh=source}",
 								"Search can be set; {@filter view dinosaurs|bestiary|search=dinosaur}",
 								"An exact starting entity; {@filter filter for beasts and show cat|bestiary|type=beast|hash=cat_mm} where 'hash' is the part after a '#' and before any commas which appears in the URL bar when viewing the entity.",
 								{
@@ -131,6 +131,7 @@
 									"type": "list",
 									"items": [
 										"Internal links: {@5etools This Is Your Life|lifegen.html}",
+										"Internal \"img\" links (i.e., anything in {@link https://github.com/5etools-mirror-2/5etools-img}): {@5etoolsImg Players Handbook Cover|covers/PHB.webp}; {@5etoolsImg Human Paladin sheet|pdf/DoSI/Human-Paladin.pdf}",
 										"External links: {@link https://discord.gg/5etools} or {@link Discord|https://discord.gg/5etools}"
 									]
 								},
@@ -600,7 +601,7 @@
 					"type": "image",
 					"href": {
 						"type": "internal",
-						"path": "blank.png"
+						"path": "blank.webp"
 					},
 					"title": "Optional Title",
 					"credit": "Optional credit"
@@ -740,6 +741,7 @@
 								"spellcasting": [
 									{
 										"name": "Innate Spellcasting",
+										"type": "spellcasting",
 										"headerEntries": [
 											"The unicorn's innate spellcasting ability is Charisma (spell save {@dc 14}). The unicorn can innately cast the following spells, requiring no components:"
 										],

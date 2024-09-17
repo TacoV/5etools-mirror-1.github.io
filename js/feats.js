@@ -1,21 +1,21 @@
-"use strict";
+import {RenderFeats} from "./render-feats.js";
 
 class FeatsSublistManager extends SublistManager {
-	static get _ROW_TEMPLATE () {
+	static _getRowTemplate () {
 		return [
 			new SublistCellTemplate({
 				name: "Name",
-				css: "bold col-4 pl-0",
+				css: "bold ve-col-4 pl-0 pr-1",
 				colStyle: "",
 			}),
 			new SublistCellTemplate({
 				name: "Ability",
-				css: "col-4",
+				css: "ve-col-4 px-1",
 				colStyle: "",
 			}),
 			new SublistCellTemplate({
 				name: "Prerequisite",
-				css: "col-4 pr-0",
+				css: "ve-col-4 pl-1 pr-0",
 				colStyle: "",
 			}),
 		];
@@ -25,7 +25,7 @@ class FeatsSublistManager extends SublistManager {
 		const cellsText = [it.name, it._slAbility, it._slPrereq];
 
 		const $ele = $(`<div class="lst__row lst__row--sublist ve-flex-col">
-			<a href="#${hash}" class="lst--border lst__row-inner">
+			<a href="#${hash}" class="lst__row-border lst__row-inner">
 				${this.constructor._getRowCellsHtml({values: cellsText})}
 			</a>
 		</div>`)
@@ -55,7 +55,6 @@ class FeatsPage extends ListPage {
 		const pageFilter = new PageFilterFeats();
 		super({
 			dataSource: DataUtil.feat.loadJSON.bind(DataUtil.feat),
-			dataSourceFluff: DataUtil.featFluff.loadJSON.bind(DataUtil.featFluff),
 
 			pFnGetFluff: Renderer.feat.pGetFluff.bind(Renderer.feat),
 
@@ -69,8 +68,6 @@ class FeatsPage extends ListPage {
 			},
 
 			isPreviewable: true,
-
-			isMarkdownPopout: true,
 		});
 	}
 
@@ -83,16 +80,16 @@ class FeatsPage extends ListPage {
 		const source = Parser.sourceJsonToAbv(feat.source);
 		const hash = UrlUtil.autoEncodeHash(feat);
 
-		eleLi.innerHTML = `<a href="#${hash}" class="lst--border lst__row-inner">
-			<span class="col-0-3 px-0 ve-flex-vh-center lst__btn-toggle-expand ve-self-flex-stretch">[+]</span>
-			<span class="bold col-3-5 px-1">${feat.name}</span>
-			<span class="col-3-5 ${feat._slAbility === VeCt.STR_NONE ? "list-entry-none " : ""}">${feat._slAbility}</span>
-			<span class="col-3 ${feat._slPrereq === VeCt.STR_NONE ? "list-entry-none " : ""}">${feat._slPrereq}</span>
-			<span class="source col-1-7 ve-text-center ${Parser.sourceJsonToColor(feat.source)} pr-0" title="${Parser.sourceJsonToFull(feat.source)}" ${Parser.sourceJsonToStyle(feat.source)}>${source}</span>
+		eleLi.innerHTML = `<a href="#${hash}" class="lst__row-border lst__row-inner">
+			<span class="ve-col-0-3 px-0 ve-flex-vh-center lst__btn-toggle-expand ve-self-flex-stretch no-select">[+]</span>
+			<span class="bold ve-col-3-5 px-1">${feat.name}</span>
+			<span class="ve-col-3-5 px-1 ${feat._slAbility === VeCt.STR_NONE ? "italic " : ""}">${feat._slAbility}</span>
+			<span class="ve-col-3 px-1 ${feat._slPrereq === VeCt.STR_NONE ? "italic " : ""}">${feat._slPrereq}</span>
+			<span class="source ve-col-1-7 ve-text-center ${Parser.sourceJsonToSourceClassname(feat.source)} pl-1 pr-0" title="${Parser.sourceJsonToFull(feat.source)}" ${Parser.sourceJsonToStyle(feat.source)}>${source}</span>
 		</a>
-		<div class="ve-flex ve-hidden relative lst__wrp-preview">
-			<div class="vr-0 absolute lst__vr-preview"></div>
-			<div class="ve-flex-col py-3 ml-4 lst__wrp-preview-inner"></div>
+		<div class="ve-flex ve-hidden relative accordion__wrp-preview">
+			<div class="vr-0 absolute accordion__vr-preview"></div>
+			<div class="ve-flex-col py-3 ml-4 accordion__wrp-preview-inner"></div>
 		</div>`;
 
 		const listItem = new ListItem(

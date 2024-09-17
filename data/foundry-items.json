@@ -106,14 +106,15 @@
 			"name": "Hazirawn",
 			"source": "HotDQ",
 			"system": {
-				"attackBonus": "+1 + floor(@item.attunement / 2)",
+				"magicalBonus": "+1",
+				"attack.bonus": "+1",
 				"damage.parts": [
 					[
-						"2d6+1+floor(@item.attunement / 2)",
+						"2d6+1",
 						"slashing"
 					],
 					[
-						"1d6+floor(@item.attunement / 2)d6",
+						"1d6",
 						"necrotic"
 					]
 				]
@@ -197,7 +198,7 @@
 					"transfer": true,
 					"changes": [
 						{
-							"key": "data.attributes.hp.max",
+							"key": "system.attributes.hp.bonuses.overall",
 							"mode": "ADD",
 							"value": "+ @details.level"
 						}

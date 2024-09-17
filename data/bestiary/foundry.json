@@ -3,12 +3,15 @@
 		{
 			"name": "Beast of the Land",
 			"source": "TCE",
+			"prototypeToken": {
+				"actorLink": true
+			},
 			"effects": [
 				{
 					"name": "Ranger's Leadership",
 					"changes": [
 						{
-							"key": "data.attributes.hp.max",
+							"key": "system.attributes.hp.max",
 							"mode": "ADD",
 							"value": "+ 5 * @srd5e.userchar.classes.ranger.levels"
 						}
@@ -19,12 +22,15 @@
 		{
 			"name": "Beast of the Sea",
 			"source": "TCE",
+			"prototypeToken": {
+				"actorLink": true
+			},
 			"effects": [
 				{
 					"name": "Ranger's Leadership",
 					"changes": [
 						{
-							"key": "data.attributes.hp.max",
+							"key": "system.attributes.hp.max",
 							"mode": "ADD",
 							"value": "+ 5 * @srd5e.userchar.classes.ranger.levels"
 						}
@@ -35,12 +41,15 @@
 		{
 			"name": "Beast of the Sky",
 			"source": "TCE",
+			"prototypeToken": {
+				"actorLink": true
+			},
 			"effects": [
 				{
 					"name": "Ranger's Leadership",
 					"changes": [
 						{
-							"key": "data.attributes.hp.max",
+							"key": "system.attributes.hp.max",
 							"mode": "ADD",
 							"value": "+ 4 * @srd5e.userchar.classes.ranger.levels"
 						}
@@ -56,9 +65,9 @@
 					"name": "Druid's Leadership",
 					"changes": [
 						{
-							"key": "data.attributes.hp.max",
+							"key": "system.attributes.hp.max",
 							"mode": "ADD",
-							"value": "+ (2 * @srd5e.userchar.classes.druid.levels)"
+							"value": "+(2 * @srd5e.userchar.classes.druid.levels)"
 						},
 						{
 							"key": "data.attributes.ac.formula",
@@ -72,14 +81,17 @@
 		{
 			"name": "Drake Companion",
 			"source": "FTD",
+			"prototypeToken": {
+				"actorLink": true
+			},
 			"effects": [
 				{
 					"name": "Ranger's Leadership",
 					"changes": [
 						{
-							"key": "data.attributes.hp.max",
+							"key": "system.attributes.hp.max",
 							"mode": "ADD",
-							"value": "+ (5 * @srd5e.userchar.classes.ranger.levels)"
+							"value": "+(5 * @srd5e.userchar.classes.ranger.levels)"
 						},
 						{
 							"key": "data.attributes.ac.formula",
@@ -108,12 +120,15 @@
 		{
 			"name": "Homunculus Servant",
 			"source": "TCE",
+			"prototypeToken": {
+				"actorLink": true
+			},
 			"effects": [
 				{
 					"name": "Artificer's Leadership",
 					"changes": [
 						{
-							"key": "data.attributes.hp.max",
+							"key": "system.attributes.hp.max",
 							"mode": "ADD",
 							"value": "+ @srd5e.userchar.abilities.int.mod + @srd5e.userchar.classes.artificer.levels"
 						},
@@ -125,7 +140,7 @@
 						{
 							"key": "data.skills.prc.bonuses.check",
 							"mode": "ADD",
-							"value": "+ (2 * @srd5e.userchar.pb)"
+							"value": "+(2 * @srd5e.userchar.pb)"
 						},
 						{
 							"key": "data.skills.ste.bonuses.check",
@@ -139,12 +154,15 @@
 		{
 			"name": "Steel Defender",
 			"source": "TCE",
+			"prototypeToken": {
+				"actorLink": true
+			},
 			"effects": [
 				{
 					"name": "Artificer's Leadership",
 					"changes": [
 						{
-							"key": "data.attributes.hp.max",
+							"key": "system.attributes.hp.max",
 							"mode": "ADD",
 							"value": "+ @srd5e.userchar.abilities.int.mod + (5 * @srd5e.userchar.classes.artificer.levels)"
 						},
@@ -166,7 +184,7 @@
 						{
 							"key": "data.skills.prc.bonuses.check",
 							"mode": "ADD",
-							"value": "+ (2 * @srd5e.userchar.pb)"
+							"value": "+(2 * @srd5e.userchar.pb)"
 						}
 					]
 				}
@@ -180,9 +198,9 @@
 					"name": "Druid's Leadership",
 					"changes": [
 						{
-							"key": "data.attributes.hp.max",
+							"key": "system.attributes.hp.max",
 							"mode": "ADD",
-							"value": "+ (5 * @srd5e.userchar.classes.druid.levels)"
+							"value": "+(5 * @srd5e.userchar.classes.druid.levels)"
 						}
 					]
 				}

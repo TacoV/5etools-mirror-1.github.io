@@ -103,7 +103,7 @@
 									"type": "entries",
 									"name": "Option: Greater Aberrant Powers",
 									"entries": [
-										"At the DM's option, a character who has the Aberrant Dragonmark feat has a chance of manifesting greater power. Upon reaching 10th level, such a character has a {@chance 10|10 percent} chance of gaining an {@filter epic boon|rewards|type=boon} from among the options in chapter 7 of the {@book Dungeon Master's Guide|DMG}. If the character fails to gain a boon, they have a {@chance 10|10 percent} chance the next time they gain a level.",
+										"At the DM's option, a character who has the Aberrant Dragonmark feat has a chance of manifesting greater power. Upon reaching 10th level, such a character has a {@chance 10} chance of gaining an {@filter epic boon|rewards|type=boon} from among the options in chapter 7 of the {@book Dungeon Master's Guide|DMG}. If the character fails to gain a boon, they have a {@chance 10} chance the next time they gain a level.",
 										"If the character gains a boon, the DM chooses it or determines it randomly. The character also permanently loses one of their Hit Dice, and their hit point maximum is reduced by an amount equal to a roll of that die plus their Constitution modifier (minimum reduction of 1). This reduction can't be reversed by any means."
 									]
 								}
@@ -333,6 +333,27 @@
 			]
 		},
 		{
+			"name": "Aerial Expert",
+			"source": "HWCS",
+			"page": 47,
+			"prerequisite": [
+				{
+					"other": "Glide trait"
+				}
+			],
+			"entries": [
+				"Years of practice or an innate talent have made you adept at gliding. You gain the following benefits:",
+				{
+					"type": "list",
+					"items": [
+						"You no longer need to move at least 10 feet to perform long and high jumps. You may choose whether the jump uses your Strength or Dexterity score for determining height or distance, and you double the distance you would normally leap in either case.",
+						"You may take the {@action Dash} action while gliding to fly an additional distance up to your movement speed.",
+						"You may change direction freely while gliding, and may gain up to 10 feet of altitude once before you finish your descent."
+					]
+				}
+			]
+		},
+		{
 			"name": "Agent of Order",
 			"source": "SatO",
 			"page": 10,
@@ -386,7 +407,7 @@
 					"type": "list",
 					"items": [
 						"You gain a +5 bonus to initiative.",
-						"You can't be {@quickref Surprise|PHB|3|0|surprised} while you are conscious.",
+						"You can't be {@status surprised} while you are conscious.",
 						"Other creatures don't gain advantage on attack rolls against you as a result of being unseen by you."
 					]
 				}
@@ -501,6 +522,31 @@
 							"name": "Grasp of Avarice",
 							"entries": [
 								"Once per turn, when you damage a creature you can see within 60 feet of yourself, you can also deal necrotic damage to it. The necrotic damage equals {@dice 1d6} + your proficiency bonus, and you regain a number of hit points equal to this necrotic damage dealt. You can use this benefit a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Bandit Cunning",
+			"source": "HWCS",
+			"page": 47,
+			"entries": [
+				"Your time as a bandit has granted you a sense for danger, and made you skilled at sizing up opponents. You gain the following benefits:",
+				{
+					"type": "list",
+					"items": [
+						"When you are asked to make a saving throw, you may spend your reaction to add your Intelligence modifier as an additional bonus to the saving throw. You cannot use this ability again until you have completed a long rest.",
+						"During combat, you can use your action to make an Intelligence ({@skill Investigation}) check against any creature you have seen fight. As long as you succeed against a DC of 10 + their challenge rating, you can learn one useful fact of your choice about the target's combat abilities. Choose from:",
+						{
+							"type": "list",
+							"items": [
+								"one damage resistance or immunity",
+								"one condition immunity",
+								"one special ability possessed by the creature that either does damage, or prevents damage",
+								"one option under their attack, legendary, or reaction actions",
+								"one special sense they possess"
 							]
 						}
 					]
@@ -669,7 +715,7 @@
 					"style": "list-hang-notitle",
 					"items": [
 						{
-							"type": "entries",
+							"type": "item",
 							"name": "Chaotic Flare",
 							"entries": [
 								"When you roll a 1 or a 20 on an attack roll or a saving throw, the magic of chaos flows through you. Roll a d4 and consult the Chaotic Flares table to determine what happens. A flare lasts until the end of your next turn, and a new flare can't occur until after the first flare ends.",
@@ -1806,6 +1852,26 @@
 			]
 		},
 		{
+			"name": "Heavy Glider",
+			"source": "HWCS",
+			"page": 47,
+			"prerequisite": [
+				{
+					"other": "Glide trait"
+				}
+			],
+			"entries": [
+				"You were either born with great strength, or trained hard to allow yourself to glide under circumstances most would find impossible. You gain the following benefits:",
+				{
+					"type": "list",
+					"items": [
+						"You may glide while holding a heavy weapon and wearing heavy armor as long as you aren't encumbered.",
+						"You may choose to land your glide in a space occupied by a hostile creature that is Large or smaller. If you do so, you may roll an opposed Strength check against the creature. On a success, you push them 10 feet away and knock them {@condition prone} with the force of your impact. On a failure you land in the nearest un-occupied space."
+					]
+				}
+			]
+		},
+		{
 			"name": "Infernal Constitution",
 			"source": "XGE",
 			"page": 75,
@@ -2610,7 +2676,7 @@
 			"armorProficiencies": [
 				{
 					"medium": true,
-					"shield|phb": true
+					"shield": true
 				}
 			],
 			"entries": [
@@ -2689,6 +2755,26 @@
 					"items": [
 						"If you can see a creature's mouth while it is speaking a language you understand, you can interpret what it's saying by reading its lips.",
 						"You have a +5 bonus to your passive Wisdom ({@skill Perception}) and passive Intelligence ({@skill Investigation}) scores."
+					]
+				}
+			]
+		},
+		{
+			"name": "Opportunistic Thief",
+			"source": "HWCS",
+			"page": 47,
+			"ability": [
+				{
+					"dex": 1
+				}
+			],
+			"entries": [
+				"You have learned the tricks of the trade of thievery, allowing you to exploit opportunities for pick-pocketing both in and out of combat. You gain the following benefits:",
+				{
+					"type": "list",
+					"items": [
+						"When a creature fails a melee attack roll against you in combat, you can make a Dexterity ({@skill Sleight of Hand}) check against a DC equal to 10 + the target's Dexterity modifier. On a success, you may steal any one item that is not being held or worn by the target.",
+						"Whenever you successfully use your {@skill Sleight of Hand} skill outside of combat to steal an object, you may immediately conceal it flawlessly on your person, or put another object you possess in its place."
 					]
 				}
 			]
@@ -2773,6 +2859,27 @@
 			]
 		},
 		{
+			"name": "Perfect Landing",
+			"source": "HWCS",
+			"page": 47,
+			"ability": [
+				{
+					"dex": 1
+				}
+			],
+			"entries": [
+				"Years of living at great heights have taught you how to fall more gracefully. You gain the following benefits:",
+				{
+					"type": "list",
+					"items": [
+						"Reduce the damage die for fall damage from a d6 to a d4.",
+						"You do not fall prone after taking falling damage.",
+						"You do not take damage for the first 30 feet of your fall."
+					]
+				}
+			]
+		},
+		{
 			"name": "Piercer",
 			"source": "TCE",
 			"page": 80,
@@ -2810,6 +2917,9 @@
 					]
 				}
 			],
+			"traitTags": [
+				"Damage Resistance"
+			],
 			"entries": [
 				"You can draw on the forces of the multiverse to survive cosmic extremes and to traverse its infinite realms, granting you these benefits:",
 				{
@@ -2834,7 +2944,7 @@
 							"type": "item",
 							"name": "Portal Sense",
 							"entries": [
-								"You know the direction to the last planar portal you used while you and the portal are on the same plane of existence. Moreover, as an action, you can detect the location of any portals within 30 feet of you that aren't behind total cover. Once you detect a portal with this action, you can't use the action again until you finish a long rest."
+								"You know the direction to the last planar portal you used while you and the portal are on the same plane of existence. Moreover, as an action, you can detect the location of any portals within 30 feet of you that aren't behind {@quickref Cover||3||total cover}. Once you detect a portal with this action, you can't use the action again until you finish a long rest."
 							]
 						}
 					]
@@ -3681,7 +3791,7 @@
 					"type": "list",
 					"items": [
 						"Attacking at long range doesn't impose disadvantage on your ranged weapon attack rolls.",
-						"Your ranged weapon attacks ignore half cover and three-quarters cover.",
+						"Your ranged weapon attacks ignore {@quickref Cover||3||half cover} and {@quickref Cover||3||three-quarters cover}.",
 						"Before you make an attack with a ranged weapon that you are proficient with, you can choose to take a -5 penalty to the attack roll. If the attack hits, you add +10 to the attack's damage."
 					]
 				}
@@ -3870,9 +3980,30 @@
 							"type": "item",
 							"name": "Maelstrom Aura",
 							"entries": [
-								"As a bonus action, you surround yourself with an aura of magical wind and lightning that extends 10 feet from you in every direction but not through total cover. The aura lasts until the start of your next turn or until you are incapacitated. While the aura is active, you have resistance to lightning and thunder damage. In addition, attack rolls against you have disadvantage, and whenever another creature starts its turn within the aura, you can force the creature to make a Strength saving throw (DC equals 8 + your proficiency bonus + the modifier of the ability increased by this feat). On a failed save, the creature's speed is halved until the start of its next turn. You can use this bonus action a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
+								"As a bonus action, you surround yourself with an aura of magical wind and lightning that extends 10 feet from you in every direction but not through {@quickref Cover||3||total cover}. The aura lasts until the start of your next turn or until you are incapacitated. While the aura is active, you have resistance to lightning and thunder damage. In addition, attack rolls against you have disadvantage, and whenever another creature starts its turn within the aura, you can force the creature to make a Strength saving throw (DC equals 8 + your proficiency bonus + the modifier of the ability increased by this feat). On a failed save, the creature's speed is halved until the start of its next turn. You can use this bonus action a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
 							]
 						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Speech of the Ancient Beasts",
+			"source": "HWCS",
+			"page": 47,
+			"ability": [
+				{
+					"cha": 1
+				}
+			],
+			"entries": [
+				"You have a special connection with the natural world. Great beasts regard you as their kin, and you possess the ability to speak the languages of the most powerful and mystic of their kind. You gain the following benefits:",
+				{
+					"type": "list",
+					"items": [
+						"Beasts of Large size or larger have a friendly disposition toward you unless you have attacked them.",
+						"You have advantage on Charisma checks made against beasts that are of Large size or larger.",
+						"You can speak and understand Giant Eagle, Giant Elk, and Giant Owl. You can otherwise be understood by any beast of Large size or larger, whether or not they speak a language. Beasts with Intelligence scores of 4 or lower may only be able to understand simple concepts."
 					]
 				}
 			]
@@ -3966,7 +4097,7 @@
 					"type": "list",
 					"items": [
 						"When you cast a spell that requires you to make an attack roll, the spell's range is doubled.",
-						"Your ranged spell attacks ignore half cover and three-quarters cover.",
+						"Your ranged spell attacks ignore {@quickref Cover||3||half cover} and {@quickref Cover||3||three-quarters cover}.",
 						"You learn one cantrip that requires an attack roll. Choose the cantrip from the {@filter bard|spells|level=0|class=bard|spell attack=m;r;o}, {@filter cleric|spells|level=0|class=cleric|spell attack=m;r;o}, {@filter druid|spells|level=0|class=druid|spell attack=m;r;o}, {@filter sorcerer|spells|level=0|class=sorcerer|spell attack=m;r;o}, {@filter warlock|spells|level=0|class=warlock|spell attack=m;r;o}, or {@filter wizard|spells|level=0|class=wizard|spell attack=m;r;o} spell list. Your spellcasting ability for this cantrip depends on the spell list you chose from: Charisma for bard, sorcerer, or warlock; Wisdom for cleric or druid; or Intelligence for wizard."
 					]
 				}
@@ -5044,6 +5175,28 @@
 			],
 			"entries": [
 				"You learn the magic of the primeval woods, which are revered and protected by your people. You learn one druid cantrip of your choice. You also learn the {@spell longstrider} and {@spell pass without trace} spells, each of which you can cast once without expending a spell slot. You regain the ability to cast these two spells in this way when you finish a long rest. Wisdom is your spellcasting ability for all three spells."
+			]
+		},
+		{
+			"name": "Woodwise",
+			"source": "HWCS",
+			"page": 47,
+			"skillProficiencies": [
+				{
+					"survival": true,
+					"nature": true
+				}
+			],
+			"entries": [
+				"You have lived your entire life in the gnarled, wooded areas of the world. You are adept at finding your way through even the most treacherous terrain. You gain the following benefits:",
+				{
+					"type": "list",
+					"items": [
+						"You gain proficiency in either the {@skill Survival} or {@skill Nature} skill.",
+						"You ignore difficult terrain.",
+						"You cannot become lost in natural surroundings except by magical means."
+					]
+				}
 			]
 		}
 	]

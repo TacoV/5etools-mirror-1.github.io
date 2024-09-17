@@ -4810,7 +4810,7 @@
 									"type": "image",
 									"href": {
 										"type": "internal",
-										"path": "book/GGR/062-302.png"
+										"path": "book/GGR/062-302.webp"
 									},
 									"width": 5000,
 									"height": 3160,
@@ -4822,7 +4822,8 @@
 										"distance": 0.5,
 										"units": "miles"
 									},
-									"title": "Tenth District"
+									"title": "Tenth District",
+									"id": "221"
 								}
 							],
 							"id": "0e4"
@@ -4978,7 +4979,7 @@
 							"type": "image",
 							"href": {
 								"type": "internal",
-								"path": "book/GGR/064-304.png"
+								"path": "book/GGR/064-304.webp"
 							},
 							"width": 3487,
 							"height": 5000,
@@ -4987,7 +4988,8 @@
 							"grid": {
 								"type": "none"
 							},
-							"title": "Precinct 1"
+							"title": "Precinct One",
+							"id": "222"
 						},
 						{
 							"type": "entries",
@@ -5233,7 +5235,7 @@
 							"type": "image",
 							"href": {
 								"type": "internal",
-								"path": "book/GGR/067-307.png"
+								"path": "book/GGR/067-307.webp"
 							},
 							"width": 2117,
 							"height": 3000,
@@ -5242,7 +5244,8 @@
 							"grid": {
 								"type": "none"
 							},
-							"title": "Precinct Two"
+							"title": "Precinct Two",
+							"id": "223"
 						},
 						{
 							"type": "entries",
@@ -5469,7 +5472,7 @@
 							"type": "image",
 							"href": {
 								"type": "internal",
-								"path": "book/GGR/070-310.png"
+								"path": "book/GGR/070-310.webp"
 							},
 							"width": 2118,
 							"height": 3000,
@@ -5478,7 +5481,8 @@
 							"grid": {
 								"type": "none"
 							},
-							"title": "Precinct Three"
+							"title": "Precinct Three",
+							"id": "224"
 						},
 						{
 							"type": "entries",
@@ -5706,7 +5710,7 @@
 							"type": "image",
 							"href": {
 								"type": "internal",
-								"path": "book/GGR/073-313.png"
+								"path": "book/GGR/073-313.webp"
 							},
 							"width": 2116,
 							"height": 3000,
@@ -5715,7 +5719,8 @@
 							"grid": {
 								"type": "none"
 							},
-							"title": "Precinct Four"
+							"title": "Precinct Four",
+							"id": "225"
 						},
 						{
 							"type": "entries",
@@ -5943,7 +5948,7 @@
 							"type": "image",
 							"href": {
 								"type": "internal",
-								"path": "book/GGR/076-316.png"
+								"path": "book/GGR/076-316.webp"
 							},
 							"width": 2096,
 							"height": 3000,
@@ -5952,7 +5957,8 @@
 							"grid": {
 								"type": "none"
 							},
-							"title": "Precinct Five"
+							"title": "Precinct Five",
+							"id": "226"
 						},
 						{
 							"type": "entries",
@@ -6192,7 +6198,7 @@
 							"type": "image",
 							"href": {
 								"type": "internal",
-								"path": "book/GGR/080-320.png"
+								"path": "book/GGR/080-320.webp"
 							},
 							"width": 2115,
 							"height": 3000,
@@ -6201,7 +6207,8 @@
 							"grid": {
 								"type": "none"
 							},
-							"title": "Precinct Six"
+							"title": "Precinct Six",
+							"id": "227"
 						},
 						{
 							"type": "entries",
@@ -7265,7 +7272,7 @@
 											"type": "image",
 											"href": {
 												"type": "internal",
-												"path": "book/GGR/086-406.png"
+												"path": "book/GGR/086-406.webp"
 											},
 											"width": 2513,
 											"height": 3338,
@@ -7278,7 +7285,8 @@
 												"offsetY": -13,
 												"scale": 3
 											},
-											"title": "Map 4.1: Arrester Station"
+											"title": "Map 4.1: Arrester Station",
+											"id": "228"
 										}
 									],
 									"id": "151"
@@ -7553,7 +7561,7 @@
 											"type": "image",
 											"href": {
 												"type": "internal",
-												"path": "book/GGR/088-408.png"
+												"path": "book/GGR/088-408.webp"
 											},
 											"width": 2513,
 											"height": 3338,
@@ -7566,7 +7574,8 @@
 												"offsetY": -3,
 												"scale": 3
 											},
-											"title": "Map 4.2: Legion Garrison"
+											"title": "Map 4.2: Legion Garrison",
+											"id": "229"
 										}
 									],
 									"id": "159"
@@ -7844,7 +7853,7 @@
 											"type": "image",
 											"href": {
 												"type": "internal",
-												"path": "book/GGR/090-410.png"
+												"path": "book/GGR/090-410.webp"
 											},
 											"width": 2513,
 											"height": 3338,
@@ -7857,7 +7866,8 @@
 												"offsetY": 25,
 												"scale": 3
 											},
-											"title": "Map 4.3: Safe House"
+											"title": "Map 4.3: Safe House",
+											"id": "22a"
 										},
 										{
 											"type": "inset",
@@ -8143,7 +8153,7 @@
 											"type": "image",
 											"href": {
 												"type": "internal",
-												"path": "book/GGR/092-412.png"
+												"path": "book/GGR/092-412.webp"
 											},
 											"width": 2513,
 											"height": 3338,
@@ -8156,7 +8166,8 @@
 												"offsetY": 46,
 												"scale": 3
 											},
-											"title": "Map 4.4: Undercity Mansion"
+											"title": "Map 4.4: Undercity Mansion",
+											"id": "22b"
 										}
 									],
 									"id": "16a"
@@ -8433,7 +8444,7 @@
 											"type": "image",
 											"href": {
 												"type": "internal",
-												"path": "book/GGR/095-415.png"
+												"path": "book/GGR/095-415.webp"
 											},
 											"width": 2513,
 											"height": 3338,
@@ -8446,7 +8457,8 @@
 												"offsetY": -62,
 												"scale": 3
 											},
-											"title": "Map 4.5: Rubblebelt Encampment"
+											"title": "Map 4.5: Rubblebelt Encampment",
+											"id": "22c"
 										}
 									],
 									"id": "172"
@@ -8721,7 +8733,7 @@
 											"type": "image",
 											"href": {
 												"type": "internal",
-												"path": "book/GGR/097-417.png"
+												"path": "book/GGR/097-417.webp"
 											},
 											"width": 2513,
 											"height": 3338,
@@ -8734,7 +8746,8 @@
 												"offsetY": 87,
 												"scale": 3
 											},
-											"title": "Map 4.6: Experimental Workshop"
+											"title": "Map 4.6: Experimental Workshop",
+											"id": "22d"
 										},
 										{
 											"type": "table",
@@ -9048,7 +9061,7 @@
 											"type": "image",
 											"href": {
 												"type": "internal",
-												"path": "book/GGR/099-419.png"
+												"path": "book/GGR/099-419.webp"
 											},
 											"width": 2513,
 											"height": 3338,
@@ -9061,7 +9074,8 @@
 												"offsetY": -13,
 												"scale": 3
 											},
-											"title": "Map 4.7: Grand Basilica"
+											"title": "Map 4.7: Grand Basilica",
+											"id": "22e"
 										}
 									],
 									"id": "182"
@@ -9349,7 +9363,7 @@
 											"type": "image",
 											"href": {
 												"type": "internal",
-												"path": "book/GGR/102-422.png"
+												"path": "book/GGR/102-422.webp"
 											},
 											"width": 2513,
 											"height": 3338,
@@ -9362,7 +9376,8 @@
 												"offsetY": -82,
 												"scale": 3
 											},
-											"title": "Map 4.8: Notorious Nightclub"
+											"title": "Map 4.8: Notorious Nightclub",
+											"id": "22f"
 										}
 									],
 									"id": "18a"
@@ -9637,7 +9652,7 @@
 											"type": "image",
 											"href": {
 												"type": "internal",
-												"path": "book/GGR/104-424.png"
+												"path": "book/GGR/104-424.webp"
 											},
 											"width": 2513,
 											"height": 3338,
@@ -9650,7 +9665,8 @@
 												"offsetY": -10,
 												"scale": 3
 											},
-											"title": "Map 4.9: Vernadi Center"
+											"title": "Map 4.9: Vernadi Center",
+											"id": "230"
 										}
 									],
 									"id": "192"
@@ -9927,7 +9943,7 @@
 											"type": "image",
 											"href": {
 												"type": "internal",
-												"path": "book/GGR/106-426.png"
+												"path": "book/GGR/106-426.webp"
 											},
 											"width": 2513,
 											"height": 3338,
@@ -9940,7 +9956,8 @@
 												"offsetY": 8,
 												"scale": 3
 											},
-											"title": "Map 4.10: Growth Chambers"
+											"title": "Map 4.10: Growth Chambers",
+											"id": "231"
 										}
 									],
 									"id": "19a"
@@ -14159,6 +14176,114 @@
 				}
 			],
 			"id": "1d5"
+		},
+		{
+			"type": "section",
+			"name": "Credits",
+			"entries": [
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Lead Designers:",
+							"entry": "Jeremy Crawford, Mike Mearls"
+						},
+						{
+							"type": "item",
+							"name": "Designers:",
+							"entry": "Ari Levitch, Ben Petrisor, Mike Mearls, Robert J. Schwalb, Chris Tulach"
+						},
+						{
+							"type": "item",
+							"name": "Managing Editor:",
+							"entry": "Jeremy Crawford"
+						},
+						{
+							"type": "item",
+							"name": "Editors:",
+							"entry": "Christopher Perkins, Kim Mohan, Michele Carter, Phil Athans, Kate Welch"
+						},
+						{
+							"type": "item",
+							"name": "Art Direction:",
+							"entry": "Shauna Narciso, Ari Levitch"
+						},
+						{
+							"type": "item",
+							"name": "Graphic Designer:",
+							"entry": "Trish Yochum"
+						},
+						{
+							"type": "item",
+							"name": "Additional Graphic Design:",
+							"entry": "Emi Tanji"
+						},
+						{
+							"type": "item",
+							"name": "Additional Art Direction:",
+							"entry": "Jeremy Jarvis, Jeremy Cranford, Pamela Ansman-Wolfe, Taylor Ingvarsson, Dawn Murin, Cynthia Sheppard, Andrew Vallas, Mark Winters"
+						},
+						{
+							"type": "item",
+							"name": "Cover Illustrator:",
+							"entry": "Magali Villeneuve"
+						},
+						{
+							"type": "item",
+							"name": "Interior Illustrators:",
+							"entry": "Deruchenko Alexander, Even Amundsen, Steve Argyle, Volkan Baga, Ryan Barger, Steven Belledin, Mike Bierek, Johann Bodin, Zoltan Boros, Noah Bradley, John Severin Brassell, Filip Burburan, Dmitry Burmak, Wesley Burt, Clint Cearley, Milivoj Ceran, Jason Chan, Sidharth Chaturvedi, Zezhou Chen, Jedd Chevrier, Chippy, Cliff Childs, Sung Choi, Yongjae Choi, Jehan Choo, Daarken, Florian De Gesincourt, Eric Deschamps, Simon Dominic, Scott M. Fischer, Randy Gallegos, Lars Grant-West, Yeong-Hao Han, Josh Hass, Michael C. Hayes, Izzy, Tomasz Jedruszek, Jaime Jones, Igor Kieryluk, Mathias Kollros, Alex Konstad, Karl Kopinski, Lius Lasahido, Daniel Ljunggren, Todd Lockwood, Titus Lunter, Howard Lyon, Slawomir Maniak, Seb McKinnon, Aaron Miller, Victor Adame Minguez, Peter Mohrbacher, Willian Murai, Scott Murphy, Winona Nelson, Terese Nielsen, Karla Ortiz, James Paick, David Palumbo, Ryan Pancoast, Adam Paquette, Jung Park, Martina Pilcerova, rk post, Livia Prima, Chris Rahn, Jason Rainville, Chris Rallis, David Rapoza, Jenn Ravenna, Wayne Reynolds, Grzegorz Rutkowski, James Ryman, Dan Scott, Bram Sels, Craig J Spearing, Anna Steinbauer, Zack Stella, Matt Stewart, Chase Stone, Raymond Swanland, Wisnu Tan, Viktor Titov, Randy Vargas, Svetlin Velinov, Magali Villeneuve, Johannes Voss, Kev Walker, Tyler Walpole, Jack Wang, Mark Winters, Richard Wright, Darek Zabrocki, Eytan Zana, Kirsten Zirngibl, Mark Zug"
+						},
+						{
+							"type": "item",
+							"name": "Cartographers:",
+							"entry": "Jonas De Ro, Dyson Logos"
+						},
+						{
+							"type": "item",
+							"name": "Ravnica World Design:",
+							"entry": "Doug Beyer, Sam Burley, Jeremy Cranford, Kelly Digges, Brady Dommermuth, Jenna Helland, Cory H. Herndon, Jeremy Jarvis, Kimberly Kreines, Chris L'etoile, Adam Lee, Ari Levitch, Alison Lührs, Shawn Main, Dawn Murin, Richard Whitters, Mark Winters, James Wyatt"
+						},
+						{
+							"type": "item",
+							"name": "Producer:",
+							"entry": "Dan Tovar"
+						},
+						{
+							"type": "item",
+							"name": "Project Management:",
+							"entry": "Matt Warren"
+						},
+						{
+							"type": "item",
+							"name": "Product Engineer:",
+							"entry": "Cynda Callaway"
+						},
+						{
+							"type": "item",
+							"name": "Imaging Technicians:",
+							"entry": "Kevin Yee"
+						},
+						{
+							"type": "item",
+							"name": "Art Administration:",
+							"entry": "David Gershman"
+						},
+						{
+							"type": "item",
+							"name": "Prepress Specialist:",
+							"entry": "Jefferson Dunlap"
+						},
+						{
+							"type": "item",
+							"name": "Other D&D Team Members:",
+							"entry": "Bart Carroll, Kate Irwin, Christopher Lindsay, Shelly Mazzanoble, Hilary Ross, Liz Schuh, Nathan Stewart, Greg Tito"
+						}
+					]
+				}
+			],
+			"id": "220"
 		}
 	]
 }

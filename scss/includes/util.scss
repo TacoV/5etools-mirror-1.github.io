@@ -1,4 +1,4 @@
-@import "vars";
+@use "../vars/vars";
 
 // region Fix Chrome
 input[type="checkbox"]:checked {
@@ -27,6 +27,16 @@ input[type="radio"]:checked {
 	font-size: 85% !important;
 }
 
+.ve-large {
+	font-size: 125% !important;
+
+	// Additional size bump for small-caps fonts, to visually match size of non-caps text
+	&.small-caps,
+	&.dnd-font {
+		font-size: 140% !important;
+	}
+}
+
 .font-size-24p {
 	font-size: 24px !important;
 }
@@ -34,7 +44,12 @@ input[type="radio"]:checked {
 
 // region Font style
 .ve-muted {
-	color: $rgb-font--muted !important;
+	color: vars.$rgb-font--muted !important;
+
+	a,
+	.roller {
+		color: vars.$rgb-link-blue--muted;
+	}
 }
 
 .bold {
@@ -57,8 +72,18 @@ i > i {
 	text-decoration: underline !important;
 }
 
+.ve-underline-double {
+	text-decoration: underline !important;
+	text-decoration-style: double !important;
+}
+
 .no-underline {
 	text-decoration: none !important;
+}
+
+.ve-strike-double {
+	text-decoration: line-through !important;
+	text-decoration-style: double !important;
 }
 
 .help {
@@ -76,6 +101,10 @@ i > i {
 	&-subtle {
 		cursor: help !important;
 	}
+}
+
+.ve-highlight {
+	background-color: vars.$rgb-bg-highlight !important;
 }
 // endregion
 
@@ -116,11 +145,11 @@ i > i {
 	break-inside: avoid;
 }
 
-.text-left {
+.ve-text-left {
 	text-align: left !important;
 }
 
-.text-right {
+.ve-text-right {
 	text-align: right !important;
 }
 
@@ -188,44 +217,47 @@ i > i {
 	scrollbar-gutter: stable;
 }
 
-.overflow-auto {
-	overflow-x: auto;
+.ve-overflow-auto {
+	overflow: auto auto;
+}
+
+.ve-overflow-visible {
+	overflow: visible visible !important;
+}
+
+.ve-overflow-y-auto {
 	overflow-y: auto;
 }
 
-.overflow-y-auto {
-	overflow-y: auto;
-}
-
-.overflow-y-scroll {
+.ve-overflow-y-scroll {
 	overflow-y: scroll;
 }
 
-.overflow-y-hidden {
+.ve-overflow-y-hidden {
 	overflow-y: hidden;
 }
 
-.overflow-x-auto {
+.ve-overflow-x-auto {
 	overflow-x: auto;
 }
 
-.overflow-x-scroll {
+.ve-overflow-x-scroll {
 	overflow-x: scroll;
 }
 
-.overflow-x-hidden {
+.ve-overflow-x-hidden {
 	overflow-x: hidden;
 }
 
-.overflow-hidden {
+.ve-overflow-hidden {
 	overflow: hidden;
 }
 
-.overflow-ellipsis {
-	@include overflow-dots();
+.ve-overflow-ellipsis {
+	@include vars.mix-overflow-dots;
 }
 
-.overflow-overlay {
+.ve-overflow-overlay {
 	overflow: auto;
 	overflow: overlay;
 }
@@ -264,7 +296,7 @@ i > i {
 }
 
 .w-33 {
-	width: 33.3333333% !important;
+	width: 33.3333% !important;
 }
 
 .w-40 {
@@ -275,7 +307,7 @@ i > i {
 	width: 50% !important;
 
 	&--mr-2 {
-		width: calc(50% - #{$spacer * 0.5}) !important;
+		width: calc(50% - #{vars.$spacer * 0.5}) !important;
 	}
 }
 
@@ -284,7 +316,7 @@ i > i {
 }
 
 .w-66 {
-	width: 66.6666666% !important;
+	width: 66.6666% !important;
 }
 
 .w-70 {
@@ -396,7 +428,7 @@ i > i {
 }
 
 .max-w-33 {
-	max-width: 33.3333333% !important;
+	max-width: 33.3333% !important;
 }
 
 .max-w-80 {
@@ -474,7 +506,7 @@ i > i {
 }
 
 .h-ipt-xs {
-	height: $h-ipt-xs;
+	height: vars.$h-ipt-xs;
 }
 
 // Often useful as a hack to force flexbox to behave
@@ -737,7 +769,7 @@ i > i {
 		break-inside: avoid-column;
 	}
 
-	@media (max-width: 768px) {
+	@media screen and (width <= #{vars.$width-screen-sm}) {
 		column-count: 1;
 	}
 }
@@ -751,11 +783,11 @@ i > i {
 		break-inside: avoid-column;
 	}
 
-	@media (max-width: 768px) {
+	@media screen and (width <= #{vars.$width-screen-sm}) {
 		column-count: 2;
 	}
 
-	@media (max-width: 480px) {
+	@media screen and (width <= #{vars.$width-screen-xs}) {
 		column-count: 1;
 	}
 }
@@ -769,11 +801,11 @@ i > i {
 		break-inside: avoid-column;
 	}
 
-	@media (max-width: 768px) {
+	@media screen and (width <= #{vars.$width-screen-sm}) {
 		column-count: 3;
 	}
 
-	@media (max-width: 480px) {
+	@media screen and (width <= #{vars.$width-screen-xs}) {
 		column-count: 2;
 	}
 }
@@ -787,11 +819,11 @@ i > i {
 		break-inside: avoid-column;
 	}
 
-	@media (max-width: 768px) {
+	@media screen and (width <= #{vars.$width-screen-sm}) {
 		column-count: 3;
 	}
 
-	@media (max-width: 480px) {
+	@media screen and (width <= #{vars.$width-screen-xs}) {
 		column-count: 2;
 	}
 }
@@ -805,11 +837,11 @@ i > i {
 		break-inside: avoid-column;
 	}
 
-	@media (max-width: 768px) {
+	@media screen and (width <= #{vars.$width-screen-sm}) {
 		column-count: 3;
 	}
 
-	@media (max-width: 480px) {
+	@media screen and (width <= #{vars.$width-screen-xs}) {
 		column-count: 2;
 	}
 }

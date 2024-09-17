@@ -1,6 +1,6 @@
 desktop.ini
 node_modules
-
+img
 
 # IntelliJ project files
 .idea/
@@ -12,6 +12,7 @@ node_modules
 # Misc dev/scripting files
 trash
 trash_in
+node_
 
 # Generated files
 sitemap.xml

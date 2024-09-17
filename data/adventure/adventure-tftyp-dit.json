@@ -474,7 +474,7 @@
 										],
 										[
 											"2",
-											"Bored, retired adventurer, claims to have explored dungeon of note and can describe first few areas ({@chance 20|20 percent} chance of an accurate description)"
+											"Bored, retired adventurer, claims to have explored dungeon of note and can describe first few areas ({@chance 20} chance of an accurate description)"
 										],
 										[
 											"3",
@@ -482,7 +482,7 @@
 										],
 										[
 											"4",
-											"Con artist, selling fake treasure maps (but a {@chance 10|10 percent} chance that a map is genuine)"
+											"Con artist, selling fake treasure maps (but a {@chance 10} chance that a map is genuine)"
 										],
 										[
 											"5",
@@ -506,7 +506,7 @@
 										],
 										[
 											"10",
-											"Elminster, incognito; {@chance 10|10 percent} chance he is on an errand of cosmic importance; otherwise, he's pressing Durnan for gossip"
+											"Elminster, incognito; {@chance 10} chance he is on an errand of cosmic importance; otherwise, he's pressing Durnan for gossip"
 										]
 									]
 								}
@@ -633,7 +633,7 @@
 											"type": "image",
 											"href": {
 												"type": "internal",
-												"path": "adventure/TftYP-DiT/001-dit01.jpg"
+												"path": "adventure/TftYP-DiT/001-dit01.webp"
 											},
 											"title": "Map 5.1: The Doomvault",
 											"width": 2310,
@@ -15782,7 +15782,7 @@
 							"type": "image",
 							"href": {
 								"type": "internal",
-								"path": "adventure/TftYP-DiT/002-dit02.jpg"
+								"path": "adventure/TftYP-DiT/002-dit02.webp"
 							},
 							"title": "Map 5.2: Player Map",
 							"width": 2334,
@@ -15808,7 +15808,7 @@
 							"type": "image",
 							"href": {
 								"type": "internal",
-								"path": "adventure/TftYP-DiT/003-dit03.png"
+								"path": "adventure/TftYP-DiT/003-dit03.webp"
 							},
 							"title": "Map 5.3: Abyssal Prisons",
 							"width": 1623,
@@ -17149,7 +17149,7 @@
 							"type": "image",
 							"href": {
 								"type": "internal",
-								"path": "adventure/TftYP-DiT/007-dit04.png"
+								"path": "adventure/TftYP-DiT/007-dit04.webp"
 							},
 							"title": "Map 5.4: Blood Pens",
 							"width": 1651,
@@ -17639,7 +17639,7 @@
 											"name": "Bridges",
 											"page": 126,
 											"entries": [
-												"A series of unsteady plank bridges runs 10 feet above the floor, lashed to the pillars and to the slabs of rock that block the eastern stairs. Any creature that falls {@condition unconscious} while on a bridge has a {@chance 50|50 percent} chance to fall into the pigpen."
+												"A series of unsteady plank bridges runs 10 feet above the floor, lashed to the pillars and to the slabs of rock that block the eastern stairs. Any creature that falls {@condition unconscious} while on a bridge has a {@chance 50} chance to fall into the pigpen."
 											],
 											"id": "114"
 										},
@@ -18162,7 +18162,7 @@
 							"type": "image",
 							"href": {
 								"type": "internal",
-								"path": "adventure/TftYP-DiT/008-dit05.png"
+								"path": "adventure/TftYP-DiT/008-dit05.webp"
 							},
 							"title": "Map 5.5: Master's Domain",
 							"width": 1200,
@@ -20147,7 +20147,7 @@
 							"type": "image",
 							"href": {
 								"type": "internal",
-								"path": "adventure/TftYP-DiT/012-dit06.png"
+								"path": "adventure/TftYP-DiT/012-dit06.webp"
 							},
 							"title": "Map 5.6: Far Realm Cysts",
 							"width": 1064,
@@ -22259,7 +22259,7 @@
 											"entries": [
 												"Floating 5 feet above the floor, these magic water globes are 15 feet in diameter. Red Wizards use them to hold aquatic creatures for transport through the black gates.",
 												"As an action, a creature that is within 5 feet of a globe and has an Intelligence score of 10 or higher can take control of the globe by succeeding on a DC 10 Intelligence check. As part of its movement and with a successful DC 10 Intelligence check, the controller can direct the globe to move with it, remaining within 5 feet of the controller. A globe's controller can enter and leave the globe at will. The controller can maintain control of the globe while within 100 feet of it. Another creature that qualifies as a controller can gain control of a globe by winning a contest of Intelligence checks against the current controller.",
-												"A creature that touches a globe but isn't its controller must succeed on a DC 15 Strength saving throw or be drawn into the globe and unable to pass back through its boundary. As an action, a trapped creature can free itself with a successful DC 15 Intelligence check. Also as an action, a globe's controller can release a trapped creature with a successful DC 10 Intelligence check. A creature inside a globe has half cover against effects that originate outside the globe. While inside a globe, a trapped creature can't contest for control of the globe."
+												"A creature that touches a globe but isn't its controller must succeed on a DC 15 Strength saving throw or be drawn into the globe and unable to pass back through its boundary. As an action, a trapped creature can free itself with a successful DC 15 Intelligence check. Also as an action, a globe's controller can release a trapped creature with a successful DC 10 Intelligence check. A creature inside a globe has {@quickref Cover||3||half cover} against effects that originate outside the globe. While inside a globe, a trapped creature can't contest for control of the globe."
 											],
 											"id": "1a0"
 										},
@@ -22884,7 +22884,7 @@
 							"type": "image",
 							"href": {
 								"type": "internal",
-								"path": "adventure/TftYP-DiT/013-dit07.png"
+								"path": "adventure/TftYP-DiT/013-dit07.webp"
 							},
 							"title": "Map 5.7: Forests of Slaughter",
 							"width": 1748,
@@ -27752,7 +27752,7 @@
 							"type": "image",
 							"href": {
 								"type": "internal",
-								"path": "adventure/TftYP-DiT/014-dit08.png"
+								"path": "adventure/TftYP-DiT/014-dit08.webp"
 							},
 							"title": "Map 5.8: Ooze Grottos",
 							"width": 1680,
@@ -30767,7 +30767,7 @@
 								{
 									"type": "entries",
 									"name": "63. Spawn Vats",
-									"page": 124,
+									"page": 142,
 									"entries": [
 										"The sound of flowing and bubbling liquid is audible from the northern hallway leading to this chamber.",
 										{
@@ -31409,7 +31409,7 @@
 							"type": "image",
 							"href": {
 								"type": "internal",
-								"path": "adventure/TftYP-DiT/015-dit09.png"
+								"path": "adventure/TftYP-DiT/015-dit09.webp"
 							},
 							"title": "Map 5.9: Predator Pools",
 							"width": 1200,
@@ -33078,7 +33078,7 @@
 											"entries": [
 												"Floating 5 feet above the floor, these magic water globes are 15 feet in diameter. Red Wizards use them to hold aquatic creatures for transport through the black gates.",
 												"As an action, a creature that is within 5 feet of a globe and has an Intelligence score of 10 or higher can take control of the globe by succeeding on a DC 10 Intelligence check. As part of its movement and with a successful DC 10 Intelligence check, the controller can direct the globe to move with it, remaining within 5 feet of the controller. A globe's controller can enter and leave the globe at will. The controller can maintain control of the globe while within 100 feet of it. Another creature that qualifies as a controller can gain control of a globe by winning a contest of Intelligence checks against the current controller.",
-												"A creature that touches a globe but isn't its controller must succeed on a DC 15 Strength saving throw or be drawn into the globe and unable to pass back through its boundary. As an action, a trapped creature can free itself with a successful DC 15 Intelligence check. Also as an action, a globe's controller can release a trapped creature with a successful DC 10 Intelligence check. A creature inside a globe has half cover against effects that originate outside the globe. While inside a globe, a trapped creature can't contest for control of the globe."
+												"A creature that touches a globe but isn't its controller must succeed on a DC 15 Strength saving throw or be drawn into the globe and unable to pass back through its boundary. As an action, a trapped creature can free itself with a successful DC 15 Intelligence check. Also as an action, a globe's controller can release a trapped creature with a successful DC 10 Intelligence check. A creature inside a globe has {@quickref Cover||3||half cover} against effects that originate outside the globe. While inside a globe, a trapped creature can't contest for control of the globe."
 											],
 											"id": "287"
 										}
@@ -33893,7 +33893,7 @@
 							"type": "image",
 							"href": {
 								"type": "internal",
-								"path": "adventure/TftYP-DiT/016-dit10.png"
+								"path": "adventure/TftYP-DiT/016-dit10.webp"
 							},
 							"title": "Map 5.10: Golem Laboratories",
 							"width": 1680,
@@ -35438,7 +35438,7 @@
 							"type": "image",
 							"href": {
 								"type": "internal",
-								"path": "adventure/TftYP-DiT/018-dit11.png"
+								"path": "adventure/TftYP-DiT/018-dit11.webp"
 							},
 							"title": "Map 5.11: Temples of Extraction",
 							"width": 1680,
@@ -37076,7 +37076,7 @@
 											"type": "image",
 											"href": {
 												"type": "internal",
-												"path": "adventure/TftYP-DiT/020-dit12.jpg"
+												"path": "adventure/TftYP-DiT/020-dit12.webp"
 											},
 											"title": "Map 5.12: The Phylactery Vault\u2014Floor 1 & Floor 2",
 											"width": 2334,
@@ -37087,13 +37087,14 @@
 												"size": 61,
 												"offsetX": -25,
 												"offsetY": 5
-											}
+											},
+											"id": "02e"
 										},
 										{
 											"type": "image",
 											"href": {
 												"type": "internal",
-												"path": "adventure/TftYP-DiT/021-dit13.jpg"
+												"path": "adventure/TftYP-DiT/021-dit13.webp"
 											},
 											"title": "Map 5.13: The Phylactery Vault\u2014Floor 3 & Floor 4",
 											"width": 2334,
@@ -37104,7 +37105,8 @@
 												"size": 61,
 												"offsetX": -23,
 												"offsetY": 5
-											}
+											},
+											"id": "02f"
 										}
 									]
 								},
@@ -37390,6 +37392,459 @@
 				}
 			],
 			"id": "347"
+		},
+		{
+			"type": "section",
+			"name": "Credits",
+			"entries": [
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"columns": 2,
+					"items": [
+						{
+							"type": "item",
+							"name": "Compilers",
+							"entries": [
+								"Kim Mohan, Mike Mearls"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Lead Rules Developer",
+							"entries": [
+								"Jeremy Crawford"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Fifth Edition Conversion",
+							"entries": [
+								"Chris Sims, Sean K Reynolds, Jennifer Clarke Wilkes"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Managing Editor",
+							"entries": [
+								"Jeremy Crawford"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Editors",
+							"entries": [
+								"Kim Mohan, Michele Carter"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Editorial Assistance",
+							"entries": [
+								"Chris Dupuis, Ben Petrisor, Matt Sernett"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Art Director",
+							"entries": [
+								"Kate Irwin"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Additional Art Direction",
+							"entries": [
+								"Shauna Narciso, Richard Whitters"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Graphic Designer",
+							"entries": [
+								"Emi Tanji"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Cover Illustrator",
+							"entries": [
+								"Tyler Jacobson"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Interior Illustrators",
+							"entries": [
+								"Mark Behm, Eric Belisle, Zoltan Boros, Noah Bradley, Sam Carr, Jedd Chevrier, Bud Cook, Olga Drebas, Wayne England, Lake Hurwitz, Izzy, Tyler Jacobson, Titus Lunter, Brynn Metheney, Scott Murphy, Claudio Pozas, Ned Rogers, Chris Seaman, Cory Trego-Erdner, Franz Vohwinkel, Mark Winters, Sam Wood, Ben Wootten"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Cartographers",
+							"entries": [
+								"Jason A. Engle, Rob Lazzaretti, Mike Schley, Ben Wootten"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Producer",
+							"entries": [
+								"Stan!"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Project Manager",
+							"entries": [
+								"Heather Fleming"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Product Engineer",
+							"entries": [
+								"Cynda Callaway"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Imaging Technicians",
+							"entries": [
+								"Sven Bolen, Carmen Cheung, Kevin Yee"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Art Administration",
+							"entries": [
+								"David Gershman"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Prepress Specialist",
+							"entries": [
+								"Jefferson Dunlap"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Other D&D Team Members",
+							"entries": [
+								"Bart Carroll, John Feil, Trevor Kidd, Adam Lee, Christopher Lindsay, Shelly Mazzanoble, Christopher Perkins, Hilary Ross, Liz Schuh, Nathan Stewart, Greg Tito, Shawn Wood"
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Credits from the Original Adventures",
+					"entries": [
+						{
+							"type": "list",
+							"style": "list-hang-notitle",
+							"columns": 2,
+							"items": [
+								{
+									"type": "entries",
+									"name": "Tomb of Horrors (1978)",
+									"entries": [
+										{
+											"type": "list",
+											"style": "list-hang-notitle",
+											"items": [
+												{
+													"type": "item",
+													"name": "Design",
+													"entries": [
+														"Gary Gygax"
+													]
+												}
+											]
+										}
+									],
+									"id": "026"
+								},
+								{
+									"type": "entries",
+									"name": "White Plume Mountain (1979)",
+									"entries": [
+										{
+											"type": "list",
+											"style": "list-hang-notitle",
+											"items": [
+												{
+													"type": "item",
+													"name": "Design",
+													"entries": [
+														"Lawrence Schick"
+													]
+												},
+												{
+													"type": "item",
+													"name": "Editing and Suggestions",
+													"entries": [
+														"Mike Carr, Allen Hammack, Harold Johnson, Tim Jones, Jeff Leason, Dave Sutherland, Jean Wells"
+													]
+												},
+												{
+													"type": "item",
+													"name": "Art",
+													"entries": [
+														"Dave Sutherland, Erol Otus, Darlene Pekul, Jeff Dee, David S. LaForce, Jim Roslof, Bill Willingham"
+													]
+												}
+											]
+										}
+									],
+									"id": "027"
+								},
+								{
+									"type": "entries",
+									"name": "The Hidden Shrine of Tamoachan (1980)",
+									"entries": [
+										{
+											"type": "list",
+											"style": "list-hang-notitle",
+											"items": [
+												{
+													"type": "item",
+													"name": "Design",
+													"entries": [
+														"Harold Johnson, Jeff R. Leason"
+													]
+												},
+												{
+													"type": "item",
+													"name": "Able Assistance",
+													"entries": [
+														"Dave Cook, Lawrence Schick"
+													]
+												},
+												{
+													"type": "item",
+													"name": "Editing",
+													"entries": [
+														"Harold Johnson"
+													]
+												},
+												{
+													"type": "item",
+													"name": "Editing and Production",
+													"entries": [
+														"Dave Cook, Jeff R. Leason, Lawrence Schick"
+													]
+												},
+												{
+													"type": "item",
+													"name": "Illustrations",
+													"entries": [
+														"Erol Otus, Jeff Dee, Gregory K. Fleming, David S. LaForce, David C. Sutherland III"
+													]
+												}
+											]
+										}
+									],
+									"id": "028"
+								},
+								{
+									"type": "entries",
+									"name": "Against the Giants (1981)",
+									"entries": [
+										{
+											"type": "list",
+											"style": "list-hang-notitle",
+											"items": [
+												{
+													"type": "item",
+													"name": "Design",
+													"entries": [
+														"Gary Gygax"
+													]
+												},
+												{
+													"type": "item",
+													"name": "Editing",
+													"entries": [
+														"Mike Carr, Timothy Jones, Jon Pickens, Lawrence Schick"
+													]
+												},
+												{
+													"type": "item",
+													"name": "Art",
+													"entries": [
+														"David C. Sutherland III, David A. Trampier, Jeff Dee, David S. LaForce, Erol Otis, Bill Willingham"
+													]
+												}
+											]
+										}
+									],
+									"id": "029"
+								},
+								{
+									"type": "entries",
+									"name": "The Sunless Citadel (2000)",
+									"entries": [
+										{
+											"type": "list",
+											"style": "list-hang-notitle",
+											"items": [
+												{
+													"type": "item",
+													"name": "Design",
+													"entries": [
+														"Bruce R. Cordell"
+													]
+												},
+												{
+													"type": "item",
+													"name": "Editing",
+													"entries": [
+														"Miranda Horner"
+													]
+												},
+												{
+													"type": "item",
+													"name": "Cartography",
+													"entries": [
+														"Todd Gamble"
+													]
+												},
+												{
+													"type": "item",
+													"name": "Illustrations",
+													"entries": [
+														"Dennis Cramer, Todd Lockwood"
+													]
+												}
+											]
+										}
+									],
+									"id": "02a"
+								},
+								{
+									"type": "entries",
+									"name": "The Forge of Fury (2000)",
+									"entries": [
+										{
+											"type": "list",
+											"style": "list-hang-notitle",
+											"items": [
+												{
+													"type": "item",
+													"name": "Design",
+													"entries": [
+														"Richard Baker"
+													]
+												},
+												{
+													"type": "item",
+													"name": "Editing",
+													"entries": [
+														"Miranda Horner"
+													]
+												},
+												{
+													"type": "item",
+													"name": "Cartography",
+													"entries": [
+														"Todd Gamble"
+													]
+												},
+												{
+													"type": "item",
+													"name": "Illustrations",
+													"entries": [
+														"Dennis Cramer, Todd Lockwood"
+													]
+												}
+											]
+										}
+									],
+									"id": "02b"
+								},
+								{
+									"type": "entries",
+									"name": "Dead in Thay (2014)",
+									"entries": [
+										{
+											"type": "list",
+											"style": "list-hang-notitle",
+											"items": [
+												{
+													"type": "item",
+													"name": "Design",
+													"entries": [
+														"Scott Fitzgerald Gray"
+													]
+												},
+												{
+													"type": "item",
+													"name": "Editing",
+													"entries": [
+														"Ray Vallese"
+													]
+												},
+												{
+													"type": "item",
+													"name": "Cartography",
+													"entries": [
+														"Mike Schley"
+													]
+												},
+												{
+													"type": "item",
+													"name": "Illustrations",
+													"entries": [
+														"Eric Belisle, Sam Carr, Tyler Jacobson, Miles Johnstone, Mark Winters"
+													]
+												}
+											]
+										}
+									],
+									"id": "02c"
+								}
+							]
+						}
+					],
+					"id": "025"
+				},
+				{
+					"type": "entries",
+					"name": "On the Cover",
+					"entries": [
+						{
+							"type": "gallery",
+							"images": [
+								{
+									"type": "image",
+									"href": {
+										"type": "internal",
+										"path": "adventure/TftYP/credits.webp"
+									},
+									"title": "As proprietor of the Yawning Portal, Durnan has heard amazing tales from adventurers of all sorts from across the multiverse, as seen in this array of characters by Tyler Jacobson.",
+									"width": 2560,
+									"height": 1690
+								},
+								{
+									"type": "image",
+									"href": {
+										"type": "internal",
+										"path": "adventure/TftYP/credits1.webp"
+									},
+									"title": "See if you can identify the face and the adventure found in {@i Tales from the Yawning Portal}.",
+									"width": 1397,
+									"height": 1200
+								}
+							]
+						},
+						"{@note (1. Gargoyle (Tomb of Horrors); 2. Tarul Var (Dead in Thay); 3. Mialee (Sunless Citadel); 4. Sir Bluto Sans Pite (White Plume Mountain); 5. Tordek (Forge of Fury); 6. Xipe, the Oni (Hidden Shrine of Tamoachan); 7. Manticore (White Plume Mountain); 8. Kieren, Chosen of Ilmater (Dead in Thay))}"
+					],
+					"id": "02d"
+				}
+			],
+			"id": "024"
 		}
 	]
 }

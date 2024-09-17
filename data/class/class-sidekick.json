@@ -25,16 +25,7 @@
 				"Ability Score Improvement|Expert Sidekick|TCE|19",
 				"Inspiring Help Improvement|Expert Sidekick|TCE|20"
 			],
-			"fluff": [
-				{
-					"name": "Expert Sidekick",
-					"type": "section",
-					"entries": [
-						"The Expert is a master of certain tasks or knowledge, favoring cunning over brawn. It might be a scout, a musician, a librarian, a clever street kid, a wily merchant, or a burglar."
-					],
-					"source": "TCE"
-				}
-			]
+			"hasFluff": true
 		},
 		{
 			"name": "Spellcaster Sidekick",
@@ -387,16 +378,7 @@
 				"Ability Score Improvement|Spellcaster Sidekick|TCE|18",
 				"Focused Casting|Spellcaster Sidekick|TCE|20"
 			],
-			"fluff": [
-				{
-					"name": "Spellcaster Sidekick",
-					"type": "section",
-					"entries": [
-						"A sidekick who becomes a Spellcaster walks the paths of magic. The sidekick might be a hedge wizard, a priest, a soothsayer, a magical performer, or a person with magic in their veins."
-					],
-					"source": "TCE"
-				}
-			]
+			"hasFluff": true
 		},
 		{
 			"name": "Warrior Sidekick",
@@ -423,16 +405,7 @@
 				"Ability Score Improvement|Warrior Sidekick|TCE|19",
 				"Second Wind Improvement|Warrior Sidekick|TCE|20"
 			],
-			"fluff": [
-				{
-					"name": "Warrior Sidekick",
-					"type": "section",
-					"entries": [
-						"A Warrior sidekick grows in martial prowess as it fights by your side. It might be a soldier, a town guard, a battle-trained beast, or any other creature honed for combat."
-					],
-					"source": "TCE"
-				}
-			]
+			"hasFluff": true
 		}
 	],
 	"classFeature": [
@@ -508,7 +481,8 @@
 			"level": 4,
 			"entries": [
 				"{@i 4th-level Expert feature}",
-				"At 4th level and again at 8th, 10th, 12th, 16th, and 19th level, the sidekick increases one ability score of your choice by 2, or the sidekick increases two ability scores of your choice by 1. The sidekick can't increase an ability score above 20 using this feature."
+				"At 4th level and again at 8th, 10th, 12th, 16th, and 19th level, the sidekick increases one ability score of your choice by 2, or the sidekick increases two ability scores of your choice by 1. The sidekick can't increase an ability score above 20 using this feature.",
+				"If your DM allows the use of feats, the sidekick may instead take a {@5etools feat|feats.html}."
 			]
 		},
 		{
@@ -544,7 +518,8 @@
 			"level": 8,
 			"entries": [
 				"{@i 8th-level Expert feature}",
-				"At 4th level and again at 8th, 10th, 12th, 16th, and 19th level, the sidekick increases one ability score of your choice by 2, or the sidekick increases two ability scores of your choice by 1. The sidekick can't increase an ability score above 20 using this feature."
+				"At 4th level and again at 8th, 10th, 12th, 16th, and 19th level, the sidekick increases one ability score of your choice by 2, or the sidekick increases two ability scores of your choice by 1. The sidekick can't increase an ability score above 20 using this feature.",
+				"If your DM allows the use of feats, the sidekick may instead take a {@5etools feat|feats.html}."
 			]
 		},
 		{
@@ -556,7 +531,8 @@
 			"level": 10,
 			"entries": [
 				"{@i 10th-level Expert feature}",
-				"At 4th level and again at 8th, 10th, 12th, 16th, and 19th level, the sidekick increases one ability score of your choice by 2, or the sidekick increases two ability scores of your choice by 1. The sidekick can't increase an ability score above 20 using this feature."
+				"At 4th level and again at 8th, 10th, 12th, 16th, and 19th level, the sidekick increases one ability score of your choice by 2, or the sidekick increases two ability scores of your choice by 1. The sidekick can't increase an ability score above 20 using this feature.",
+				"If your DM allows the use of feats, the sidekick may instead take a {@5etools feat|feats.html}."
 			]
 		},
 		{
@@ -581,7 +557,8 @@
 			"level": 12,
 			"entries": [
 				"{@i 12th-level Expert feature}",
-				"At 4th level and again at 8th, 10th, 12th, 16th, and 19th level, the sidekick increases one ability score of your choice by 2, or the sidekick increases two ability scores of your choice by 1. The sidekick can't increase an ability score above 20 using this feature."
+				"At 4th level and again at 8th, 10th, 12th, 16th, and 19th level, the sidekick increases one ability score of your choice by 2, or the sidekick increases two ability scores of your choice by 1. The sidekick can't increase an ability score above 20 using this feature.",
+				"If your DM allows the use of feats, the sidekick may instead take a {@5etools feat|feats.html}."
 			]
 		},
 		{
@@ -617,7 +594,8 @@
 			"level": 16,
 			"entries": [
 				"{@i 16th-level Expert feature}",
-				"At 4th level and again at 8th, 10th, 12th, 16th, and 19th level, the sidekick increases one ability score of your choice by 2, or the sidekick increases two ability scores of your choice by 1. The sidekick can't increase an ability score above 20 using this feature."
+				"At 4th level and again at 8th, 10th, 12th, 16th, and 19th level, the sidekick increases one ability score of your choice by 2, or the sidekick increases two ability scores of your choice by 1. The sidekick can't increase an ability score above 20 using this feature.",
+				"If your DM allows the use of feats, the sidekick may instead take a {@5etools feat|feats.html}."
 			]
 		},
 		{
@@ -641,7 +619,8 @@
 			"level": 19,
 			"entries": [
 				"{@i 19th-level Expert feature}",
-				"At 4th level and again at 8th, 10th, 12th, 16th, and 19th level, the sidekick increases one ability score of your choice by 2, or the sidekick increases two ability scores of your choice by 1. The sidekick can't increase an ability score above 20 using this feature."
+				"At 4th level and again at 8th, 10th, 12th, 16th, and 19th level, the sidekick increases one ability score of your choice by 2, or the sidekick increases two ability scores of your choice by 1. The sidekick can't increase an ability score above 20 using this feature.",
+				"If your DM allows the use of feats, the sidekick may instead take a {@5etools feat|feats.html}."
 			]
 		},
 		{
@@ -806,7 +785,8 @@
 			"level": 4,
 			"entries": [
 				"{@i 4th-level Spellcaster feature}",
-				"At 4th level and again at 8th, 12th, 16th, and 18th level, the sidekick increases one ability score of your choice by 2, or the sidekick increases two ability scores of your choice by 1. The sidekick can't increase an ability score above 20 using this feature."
+				"At 4th level and again at 8th, 12th, 16th, and 18th level, the sidekick increases one ability score of your choice by 2, or the sidekick increases two ability scores of your choice by 1. The sidekick can't increase an ability score above 20 using this feature.",
+				"If your DM allows the use of feats, the sidekick may instead take a {@5etools feat|feats.html}."
 			]
 		},
 		{
@@ -830,7 +810,8 @@
 			"level": 8,
 			"entries": [
 				"{@i 8th-level Spellcaster feature}",
-				"At 4th level and again at 8th, 12th, 16th, and 18th level, the sidekick increases one ability score of your choice by 2, or the sidekick increases two ability scores of your choice by 1. The sidekick can't increase an ability score above 20 using this feature."
+				"At 4th level and again at 8th, 12th, 16th, and 18th level, the sidekick increases one ability score of your choice by 2, or the sidekick increases two ability scores of your choice by 1. The sidekick can't increase an ability score above 20 using this feature.",
+				"If your DM allows the use of feats, the sidekick may instead take a {@5etools feat|feats.html}."
 			]
 		},
 		{
@@ -842,7 +823,8 @@
 			"level": 12,
 			"entries": [
 				"{@i 12th-level Spellcaster feature}",
-				"At 4th level and again at 8th, 12th, 16th, and 18th level, the sidekick increases one ability score of your choice by 2, or the sidekick increases two ability scores of your choice by 1. The sidekick can't increase an ability score above 20 using this feature."
+				"At 4th level and again at 8th, 12th, 16th, and 18th level, the sidekick increases one ability score of your choice by 2, or the sidekick increases two ability scores of your choice by 1. The sidekick can't increase an ability score above 20 using this feature.",
+				"If your DM allows the use of feats, the sidekick may instead take a {@5etools feat|feats.html}."
 			]
 		},
 		{
@@ -866,7 +848,8 @@
 			"level": 16,
 			"entries": [
 				"{@i 16th-level Spellcaster feature}",
-				"At 4th level and again at 8th, 12th, 16th, and 18th level, the sidekick increases one ability score of your choice by 2, or the sidekick increases two ability scores of your choice by 1. The sidekick can't increase an ability score above 20 using this feature."
+				"At 4th level and again at 8th, 12th, 16th, and 18th level, the sidekick increases one ability score of your choice by 2, or the sidekick increases two ability scores of your choice by 1. The sidekick can't increase an ability score above 20 using this feature.",
+				"If your DM allows the use of feats, the sidekick may instead take a {@5etools feat|feats.html}."
 			]
 		},
 		{
@@ -878,7 +861,8 @@
 			"level": 18,
 			"entries": [
 				"{@i 18th-level Spellcaster feature}",
-				"At 4th level and again at 8th, 12th, 16th, and 18th level, the sidekick increases one ability score of your choice by 2, or the sidekick increases two ability scores of your choice by 1. The sidekick can't increase an ability score above 20 using this feature."
+				"At 4th level and again at 8th, 12th, 16th, and 18th level, the sidekick increases one ability score of your choice by 2, or the sidekick increases two ability scores of your choice by 1. The sidekick can't increase an ability score above 20 using this feature.",
+				"If your DM allows the use of feats, the sidekick may instead take a {@5etools feat|feats.html}."
 			]
 		},
 		{
@@ -981,7 +965,8 @@
 			"level": 4,
 			"entries": [
 				"{@i 4th-level Warrior feature}",
-				"At 4th level and again at 8th, 12th, 14th, 16th, and 19th level, the sidekick increases one ability score of your choice by 2, or the sidekick increases two ability scores of your choice by 1. The sidekick can't increase an ability score above 20 using this feature."
+				"At 4th level and again at 8th, 12th, 14th, 16th, and 19th level, the sidekick increases one ability score of your choice by 2, or the sidekick increases two ability scores of your choice by 1. The sidekick can't increase an ability score above 20 using this feature.",
+				"If your DM allows the use of feats, the sidekick may instead take a {@5etools feat|feats.html}."
 			]
 		},
 		{
@@ -1019,7 +1004,8 @@
 			"level": 8,
 			"entries": [
 				"{@i 8th-level Warrior feature}",
-				"At 4th level and again at 8th, 12th, 14th, 16th, and 19th level, the sidekick increases one ability score of your choice by 2, or the sidekick increases two ability scores of your choice by 1. The sidekick can't increase an ability score above 20 using this feature."
+				"At 4th level and again at 8th, 12th, 14th, 16th, and 19th level, the sidekick increases one ability score of your choice by 2, or the sidekick increases two ability scores of your choice by 1. The sidekick can't increase an ability score above 20 using this feature.",
+				"If your DM allows the use of feats, the sidekick may instead take a {@5etools feat|feats.html}."
 			]
 		},
 		{
@@ -1056,7 +1042,8 @@
 			"level": 12,
 			"entries": [
 				"{@i 12th-level Warrior feature}",
-				"At 4th level and again at 8th, 12th, 14th, 16th, and 19th level, the sidekick increases one ability score of your choice by 2, or the sidekick increases two ability scores of your choice by 1. The sidekick can't increase an ability score above 20 using this feature."
+				"At 4th level and again at 8th, 12th, 14th, 16th, and 19th level, the sidekick increases one ability score of your choice by 2, or the sidekick increases two ability scores of your choice by 1. The sidekick can't increase an ability score above 20 using this feature.",
+				"If your DM allows the use of feats, the sidekick may instead take a {@5etools feat|feats.html}."
 			]
 		},
 		{
@@ -1068,7 +1055,8 @@
 			"level": 14,
 			"entries": [
 				"{@i 14th-level Warrior feature}",
-				"At 4th level and again at 8th, 12th, 14th, 16th, and 19th level, the sidekick increases one ability score of your choice by 2, or the sidekick increases two ability scores of your choice by 1. The sidekick can't increase an ability score above 20 using this feature."
+				"At 4th level and again at 8th, 12th, 14th, 16th, and 19th level, the sidekick increases one ability score of your choice by 2, or the sidekick increases two ability scores of your choice by 1. The sidekick can't increase an ability score above 20 using this feature.",
+				"If your DM allows the use of feats, the sidekick may instead take a {@5etools feat|feats.html}."
 			]
 		},
 		{
@@ -1094,7 +1082,8 @@
 			"level": 16,
 			"entries": [
 				"{@i 16th-level Warrior feature}",
-				"At 4th level and again at 8th, 12th, 14th, 16th, and 19th level, the sidekick increases one ability score of your choice by 2, or the sidekick increases two ability scores of your choice by 1. The sidekick can't increase an ability score above 20 using this feature."
+				"At 4th level and again at 8th, 12th, 14th, 16th, and 19th level, the sidekick increases one ability score of your choice by 2, or the sidekick increases two ability scores of your choice by 1. The sidekick can't increase an ability score above 20 using this feature.",
+				"If your DM allows the use of feats, the sidekick may instead take a {@5etools feat|feats.html}."
 			]
 		},
 		{
@@ -1119,7 +1108,8 @@
 			"level": 19,
 			"entries": [
 				"{@i 19th-level Warrior feature}",
-				"At 4th level and again at 8th, 12th, 14th, 16th, and 19th level, the sidekick increases one ability score of your choice by 2, or the sidekick increases two ability scores of your choice by 1. The sidekick can't increase an ability score above 20 using this feature."
+				"At 4th level and again at 8th, 12th, 14th, 16th, and 19th level, the sidekick increases one ability score of your choice by 2, or the sidekick increases two ability scores of your choice by 1. The sidekick can't increase an ability score above 20 using this feature.",
+				"If your DM allows the use of feats, the sidekick may instead take a {@5etools feat|feats.html}."
 			]
 		},
 		{

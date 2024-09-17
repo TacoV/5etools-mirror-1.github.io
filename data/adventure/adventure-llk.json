@@ -582,7 +582,7 @@
 							"type": "image",
 							"href": {
 								"type": "internal",
-								"path": "adventure/LLK/006-318365_extra_life_monastery.png"
+								"path": "adventure/LLK/006-318365_extra_life_monastery.webp"
 							},
 							"width": 4926,
 							"height": 6426,
@@ -1259,7 +1259,7 @@
 							"type": "image",
 							"href": {
 								"type": "internal",
-								"path": "adventure/LLK/007-playerversionllok2.jpg"
+								"path": "adventure/LLK/007-playerversionllok2.webp"
 							},
 							"title": "Player Version",
 							"width": 5000,
@@ -2129,7 +2129,7 @@
 							"type": "image",
 							"href": {
 								"type": "internal",
-								"path": "adventure/LLK/011-318365_extra_life_ooze.png"
+								"path": "adventure/LLK/011-318365_extra_life_ooze.webp"
 							},
 							"title": "Daoine Gloine",
 							"credit": "Claudio Pozas",
@@ -2794,7 +2794,7 @@
 							"type": "image",
 							"href": {
 								"type": "internal",
-								"path": "adventure/LLK/012-playerversionllok1.jpg"
+								"path": "adventure/LLK/012-playerversionllok1.webp"
 							},
 							"title": "Player Version",
 							"credit": "Claudio Pozas",
@@ -2806,7 +2806,7 @@
 								"distance": 50
 							},
 							"mapParent": {
-								"id": "0db",
+								"id": "0da",
 								"autoScale": true
 							}
 						},
@@ -3184,7 +3184,7 @@
 											"id": "0a6",
 											"entries": [
 												"Kwalish's presence in the lab is left to your determination, and might depend on how much more adventuring you want the characters to do. See the \"{@area Meeting Kwalish|0aa|x}\" section below for more information.",
-												"If the steam mephits are released, they might try to immediately escape (a {@chance 50|50 percent} chance), but they otherwise attack everyone in the lab.",
+												"If the steam mephits are released, they might try to immediately escape (a {@chance 50} chance), but they otherwise attack everyone in the lab.",
 												"A {@creature Mind Flayer Arcanist} (a variant creature in the {@book Monster Manual|MM}) is trapped within a glass-walled stasis chamber, kept on hand by Kwalish to be consulted for its magical knowledge. A successful DC 14 Intelligence ({@skill Arcana} or {@skill Investigation}) check can activate the stasis controls and awaken the mind flayer.",
 												"The mind flayer has no effective attacks while within the stasis chamber, as no spells or other effects can pass through the cylinder in either direction. However, if the check to activate the controls fails by 5 or more, the cylinder accidentally opens to free the mind flayer. The creature attempts to bargain for its safety with a large number of well-armed characters, but it betrays and attempts to slay them at the first opportunity."
 											]
@@ -3277,7 +3277,7 @@
 												[
 													"7",
 													"One of the eyes in a statue of a devil",
-													"The characters find themselves inside a variant version of the {@item Apparatus of Kwalish} abandoned within the Nine Hells. Characters cannot leave the apparatus, but they can pilot it and explore their surroundings. Every 10 minutes of exploration, there is a {@chance 20|20 percent} chance that one or more randomly determined devils happens upon the apparatus and attacks it."
+													"The characters find themselves inside a variant version of the {@item Apparatus of Kwalish} abandoned within the Nine Hells. Characters cannot leave the apparatus, but they can pilot it and explore their surroundings. Every 10 minutes of exploration, there is a {@chance 20} chance that one or more randomly determined devils happens upon the apparatus and attacks it."
 												],
 												[
 													"8",
@@ -3292,12 +3292,12 @@
 												[
 													"10",
 													"The centerpiece in a complex mechanical clock in a central square",
-													"The characters find themselves inside a variant version of the {@item Apparatus of Kwalish}, wandering the plane of Mechanus. Characters cannot leave the apparatus, but they can pilot it and explore their surroundings. Every 10 minutes of exploration, there is a {@chance 20|20 percent} chance that one or more randomly determined modrons happens upon the apparatus and attacks it."
+													"The characters find themselves inside a variant version of the {@item Apparatus of Kwalish}, wandering the plane of Mechanus. Characters cannot leave the apparatus, but they can pilot it and explore their surroundings. Every 10 minutes of exploration, there is a {@chance 20} chance that one or more randomly determined modrons happens upon the apparatus and attacks it."
 												],
 												[
 													"11",
 													"The eye of a squid set within an extensive aquarium",
-													"The characters find themselves inside a variant version of the {@item Apparatus of Kwalish} at the bottom of a deep ocean. Characters cannot leave the apparatus, but they can pilot it and explore their surroundings. Every 10 minutes of exploration, there is a {@chance 20|20 percent} chance that one or more randomly determined aquatic creatures happens upon the apparatus and attacks it."
+													"The characters find themselves inside a variant version of the {@item Apparatus of Kwalish} at the bottom of a deep ocean. Characters cannot leave the apparatus, but they can pilot it and explore their surroundings. Every 10 minutes of exploration, there is a {@chance 20} chance that one or more randomly determined aquatic creatures happens upon the apparatus and attacks it."
 												],
 												[
 													"12",
@@ -3496,7 +3496,7 @@
 								],
 								[
 									"2",
-									"The path leads into a lonely grove that serves as the grave of a former dryad queen. If appropriate respects are paid, the characters have a {@chance 50|50 percent} chance to receive a supernatural gift (see {@book chapter 7|DMG|7|Supernatural Gifts} of the {@book Dungeon Master's Guide|DMG})\u2014a charm that allows a character to cast the {@spell Galder's Tower|LLK|Galder's tower} spell (see {@adventure appendix E|LLK|7}) once as an action."
+									"The path leads into a lonely grove that serves as the grave of a former dryad queen. If appropriate respects are paid, the characters have a {@chance 50} chance to receive a supernatural gift (see {@book chapter 7|DMG|7|Supernatural Gifts} of the {@book Dungeon Master's Guide|DMG})\u2014a charm that allows a character to cast the {@spell Galder's Tower|LLK|Galder's tower} spell (see {@adventure appendix E|LLK|7}) once as an action."
 								],
 								[
 									"3",
@@ -5425,6 +5425,96 @@
 					]
 				}
 			]
+		},
+		{
+			"type": "section",
+			"name": "Credits",
+			"entries": [
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Lead Designer",
+							"entries": [
+								"Bart Carroll"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Additional Design",
+							"entries": [
+								"Robert Adducci, Bill Benham, M.T. Black, Jeremy Crawford, Will Doyle, James Introcaso, Ari Levitch, Greg Marks, Shawn Merwin, Cindi Moore, Laurence Withey"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Additional Rumors",
+							"entries": [
+								"David Adams, Vladimir Barash, Rose Bell, Ethan Best, Steve Bissonnette, Wolf Bloodmoon, Kevin Boardman, Trevor Boe, Nolan Bond, Aidan Brenner-Slagle, Bodhi Brooke-White, Mary Burgess, Matt J Carlson, Casandra Carter, Liam Cherry-Holt, Dave Chua, Diana Clark, Caleb Cole, Andrew Cousins, Jonathon Crawford, Joshua Cuthbertson, Rae Cwach, Bryan Davidson-Tirca, Dominic Davies, Marcello De Velazquez, Matthew Disedare, Fiona Elliott, Steve Elliott, Sam English, John Evans, Ryan Fletcher, Sam Fortier, Adrian Francisco, Nick Gill, Christian Gilliam, Marcus Good, Daniel Harmon, Michael Hoffmann, Zasheir Jassan, Rod Johnson, Conor Kelleher, Bryon Kershaw, Douglas Kilpatrick, Leonard LaBine, Dan Layman-Kennedy, Gaetano LeFavi, Michael Letterle, Joshua, Leonhardt, Ryan Mahan, Sergio Martinez, Daniel McKay, Jacob McCray, Devon McEwen, Brian McLachlan, Sean Meaney, Chloe Montgomery, Charles Morris, Daniel Oliveira, Eric Peterson, Mike Plautz, Adam Powell, Richard Powell, Alan Provance, Michael Richards, Justin Ross, Joseph Rounsavell, Brian Rubinfeld, Ian Rugg, Joe Ryan, John Saffran, Corey Shaw, Reggie Sloan, Demon Spawner, Spencer, Raul Stainzel, Jasmine Stairs, Jason Stone, Nick Symosky, Zach Tate, Benjamin Tozer, Corey Turner, Jordan Valentine, Jonah Van Campen, Cameron Vollrath, Charles Wain, Taylor Walker, Geoff Washam, Omer Watkins III, David Wheeler, Jacob Wilkinson, Chuck Wilson, Evan Wolfe, Greg Wright, Raymond Wynne, Douglas Young, Adrian Zaslona"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Editing, Development and Layout",
+							"entries": [
+								"Scott Fitzgerald Gray"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Art Director",
+							"entries": [
+								"Kate Irwin"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Graphic Deisnger",
+							"entries": [
+								"Emi Tanji"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Cover Illustrator",
+							"entries": [
+								"Shawn Wood"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Interior Illustrators",
+							"entries": [
+								"Mike Burns, Quinn Carroll, Dustin Fletcher, Devan Henderson, Aaron Hübrick, Maxx Marshall, Shauna Narciso, David Rapoza, Stan!, Emi Tanji, Jason Thompson, Cory Trego-Erdner, Matt Warren, Mark Winters, Shawn Wood"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Cartographer",
+							"entries": [
+								"Claudio Pozas"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Other D&D Team Members",
+							"entries": [
+								"David Gershman, Pelham Greene, Adam Lee, Chris Lindsay, Shelly Mazzanoble, Mike Mearls, Shauna Narciso, Christopher Perkins, Ben Petrisor, Hilary Ross, Liz Schuh, Nathan Stewart, Emi Tanji, Greg Tito, Dan Tovar, Anna Vo, Kate Welch, Richard Whitters, Trish Yochum"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Playtesters",
+							"entries": [
+								"Christine Abram, C.J. Alger, Russell Alleen-Willems, Kyle Andrew, Frank Bailey, Mike Balles, Michael Born, Derek Cash, Mick Chambers, Diego Correal, Hunter Craig, Izzy Curran, Sam Delaney, Matt Dewar, Matthew Dillon-Mayne, Scott Dolbee, James East, The Erisian Defense Force, Oscar Fong, Jesse Fox, Scott Gibeault, Charles Goren, Annette Graham, Joe Graham, Peter Grieshaber, Tommy Grissom, Jeremie Harnois, Travis Hayes, Lynn Hogan, Doug Hopkins, Jeffrey Kamberger, Kristine Krozow Richter, Eric LaPlatney, Rick Laprade, Shiaw-Ling Lia, James McKiernan, Cody McLean, Jarret Mcphee, Gil Nerio, Chris Neveu, Jay Neveu, Mario Ortegón, Steve Paiano, Drew Peacock, Bryce, Polkinghorn, Melanie Polkinghorn, Michael Polkinghorn, Owen Polkinghorn, Yania Portillo, Diego Salmón, Claudia Sánchez, Kevin Scully, Simon Sharber, Ted Simon, Benjamin Szymanski, Jay Tatum, David Tompkins, Nick Tourville, Emily Walter, David West, Melissa Wiener, Paige Willis, Steven Wonser"
+							]
+						}
+					]
+				}
+			],
+			"id": "0dc"
 		}
 	]
 }

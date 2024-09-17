@@ -1,5 +1,10 @@
 {
 	"_meta": {
+		"dependencies": {
+			"monster": [
+				"MM"
+			]
+		},
 		"otherSources": {
 			"monster": {
 				"DMG": "BMT",
@@ -7,14 +12,8 @@
 				"DoSI": "BMT",
 				"MPMM": "BMT",
 				"WBtW": "BMT",
-				"BAM": "BMT",
-				"MOT": "BMT"
+				"BAM": "BMT"
 			}
-		},
-		"dependencies": {
-			"monster": [
-				"MM"
-			]
 		}
 	},
 	"monster": [
@@ -26,10 +25,21 @@
 				"name": "Shield Guardian",
 				"source": "MM",
 				"_mod": {
-					"*": {
-						"mode": "replaceTxt",
-						"replace": "shield guardian",
-						"with": "drone"
+					"*": [
+						{
+							"mode": "replaceTxt",
+							"replace": "shield guardian",
+							"with": "drone"
+						},
+						{
+							"mode": "replaceTxt",
+							"replace": "guardian",
+							"with": "drone"
+						}
+					],
+					"trait": {
+						"mode": "removeArr",
+						"names": "Bound"
 					},
 					"action": [
 						{
@@ -114,7 +124,10 @@
 				"thieves' cant",
 				"plus any one language"
 			],
-			"cr": "5",
+			"cr": {
+				"cr": "5",
+				"lair": "6"
+			},
 			"trait": [
 				{
 					"name": "Legendary Resistance (2/Day)",
@@ -394,6 +407,7 @@
 			"spellcasting": [
 				{
 					"name": "Spellcasting",
+					"type": "spellcasting",
 					"headerEntries": [
 						"Asteria casts one of the following spells, requiring no material components and using Charisma as the spellcasting ability (spell save {@dc 19}):"
 					],
@@ -432,7 +446,7 @@
 				{
 					"name": "Special Equipment",
 					"entries": [
-						"Asteria wears Winged Boots, which grant her a flying speed (included in her statistics). She also carries one half of a pair of Sending Stones; the other half of the pair is held by Euryale."
+						"Asteria wears {@item Winged Boots}, which grant her a flying speed (included in her statistics). She also carries one half of a pair of {@item Sending Stones}; the other half of the pair is held by Euryale."
 					]
 				}
 			],
@@ -460,7 +474,7 @@
 				{
 					"name": "Empowering Aegis {@recharge 4}",
 					"entries": [
-						"Asteria summons a spectral version of her shield, which orbits and bolsters one creature of Asteria's choice that she can see within 60 feet of herself. The spectral shield lasts until the start of Asteria's next turn. While the shield is orbiting the creature, the creature has half cover, is immune to the {@condition frightened} condition, and makes weapon attack rolls with advantage."
+						"Asteria summons a spectral version of her shield, which orbits and bolsters one creature of Asteria's choice that she can see within 60 feet of herself. The spectral shield lasts until the start of Asteria's next turn. While the shield is orbiting the creature, the creature has {@quickref Cover||3||half cover}, is immune to the {@condition frightened} condition, and makes weapon attack rolls with advantage."
 					]
 				}
 			],
@@ -592,10 +606,14 @@
 				"Abyssal",
 				"telepathy 120 ft."
 			],
-			"cr": "22",
+			"cr": {
+				"cr": "22",
+				"lair": "23"
+			},
 			"spellcasting": [
 				{
 					"name": "Spellcasting",
+					"type": "spellcasting",
 					"headerEntries": [
 						"Aurnozci casts one of the following spells, requiring no material components and using Wisdom as the spellcasting ability (spell save {@dc 20}):"
 					],
@@ -851,6 +869,7 @@
 				"S"
 			],
 			"miscTags": [
+				"CUR",
 				"MLW",
 				"MW"
 			],
@@ -996,6 +1015,7 @@
 				"P"
 			],
 			"miscTags": [
+				"CUR",
 				"MLW",
 				"MW",
 				"RW"
@@ -1227,6 +1247,7 @@
 			"spellcasting": [
 				{
 					"name": "Spellcasting",
+					"type": "spellcasting",
 					"headerEntries": [
 						"Brusipha casts one of the following spells, using Charisma as the spellcasting ability (spell save {@dc 13}):"
 					],
@@ -1523,7 +1544,10 @@
 				"thieves' cant",
 				"plus any one language"
 			],
-			"cr": "11",
+			"cr": {
+				"cr": "11",
+				"lair": "12"
+			},
 			"trait": [
 				{
 					"name": "Legendary Resistance (3/Day)",
@@ -1722,6 +1746,7 @@
 			"spellcasting": [
 				{
 					"name": "Spellcasting (Medusa Form Only)",
+					"type": "spellcasting",
 					"headerEntries": [
 						"Euryale casts one of the following spells, requiring no material components and using Wisdom as the spellcasting ability (spell save {@dc 19}):"
 					],
@@ -1752,7 +1777,7 @@
 				{
 					"name": "Special Equipment",
 					"entries": [
-						"Euryale carries one half of a pair of Sending Stones; the other half of the pair is held by Asteria."
+						"Euryale carries one half of a pair of {@item Sending Stones}; the other half of the pair is held by Asteria."
 					]
 				}
 			],
@@ -1908,6 +1933,7 @@
 			"spellcasting": [
 				{
 					"name": "Spellcasting",
+					"type": "spellcasting",
 					"headerEntries": [
 						"While holding its shears, the hag casts one of the following spells, requiring no material components and using Wisdom as the spellcasting ability (spell save {@dc 14}):"
 					],
@@ -2098,6 +2124,7 @@
 			"spellcasting": [
 				{
 					"name": "Spellcasting",
+					"type": "spellcasting",
 					"headerEntries": [
 						"Gremorly casts one of the following spells, using Intelligence as the spellcasting ability (spell save {@dc 16}):"
 					],
@@ -2619,6 +2646,7 @@
 			"spellcasting": [
 				{
 					"name": "Spellcasting",
+					"type": "spellcasting",
 					"headerEntries": [
 						"The champion casts one of the following spells, requiring no material components and using Charisma as the spellcasting ability (spell save {@dc 18}):"
 					],
@@ -3040,6 +3068,7 @@
 			"spellcasting": [
 				{
 					"name": "Spellcasting",
+					"type": "spellcasting",
 					"headerEntries": [
 						"The medusa casts one of the following spells, requiring no material components and using Wisdom as the spellcasting ability (spell save {@dc 20}):"
 					],
@@ -3252,6 +3281,7 @@
 			"spellcasting": [
 				{
 					"name": "Spellcasting",
+					"type": "spellcasting",
 					"headerEntries": [
 						"The hierophant casts one of the following spells, using Charisma as the spellcasting ability (spell save {@dc 17}):"
 					],
@@ -3456,6 +3486,7 @@
 			"spellcasting": [
 				{
 					"name": "Spellcasting",
+					"type": "spellcasting",
 					"headerEntries": [
 						"Hulgaz casts one of the following spells, requiring no material components and using Charisma as the spellcasting ability (spell save {@dc 18}):"
 					],
@@ -3629,6 +3660,7 @@
 			"spellcasting": [
 				{
 					"name": "Spellcasting",
+					"type": "spellcasting",
 					"headerEntries": [
 						"The initiate casts one of the following spells, using Charisma as the spellcasting ability (spell save {@dc 13}):"
 					],
@@ -3770,6 +3802,7 @@
 			"spellcasting": [
 				{
 					"name": "Spellcasting",
+					"type": "spellcasting",
 					"headerEntries": [
 						"The living portent casts one of the following spells, requiring no material components and using Wisdom as the spellcasting ability:"
 					],
@@ -4356,6 +4389,7 @@
 			"spellcasting": [
 				{
 					"name": "Spellcasting",
+					"type": "spellcasting",
 					"headerEntries": [
 						"Oddlewin casts one of the following spells, using Charisma as the spellcasting ability (spell save {@dc 12}):"
 					],
@@ -4505,7 +4539,10 @@
 				"telepathy 120 ft.",
 				"Thieves' cant"
 			],
-			"cr": "17",
+			"cr": {
+				"cr": "17",
+				"lair": "18"
+			},
 			"trait": [
 				{
 					"name": "Alien Mind",
@@ -4688,6 +4725,7 @@
 			"spellcasting": [
 				{
 					"name": "Spellcasting",
+					"type": "spellcasting",
 					"headerEntries": [
 						"Pazrodine casts one of the following spells, requiring no material components and using Charisma as the spellcasting ability (spell save {@dc 23}):"
 					],
@@ -5387,6 +5425,7 @@
 			"spellcasting": [
 				{
 					"name": "Spellcasting",
+					"type": "spellcasting",
 					"headerEntries": [
 						"The knight casts one of the following spells, using Charisma as the spellcasting ability (spell save {@dc 15}):"
 					],
@@ -5619,7 +5658,10 @@
 			"languages": [
 				"all"
 			],
-			"cr": "21",
+			"cr": {
+				"cr": "21",
+				"lair": "22"
+			},
 			"trait": [
 				{
 					"name": "Inviolate Presence",
@@ -5835,6 +5877,7 @@
 				"S"
 			],
 			"miscTags": [
+				"CUR",
 				"MW",
 				"RW"
 			],

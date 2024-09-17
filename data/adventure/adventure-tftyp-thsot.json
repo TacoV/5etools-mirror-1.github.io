@@ -471,7 +471,7 @@
 										],
 										[
 											"2",
-											"Bored, retired adventurer, claims to have explored dungeon of note and can describe first few areas ({@chance 20|20 percent} chance of an accurate description)"
+											"Bored, retired adventurer, claims to have explored dungeon of note and can describe first few areas ({@chance 20} chance of an accurate description)"
 										],
 										[
 											"3",
@@ -479,7 +479,7 @@
 										],
 										[
 											"4",
-											"Con artist, selling fake treasure maps (but a {@chance 10|10 percent} chance that a map is genuine)"
+											"Con artist, selling fake treasure maps (but a {@chance 10} chance that a map is genuine)"
 										],
 										[
 											"5",
@@ -503,7 +503,7 @@
 										],
 										[
 											"10",
-											"Elminster, incognito; {@chance 10|10 percent} chance he is on an errand of cosmic importance; otherwise, he's pressing Durnan for gossip"
+											"Elminster, incognito; {@chance 10} chance he is on an errand of cosmic importance; otherwise, he's pressing Durnan for gossip"
 										]
 									]
 								}
@@ -2784,7 +2784,10 @@
 											},
 											"mapParent": {
 												"id": "171",
-												"autoScale": true
+												"offsetX": 74,
+												"offsetY": -34,
+												"scaleX": 0.2425,
+												"scaleY": 0.2425
 											},
 											"width": 11873,
 											"height": 8370
@@ -4069,7 +4072,7 @@
 											"name": "Rolling Stone Trap",
 											"page": 77,
 											"entries": [
-												"A millstone, concealed in the wall behind a layer of stucco, lies at the top of the steps. No nonmagical means can detect the hidden stone. If the trap is triggered, the mechanism pushes the millstone through the wall and sends it rolling down the stairs. When this occurs, anyone who has a passive Perception score of 14 or lower is {@quickref Surprise|PHB|3|0|surprised}. Everyone rolls initiative, including the stone, which has a +10 bonus to the roll. On its turn, the stone moves 60 feet. Anyone in its path must succeed on a DC 15 Dexterity saving throw or take 27 ({@dice 5d10}) bludgeoning damage and have a 50 percent chance to drop anything carried in hand. A character whose saving throw fails by 5 or more takes maximum damage, is knocked {@condition prone}, and drops anything held in hand. Dropped objects take damage from hitting the stone and end up somewhere on the stairs.",
+												"A millstone, concealed in the wall behind a layer of stucco, lies at the top of the steps. No nonmagical means can detect the hidden stone. If the trap is triggered, the mechanism pushes the millstone through the wall and sends it rolling down the stairs. When this occurs, anyone who has a passive Perception score of 14 or lower is {@status surprised}. Everyone rolls initiative, including the stone, which has a +10 bonus to the roll. On its turn, the stone moves 60 feet. Anyone in its path must succeed on a DC 15 Dexterity saving throw or take 27 ({@dice 5d10}) bludgeoning damage and have a 50 percent chance to drop anything carried in hand. A character whose saving throw fails by 5 or more takes maximum damage, is knocked {@condition prone}, and drops anything held in hand. Dropped objects take damage from hitting the stone and end up somewhere on the stairs.",
 												"The stone ultimately crashes into the doors to {@adventure area 25|TftYP-THSoT|1|25. The Nest of the Warriors}, breaking them open and destroying them. If beetles remain in the room, some or all of them come into the stairway agitated and looking for a fight."
 											],
 											"id": "0b8"
@@ -5836,6 +5839,459 @@
 				}
 			],
 			"id": "143"
+		},
+		{
+			"type": "section",
+			"name": "Credits",
+			"entries": [
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"columns": 2,
+					"items": [
+						{
+							"type": "item",
+							"name": "Compilers",
+							"entries": [
+								"Kim Mohan, Mike Mearls"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Lead Rules Developer",
+							"entries": [
+								"Jeremy Crawford"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Fifth Edition Conversion",
+							"entries": [
+								"Chris Sims, Sean K Reynolds, Jennifer Clarke Wilkes"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Managing Editor",
+							"entries": [
+								"Jeremy Crawford"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Editors",
+							"entries": [
+								"Kim Mohan, Michele Carter"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Editorial Assistance",
+							"entries": [
+								"Chris Dupuis, Ben Petrisor, Matt Sernett"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Art Director",
+							"entries": [
+								"Kate Irwin"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Additional Art Direction",
+							"entries": [
+								"Shauna Narciso, Richard Whitters"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Graphic Designer",
+							"entries": [
+								"Emi Tanji"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Cover Illustrator",
+							"entries": [
+								"Tyler Jacobson"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Interior Illustrators",
+							"entries": [
+								"Mark Behm, Eric Belisle, Zoltan Boros, Noah Bradley, Sam Carr, Jedd Chevrier, Bud Cook, Olga Drebas, Wayne England, Lake Hurwitz, Izzy, Tyler Jacobson, Titus Lunter, Brynn Metheney, Scott Murphy, Claudio Pozas, Ned Rogers, Chris Seaman, Cory Trego-Erdner, Franz Vohwinkel, Mark Winters, Sam Wood, Ben Wootten"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Cartographers",
+							"entries": [
+								"Jason A. Engle, Rob Lazzaretti, Mike Schley, Ben Wootten"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Producer",
+							"entries": [
+								"Stan!"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Project Manager",
+							"entries": [
+								"Heather Fleming"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Product Engineer",
+							"entries": [
+								"Cynda Callaway"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Imaging Technicians",
+							"entries": [
+								"Sven Bolen, Carmen Cheung, Kevin Yee"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Art Administration",
+							"entries": [
+								"David Gershman"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Prepress Specialist",
+							"entries": [
+								"Jefferson Dunlap"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Other D&D Team Members",
+							"entries": [
+								"Bart Carroll, John Feil, Trevor Kidd, Adam Lee, Christopher Lindsay, Shelly Mazzanoble, Christopher Perkins, Hilary Ross, Liz Schuh, Nathan Stewart, Greg Tito, Shawn Wood"
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Credits from the Original Adventures",
+					"entries": [
+						{
+							"type": "list",
+							"style": "list-hang-notitle",
+							"columns": 2,
+							"items": [
+								{
+									"type": "entries",
+									"name": "Tomb of Horrors (1978)",
+									"entries": [
+										{
+											"type": "list",
+											"style": "list-hang-notitle",
+											"items": [
+												{
+													"type": "item",
+													"name": "Design",
+													"entries": [
+														"Gary Gygax"
+													]
+												}
+											]
+										}
+									],
+									"id": "174"
+								},
+								{
+									"type": "entries",
+									"name": "White Plume Mountain (1979)",
+									"entries": [
+										{
+											"type": "list",
+											"style": "list-hang-notitle",
+											"items": [
+												{
+													"type": "item",
+													"name": "Design",
+													"entries": [
+														"Lawrence Schick"
+													]
+												},
+												{
+													"type": "item",
+													"name": "Editing and Suggestions",
+													"entries": [
+														"Mike Carr, Allen Hammack, Harold Johnson, Tim Jones, Jeff Leason, Dave Sutherland, Jean Wells"
+													]
+												},
+												{
+													"type": "item",
+													"name": "Art",
+													"entries": [
+														"Dave Sutherland, Erol Otus, Darlene Pekul, Jeff Dee, David S. LaForce, Jim Roslof, Bill Willingham"
+													]
+												}
+											]
+										}
+									],
+									"id": "175"
+								},
+								{
+									"type": "entries",
+									"name": "The Hidden Shrine of Tamoachan (1980)",
+									"entries": [
+										{
+											"type": "list",
+											"style": "list-hang-notitle",
+											"items": [
+												{
+													"type": "item",
+													"name": "Design",
+													"entries": [
+														"Harold Johnson, Jeff R. Leason"
+													]
+												},
+												{
+													"type": "item",
+													"name": "Able Assistance",
+													"entries": [
+														"Dave Cook, Lawrence Schick"
+													]
+												},
+												{
+													"type": "item",
+													"name": "Editing",
+													"entries": [
+														"Harold Johnson"
+													]
+												},
+												{
+													"type": "item",
+													"name": "Editing and Production",
+													"entries": [
+														"Dave Cook, Jeff R. Leason, Lawrence Schick"
+													]
+												},
+												{
+													"type": "item",
+													"name": "Illustrations",
+													"entries": [
+														"Erol Otus, Jeff Dee, Gregory K. Fleming, David S. LaForce, David C. Sutherland III"
+													]
+												}
+											]
+										}
+									],
+									"id": "176"
+								},
+								{
+									"type": "entries",
+									"name": "Against the Giants (1981)",
+									"entries": [
+										{
+											"type": "list",
+											"style": "list-hang-notitle",
+											"items": [
+												{
+													"type": "item",
+													"name": "Design",
+													"entries": [
+														"Gary Gygax"
+													]
+												},
+												{
+													"type": "item",
+													"name": "Editing",
+													"entries": [
+														"Mike Carr, Timothy Jones, Jon Pickens, Lawrence Schick"
+													]
+												},
+												{
+													"type": "item",
+													"name": "Art",
+													"entries": [
+														"David C. Sutherland III, David A. Trampier, Jeff Dee, David S. LaForce, Erol Otis, Bill Willingham"
+													]
+												}
+											]
+										}
+									],
+									"id": "177"
+								},
+								{
+									"type": "entries",
+									"name": "The Sunless Citadel (2000)",
+									"entries": [
+										{
+											"type": "list",
+											"style": "list-hang-notitle",
+											"items": [
+												{
+													"type": "item",
+													"name": "Design",
+													"entries": [
+														"Bruce R. Cordell"
+													]
+												},
+												{
+													"type": "item",
+													"name": "Editing",
+													"entries": [
+														"Miranda Horner"
+													]
+												},
+												{
+													"type": "item",
+													"name": "Cartography",
+													"entries": [
+														"Todd Gamble"
+													]
+												},
+												{
+													"type": "item",
+													"name": "Illustrations",
+													"entries": [
+														"Dennis Cramer, Todd Lockwood"
+													]
+												}
+											]
+										}
+									],
+									"id": "178"
+								},
+								{
+									"type": "entries",
+									"name": "The Forge of Fury (2000)",
+									"entries": [
+										{
+											"type": "list",
+											"style": "list-hang-notitle",
+											"items": [
+												{
+													"type": "item",
+													"name": "Design",
+													"entries": [
+														"Richard Baker"
+													]
+												},
+												{
+													"type": "item",
+													"name": "Editing",
+													"entries": [
+														"Miranda Horner"
+													]
+												},
+												{
+													"type": "item",
+													"name": "Cartography",
+													"entries": [
+														"Todd Gamble"
+													]
+												},
+												{
+													"type": "item",
+													"name": "Illustrations",
+													"entries": [
+														"Dennis Cramer, Todd Lockwood"
+													]
+												}
+											]
+										}
+									],
+									"id": "179"
+								},
+								{
+									"type": "entries",
+									"name": "Dead in Thay (2014)",
+									"entries": [
+										{
+											"type": "list",
+											"style": "list-hang-notitle",
+											"items": [
+												{
+													"type": "item",
+													"name": "Design",
+													"entries": [
+														"Scott Fitzgerald Gray"
+													]
+												},
+												{
+													"type": "item",
+													"name": "Editing",
+													"entries": [
+														"Ray Vallese"
+													]
+												},
+												{
+													"type": "item",
+													"name": "Cartography",
+													"entries": [
+														"Mike Schley"
+													]
+												},
+												{
+													"type": "item",
+													"name": "Illustrations",
+													"entries": [
+														"Eric Belisle, Sam Carr, Tyler Jacobson, Miles Johnstone, Mark Winters"
+													]
+												}
+											]
+										}
+									],
+									"id": "17a"
+								}
+							]
+						}
+					],
+					"id": "173"
+				},
+				{
+					"type": "entries",
+					"name": "On the Cover",
+					"entries": [
+						{
+							"type": "gallery",
+							"images": [
+								{
+									"type": "image",
+									"href": {
+										"type": "internal",
+										"path": "adventure/TftYP/credits.webp"
+									},
+									"title": "As proprietor of the Yawning Portal, Durnan has heard amazing tales from adventurers of all sorts from across the multiverse, as seen in this array of characters by Tyler Jacobson.",
+									"width": 2560,
+									"height": 1690
+								},
+								{
+									"type": "image",
+									"href": {
+										"type": "internal",
+										"path": "adventure/TftYP/credits1.webp"
+									},
+									"title": "See if you can identify the face and the adventure found in {@i Tales from the Yawning Portal}.",
+									"width": 1397,
+									"height": 1200
+								}
+							]
+						},
+						"{@note (1. Gargoyle (Tomb of Horrors); 2. Tarul Var (Dead in Thay); 3. Mialee (Sunless Citadel); 4. Sir Bluto Sans Pite (White Plume Mountain); 5. Tordek (Forge of Fury); 6. Xipe, the Oni (Hidden Shrine of Tamoachan); 7. Manticore (White Plume Mountain); 8. Kieren, Chosen of Ilmater (Dead in Thay))}"
+					],
+					"id": "17b"
+				}
+			],
+			"id": "172"
 		}
 	]
 }

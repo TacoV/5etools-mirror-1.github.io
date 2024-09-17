@@ -1,14 +1,14 @@
-@import "vars";
+@use "../vars/vars";
+@use "../vars/vars-night";
 
 .dm-blank__ {
 	&panel {
-		background: $rgb-bg;
+		background: vars.$rgb-bg;
 	}
 }
 
-.night-mode .dm-blank__ {
+.ve-night-mode .dm-blank__ {
 	&panel {
-		background: $rgb-bg--night;
+		background: vars-night.$rgb-bg--night;
 	}
 }
-

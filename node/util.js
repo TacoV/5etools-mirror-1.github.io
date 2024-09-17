@@ -1,4 +1,4 @@
-import * as fs from "fs";
+import fs from "fs";
 import https from "https";
 
 function readJson (path) {
@@ -22,8 +22,17 @@ const FILE_EXTENSION_ALLOWLIST = [
 
 const FILE_PREFIX_BLOCKLIST = [
 	"bookref-",
-	"foundry-",
 	"gendata-",
+];
+
+const DIR_PREFIX_BLOCKLIST = [
+	"_",
+];
+
+const DIR_BLOCKLIST = [
+	".git",
+	".idea",
+	"node_modules",
 ];
 
 /**
@@ -31,22 +40,33 @@ const FILE_PREFIX_BLOCKLIST = [
  *
  * @param [opts] Options object.
  * @param [opts.blocklistFilePrefixes] Blocklisted filename prefixes (case sensitive).
+ * @param [opts.blocklistDirPrefixes] Blocklisted directory prefixes (case sensitive).
  * @param [opts.allowlistFileExts] Allowlisted filename extensions (case sensitive).
  * @param [opts.dir] Directory to list.
  * @param [opts.allowlistDirs] Directory allowlist.
+ * @param [opts.blocklistDirs] Directory blocklist.
  */
 function listFiles (opts) {
 	opts = opts || {};
-	opts.dir = opts.dir || "./data";
-	opts.blocklistFilePrefixes = opts.blocklistFilePrefixes || FILE_PREFIX_BLOCKLIST;
-	opts.allowlistFileExts = opts.allowlistFileExts || FILE_EXTENSION_ALLOWLIST;
+	opts.dir = opts.dir ?? "./data";
+	opts.blocklistFilePrefixes = opts.blocklistFilePrefixes === undefined ? FILE_PREFIX_BLOCKLIST : opts.blocklistFilePrefixes;
+	opts.blocklistDirPrefixes = opts.blocklistDirPrefixes === undefined ? DIR_PREFIX_BLOCKLIST : opts.blocklistDirPrefixes;
+	opts.allowlistFileExts = opts.allowlistFileExts === undefined ? FILE_EXTENSION_ALLOWLIST : opts.allowlistFileExts;
 	opts.allowlistDirs = opts.allowlistDirs || null;
+	opts.blocklistDirs = opts.blocklistDirs === undefined ? DIR_BLOCKLIST : opts.blocklistDirs;
 
 	const dirContent = fs.readdirSync(opts.dir, "utf8")
 		.filter(file => {
 			const path = `${opts.dir}/${file}`;
-			if (isDirectory(path)) return opts.allowlistDirs ? opts.allowlistDirs.includes(path) : true;
-			return !opts.blocklistFilePrefixes.some(it => file.startsWith(it)) && opts.allowlistFileExts.some(it => file.endsWith(it));
+
+			if (isDirectory(path)) {
+				if (opts.blocklistDirPrefixes != null && opts.blocklistDirPrefixes.some(it => file.startsWith(it))) return false;
+				if (opts.blocklistDirs != null && opts.blocklistDirs.some(it => it === file)) return false;
+				return opts.allowlistDirs ? opts.allowlistDirs.includes(path) : true;
+			}
+
+			return (opts.blocklistFilePrefixes == null || !opts.blocklistFilePrefixes.some(it => file.startsWith(it)))
+				&& (opts.allowlistFileExts == null || opts.allowlistFileExts.some(it => file.endsWith(it)));
 		})
 		.map(file => `${opts.dir}/${file}`);
 
@@ -76,33 +96,43 @@ class PatchLoadJson {
 
 	static _CACHE_HTTP_REQUEST = {};
 
+	static async _pLoadUrl (url) {
+		if (!url.startsWith("http")) return this._CACHE_HTTP_REQUEST[url] = readJson(url);
+
+		if (process.env.HOMEBREW_REPO_DIR && DataUtil.brew.isUrlUnderDefaultRoot(url)) {
+			const urlLocal = [
+				process.env.HOMEBREW_REPO_DIR.trim(),
+				DataUtil.brew.getUrlRelativeToDefaultRoot(url),
+			]
+				.join("/")
+				.replace(/\/+/g, "/");
+			return this._CACHE_HTTP_REQUEST[url] = readJson(urlLocal);
+		}
+
+		return this._CACHE_HTTP_REQUEST[url] ||= new Promise((resolve, reject) => {
+			https
+				.get(
+					url,
+					resp => {
+						let stack = "";
+						resp.on("data", chunk => stack += chunk);
+						resp.on("end", () => resolve(JSON.parse(stack)));
+					},
+				)
+				.on("error", err => reject(err));
+		});
+	}
+
 	static patchLoadJson () {
 		if (this._PATCH_STACK++) return;
 
 		PatchLoadJson._CACHED = PatchLoadJson._CACHED || DataUtil.loadJSON.bind(DataUtil);
 
-		const pLoadUrl = async url => {
-			if (!url.startsWith("http")) return readJson(url);
-
-			return this._CACHE_HTTP_REQUEST[url] ||= new Promise((resolve, reject) => {
-				https
-					.get(
-						url,
-						resp => {
-							let stack = "";
-							resp.on("data", chunk => stack += chunk);
-							resp.on("end", () => resolve(JSON.parse(stack)));
-						},
-					)
-					.on("error", err => reject(err));
-			});
-		};
-
 		const loadJsonCache = {};
 		DataUtil.loadJSON = (url) => {
 			if (!loadJsonCache[url]) {
 				loadJsonCache[url] = (async () => {
-					const data = await pLoadUrl(url);
+					const data = await this._pLoadUrl(url);
 					await DataUtil.pDoMetaMerge(url, data, {isSkipMetaMergeCache: true});
 					return data;
 				})();
@@ -111,7 +141,7 @@ class PatchLoadJson {
 		};
 
 		PatchLoadJson._CACHED_RAW = PatchLoadJson._CACHED_RAW || DataUtil.loadRawJSON.bind(DataUtil);
-		DataUtil.loadRawJSON = async (url) => pLoadUrl(url);
+		DataUtil.loadRawJSON = async (url) => this._pLoadUrl(url);
 	}
 
 	static unpatchLoadJson () {
@@ -121,28 +151,6 @@ class PatchLoadJson {
 		if (PatchLoadJson._CACHED_RAW) DataUtil.loadRawJSON = PatchLoadJson._CACHED_RAW;
 	}
 }
-
-class ArgParser {
-	static parse () {
-		process.argv
-			.slice(2)
-			.forEach(arg => {
-				let [k, v] = arg.split("=").map(it => it.trim()).filter(Boolean);
-				if (v == null) ArgParser.ARGS[k] = true;
-				else {
-					v = v
-						.replace(/^"(.*)"$/, "$1")
-						.replace(/^'(.*)'$/, "$1")
-					;
-
-					if (!isNaN(v)) ArgParser.ARGS[k] = Number(v);
-					else ArgParser.ARGS[k] = v;
-				}
-			});
-	}
-}
-ArgParser.ARGS = {};
-
 class Timer {
 	static _ID = 0;
 	static _RUNNING = {};
@@ -172,7 +180,6 @@ export {
 	readJson,
 	listFiles,
 	FILE_PREFIX_BLOCKLIST,
-	ArgParser,
 	rmDirRecursiveSync,
 	Timer,
 };

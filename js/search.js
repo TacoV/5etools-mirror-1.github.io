@@ -1,4 +1,4 @@
-"use strict";
+import {UtilsOmnisearch} from "./utils-omnisearch.js";
 
 class SearchPage {
 	static async pInit () {
@@ -13,6 +13,23 @@ class SearchPage {
 		this._render();
 	}
 
+	/* -------------------------------------------- */
+
+	static _PARAM_QUERY = "q";
+	static _PARAM_LUCKY = "lucky";
+
+	static _getSearchParams () {
+		const params = new URLSearchParams(location.search);
+		return Object.fromEntries(params);
+	}
+
+	static _setSearchParams (obj) {
+		const params = new URLSearchParams(obj);
+		location.search = params.toString();
+	}
+
+	/* -------------------------------------------- */
+
 	static _render_$getBtnToggleFilter (
 		{
 			propOmnisearch,
@@ -22,7 +39,7 @@ class SearchPage {
 			text,
 		},
 	) {
-		const $btn = $(`<button class="btn btn-default" title="${title.qq()}">${text.qq()}</button>`)
+		const $btn = $(`<button class="ve-btn ve-btn-default" title="${title.qq()}">${text.qq()}</button>`)
 			.click(() => Omnisearch[fnDoToggleOmnisearch]());
 		const hkBrew = (val) => {
 			$btn.toggleClass("active", Omnisearch[propOmnisearch]);
@@ -43,46 +60,56 @@ class SearchPage {
 				if (evt.key !== "Enter") return;
 				$btnSearch.click();
 			})
-			.val(decodeURIComponent(location.search.slice(1).replace(/\+/g, " ")));
+			.val(this._getSearchParams()[this._PARAM_QUERY]);
 
-		const $btnSearch = $(`<button class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>`)
+		const $btnSearch = $(`<button class="ve-btn ve-btn-default"><span class="glyphicon glyphicon-search"></span></button>`)
 			.click(() => {
-				location.search = encodeURIComponent($iptSearch.val().trim().toLowerCase());
+				this._setSearchParams({
+					[this._PARAM_QUERY]: $iptSearch.val().trim().toLowerCase(),
+				});
 			});
 
-		const $btnHelp = $(`<button class="btn btn-default mr-2 mobile__hidden" title="Help"><span class="glyphicon glyphicon-info-sign"></span></button>`)
+		const $btnHelp = $(`<button class="ve-btn ve-btn-default mr-2 mobile__hidden" title="Help"><span class="glyphicon glyphicon-info-sign"></span></button>`)
 			.click(() => Omnisearch.doShowHelp());
+
+		const $btnTogglePartnered = this._render_$getBtnToggleFilter({
+			propOmnisearch: "isShowPartnered",
+			fnAddHookOmnisearch: "addHookPartnered",
+			fnDoToggleOmnisearch: "doTogglePartnered",
+			title: "Include Partnered",
+			text: "Partnered",
+		});
 
 		const $btnToggleBrew = this._render_$getBtnToggleFilter({
 			propOmnisearch: "isShowBrew",
 			fnAddHookOmnisearch: "addHookBrew",
 			fnDoToggleOmnisearch: "doToggleBrew",
-			title: "Filter Homebrew",
-			text: "Include Homebrew",
+			title: "Include Homebrew",
+			text: "Homebrew",
 		});
 
 		const $btnToggleUa = this._render_$getBtnToggleFilter({
 			propOmnisearch: "isShowUa",
 			fnAddHookOmnisearch: "addHookUa",
 			fnDoToggleOmnisearch: "doToggleUa",
-			title: "Filter Unearthed Arcana and other unofficial source results",
-			text: "Include UA",
+			title: "Include Unearthed Arcana and other unofficial source results",
+			text: "UA/Etc.",
 		});
 
 		const $btnToggleBlocklisted = this._render_$getBtnToggleFilter({
 			propOmnisearch: "isShowBlocklisted",
 			fnAddHookOmnisearch: "addHookBlocklisted",
 			fnDoToggleOmnisearch: "doToggleBlocklisted",
-			title: "Filter blocklisted content results",
-			text: "Include Blocklisted",
+			title: "Include blocklisted content results",
+			text: "Blocklisted",
 		});
 
 		const $btnToggleSrd = this._render_$getBtnToggleFilter({
 			propOmnisearch: "isSrdOnly",
 			fnAddHookOmnisearch: "addHookSrdOnly",
 			fnDoToggleOmnisearch: "doToggleSrdOnly",
-			title: "Filter non- Systems Reference Document results",
-			text: "SRD Only",
+			title: "Exclude non- Systems Reference Document results",
+			text: "SRD",
 		});
 
 		const handleMassExpandCollapse = mode => {
@@ -95,27 +122,29 @@ class SearchPage {
 				.forEach(meta => meta.setIsExpanded(mode));
 		};
 
-		const $btnCollapseAll = $(`<button class="btn btn-default" title="Collapse All Results"><span class="glyphicon glyphicon-minus"></span></button>`)
+		const $btnCollapseAll = $(`<button class="ve-btn ve-btn-default" title="Collapse All Results"><span class="glyphicon glyphicon-minus"></span></button>`)
 			.click(() => handleMassExpandCollapse(false));
 
-		const $btnExpandAll = $(`<button class="btn btn-default" title="Expand All Results"><span class="glyphicon glyphicon-plus"></span></button>`)
+		const $btnExpandAll = $(`<button class="ve-btn ve-btn-default" title="Expand All Results"><span class="glyphicon glyphicon-plus"></span></button>`)
 			.click(() => handleMassExpandCollapse(true));
 
 		SearchPage._$wrpResults = $(`<div class="ve-flex-col w-100">${this._getWrpResult_message("Loading...")}</div>`);
 
 		$$(SearchPage._$wrp)`<div class="ve-flex-col w-100 pg-search__wrp">
-			<div class="ve-flex-v-center mb-2 mobile-ish__ve-flex-col">
-				<div class="ve-flex-v-center input-group btn-group mr-2 w-100 mobile-ish__mb-2">${$iptSearch}${$btnSearch}</div>
+			<div class="ve-flex-v-center mb-2 mobile-lg__ve-flex-col">
+				<div class="ve-flex-v-center input-group ve-btn-group mr-2 w-100 mobile-lg__mb-2">${$iptSearch}${$btnSearch}</div>
 
-				<div class="ve-flex-v-center mobile__ve-flex-col mobile-ish__ve-flex-ai-start mobile-ish__w-100">
+				<div class="ve-flex-v-center mobile__ve-flex-col mobile-lg__ve-flex-ai-start mobile-lg__w-100">
 					${$btnHelp}
-					<div class="ve-flex-v-center btn-group mr-2 mobile__mb-2 mobile__mr-0">
+					<div class="mr-2 ml-1 mobile__ml-0 mobile__mb-2 italic">Include</div>
+					<div class="ve-flex-v-center ve-btn-group mr-2 mobile__mb-2 mobile__mr-0">
+						${$btnTogglePartnered}
 						${$btnToggleBrew}
 						${$btnToggleUa}
 						${$btnToggleBlocklisted}
 						${$btnToggleSrd}
 					</div>
-					<div class="btn-group ve-flex-v-center">
+					<div class="ve-btn-group ve-flex-v-center">
 						${$btnCollapseAll}
 						${$btnExpandAll}
 					</div>
@@ -146,12 +175,14 @@ class SearchPage {
 		}
 		SearchPage._rowMetas = [];
 
-		if (!location.search.slice(1)) {
+		const params = this._getSearchParams();
+
+		if (!params[this._PARAM_QUERY]) {
 			SearchPage._$wrpResults.empty().append(this._getWrpResult_message("Enter a search to view results"));
 			return;
 		}
 
-		Omnisearch.pGetResults(decodeURIComponent(location.search.slice(1).replace(/\+/g, " ")))
+		Omnisearch.pGetResults(params[this._PARAM_QUERY])
 			.then(results => {
 				SearchPage._$wrpResults.empty();
 
@@ -160,12 +191,35 @@ class SearchPage {
 					return;
 				}
 
+				if (this._PARAM_LUCKY in params) {
+					const [href] = results
+						.map(res => Omnisearch.getResultHref(res.doc))
+						.filter(Boolean);
+
+					if (href) {
+						window.location = `${Renderer.get().baseUrl}${href}`;
+						return;
+					}
+				}
+
 				SearchPage._rowMetas = results.map(result => {
 					const r = result.doc;
 
 					const $link = Omnisearch.$getResultLink(r);
 
-					const {s: source, p: page, h: isHoverable, c: category, u: hash, r: isSrd} = r;
+					const {
+						source,
+						page,
+						isHoverable,
+						category,
+						hash,
+						isSrd,
+
+						ptStyle,
+						sourceAbv,
+						sourceFull,
+					} = UtilsOmnisearch.getUnpackedSearchResult(r);
+
 					const ptPageInner = page ? `page ${page}` : "";
 					const adventureBookSourceHref = SourceUtil.getAdventureBookSourceHref(source, page);
 					const ptPage = ptPageInner && adventureBookSourceHref
@@ -173,7 +227,7 @@ class SearchPage {
 						: ptPageInner;
 
 					const ptSourceInner = source
-						? `<i>${Parser.sourceJsonToFull(source)}</i> (<span class="${Parser.sourceJsonToColor(source)}" ${Parser.sourceJsonToStyle(source)}>${Parser.sourceJsonToAbv(source)}</span>)${isSrd ? `<span class="ve-muted relative help-subtle pg-search__disp-srd" title="Available in the Systems Reference Document">[SRD]</span>` : ""}${Parser.sourceJsonToMarkerHtml(source, {isList: false, additionalStyles: "pg-search__disp-source-marker"})}`
+						? `<i>${sourceFull}</i> (<span class="${Parser.sourceJsonToSourceClassname(source)}" ${ptStyle}>${sourceAbv}</span>)${isSrd ? `<span class="ve-muted relative help-subtle pg-search__disp-srd" title="Available in the Systems Reference Document">[SRD]</span>` : ""}${Parser.sourceJsonToMarkerHtml(source, {isList: false, additionalStyles: "pg-search__disp-source-marker"})}`
 						: `<span></span>`;
 					const ptSource = ptPage || !adventureBookSourceHref
 						? ptSourceInner
@@ -214,7 +268,7 @@ class SearchPage {
 							handleIsExpanded();
 						};
 
-						const $btnTogglePreview = $(`<button class="btn btn-default btn-xs h-100" title="Toggle Preview"></button>`)
+						const $btnTogglePreview = $(`<button class="ve-btn ve-btn-default ve-btn-xs h-100" title="Toggle Preview"></button>`)
 							.click(() => {
 								out.isExpanded = !out.isExpanded;
 								handleIsExpanded();
@@ -243,18 +297,49 @@ class SearchPage {
 									// region Render tokens, where available
 									let isImagePopulated = false;
 
-									switch (category) {
-										case Parser.CAT_ID_CREATURE:
-										case Parser.CAT_ID_VEHICLE:
-										case Parser.CAT_ID_OBJECT: {
-											const hasToken = ent.tokenUrl || ent.hasToken;
-											if (hasToken) {
-												const fnGetTokenUrl = category === Parser.CAT_ID_CREATURE ? Renderer.monster.getTokenUrl : category === Parser.CAT_ID_VEHICLE ? Renderer.vehicle.getTokenUrl : Renderer.object.getTokenUrl;
+									const displayTokenImage = (
+										{
+											fnHasToken,
+											fnGetTokenUrl,
+										},
+										ent,
+									) => {
+										if (!fnHasToken(ent)) return;
 
-												isImagePopulated = true;
-												const tokenUrl = fnGetTokenUrl(ent);
-												$dispImage.html(`<img src="${tokenUrl}" class="w-100 h-100" alt="Token Image: ${(ent.name || "").qq()}" ${ent.tokenCredit ? `title="Credit: ${ent.tokenCredit.qq()}"` : ""} loading="lazy">`);
-											}
+										isImagePopulated = true;
+										const tokenUrl = fnGetTokenUrl(ent);
+										$dispImage.html(`<img src="${tokenUrl}" class="w-100 h-100" alt="Token Image: ${(ent.name || "").qq()}" ${ent.tokenCredit ? `title="Credit: ${ent.tokenCredit.qq()}"` : ""} loading="lazy">`);
+									};
+
+									switch (category) {
+										case Parser.CAT_ID_CREATURE: {
+											displayTokenImage(
+												{
+													fnHasToken: Renderer.monster.hasToken,
+													fnGetTokenUrl: Renderer.monster.getTokenUrl,
+												},
+												ent,
+											);
+											break;
+										}
+										case Parser.CAT_ID_VEHICLE: {
+											displayTokenImage(
+												{
+													fnHasToken: Renderer.vehicle.hasToken,
+													fnGetTokenUrl: Renderer.vehicle.getTokenUrl,
+												},
+												ent,
+											);
+											break;
+										}
+										case Parser.CAT_ID_OBJECT: {
+											displayTokenImage(
+												{
+													fnHasToken: Renderer.object.hasToken,
+													fnGetTokenUrl: Renderer.object.getTokenUrl,
+												},
+												ent,
+											);
 											break;
 										}
 

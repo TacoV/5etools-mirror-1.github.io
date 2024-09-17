@@ -19,6 +19,8 @@ Renderer.dice = {
 
 	_isManualMode: false,
 
+	/* -------------------------------------------- */
+
 	// region Utilities
 	DICE: [4, 6, 8, 10, 12, 20, 100],
 	getNextDice (faces) {
@@ -33,6 +35,8 @@ Renderer.dice = {
 		else return null;
 	},
 	// endregion
+
+	/* -------------------------------------------- */
 
 	// region DM Screen integration
 	_panel: null,
@@ -59,6 +63,27 @@ Renderer.dice = {
 		return Renderer.dice._$wrpRoll;
 	},
 	// endregion
+
+	/* -------------------------------------------- */
+
+	bindOnclickListener (ele) {
+		ele.addEventListener("click", (evt) => {
+			const eleDice = evt.target.hasAttribute("data-packed-dice")
+				? evt.target
+				// Tolerate e.g. Bestiary wrapped proficiency dice rollers
+				: evt.target.parentElement?.hasAttribute("data-packed-dice")
+					? evt.target.parentElement
+					: null;
+
+			if (!eleDice) return;
+
+			evt.preventDefault();
+			evt.stopImmediatePropagation();
+			Renderer.dice.pRollerClickUseData(evt, eleDice).then(null);
+		});
+	},
+
+	/* -------------------------------------------- */
 
 	/**
 	 * Silently roll an expression and get the result.
@@ -195,6 +220,8 @@ Renderer.dice = {
 	// endregion
 
 	// region Event handling
+	RE_PROMPT: /#\$prompt_number:?([^$]*)\$#/g,
+
 	async pRollerClickUseData (evt, ele) {
 		evt.stopPropagation();
 		evt.preventDefault();
@@ -233,10 +260,8 @@ Renderer.dice = {
 
 		if (!chosenRollData) return;
 
-		const rePrompt = /#\$prompt_number:?([^$]*)\$#/g;
 		const results = [];
-		let m;
-		while ((m = rePrompt.exec(chosenRollData.toRoll))) {
+		for (const m of chosenRollData.toRoll.matchAll(Renderer.dice.RE_PROMPT)) {
 			const optionsRaw = m[1];
 			const opts = {};
 			if (optionsRaw) {
@@ -263,8 +288,7 @@ Renderer.dice = {
 		}
 
 		const rollDataCpy = MiscUtil.copyFast(chosenRollData);
-		rePrompt.lastIndex = 0;
-		rollDataCpy.toRoll = rollDataCpy.toRoll.replace(rePrompt, () => results.shift());
+		rollDataCpy.toRoll = rollDataCpy.toRoll.replace(Renderer.dice.RE_PROMPT, () => results.shift());
 
 		// If there's a prompt, prompt the user to select the dice
 		let rollDataCpyToRoll;
@@ -406,42 +430,23 @@ Renderer.dice = {
 		// Try to use the entry's built-in name
 		if (entry.name) return entry.name;
 
-		// try to use table caption
-		let titleMaybe = $ele.closest(`table:not(.stats)`).children(`caption`).text();
-		if (titleMaybe) return titleMaybe.trim();
+		const $eleNameAncestor = $ele.closest(`[data-roll-name-ancestor]`);
+		if (!$eleNameAncestor.length) return "";
 
-		// try to use list item title
-		titleMaybe = $ele.parent().children(`.rd__list-item-name`).text();
-		if (titleMaybe) return titleMaybe.trim().replace(/[.,:]$/, "");
+		const dataName = $eleNameAncestor.attr("data-roll-name-ancestor");
+		if (dataName) return dataName;
 
-		// use the section title, where applicable
-		titleMaybe = $ele.closest(`div`).children(`.rd__h`).first().find(`.entry-title-inner`).text();
-		if (titleMaybe) {
-			titleMaybe = titleMaybe.trim().replace(/[.,:]$/, "");
-			return titleMaybe;
-		}
-
-		// try to use stats table name row
-		titleMaybe = $ele.closest(`table.stats`).children(`tbody`).first().children(`tr`).first().find(`.rnd-name .stats-name`).text();
-		if (titleMaybe) return titleMaybe.trim();
-
-		if (UrlUtil.getCurrentPage() === UrlUtil.PG_CHARACTERS) {
-			// try use mini-entity name
-			titleMaybe = ($ele.closest(`.chr-entity__row`).find(".chr-entity__ipt-name").val() || "").trim();
-			if (titleMaybe) return titleMaybe;
-		}
-
-		return titleMaybe;
+		return $eleNameAncestor.text().trim().replace(/[.,:]$/, "");
 	},
 
 	_pRollerClick_attemptToGetNameOfRoller ({$ele}) {
-		const $hov = $ele.closest(`.hwin`);
-		if ($hov.length) return $hov.find(`.stats-name`).first().text();
-		const $roll = $ele.closest(`.out-roll-wrp`);
-		if ($roll.length) return $roll.data("name");
-		const $dispPanelTitle = $ele.closest(`.dm-screen-panel`).children(`.panel-control-title`);
-		if ($dispPanelTitle.length) return $dispPanelTitle.text().trim();
-		let name = document.title.replace("- 5etools", "").trim();
+		const $eleNameAncestor = $ele.closest(`[data-roll-name-ancestor-roller]`);
+		if ($eleNameAncestor.length) return $eleNameAncestor.attr("data-roll-name-ancestor-roller");
+
+		const $roll = $ele.closest(`[data-rollbox-last-rolled-by-name]`);
+		if ($roll.length) return $roll.attr("data-rollbox-last-rolled-by-name");
+
+		const name = document.title.replace("- 5etools", "").trim();
 		return name === "DM Screen" ? "Dungeon Master" : name;
 	},
 
@@ -738,7 +743,7 @@ Renderer.dice = {
 							${message ? `<span class="message">${message}</span>` : ""}
 						</div>
 						<div class="out-roll-item-button-wrp">
-							<button title="Copy to input" class="btn btn-default btn-xs btn-copy-roll" onclick="Renderer.dice._$iptRoll.val('${tree.toString().replace(/\s+/g, "")}'); Renderer.dice._$iptRoll.focus()"><span class="glyphicon glyphicon-pencil"></span></button>
+							<button title="Copy to input" class="ve-btn ve-btn-default ve-btn-xs ve-btn-copy-roll" onclick="Renderer.dice._$iptRoll.val('${tree.toString().replace(/\s+/g, "")}'); Renderer.dice._$iptRoll.focus()"><span class="glyphicon glyphicon-pencil"></span></button>
 						</div>
 					</div>`);
 
@@ -990,9 +995,9 @@ Use <span class="out-roll-item-code">/macro list</span> to list saved macros.<br
 	},
 
 	_checkHandleName (name) {
-		if (!Renderer.dice._$lastRolledBy || Renderer.dice._$lastRolledBy.data("name") !== name) {
+		if (!Renderer.dice._$lastRolledBy || Renderer.dice._$lastRolledBy.attr("data-rollbox-last-rolled-by-name") !== name) {
 			Renderer.dice._$outRoll.prepend(`<div class="ve-muted out-roll-id">${name}</div>`);
-			Renderer.dice._$lastRolledBy = $(`<div class="out-roll-wrp"></div>`).data("name", name);
+			Renderer.dice._$lastRolledBy = $(`<div class="out-roll-wrp" data-rollbox-last-rolled-by-name="${name.qq()}"></div>`);
 			Renderer.dice._$outRoll.prepend(Renderer.dice._$lastRolledBy);
 		}
 	},
@@ -1074,7 +1079,7 @@ Renderer.dice.lang = {
 			.replace(/\s*?\bdivided by\b\s*?/g, " / ")
 			// endregion
 			.replace(/\s+/g, "")
-			.replace(/[\u2012\u2013\u2014]/g, "-") // convert dashes
+			.replace(/[\u2012-\u2014\u2212]/g, "-") // convert dashes
 			.replace(/[×]/g, "*") // convert mult signs
 			.replace(/\*\*/g, "^") // convert ** to ^
 			.replace(/÷/g, "/") // convert div signs

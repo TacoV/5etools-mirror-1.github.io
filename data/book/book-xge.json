@@ -3584,7 +3584,7 @@
 											"name": "Circles",
 											"page": 87,
 											"entries": [
-												"This method depicts everything using squares, and a circular area of effect becomes square in it, whether the area is a sphere, cylinder, or radius. For instance, the 10-foot radius of flame strike, which has a diameter of 20 feet, is expressed as a square that is 20 feet on a side, as shown in diagram 2.3. Diagram 2.4 shows that area with total cover inside it."
+												"This method depicts everything using squares, and a circular area of effect becomes square in it, whether the area is a sphere, cylinder, or radius. For instance, the 10-foot radius of flame strike, which has a diameter of 20 feet, is expressed as a square that is 20 feet on a side, as shown in diagram 2.3. Diagram 2.4 shows that area with {@quickref Cover||3||total cover} inside it."
 											],
 											"id": "04c"
 										},
@@ -5785,7 +5785,7 @@
 											"name": "Complications",
 											"page": 128,
 											"entries": [
-												"Characters who carouse risk bar brawls, accumulating a cloud of nasty rumors, and building a bad reputation around town. As a rule of thumb, a character has a {@chance 10|10 percent} chance of triggering a complication for each workweek of carousing.",
+												"Characters who carouse risk bar brawls, accumulating a cloud of nasty rumors, and building a bad reputation around town. As a rule of thumb, a character has a {@chance 10} chance of triggering a complication for each workweek of carousing.",
 												{
 													"type": "table",
 													"caption": "Lower-Class Carousing Complications",
@@ -6098,7 +6098,7 @@
 											"name": "Complications",
 											"page": 129,
 											"entries": [
-												"Most of the complications involved in creating something, especially a magic item, are linked to the difficulty in finding rare ingredients or components needed to complete the work. The complications a character might face as byproducts of the creation process are most interesting when the characters are working on a magic item: there's a {@chance 10|10 percent} chance for every five workweeks spent on crafting an item that a complication occurs. The Crafting Complications table provides examples of what might happen.",
+												"Most of the complications involved in creating something, especially a magic item, are linked to the difficulty in finding rare ingredients or components needed to complete the work. The complications a character might face as byproducts of the creation process are most interesting when the characters are working on a magic item: there's a {@chance 10} chance for every five workweeks spent on crafting an item that a complication occurs. The Crafting Complications table provides examples of what might happen.",
 												{
 													"type": "table",
 													"caption": "Crafting Complications",
@@ -6375,7 +6375,7 @@
 											"name": "Complications",
 											"page": 130,
 											"entries": [
-												"Gambling tends to attract unsavory individuals. The potential complications involved come from run-ins with the law and associations with various criminals tied to the activity. Every workweek spent gambling brings a {@chance 10|10 percent} chance of a complication, examples of which are on the Gambling Complications table.",
+												"Gambling tends to attract unsavory individuals. The potential complications involved come from run-ins with the law and associations with various criminals tied to the activity. Every workweek spent gambling brings a {@chance 10} chance of a complication, examples of which are on the Gambling Complications table.",
 												{
 													"type": "table",
 													"caption": "Gambling Complications",
@@ -6483,7 +6483,7 @@
 											"name": "Complications",
 											"page": 131,
 											"entries": [
-												"Characters involved in pit fighting must deal with their opponents, the people who bet on matches, and the matches' promoters. Every workweek spent pit fighting brings a {@chance 10|10 percent} chance of a complication, examples of which are on the Pit Fighting Complications table.",
+												"Characters involved in pit fighting must deal with their opponents, the people who bet on matches, and the matches' promoters. Every workweek spent pit fighting brings a {@chance 10} chance of a complication, examples of which are on the Pit Fighting Complications table.",
 												{
 													"type": "table",
 													"caption": "Pit Fighting Complications",
@@ -6624,7 +6624,7 @@
 											"name": "Complications",
 											"page": 132,
 											"entries": [
-												"Temples can be labyrinths of political and social scheming. Even the best-intentioned sect can fall prone to rivalries. A character who serves a temple risks becoming embroiled in such struggles. Every workweek spent in religious service brings a {@chance 10|10 percent} chance of a complication, examples of which are on the Religious Service Complications table.",
+												"Temples can be labyrinths of political and social scheming. Even the best-intentioned sect can fall prone to rivalries. A character who serves a temple risks becoming embroiled in such struggles. Every workweek spent in religious service brings a {@chance 10} chance of a complication, examples of which are on the Religious Service Complications table.",
 												{
 													"type": "table",
 													"caption": "Religious Service Complications",
@@ -6743,7 +6743,7 @@
 											"page": 132,
 											"entries": [
 												"The greatest risk in research is uncovering false information. Not all lore is accurate or truthful, and a rival with a scholarly bent might try to lead the character astray, especially if the object of the research is known to the rival. The rival might plant false information, bribe sages to give bad advice, or steal key tomes needed to find the truth.",
-												"In addition, a character might run into other complications during research. Every workweek spent in research brings a {@chance 10|10 percent} chance of a complication, examples of which are on the Research Complications table.",
+												"In addition, a character might run into other complications during research. Every workweek spent in research brings a {@chance 10} chance of a complication, examples of which are on the Research Complications table.",
 												{
 													"type": "table",
 													"caption": "Research Complications",
@@ -6878,7 +6878,7 @@
 											"name": "Complications",
 											"page": 133,
 											"entries": [
-												"Crafting a spell scroll is a solitary task, unlikely to attract much attention. The complications that arise are more likely to involve the preparation needed for the activity. Every workweek spent scribing brings a {@chance 10|10 percent} chance of a complication, examples of which are on the Scribe a Scroll Complications table.",
+												"Crafting a spell scroll is a solitary task, unlikely to attract much attention. The complications that arise are more likely to involve the preparation needed for the activity. Every workweek spent scribing brings a {@chance 10} chance of a complication, examples of which are on the Scribe a Scroll Complications table.",
 												{
 													"type": "table",
 													"caption": "Scribe a Scroll Complications",
@@ -7024,7 +7024,7 @@
 											"name": "Complications",
 											"page": 133,
 											"entries": [
-												"The main risk in selling a magic item lies in attracting thieves and anyone else who wants the item but doesn't want to pay for it. Other folk might try to undermine a deal in order to bolster their own business or seek to discredit the character as a legitimate seller. Every workweek spent trying to sell an item brings a {@chance 10|10 percent} chance of a complication, examples of which are on the Magic Item Sale Complications table.",
+												"The main risk in selling a magic item lies in attracting thieves and anyone else who wants the item but doesn't want to pay for it. Other folk might try to undermine a deal in order to bolster their own business or seek to discredit the character as a legitimate seller. Every workweek spent trying to sell an item brings a {@chance 10} chance of a complication, examples of which are on the Magic Item Sale Complications table.",
 												{
 													"type": "table",
 													"caption": "Magic Item Sale Complications",
@@ -7101,7 +7101,7 @@
 											"name": "Complications",
 											"page": 134,
 											"entries": [
-												"Complications that arise while training typically involve the teacher. Every ten workweeks spent in training brings a {@chance 10|10 percent} chance of a complication, examples of which are on the Training Complications table.",
+												"Complications that arise while training typically involve the teacher. Every ten workweeks spent in training brings a {@chance 10} chance of a complication, examples of which are on the Training Complications table.",
 												{
 													"type": "table",
 													"caption": "Training Complications",
@@ -7211,7 +7211,7 @@
 											"name": "Complications",
 											"page": 134,
 											"entries": [
-												"Ordinary work is rarely filled with significant complications. Still, the Work Complications table can add some difficulties to a worker's life. Each workweek of activity brings a {@chance 10|10 percent} chance that a character encounters a complication.",
+												"Ordinary work is rarely filled with significant complications. Still, the Work Complications table can add some difficulties to a worker's life. Each workweek of activity brings a {@chance 10} chance that a character encounters a complication.",
 												{
 													"type": "table",
 													"caption": "Work Complications",
@@ -7742,6 +7742,106 @@
 				}
 			],
 			"id": "0e3"
+		},
+		{
+			"type": "section",
+			"name": "Credits",
+			"entries": [
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Lead Designers:",
+							"entry": "Jeremy Crawford, Mike Mearls"
+						},
+						{
+							"type": "item",
+							"name": "Designer:",
+							"entry": "Robert J. Schwalb"
+						},
+						{
+							"type": "item",
+							"name": "Additional Design:",
+							"entry": "Adam Lee, Christopher Perkins, Matt Sernett"
+						},
+						{
+							"type": "item",
+							"name": "Development:",
+							"entry": "Ben Petrisor"
+						},
+						{
+							"type": "item",
+							"name": "Managing Editor:",
+							"entry": "Jeremy Crawford"
+						},
+						{
+							"type": "item",
+							"name": "Editor:",
+							"entry": "Kim Mohan"
+						},
+						{
+							"type": "item",
+							"name": "Additional Editing:",
+							"entry": "Michele Carter, Scott Fitzgerald Gray"
+						},
+						{
+							"type": "item",
+							"name": "Art Director:",
+							"entry": "Kate Irwin"
+						},
+						{
+							"type": "item",
+							"name": "Additional Art Direction:",
+							"entry": "Shauna Narciso"
+						},
+						{
+							"type": "item",
+							"name": "Graphic Designer:",
+							"entry": "Emi Tanji"
+						},
+						{
+							"type": "item",
+							"name": "Cover Illustrator:",
+							"entry": "Jason Rainville"
+						},
+						{
+							"type": "item",
+							"name": "Cover Illustrator (Alternative Cover):",
+							"entry": "Hydro74"
+						},
+						{
+							"type": "item",
+							"name": "Interior Illustrators:",
+							"entry": "Rob Alexander, Mark Behm, Eric Belisle, Zoltan Boros, Christopher Bradley, Noah Bradley, Sam Burley, Jedd Chevrier, jD, Olga Drebas, Jesper Ejsing, Wayne England, Leesha Hannigan, Jon Hodgson, Ralph Horsley, Lake Hurwitz, Julian Kok, Raphael Lübke, Warren Mahy, Mark Molnar, Scott Murphy, Adam Paquette, Claudio Pozas, Vincent Proce, A.M. Sartor, Chris Seaman, David Sladek, Craig J Spearing, Cory Trego-Erdner, Beth Trott, Jose Vega, Richard Whitters, Ben Wootten, Min Yum"
+						},
+						{
+							"type": "item",
+							"name": "Project Management:",
+							"entry": "Stan!, Heather Fleming"
+						},
+						{
+							"type": "item",
+							"name": "Production Services:",
+							"entry": "Cynda Callaway, Jefferson Dunlap, David Gershman, Kevin Yee"
+						},
+						"Includes material from Princes of the Apocalypse (2015) and Sword Coast Adventurer's Guide (2015)",
+						"Special thanks to Jennell Jaquays",
+						{
+							"type": "item",
+							"name": "Other D&D Team Members:",
+							"entry": "Bart Carroll, Trevor Kidd, Christopher Lindsay, Shelly Mazzanoble, Hilary Ross, Liz Schuh, Nathan Stewart, Greg Tito"
+						},
+						{
+							"type": "item",
+							"name": "Playtesters:",
+							"entry": "Charles Benscoter, Dan Klinestiver, Dave Kovarik, Davena Oaks, Kevin Engling, Teos Abadia, Robert Alaniz, Phil Allison, Robert Allison, Jay Anderson, Paul Aparicio, Paul Van Arcken, Dee Ashe, Andrew Bahls, Chris Balboni, Jason Baxter, Jerry Behrendt, Teddy Benson, Deb Berlin, Stacy Bermes, Jim Berrier, Lauren Bilanko, Jordan Brass, Ken J. Breese, Robert \"Bobby\" Brown, Matthew Budde, Matt Burton, David Callander, Mik Calow, Richard Chamberlain, Wayne Chang, Emre Cihangir, Bruno Cobbi, Garrett Colón, Mark Craddock, Max Cushner, Brian Dahl, Derek DaSilva, Phil Davidson, Krupal Desai, Scott Deschler, Yorcho Diaz, Mario A. DiGirolamo, Adam Dowdy, Curt Duval, Jay Elmore, Russell Engel, Andrew Epps, David M. Ewalt, Justin Faris, Jared Fegan, Frank Foulis, Max Frutig, Travis Fuller, Kyle Garms, Ben Garton, Louis Gentile, Genesis Emanuale Martinez Gonzalez, Derek A. Gray, Richard Green, Kevin Grigsby, Christopher Hackler, Bryan Harris, Gregory Harris, Randall Harris, Fred Harvey, Ian Hawthorne, Adam Hennebeck, Sterling Hershey, Justin Hicks, Will Hoffman, Scott Holmgren, Paul Hughes, Daniel E. Chapman II, Stanislav Ivanov, Matt Jarmak, James Jorstad, Evan Jorstad, Alex Kammer, Joshua Kaufman, Bill Grishnak Kerney, Jake Kiefer, Chet King, Atis Kleinbergs, Steven Knight, David Krolnik, Yan Lacharité, Jon F. Lamkin, Marjorie Lamkin, Shane Leahy, Stephen Lindberg, Tom Lommel, Michael Long, Jonathan Longstaff, Ginny Loveday, Kevin D. Luebke, Michael Lydon, Matthew Maranda, Joel Marsh, Gleb Masaltsev, Chris McDaniel, Chris McGovern, Jim McKay, Mark Meredith, Mark Merida, Lou Michelli, David Middleton, Mike Mihalas, Mark A. Miller, Paige Miller, Ian Mills, Stacy Mills, David Milman, Daren Mitchell, TL Frasqueri-Molina, Scott Moore, David Morris, Tim Mottishaw, JoDee Murch, Joshua Murdock, William Myers, Walter Nau, Kevin Neff, Daniel \"KBlin\" Oliveira, Grigory Parovichnikov, Alan Patrick, Russ Paulsen, Matt Petruzzelli, Zachary Pickett, Chris Presnall, Nel Pulanco, Jack Reid, Joe Reilly, Renout van Rijn, Sam Robertson, Carlos Robles, Evan Rodarte, Matthew Roderick, Zane Romine, Nathan Ross, Dave Rosser, David Russell, Ruty Rutenberg, A.C. Ryder, Arthur Saucier, Benjamin Schindewolf, Ken Schreur, James Schweiss, the Seer, Jonathan Connor Self, Nicholas Sementelli, Arthur Severance, Ben Siekert, Jimmy Spiva, the Dead Squad, Francois P. Lefebvre Sr., Keaton Stamps, Matthew Talley, Dan Taylor, Kirsten A. Thomas, Laura Thompson, Jia Jian Tin, Kyle Turner, Justin Turner, Alex Vine, Yoerik de Voogd, Shane Walker, Matthew Warwick, Chris \"Waffles\" Wathen, Eric Weberg, Werebear, Gary West, Andy Wieland, Keith Williams, David Williamson, Travis Woodall, Arthur Wright, Keoki Young"
+						}
+					]
+				}
+			],
+			"id": "0e4"
 		}
 	]
 }

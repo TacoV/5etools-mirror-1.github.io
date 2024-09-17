@@ -30,7 +30,7 @@
 					"light",
 					"medium",
 					"heavy",
-					"{@item shield|phb|shields}"
+					"shield"
 				],
 				"weapons": [
 					"simple",
@@ -123,7 +123,7 @@
 					"armor": [
 						"light",
 						"medium",
-						"{@item shield|phb|shields}"
+						"shield"
 					],
 					"weapons": [
 						"simple",
@@ -172,296 +172,8 @@
 				"Extra Attack (3)|Fighter||20"
 			],
 			"subclassTitle": "Martial Archetype",
-			"fluff": [
-				{
-					"name": "Fighter",
-					"type": "section",
-					"entries": [
-						"A human in clanging plate armor holds her shield before her as she runs toward the massed goblins. An elf behind her, clad in studded leather armor, peppers the goblins with arrows loosed from his exquisite bow. The half-orc nearby shouts orders, helping the two combatants coordinate their assault to the best advantage.",
-						"A dwarf in chain mail interposes his shield between the ogre's club and his companion, knocking the deadly blow aside. His companion, a half-elf in scale armor, swings two scimitars in a blinding whirl as she circles the ogre, looking for a blind spot in its defenses.",
-						"A gladiator fights for sport in an arena, a master with his trident and net, skilled at toppling foes and moving them around for the crowd's delight\u2014and his own tactical advantage. His opponent's sword flares with blue light an instant before she sends lightning flashing forth to smite him.",
-						"All of these heroes are fighters, perhaps the most diverse class of characters in the worlds of Dungeons & Dragons. Questing knights, conquering overlords, royal champions, elite foot soldiers, hardened mercenaries, and bandit kings\u2014as fighters, they all share an unparalleled mastery with weapons and armor, and a thorough knowledge of the skills of combat. And they are well acquainted with death, both meting it out and staring it defiantly in the face.",
-						{
-							"type": "entries",
-							"name": "Well-Rounded Specialists",
-							"entries": [
-								"Fighters learn the basics of all combat styles. Every fighter can swing an axe, fence with a rapier, wield a longsword or a greatsword, use a bow, and even trap foes in a net with some degree of skill. Likewise, a fighter is adept with shields and every form of armor. Beyond that basic degree of familiarity, each fighter specializes in a certain style of combat. Some concentrate on archery, some on fighting with two weapons at once, and some on augmenting their martial skills with magic. This combination of broad general ability and extensive specialization makes fighters superior combatants on battlefields and in dungeons alike."
-							]
-						},
-						{
-							"type": "entries",
-							"name": "Trained for Danger",
-							"entries": [
-								"Not every member of the city watch, the village militia, or the queen's army is a fighter. Most of these troops are relatively untrained soldiers with only the most basic combat knowledge. Veteran soldiers, military officers, trained bodyguards, dedicated knights, and similar figures are fighters.",
-								"Some fighters feel drawn to use their training as adventurers. The dungeon delving, monster slaying, and other dangerous work common among adventurers is second nature for a fighter, not all that different from the life he or she left behind. There are greater risks, perhaps, but also much greater rewards\u2014few fighters in the city watch have the opportunity to discover a magic flame tongue sword, for example."
-							]
-						},
-						{
-							"type": "entries",
-							"name": "Creating a Fighter",
-							"entries": [
-								"As you build your fighter, think about two related elements of your character's background: Where did you get your combat training, and what set you apart from the mundane warriors around you? Were you particularly ruthless? Did you get extra help from a mentor, perhaps because of your exceptional dedication? What drove you to this training in the first place? A threat to your homeland, a thirst for revenge, or a need to prove yourself might all have been factors.",
-								"You might have enjoyed formal training in a noble's army or in a local militia. Perhaps you trained in a war academy, learning strategy, tactics, and military history. Or you might be self-taught\u2014unpolished but well tested. Did you take up the sword as a way to escape the limits of life on a farm, or are you following a proud family tradition? Where did you acquire your weapons and armor? They might have been military issue or family heirlooms, or perhaps you scrimped and saved for years to buy them. Your armaments are now among your most important possessions\u2014the only things that stand between you and death's embrace.",
-								{
-									"type": "entries",
-									"name": "Quick Build",
-									"entries": [
-										"You can make a fighter quickly by following these suggestions. First, make Strength or Dexterity your highest ability score, depending on whether you want to focus on melee weapons or on archery (or finesse weapons). Your next-highest score should be Constitution, or Intelligence if you plan to adopt the Eldritch Knight martial archetype. Second, choose the {@background soldier} background."
-									]
-								}
-							]
-						}
-					],
-					"source": "PHB",
-					"page": 70
-				},
-				{
-					"type": "section",
-					"entries": [
-						{
-							"type": "quote",
-							"entries": [
-								"Let me know when you're all done talking."
-							],
-							"by": "Tordek"
-						},
-						"Of all the adventurers in the worlds of D&D, the fighter is perhaps the greatest paradox. On the one hand, a singular feature of the class is that no two fighters ply their craft in quite the same way; their weapons, armor, and tactics differ across a vast spectrum. On the other hand, regardless of the tools and methods one uses, at the heart of every fighter's motivation lies the same basic truth: it is better to wound than to be wounded.",
-						"Although some adventuring fighters risk their lives fighting for glory or treasure, others are primarily concerned with the welfare of others. They put more value on the well-being of the society, the village, or the group than on their own safety. Even if there's gold in the offing, the true reward for most fighters comes from sending enemies to their doom.",
-						"The sections below offer ways to add a little depth and a few personal touches to your fighter character.",
-						{
-							"type": "entries",
-							"name": "Heraldic Sign",
-							"entries": [
-								"Fighters typically do battle for a cause. Some fight on behalf of kingdoms besieged by monsters, while others quest only for personal glory. In either case, a fighter often displays a heraldic sign that represents that cause, either adopting the symbol of a nation or a royal line, or creating a crest to represent one's self-interest.",
-								"Your character could be affiliated with an organization or a cause, and thus might already travel under a banner of some sort. If that's not the case, consider devising a heraldic sign that symbolizes an aspect of your nature or speaks to what you see as your purpose in the world.",
-								{
-									"type": "table",
-									"caption": "Heraldic Signs",
-									"colLabels": [
-										"{@dice d6}",
-										"Heraldic Signs"
-									],
-									"colStyles": [
-										"col-1 text-center",
-										"col-11"
-									],
-									"rows": [
-										[
-											{
-												"type": "cell",
-												"roll": {
-													"exact": 1
-												}
-											},
-											"A rampant golden dragon on a green field, representing valor and a quest for wealth"
-										],
-										[
-											{
-												"type": "cell",
-												"roll": {
-													"exact": 2
-												}
-											},
-											"The fist of a storm giant clutching lightning before a storm cloud, symbolizing wrath and power"
-										],
-										[
-											{
-												"type": "cell",
-												"roll": {
-													"exact": 3
-												}
-											},
-											"Crossed greatswords in front of a castle gate, signifying the defense of a city or kingdom"
-										],
-										[
-											{
-												"type": "cell",
-												"roll": {
-													"exact": 4
-												}
-											},
-											"A skull with a dagger through it, representing the doom you bring to your enemies"
-										],
-										[
-											{
-												"type": "cell",
-												"roll": {
-													"exact": 5
-												}
-											},
-											"A phoenix in a ring of fire, an expression of an indomitable spirit"
-										],
-										[
-											{
-												"type": "cell",
-												"roll": {
-													"exact": 6
-												}
-											},
-											"Three drops of blood beneath a horizontal sword blade on a black background, symbolizing three foes you have sworn to kill"
-										]
-									]
-								}
-							]
-						},
-						{
-							"type": "entries",
-							"name": "Instructor",
-							"entries": [
-								"Some fighters are natural-born combatants who have a talent for surviving in battle. Others learned the basics of their combat prowess in their formative years from spending time in a military or some other martial organization, when they were taught by the leaders of the group.",
-								"A third type of fighter comes from the ranks of those who received one-on-one instruction from an accomplished veteran of the craft. That instructor was, or perhaps still is, well versed in a certain aspect of combat that relates to the student's background.",
-								"If you decide that your character had an individual instructor, what is that person's specialty? Do you emulate your instructor in how you fight, or did you take the instructor's teachings and adapt them to your own purposes?",
-								{
-									"type": "table",
-									"caption": "Instructor",
-									"colLabels": [
-										"{@dice d6}",
-										"Instructor"
-									],
-									"colStyles": [
-										"col-1 text-center",
-										"col-11"
-									],
-									"rows": [
-										[
-											{
-												"type": "cell",
-												"roll": {
-													"exact": 1
-												}
-											},
-											"Gladiator. Your instructor was a slave who fought for freedom in the arena, or one who willingly chose the gladiator's life to earn money and fame."
-										],
-										[
-											{
-												"type": "cell",
-												"roll": {
-													"exact": 2
-												}
-											},
-											"Military. Your trainer served with a group of soldiers and knows much about working as a team."
-										],
-										[
-											{
-												"type": "cell",
-												"roll": {
-													"exact": 3
-												}
-											},
-											"City Watch. Crowd control and peacekeeping are your instructor's specialties."
-										],
-										[
-											{
-												"type": "cell",
-												"roll": {
-													"exact": 4
-												}
-											},
-											"Tribal Warrior. Your instructor grew up in a tribe, where fighting for one's life was practically an everyday occurrence."
-										],
-										[
-											{
-												"type": "cell",
-												"roll": {
-													"exact": 5
-												}
-											},
-											"Street Fighter. Your trainer excels at urban combat, combining close-quarters work with silence and efficiency."
-										],
-										[
-											{
-												"type": "cell",
-												"roll": {
-													"exact": 6
-												}
-											},
-											"Weapon Master. Your mentor helped you to become one with your chosen weapon, by imparting highly specialized knowledge of how to wield it most effectively."
-										]
-									]
-								}
-							]
-						},
-						{
-							"type": "entries",
-							"name": "Style",
-							"entries": [
-								"Many fighters distinguish themselves from their peers by adopting and perfecting a particular style or method of waging combat. Although this style might be a natural outgrowth of a fighter's personality, that's not always the case\u2014someone's approach to the world in general does not necessarily dictate how that person operates when lives are on the line.",
-								"Do you have a combat style that mirrors your outlook on life, or is something else inside you unleashed when weapons are drawn?",
-								{
-									"type": "table",
-									"caption": "Style",
-									"colLabels": [
-										"{@dice d6}",
-										"Style"
-									],
-									"colStyles": [
-										"col-1 text-center",
-										"col-11"
-									],
-									"rows": [
-										[
-											{
-												"type": "cell",
-												"roll": {
-													"exact": 1
-												}
-											},
-											"Elegant. You move with precise grace and total control, never using more energy than you need."
-										],
-										[
-											{
-												"type": "cell",
-												"roll": {
-													"exact": 2
-												}
-											},
-											"Brutal. Your attacks rain down like hammer blows, meant to splinter bone or send blood flying."
-										],
-										[
-											{
-												"type": "cell",
-												"roll": {
-													"exact": 3
-												}
-											},
-											"Cunning. You dart in to attack at just the right moment and use small-scale tactics to tilt the odds in your favor."
-										],
-										[
-											{
-												"type": "cell",
-												"roll": {
-													"exact": 4
-												}
-											},
-											"Effortless. You rarely perspire or display anything other than a stoic expression in battle."
-										],
-										[
-											{
-												"type": "cell",
-												"roll": {
-													"exact": 5
-												}
-											},
-											"Energetic. You sing and laugh during combat as your spirit soars. You are happiest when you have a foe in front of you and a weapon in hand."
-										],
-										[
-											{
-												"type": "cell",
-												"roll": {
-													"exact": 6
-												}
-											},
-											"Sinister. You scowl and sneer while fighting, and you enjoy mocking your foes as you defeat them."
-										]
-									]
-								}
-							]
-						}
-					],
-					"source": "XGE",
-					"page": 27
-				}
-			]
+			"hasFluff": true,
+			"hasFluffImages": true
 		}
 	],
 	"subclass": [
@@ -863,7 +575,8 @@
 				"Inspiring Surge|Fighter||Purple Dragon Knight (Banneret)|SCAG|10",
 				"Bulwark|Fighter||Purple Dragon Knight (Banneret)|SCAG|15",
 				"Inspiring Surge|Fighter||Purple Dragon Knight (Banneret)|SCAG|18"
-			]
+			],
+			"hasFluffImages": true
 		},
 		{
 			"name": "Arcane Archer",
@@ -945,6 +658,22 @@
 			]
 		},
 		{
+			"name": "Scofflaw",
+			"shortName": "Scofflaw",
+			"source": "HWCS",
+			"className": "Fighter",
+			"classSource": "PHB",
+			"page": 41,
+			"subclassFeatures": [
+				"Scofflaw|Fighter||Scofflaw|HWCS|3",
+				"Misdirection|Fighter||Scofflaw|HWCS|7",
+				"Blindside|Fighter||Scofflaw|HWCS|10",
+				"Infamy|Fighter||Scofflaw|HWCS|15",
+				"Two For Flinching|Fighter||Scofflaw|HWCS|18"
+			],
+			"hasFluffImages": true
+		},
+		{
 			"name": "Echo Knight",
 			"shortName": "Echo Knight",
 			"source": "EGW",
@@ -957,7 +686,8 @@
 				"Shadow Martyr|Fighter||Echo Knight|EGW|10",
 				"Reclaim Potential|Fighter||Echo Knight|EGW|15",
 				"Legion of One|Fighter||Echo Knight|EGW|18"
-			]
+			],
+			"hasFluffImages": true
 		},
 		{
 			"name": "Psi Warrior",
@@ -985,7 +715,8 @@
 				"Guarded Mind|Fighter||Psi Warrior|TCE|10",
 				"Bulwark of Force|Fighter||Psi Warrior|TCE|15",
 				"Telekinetic Master|Fighter||Psi Warrior|TCE|18"
-			]
+			],
+			"hasFluffImages": true
 		},
 		{
 			"name": "Rune Knight",
@@ -1017,7 +748,8 @@
 				"Master of Runes|Fighter||Rune Knight|TCE|15",
 				"Additional Rune Known|Fighter||Rune Knight|TCE|15",
 				"Runic Juggernaut|Fighter||Rune Knight|TCE|18"
-			]
+			],
+			"hasFluffImages": true
 		}
 	],
 	"classFeature": [
@@ -1513,6 +1245,104 @@
 				"{@i 18th-level Echo Knight feature}",
 				"You can use a bonus action to create two echoes with your Manifest Echo feature, and these echoes can coexist. If you try to create a third echo, the previous two echoes are destroyed. Anything you can do from one echo's position can be done from the other's instead.",
 				"In addition, when you roll initiative and have no uses of your Unleash Incarnation feature left, you regain one use of that feature."
+			]
+		},
+		{
+			"name": "Scofflaw",
+			"source": "HWCS",
+			"page": 41,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Scofflaw",
+			"subclassSource": "HWCS",
+			"level": 3,
+			"entries": [
+				"A fighter who hits hard and fights dirty, the Scofflaw balks at the ideals of honor and tradition, doing what they need to survive. Rules are made to be broken, and the Scofflaw extends this logic to their fighting style. Using every trick at their disposal to gain the upper hand against their foes, the Scofflaw cows their enemy into submission, or overwhelms their defenses with a single cheap shot.",
+				"Scofflaws eventually trust their notorious reputation to do much of the work for them, gaining the ability to cause foes to quake with a single threat. Scofflaws are a diverse bunch that run the gamut from graceful yet deadly knaves to bruiser thugs. What ties them together is their belief that there's no such thing as a bad win.",
+				{
+					"type": "entries",
+					"name": "Bonus Proficiency",
+					"entries": [
+						"When you choose this Martial Archetype at 3rd level, you gain proficiency in one of the following skills of your choice: {@skill Deception}, {@skill Insight}, {@skill Intimidation}, {@skill Sleight of Hand}, or {@skill Stealth}. Alternatively, you may learn {@class rogue|phb|Thieves' Cant||phb|Thieves' Cant 1}."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Intimidating Banter",
+					"entries": [
+						"At 3rd level, you are adept at integrating insults and barbs into your fighting style. So long as you are in combat, you may choose to use Strength or Dexterity to make Charisma ability checks."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Brutal Brawler",
+					"entries": [
+						"At 3rd level, your tavernside scuffles have honed your ability to deal damage with just about anything that's handy. You have proficiency with improvised weapons, and treat any improvised weapon you handle as if it has the finesse quality.",
+						"Additionally, whenever you hit with an improvised weapon, you may spend a bonus action to break it over your opponent. Doing this destroys the weapon, but deals the maximum number each of the weapon's damage dice could deal to the target. Any additional dice added to the attack's damage roll are not affected by this ability.",
+						"At 10th level, the improvised weapons you wield become even more lethal in your hands. When you spend your bonus action to break an improvised weapon over your opponent, add an additional {@damage 2d6} to the weapon's base damage dice.",
+						"At 18th level, you have advantage on attacks you make with improvised weapons."
+					]
+				}
+			]
+		},
+		{
+			"name": "Misdirection",
+			"source": "HWCS",
+			"page": 41,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Scofflaw",
+			"subclassSource": "HWCS",
+			"level": 7,
+			"header": 2,
+			"entries": [
+				"At 7th level, you are adept at using words and gestures to taunt or fake-out your opponent, turning their lack of composure against them. This allows you to goad your foe into swinging in ways that can cause them to strike their allies, or which leave them open to a counterattack. As a bonus action you can misdirect an opponent within 5 feet of you. The target must succeed on an Intelligence saving throw against a DC equal to 8 + your proficiency bonus + your Strength or Dexterity modifier. On a failure, they must spend their reaction to attack a creature of your choice within 5 feet of them. If no other creatures are present within 5 feet of them, they waste their reaction attacking the air where you once were.",
+				"In order for you to misdirect a creature in this way they must be able to see, hear, or otherwise be able to understand you."
+			]
+		},
+		{
+			"name": "Blindside",
+			"source": "HWCS",
+			"page": 41,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Scofflaw",
+			"subclassSource": "HWCS",
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"At 10th level, you are truly skilled at exploiting the openings you create in combat, hitting off-guard opponents with precise blows that are swift and deadly. You may use this technique against any creature that hasn't yet taken a turn in combat, or who you have successfully misdirected this turn. You may also apply this technique to any attack roll you make with advantage. On a hit, you exploit an opening in the target's defenses, dealing an extra {@damage 5d6} points of damage. Once you use this ability, you can't use it again until you have taken a short or long rest.",
+				"At 15th level, the damage dealt by your blindside increases to {@damage 7d6}.",
+				"At 18th level the damage dealt by your blindside increases to {@damage 9d6}. If you have no uses of this ability at the beginning of combat on your turn, you regain one use of it."
+			]
+		},
+		{
+			"name": "Infamy",
+			"source": "HWCS",
+			"page": 41,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Scofflaw",
+			"subclassSource": "HWCS",
+			"level": 15,
+			"header": 2,
+			"entries": [
+				"At 15th level, your reputation precedes you, making it easy for you to strike fear into the hearts of anyone foolish enough to oppose you. As part of your {@action Attack} action, you can utter deadly threats to a single target within 30 feet of you, causing them to become {@condition frightened} of you for 1 minute on a failed Wisdom saving throw. An affected target may repeat this saving throw at the end of each of their turns, ending the effect on a success. The DC for this saving throw is 8 + your proficiency bonus + your Strength or Dexterity modifier. A creature who has witnessed or heard tales of your ruthlessness makes this saving throw with disadvantage.",
+				"In order for you to use this feature, a creature must be able to see, hear, or otherwise be able to understand you."
+			]
+		},
+		{
+			"name": "Two For Flinching",
+			"source": "HWCS",
+			"page": 41,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Scofflaw",
+			"subclassSource": "HWCS",
+			"level": 18,
+			"header": 2,
+			"entries": [
+				"At 18th level, you have perfected the art of exploiting your opponent's weakness. Whenever you take the attack action against an opponent you have successfully misdirected this turn, or an opponent that is afflicted by a {@book condition|PHB|11}, you may make one additional attack against that opponent. You may only use this feature once per round."
 			]
 		},
 		{
@@ -2384,7 +2214,7 @@
 			"header": 2,
 			"entries": [
 				"{@i 15th-level Psi Warrior feature}",
-				"You can shield yourself and others with telekinetic force. As a bonus action, you can choose creatures, which can include you, that you can see within 30 feet of you, up to a number of creatures equal to your Intelligence modifier (minimum of one creature). Each of the chosen creatures is protected by half cover for 1 minute or until you're {@condition incapacitated}.",
+				"You can shield yourself and others with telekinetic force. As a bonus action, you can choose creatures, which can include you, that you can see within 30 feet of you, up to a number of creatures equal to your Intelligence modifier (minimum of one creature). Each of the chosen creatures is protected by {@quickref Cover||3||half cover} for 1 minute or until you're {@condition incapacitated}.",
 				"Once you take this bonus action, you can't do so again until you finish a long rest, unless you expend a Psionic Energy die to take it again."
 			]
 		},

@@ -1,18 +1,18 @@
 "use strict";
 
-class PageFilterFeats extends PageFilter {
+class PageFilterFeats extends PageFilterBase {
 	// region static
-	static _PREREQ_KEY_TO_FULL = {
-		"other": "Special",
-		"spellcasting2020": "Spellcasting",
-		"spellcastingFeature": "Spellcasting",
-		"spellcastingPrepared": "Spellcasting",
-	};
+	static _PREREQ_KEYs_OTHER_IGNORED = new Set(["level"]);
 	// endregion
 
 	constructor () {
 		super();
 
+		this._categoryFilter = new Filter({
+			header: "Category",
+			displayFn: Parser.featCategoryToFull,
+			items: [...Object.keys(Parser.FEAT_CATEGORY_TO_FULL), "Other"],
+		});
 		this._asiFilter = new Filter({
 			header: "Ability Bonus",
 			items: [
@@ -26,13 +26,9 @@ class PageFilterFeats extends PageFilter {
 			displayFn: Parser.attAbvToFull,
 			itemSortFn: null,
 		});
-		this._categoryFilter = new Filter({
-			header: "Category",
-			displayFn: StrUtil.toTitleCase,
-		});
 		this._otherPrereqFilter = new Filter({
 			header: "Other",
-			items: ["Ability", "Race", "Psionics", "Proficiency", "Special", "Spellcasting"],
+			items: [...FilterCommon.PREREQ_FILTER_ITEMS],
 		});
 		this._levelFilter = new Filter({
 			header: "Level",
@@ -53,7 +49,7 @@ class PageFilterFeats extends PageFilter {
 		this._vulnerableFilter = FilterCommon.getDamageVulnerableFilter();
 		this._resistFilter = FilterCommon.getDamageResistFilter();
 		this._immuneFilter = FilterCommon.getDamageImmuneFilter();
-		this._defenceFilter = new MultiFilter({header: "Damage", filters: [this._vulnerableFilter, this._resistFilter, this._immuneFilter]});
+		this._defenseFilter = new MultiFilter({header: "Damage", filters: [this._vulnerableFilter, this._resistFilter, this._immuneFilter]});
 		this._conditionImmuneFilter = FilterCommon.getConditionImmuneFilter();
 		this._miscFilter = new Filter({header: "Miscellaneous", items: ["Has Info", "Has Images", "SRD", "Basic Rules", "Legacy"], isMiscFilter: true});
 	}
@@ -62,12 +58,18 @@ class PageFilterFeats extends PageFilter {
 		const ability = Renderer.getAbilityData(feat.ability);
 		feat._fAbility = ability.asCollection.filter(a => !ability.areNegative.includes(a)); // used for filtering
 
+		feat._fCategory = feat.category || "Other";
+
 		const prereqText = Renderer.utils.prerequisite.getHtml(feat.prerequisite, {isListMode: true}) || VeCt.STR_NONE;
 
-		feat._fPrereqOther = [...new Set((feat.prerequisite || []).flatMap(it => Object.keys(it)))]
-			.map(it => (this._PREREQ_KEY_TO_FULL[it] || it).uppercaseFirst());
-		if (feat.prerequisite) feat._fPrereqLevel = feat.prerequisite.filter(it => it.level != null).map(it => `Level ${it.level.level ?? it.level}`);
+		feat._fPrereqOther = FilterCommon.getFilterValuesPrerequisite(feat.prerequisite, {ignoredKeys: this._PREREQ_KEYs_OTHER_IGNORED});
+		feat._fPrereqLevel = feat.prerequisite
+			? feat.prerequisite
+				.filter(it => it.level != null)
+				.map(it => `Level ${it.level.level ?? it.level}`)
+			: [];
 		feat._fBenifits = [
+			...(feat.traitTags || []),
 			feat.resist ? "Damage Resistance" : null,
 			feat.immune ? "Damage Immunity" : null,
 			feat.conditionImmune ? "Condition Immunity" : null,
@@ -86,11 +88,11 @@ class PageFilterFeats extends PageFilter {
 		feat._fMisc = feat.srd ? ["SRD"] : [];
 		if (feat.basicRules) feat._fMisc.push("Basic Rules");
 		if (SourceUtil.isLegacySourceWotc(feat.source)) feat._fMisc.push("Legacy");
-		if (feat.hasFluff || feat.fluff?.entries) feat._fMisc.push("Has Info");
-		if (feat.hasFluffImages || feat.fluff?.images) feat._fMisc.push("Has Images");
+		if (this._hasFluff(feat)) feat._fMisc.push("Has Info");
+		if (this._hasFluffImages(feat)) feat._fMisc.push("Has Images");
 		if (feat.repeatable != null) feat._fMisc.push(feat.repeatable ? "Repeatable" : "Not Repeatable");
 
-		feat._slAbility = ability.asText || VeCt.STR_NONE;
+		feat._slAbility = ability.asTextShort || VeCt.STR_NONE;
 		feat._slPrereq = prereqText;
 
 		FilterCommon.mutateForFilters_damageVulnResImmune_player(feat);
@@ -102,7 +104,8 @@ class PageFilterFeats extends PageFilter {
 
 		this._sourceFilter.addItem(feat.source);
 		this._categoryFilter.addItem(feat.category);
-		if (feat.prerequisite) this._levelFilter.addItem(feat._fPrereqLevel);
+		this._levelFilter.addItem(feat._fPrereqLevel);
+		this._otherPrereqFilter.addItem(feat._fPrereqOther);
 		this._vulnerableFilter.addItem(feat._fVuln);
 		this._resistFilter.addItem(feat._fRes);
 		this._immuneFilter.addItem(feat._fImm);
@@ -114,11 +117,11 @@ class PageFilterFeats extends PageFilter {
 	async _pPopulateBoxOptions (opts) {
 		opts.filters = [
 			this._sourceFilter,
-			this._asiFilter,
 			this._categoryFilter,
+			this._asiFilter,
 			this._prerequisiteFilter,
 			this._benefitsFilter,
-			this._defenceFilter,
+			this._defenseFilter,
 			this._conditionImmuneFilter,
 			this._miscFilter,
 		];
@@ -128,8 +131,8 @@ class PageFilterFeats extends PageFilter {
 		return this._filterBox.toDisplay(
 			values,
 			ft.source,
+			ft._fCategory,
 			ft._fAbility,
-			ft.category,
 			[
 				ft._fPrereqOther,
 				ft._fPrereqLevel,
@@ -148,7 +151,7 @@ class PageFilterFeats extends PageFilter {
 
 globalThis.PageFilterFeats = PageFilterFeats;
 
-class ModalFilterFeats extends ModalFilter {
+class ModalFilterFeats extends ModalFilterBase {
 	/**
 	 * @param opts
 	 * @param opts.namespace
@@ -171,7 +174,7 @@ class ModalFilterFeats extends ModalFilter {
 			{sort: "prerequisite", text: "Prerequisite", width: "3"},
 			{sort: "source", text: "Source", width: "1"},
 		];
-		return ModalFilter._$getFilterColumnHeaders(btnMeta);
+		return ModalFilterBase._$getFilterColumnHeaders(btnMeta);
 	}
 
 	async _pLoadAllData () {
@@ -189,17 +192,17 @@ class ModalFilterFeats extends ModalFilter {
 		const hash = UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_FEATS](feat);
 		const source = Parser.sourceJsonToAbv(feat.source);
 
-		eleRow.innerHTML = `<div class="w-100 ve-flex-vh-center lst--border veapp__list-row no-select lst__wrp-cells">
-			<div class="col-0-5 pl-0 ve-flex-vh-center">${this._isRadio ? `<input type="radio" name="radio" class="no-events">` : `<input type="checkbox" class="no-events">`}</div>
+		eleRow.innerHTML = `<div class="w-100 ve-flex-vh-center lst__row-border veapp__list-row no-select lst__wrp-cells">
+			<div class="ve-col-0-5 pl-0 ve-flex-vh-center">${this._isRadio ? `<input type="radio" name="radio" class="no-events">` : `<input type="checkbox" class="no-events">`}</div>
 
-			<div class="col-0-5 px-1 ve-flex-vh-center">
-				<div class="ui-list__btn-inline px-2" title="Toggle Preview (SHIFT to Toggle Info Preview)">[+]</div>
+			<div class="ve-col-0-5 px-1 ve-flex-vh-center">
+				<div class="ui-list__btn-inline px-2 no-select" title="Toggle Preview (SHIFT to Toggle Info Preview)">[+]</div>
 			</div>
 
-			<div class="col-4 ${feat._versionBase_isVersion ? "italic" : ""} ${this._getNameStyle()}">${feat._versionBase_isVersion ? `<span class="px-3"></span>` : ""}${feat.name}</div>
-			<span class="col-3 ${feat._slAbility === VeCt.STR_NONE ? "italic" : ""}">${feat._slAbility}</span>
-				<span class="col-3 ${feat._slPrereq === VeCt.STR_NONE ? "italic" : ""}">${feat._slPrereq}</span>
-			<div class="col-1 pr-0 ve-flex-h-center ${Parser.sourceJsonToColor(feat.source)}" title="${Parser.sourceJsonToFull(feat.source)}" ${Parser.sourceJsonToStyle(feat.source)}>${source}${Parser.sourceJsonToMarkerHtml(feat.source)}</div>
+			<div class="ve-col-4 px-1 ${feat._versionBase_isVersion ? "italic" : ""} ${this._getNameStyle()}">${feat._versionBase_isVersion ? `<span class="px-3"></span>` : ""}${feat.name}</div>
+			<span class="ve-col-3 px-1 ${feat._slAbility === VeCt.STR_NONE ? "italic" : ""}">${feat._slAbility}</span>
+			<span class="ve-col-3 px-1 ${feat._slPrereq === VeCt.STR_NONE ? "italic" : ""}">${feat._slPrereq}</span>
+			<div class="ve-col-1 pl-1 pr-0 ve-flex-h-center ${Parser.sourceJsonToSourceClassname(feat.source)}" title="${Parser.sourceJsonToFull(feat.source)}" ${Parser.sourceJsonToStyle(feat.source)}>${source}${Parser.sourceJsonToMarkerHtml(feat.source)}</div>
 		</div>`;
 
 		const btnShowHidePreview = eleRow.firstElementChild.children[1].firstElementChild;

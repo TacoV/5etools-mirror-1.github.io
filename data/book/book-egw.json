@@ -168,7 +168,7 @@
 							"type": "image",
 							"href": {
 								"type": "internal",
-								"path": "book/EGW/002-00-Poster-Map-9000.jpg"
+								"path": "book/EGW/002-00-Poster-Map-9000.webp"
 							},
 							"title": "Continent of Wildemount",
 							"width": 9300,
@@ -182,7 +182,8 @@
 								"units": "miles"
 							},
 							"imageType": "map",
-							"credit": "Deven Rue"
+							"credit": "Deven Rue",
+							"id": "02c"
 						}
 					]
 				},
@@ -2724,7 +2725,7 @@
 							"type": "image",
 							"href": {
 								"type": "internal",
-								"path": "book/EGW/045-3.1-Menagerie-Coast.png"
+								"path": "book/EGW/045-3.1-Menagerie-Coast.webp"
 							},
 							"title": "Map 3.1: Menagerie Coast",
 							"width": 2550,
@@ -2738,7 +2739,8 @@
 								"units": "miles"
 							},
 							"imageType": "map",
-							"credit": "Deven Rue"
+							"credit": "Deven Rue",
+							"id": "02d"
 						},
 						{
 							"type": "section",
@@ -4142,7 +4144,7 @@
 															"type": "image",
 															"href": {
 																"type": "internal",
-																"path": "book/EGW/049-3.2-Port-Damali-player.jpg"
+																"path": "book/EGW/049-3.2-Port-Damali-player.webp"
 															},
 															"title": "Map 3.2: Port Damali",
 															"width": 2550,
@@ -4153,7 +4155,8 @@
 																"units": "miles"
 															},
 															"imageType": "map",
-															"credit": "Deven Rue"
+															"credit": "Deven Rue",
+															"id": "02e"
 														}
 													]
 												}
@@ -4587,7 +4590,7 @@
 							"type": "image",
 							"href": {
 								"type": "internal",
-								"path": "book/EGW/051-3.3-Marrow-Valley.png"
+								"path": "book/EGW/051-3.3-Marrow-Valley.webp"
 							},
 							"title": "Map 3.3: Marrow Valley",
 							"width": 2550,
@@ -4599,7 +4602,8 @@
 								"units": "miles"
 							},
 							"imageType": "map",
-							"credit": "Deven Rue"
+							"credit": "Deven Rue",
+							"id": "02f"
 						},
 						{
 							"type": "section",
@@ -5258,7 +5262,7 @@
 												{
 													"type": "entries",
 													"name": "Population",
-													"page": 48,
+													"page": 84,
 													"id": "269",
 													"entries": [
 														"8,180 (58% halflings, 21% humans, 6% dragonborn, 15% other races)"
@@ -6474,7 +6478,7 @@
 							"type": "image",
 							"href": {
 								"type": "internal",
-								"path": "book/EGW/056-3.4-Zemni-Fields.png"
+								"path": "book/EGW/056-3.4-Zemni-Fields.webp"
 							},
 							"title": "Map 3.4: Zemni Fields",
 							"width": 2550,
@@ -6486,7 +6490,8 @@
 								"units": "miles"
 							},
 							"imageType": "map",
-							"credit": "Deven Rue"
+							"credit": "Deven Rue",
+							"id": "032"
 						},
 						{
 							"type": "section",
@@ -7463,7 +7468,7 @@
 															"type": "image",
 															"href": {
 																"type": "internal",
-																"path": "book/EGW/059-3.5-Rexxentrum-player.jpg"
+																"path": "book/EGW/059-3.5-Rexxentrum-player.webp"
 															},
 															"title": "Map 3.5: Rexxentrum",
 															"width": 2550,
@@ -7474,7 +7479,8 @@
 																"units": "miles"
 															},
 															"imageType": "map",
-															"credit": "Deven Rue"
+															"credit": "Deven Rue",
+															"id": "050"
 														}
 													]
 												}
@@ -8050,7 +8056,7 @@
 							"type": "image",
 							"href": {
 								"type": "internal",
-								"path": "book/EGW/061-3.6-Greying-Wildlands.png"
+								"path": "book/EGW/061-3.6-Greying-Wildlands.webp"
 							},
 							"title": "Map 3.6: Greying Wildlands",
 							"width": 2550,
@@ -8062,7 +8068,8 @@
 								"units": "miles"
 							},
 							"imageType": "map",
-							"credit": "Deven Rue"
+							"credit": "Deven Rue",
+							"id": "051"
 						},
 						{
 							"type": "section",
@@ -8918,7 +8925,7 @@
 							"type": "image",
 							"href": {
 								"type": "internal",
-								"path": "book/EGW/066-3.7-Eiselcross.png"
+								"path": "book/EGW/066-3.7-Eiselcross.webp"
 							},
 							"title": "Map 3.7: Eiselcross",
 							"width": 2550,
@@ -8930,7 +8937,8 @@
 								"units": "miles"
 							},
 							"imageType": "map",
-							"credit": "Deven Rue"
+							"credit": "Deven Rue",
+							"id": "052"
 						},
 						{
 							"type": "section",
@@ -8957,7 +8965,7 @@
 										],
 										[
 											"2",
-											"The characters encounter a lost Cerberus Assembly {@creature mage} trying to return to Balenpost. The rest of the mage's team died in the ruins of Aeor, and there is a {@chance 50|50 percent} chance the mage carries a recently recovered Aeorian item."
+											"The characters encounter a lost Cerberus Assembly {@creature mage} trying to return to Balenpost. The rest of the mage's team died in the ruins of Aeor, and there is a {@chance 50} chance the mage carries a recently recovered Aeorian item."
 										],
 										[
 											"3",
@@ -10144,7 +10152,7 @@
 							"type": "image",
 							"href": {
 								"type": "internal",
-								"path": "book/EGW/071-3.8-wastes-of-xhorhas.jpg"
+								"path": "book/EGW/071-3.8-wastes-of-xhorhas.webp"
 							},
 							"title": "Map 3.8: Wastes of Xorhas",
 							"width": 2550,
@@ -10156,7 +10164,8 @@
 								"units": "miles"
 							},
 							"imageType": "map",
-							"credit": "Deven Rue"
+							"credit": "Deven Rue",
+							"id": "053"
 						},
 						{
 							"type": "section",
@@ -11134,7 +11143,7 @@
 															"type": "image",
 															"href": {
 																"type": "internal",
-																"path": "book/EGW/074-3.9-Rosohna-player.jpg"
+																"path": "book/EGW/074-3.9-Rosohna-player.webp"
 															},
 															"title": "Map 3.9: Rosohna",
 															"width": 2550,
@@ -11146,7 +11155,8 @@
 																"units": "miles"
 															},
 															"imageType": "map",
-															"credit": "Deven Rue"
+															"credit": "Deven Rue",
+															"id": "054"
 														}
 													]
 												}
@@ -11743,7 +11753,7 @@
 							"type": "image",
 							"href": {
 								"type": "internal",
-								"path": "book/EGW/077-3.10-Blightshore.png"
+								"path": "book/EGW/077-3.10-Blightshore.webp"
 							},
 							"title": "Map 3.10: Blightshore",
 							"width": 2550,
@@ -11755,7 +11765,8 @@
 								"units": "miles"
 							},
 							"imageType": "map",
-							"credit": "Deven Rue"
+							"credit": "Deven Rue",
+							"id": "055"
 						},
 						{
 							"type": "entries",
@@ -11785,7 +11796,7 @@
 											"type": "list",
 											"items": [
 												"Ranged attacks through electric wind are made with disadvantage.",
-												"Any creature that starts its turn surrounded by electric wind has a {@chance 5|5 percent} chance of being struck by lightning. A creature struck by lightning must make a DC 15 Dexterity saving throw, taking {@dice 4d6} lightning damage on a failed save, or half as much damage on a successful one."
+												"Any creature that starts its turn surrounded by electric wind has a {@chance 5} chance of being struck by lightning. A creature struck by lightning must make a DC 15 Dexterity saving throw, taking {@dice 4d6} lightning damage on a failed save, or half as much damage on a successful one."
 											]
 										}
 									]
@@ -11818,7 +11829,7 @@
 											"type": "list",
 											"items": [
 												"An etheric rift is a lightly obscured area.",
-												"Any creature that enters an etheric rift or starts its turn there has a {@chance 33|33 percent} chance of gaining the effect of the {@spell etherealness} spell until the end of its next turn."
+												"Any creature that enters an etheric rift or starts its turn there has a {@chance 33} chance of gaining the effect of the {@spell etherealness} spell until the end of its next turn."
 											]
 										}
 									]
@@ -11884,7 +11895,7 @@
 										{
 											"type": "list",
 											"items": [
-												"Any non-plant creature within 20 feet of a toxic fungus colony is {@condition poisoned}. A creature {@condition poisoned} by the colony for 1 hour has a {@chance 20|20 percent} chance of gaining a random form of short-term madness (see \"{@book Madness|DMG|8|Madness}\" in chapter 8 of the {@book Dungeon Master's Guide|DMG}).",
+												"Any non-plant creature within 20 feet of a toxic fungus colony is {@condition poisoned}. A creature {@condition poisoned} by the colony for 1 hour has a {@chance 20} chance of gaining a random form of short-term madness (see \"{@book Madness|DMG|8|Madness}\" in chapter 8 of the {@book Dungeon Master's Guide|DMG}).",
 												"A toxic fungus colony can be bioluminescent. A bioluminescent colony sheds dim light within its area and for an additional 20 feet beyond its outer edges."
 											]
 										}
@@ -11954,7 +11965,7 @@
 												],
 												[
 													"10",
-													"This place is haunted by fragments of the Far Realm. Whenever the target of a Wisdom saving throw fails its save, that creature has a {@chance 5|5 percent} chance of becoming afflicted by a random form of long-term madness (see \"{@book Madness|DMG|8|Madness}\" in chapter 8 of the {@book Dungeon Master's Guide|DMG})."
+													"This place is haunted by fragments of the Far Realm. Whenever the target of a Wisdom saving throw fails its save, that creature has a {@chance 5} chance of becoming afflicted by a random form of long-term madness (see \"{@book Madness|DMG|8|Madness}\" in chapter 8 of the {@book Dungeon Master's Guide|DMG})."
 												]
 											]
 										}
@@ -16228,6 +16239,200 @@
 					"credit": "Deven Rue"
 				}
 			]
+		},
+		{
+			"type": "section",
+			"name": "Credits",
+			"entries": [
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"columns": 2,
+					"items": [
+						{
+							"type": "item",
+							"name": "Lead Writer",
+							"entries": [
+								"Matthew Mercer"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Writers",
+							"entries": [
+								"James J. Haeck, James Introcaso, Chris Lockey"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Developers",
+							"entries": [
+								"Jeremy Crawford, Dan Dillon, Ben Petrisor, Taymoor Rehman, Kate Welch"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Managing Editor",
+							"entries": [
+								"Christopher Perkins"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Editors",
+							"entries": [
+								"Scott Fitzgerald Gray, Hannah Rose, F. Wesley Schneider"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Art Director",
+							"entries": [
+								"Kate Irwin"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Graphic Designers",
+							"entries": [
+								"Trish Yochum, Trystan Falcone"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Cover Illustrator",
+							"entries": [
+								"Karl Kerschl"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Interior Illustrators",
+							"entries": [
+								"Even Amundsen, Jonah Baumann, Mark Behm, Eric Belisle, Dan Bittencourt, Zoltan Boros, Wesley Burt, Clint Cearley, Jedd Chevrier, Chippy, David René Christensen, CoupleOfKooks, Joma Cueto, Alayna Danner, Kent Davis, Nikki Dawes, Axel Defois, Olga Drebas, Lars Grant-West, Julian Kok, Linda Lithen, Jessica Mahon, Andrew Mar, Marcela Medeiros, Robson Michel, Goñi Montes, Irina Nordsol, Stephen Oakley, Robin Olausson, Claudio Pozas, Livia Prima, Jenn Ravenna, Nick Robles, Caio E Santos, David Sladek, Brian Valeza, Anna Veltkamp, Richard Whitters, Shawn Wood, Zuzanna Wuzyk, Anna Zee"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Cartographer",
+							"entries": [
+								"Deven Rue"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Producers",
+							"entries": [
+								"Bill Benham, Lea Heleotis, Dan Tovar"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Product Engineer",
+							"entries": [
+								"Cynda Callaway"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Imaging Technicians",
+							"entries": [
+								"Sven Bolen, Carmen Cheung, Kevin Yee"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Art Administration",
+							"entries": [
+								"David Gershman"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Prepress Specialist",
+							"entries": [
+								"Jefferson Dunlap"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Franchise & Global Brand Strategy",
+							"entries": [
+								"Nathan Stewart"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Director Licensing & Publishing",
+							"entries": [
+								"Liz Schuh"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Licensing Manager",
+							"entries": [
+								"Hilary Ross"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Marketing and Communications",
+							"entries": [
+								"Bart Carroll, Pelham Greene, Chris Lindsay, Shauna Narciso, Emi Tanji, Greg Tito, Anna Vo"
+							]
+						},
+						{
+							"type": "item",
+							"name": "D&D IP Development",
+							"entries": [
+								"Adam Lee, Ari Levitch, Mike Mearls, Richard Whitters, Shawn Wood"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Brand Manager",
+							"entries": [
+								"Shelly Mazzanoble"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Playtest Coordinator",
+							"entries": [
+								"Bill Benham"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Critical Role Team",
+							"entries": [
+								"Laura Bailey, Taliesin Jaffe, Ashley Johnson, Liam O'Brien, Marisha Ray, Sam Riegel, Rachel Romero, Ben Van Der Fluit, Travis Willingham"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Special Thanks",
+							"entries": [
+								"Ashly Burch, Mica Burton, Matt Colville, Tanya DePass, Brian Foster, Will Friedle, Todd Kenreck, Matthew Key, Sumalee Montano, Brennan Lee Mulligan, Khary Payton, Brittany Walloch, Deborah Ann Woll"
+							]
+						}
+					]
+				},
+				"Thanks to the many, many groups of playtesters who helped us get the character options and adventures into their final form. We couldn't have made this book without you!",
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "book/EGW/credits.webp"
+					},
+					"title": "On the Cover: Illustrator Karl Kerschl captures the stern visages of two sovereigns with a Luxon beacon between them. Bright Queen Leylas Kryn of the Kryn Dynasty and King Bertrand Dwendal of the Dwendalian Empire have never seen eye to eye\u2014and their conflict will shape the futures and destinies of all life on the war-torn continent of Wildemount.",
+					"maxWidth": 600,
+					"width": 1140,
+					"height": 719
+				}
+			],
+			"id": "021"
 		}
 	]
 }

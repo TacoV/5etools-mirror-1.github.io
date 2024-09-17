@@ -65,7 +65,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from non-magical attacks"
+					"note": "from non-magical attacks",
+					"cond": true
 				}
 			],
 			"conditionImmune": [
@@ -252,6 +253,7 @@
 			"spellcasting": [
 				{
 					"name": "Spellcasting",
+					"type": "spellcasting",
 					"headerEntries": [
 						"The firetamer is a 9th-level spellcaster. Its spellcasting ability is Wisdom (spell save {@dc 15}, {@hit 7} to hit with spell attacks). It has the following druid spells prepared:"
 					],
@@ -415,6 +417,7 @@
 			"spellcasting": [
 				{
 					"name": "Spellcasting",
+					"type": "spellcasting",
 					"headerEntries": [
 						"The skydancer is a 3rd-level spellcaster. Its spellcasting ability is Wisdom (spell save {@dc 14}, {@hit 6} to hit with spell attacks). It has the following druid spells prepared:"
 					],
@@ -480,7 +483,7 @@
 				{
 					"name": "Fly (1/Day)",
 					"entries": [
-						"The skydancer uses its {@item skysail|TDCSR} to cast {@spell fly} on itself for up to 1 minute (no {@condition concentration} required)."
+						"The skydancer uses its {@item skysail|TDCSR} to cast {@spell fly} on itself for up to 1 minute (no {@status concentration} required)."
 					]
 				}
 			],
@@ -593,6 +596,7 @@
 			"spellcasting": [
 				{
 					"name": "Spellcasting",
+					"type": "spellcasting",
 					"headerEntries": [
 						"The stoneguard is a 3rd-level spellcaster. Its spellcasting ability is Wisdom (spell save {@dc 13}, {@hit 5} to hit with spell attacks). It has the following druid spells prepared:"
 					],
@@ -641,6 +645,12 @@
 					"name": "Sentinel",
 					"entries": [
 						"When a creature within 5 feet of the stoneguard attacks a target other than the stoneguard, the stoneguard can make one attack against that creature."
+					]
+				},
+				{
+					"name": "Skin to Stone",
+					"entries": [
+						"When the stoneguard is attacked, it gains resistance to bludgeoning, piercing, and slashing damage from nonmagical attacks until the end of the attacker's turn"
 					]
 				}
 			],
@@ -738,6 +748,7 @@
 			"spellcasting": [
 				{
 					"name": "Spellcasting",
+					"type": "spellcasting",
 					"headerEntries": [
 						"The waverider is a 7th-level spellcaster. Its spellcasting ability is Wisdom (spell save {@dc 14}, {@hit 6} to hit with spell attacks). It has the following druid spells prepared:"
 					],
@@ -1221,6 +1232,7 @@
 			"spellcasting": [
 				{
 					"name": "Innate Spellcasting",
+					"type": "spellcasting",
 					"headerEntries": [
 						"The Champion's innate spellcasting ability is Charisma ({@hit 10} to hit with spell attacks, save {@dc 18}). He can innately cast the following spells, requiring no material components:"
 					],
@@ -1277,7 +1289,7 @@
 				{
 					"name": "Unerring Sight",
 					"entries": [
-						"The Champion's ranged weapon attacks ignore {@quickref cover|PHB|3|0|half cover} and {@quickref cover|PHB|3|0|three-quarters cover} and have no range penalty."
+						"The Champion's ranged weapon attacks ignore {@quickref cover||3||half cover} and {@quickref cover||3||three-quarters cover} and have no range penalty."
 					]
 				},
 				{
@@ -1410,7 +1422,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from non-magical attacks"
+					"note": "from non-magical attacks",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -2038,6 +2051,7 @@
 			"spellcasting": [
 				{
 					"name": "Innate Spellcasting",
+					"type": "spellcasting",
 					"headerEntries": [
 						"The cyclops's innate spellcasting ability is Charisma (spell save {@dc 17}, {@hit 9} to hit with spell attacks). The cyclops can innately cast the following spells, requiring no material components:"
 					],
@@ -2075,7 +2089,7 @@
 				{
 					"name": "Supernatural Focus",
 					"entries": [
-						"The cyclops has {@quickref Advantage and Disadvantage|PHB|2|0|advantage} on Constitution {@quickref saving throws|PHB|2|1} made to maintain {@condition concentration} on spells, and cannot lose {@condition concentration} because of turbulent weather."
+						"The cyclops has {@quickref Advantage and Disadvantage|PHB|2|0|advantage} on Constitution {@quickref saving throws|PHB|2|1} made to maintain {@status concentration} on spells, and cannot lose {@status concentration} because of turbulent weather."
 					]
 				}
 			],
@@ -2387,6 +2401,7 @@
 			"spellcasting": [
 				{
 					"name": "Innate Spellcasting",
+					"type": "spellcasting",
 					"headerEntries": [
 						"The grick's spellcasting ability is Wisdom (spell save {@dc 12} {@hit 4} to hit with spell attacks). It can innately cast the following spells, requiring no material components:"
 					],
@@ -3036,7 +3051,8 @@
 						"lightning",
 						"thunder"
 					],
-					"note": "while enlarged"
+					"note": "while enlarged",
+					"cond": true
 				},
 				{
 					"resist": [
@@ -3044,7 +3060,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "while raging"
+					"note": "while raging",
+					"cond": true
 				}
 			],
 			"conditionImmune": [
@@ -3053,7 +3070,8 @@
 						"charmed",
 						"frightened"
 					],
-					"note": "while raging"
+					"note": "while raging",
+					"cond": true
 				}
 			],
 			"languages": [
@@ -3103,7 +3121,7 @@
 				{
 					"name": "Spellbreaker",
 					"entries": [
-						"When Grog damages a creature that is concentrating on a spell, that creature has {@quickref Advantage and Disadvantage|PHB|2|0|disadvantage} on the {@quickref saving throws|PHB|2|1|saving throw} to maintain its {@condition concentration}. In addition, Grog has {@quickref Advantage and Disadvantage|PHB|2|0|advantage} on {@quickref saving throws|PHB|2|1} against spells cast by creatures within 5 feet of him."
+						"When Grog damages a creature that is concentrating on a spell, that creature has {@quickref Advantage and Disadvantage|PHB|2|0|disadvantage} on the {@quickref saving throws|PHB|2|1|saving throw} to maintain its {@status concentration}. In addition, Grog has {@quickref Advantage and Disadvantage|PHB|2|0|advantage} on {@quickref saving throws|PHB|2|1} against spells cast by creatures within 5 feet of him."
 					]
 				},
 				{
@@ -3295,6 +3313,7 @@
 			"spellcasting": [
 				{
 					"name": "Innate Spellcasting",
+					"type": "spellcasting",
 					"headerEntries": [
 						"Jourrael's spellcasting ability is Charisma (spell save {@dc 15}). She can innately cast the following spells, requiring no material components:"
 					],
@@ -3486,6 +3505,7 @@
 			"spellcasting": [
 				{
 					"name": "Spellcasting",
+					"type": "spellcasting",
 					"headerEntries": [
 						"Keyleth is a 20th-level spellcaster. Her spellcasting ability is Wisdom (spell save {@dc 22}, {@hit 14} to hit with spell attacks). She has the following druid spells prepared:"
 					],
@@ -3584,7 +3604,7 @@
 				{
 					"name": "Focused",
 					"entries": [
-						"Keyleth has {@quickref Advantage and Disadvantage|PHB|2|0|advantage} on Constitution {@quickref saving throws|PHB|2|1} made to maintain {@condition concentration} on spells."
+						"Keyleth has {@quickref Advantage and Disadvantage|PHB|2|0|advantage} on Constitution {@quickref saving throws|PHB|2|1} made to maintain {@status concentration} on spells."
 					]
 				},
 				{
@@ -3721,6 +3741,9 @@
 			"resist": [
 				"poison"
 			],
+			"conditionImmune": [
+				"disease"
+			],
 			"languages": [
 				"Common",
 				"Dwarvish"
@@ -3729,6 +3752,7 @@
 			"spellcasting": [
 				{
 					"name": "Spellcasting",
+					"type": "spellcasting",
 					"headerEntries": [
 						"The goat-knight is a 6th-level spellcaster. Its spellcasting ability is Charisma (spell save {@dc 13}, {@hit 5} to hit with spell attacks). It has the following paladin spells prepared:"
 					],
@@ -4050,7 +4074,7 @@
 				{
 					"name": "Bite",
 					"entries": [
-						"{@atk mw} {@hit 11} to hit, reach 5 ft., one target. {@h}45 ({@damage 6d12 + 6}) piercing damage, and 14 ({@damage 4d6}) fire damage. If the target is a Large or smaller creature, it must succeed on a {@dc 18} Dexterity {@quickref saving throws|PHB|2|1|saving throw} or be swallowed by the landshark. A swallowed creature is {@condition blinded} and {@condition restrained}, it has {@quickref cover|PHB|3|0|total cover} against attacks and other effects outside the landshark, and it takes 42 ({@damage 12d6}) fire damage at the start of each of the landshark's turns.",
+						"{@atk mw} {@hit 11} to hit, reach 5 ft., one target. {@h}45 ({@damage 6d12 + 6}) piercing damage, and 14 ({@damage 4d6}) fire damage. If the target is a Large or smaller creature, it must succeed on a {@dc 18} Dexterity {@quickref saving throws|PHB|2|1|saving throw} or be swallowed by the landshark. A swallowed creature is {@condition blinded} and {@condition restrained}, it has {@quickref cover||3||total cover} against attacks and other effects outside the landshark, and it takes 42 ({@damage 12d6}) fire damage at the start of each of the landshark's turns.",
 						"If the landshark takes 30 damage or more on a single turn from a creature inside it, the landshark must succeed on a {@dc 23} Constitution {@quickref saving throws|PHB|2|1|saving throw} at the end of that turn or regurgitate all swallowed creatures, which fall {@condition prone} in a space within 10 feet of the landshark. If the landshark dies, a swallowed creature is no longer {@condition restrained} by it and can escape from the corpse by using 15 feet of movement, exiting {@condition prone}."
 					]
 				},
@@ -4158,7 +4182,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from non-magical attacks"
+					"note": "from non-magical attacks",
+					"cond": true
 				}
 			],
 			"conditionImmune": [
@@ -4443,7 +4468,7 @@
 				{
 					"name": "Ranged Master",
 					"entries": [
-						"Percy's ranged weapon attacks have a +2 bonus to hit (included in attacks), ignore {@quickref cover|PHB|3|0|half cover} and {@quickref cover|PHB|3|0|three-quarters cover}, and have no range penalty. Additionally, Percy can take a \u22125 penalty to any ranged attack roll to gain a +10 bonus to the damage roll."
+						"Percy's ranged weapon attacks have a +2 bonus to hit (included in attacks), ignore {@quickref cover||3||half cover} and {@quickref cover||3||three-quarters cover}, and have no range penalty. Additionally, Percy can take a \u22125 penalty to any ranged attack roll to gain a +10 bonus to the damage roll."
 					]
 				},
 				{
@@ -4614,6 +4639,7 @@
 			"spellcasting": [
 				{
 					"name": "Spellcasting",
+					"type": "spellcasting",
 					"headerEntries": [
 						"Pike is a 20th-level spellcaster. Her spellcasting ability is Wisdom (spell save {@dc 19}, {@hit 11} to hit with spell attacks). She has the following cleric spells prepared:"
 					],
@@ -5115,6 +5141,7 @@
 			"spellcasting": [
 				{
 					"name": "Innate Spellcasting",
+					"type": "spellcasting",
 					"headerEntries": [
 						"The Slaughter Lord's innate spellcasting ability is Wisdom (spell save {@dc 15}, {@hit 7} to hit with spell attacks). It can innately cast the following spells, requiring no material components:"
 					],
@@ -5424,6 +5451,7 @@
 			"spellcasting": [
 				{
 					"name": "Spellcasting",
+					"type": "spellcasting",
 					"headerEntries": [
 						"The chosen is an 18th-level spellcaster. Its spellcasting ability is Charisma (spell save {@dc 17}, {@hit 9} to hit with spell attacks). It has the following sorcerer spells prepared:"
 					],
@@ -5621,6 +5649,7 @@
 			"spellcasting": [
 				{
 					"name": "Spellcasting",
+					"type": "spellcasting",
 					"headerEntries": [
 						"The remnant cultist is an 11th-level spellcaster. Its spellcasting ability is Intelligence (spell save {@dc 15}, {@hit 7} to hit with spell attacks). The cultist has the following wizard spells prepared:"
 					],
@@ -5946,6 +5975,7 @@
 			"spellcasting": [
 				{
 					"name": "Innate Spellcasting",
+					"type": "spellcasting",
 					"headerEntries": [
 						"The stormborn's innate spellcasting ability is Charisma (spell save {@dc 12}). The stormborn can innately cast the following spells, requiring no material components:"
 					],
@@ -6135,6 +6165,7 @@
 			"spellcasting": [
 				{
 					"name": "Spellcasting",
+					"type": "spellcasting",
 					"headerEntries": [
 						"Scanlan is a 20th-level spellcaster. His spellcasting ability is Charisma (spell save {@dc 19}, {@hit 11} to hit with spell attacks). He has the following bard spells prepared:"
 					],
@@ -6227,7 +6258,7 @@
 				{
 					"name": "Focused",
 					"entries": [
-						"Scanlan has {@quickref Advantage and Disadvantage|PHB|2|0|advantage} on Constitution {@quickref saving throws|PHB|2|1} made to maintain {@condition concentration} on spells."
+						"Scanlan has {@quickref Advantage and Disadvantage|PHB|2|0|advantage} on Constitution {@quickref saving throws|PHB|2|1} made to maintain {@status concentration} on spells."
 					]
 				},
 				{
@@ -6394,6 +6425,7 @@
 			"spellcasting": [
 				{
 					"name": "Spellcasting",
+					"type": "spellcasting",
 					"headerEntries": [
 						"Tary is a 15th-level spellcaster. His spellcasting ability is Intelligence (spell save {@dc 16}, {@hit 8} to hit with spell attacks). He has the following spells prepared:"
 					],
@@ -6461,7 +6493,7 @@
 				{
 					"name": "Focused",
 					"entries": [
-						"Tary has {@quickref Advantage and Disadvantage|PHB|2|0|advantage} on Constitution {@quickref saving throws|PHB|2|1} made to maintain {@condition concentration} on spells."
+						"Tary has {@quickref Advantage and Disadvantage|PHB|2|0|advantage} on Constitution {@quickref saving throws|PHB|2|1} made to maintain {@status concentration} on spells."
 					]
 				},
 				{
@@ -6743,6 +6775,7 @@
 			"spellcasting": [
 				{
 					"name": "Spellcasting",
+					"type": "spellcasting",
 					"headerEntries": [
 						"Vex is a 13th-level spellcaster. Her spell-casting ability is Wisdom (spell save {@dc 17}, {@hit 9} to hit with spell attacks). She has the following ranger spells prepared:"
 					],
@@ -6801,7 +6834,7 @@
 				{
 					"name": "Ranged Master",
 					"entries": [
-						"Vex's ranged weapon attacks have a +2 bonus to hit (included in attacks), and ignore {@quickref cover|PHB|3|0|half cover} and {@quickref cover|PHB|3|0|three-quarters cover}, and have no range penalty. Additionally, Vex can take a \u22125 penalty to any ranged attack roll to gain a +10 bonus to the damage roll."
+						"Vex's ranged weapon attacks have a +2 bonus to hit (included in attacks), and ignore {@quickref cover||3||half cover} and {@quickref cover||3||three-quarters cover}, and have no range penalty. Additionally, Vex can take a \u22125 penalty to any ranged attack roll to gain a +10 bonus to the damage roll."
 					]
 				},
 				{
@@ -6965,6 +6998,7 @@
 			"spellcasting": [
 				{
 					"name": "Innate Spellcasting",
+					"type": "spellcasting",
 					"headerEntries": [
 						"The serpentfolk's innate spellcasting ability is Charisma (spell save {@dc 12}). It can innately cast the following spells, requiring no material components:"
 					],

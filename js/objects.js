@@ -1,22 +1,16 @@
 "use strict";
 
 class ObjectsSublistManager extends SublistManager {
-	constructor () {
-		super({
-			sublistClass: "subobjects",
-		});
-	}
-
-	static get _ROW_TEMPLATE () {
+	static _getRowTemplate () {
 		return [
 			new SublistCellTemplate({
 				name: "Name",
-				css: "bold col-9 pl-0",
+				css: "bold ve-col-9 pl-0 pr-1",
 				colStyle: "",
 			}),
 			new SublistCellTemplate({
 				name: "Size",
-				css: "col-3 pr-0 ve-text-center",
+				css: "ve-col-3 pl-1 pr-0 ve-text-center",
 				colStyle: "text-center",
 			}),
 		];
@@ -27,7 +21,7 @@ class ObjectsSublistManager extends SublistManager {
 		const cellsText = [it.name, size];
 
 		const $ele = $(`<div class="lst__row lst__row--sublist ve-flex-col">
-			<a href="#${hash}" class="lst--border lst__row-inner">
+			<a href="#${hash}" class="lst__row-border lst__row-inner">
 				${this.constructor._getRowCellsHtml({values: cellsText})}
 			</a>
 		</div>`)
@@ -58,22 +52,20 @@ class ObjectsPage extends ListPage {
 
 		super({
 			dataSource: DataUtil.object.loadJSON.bind(DataUtil.object),
-			dataSourceFluff: DataUtil.objectFluff.loadJSON.bind(DataUtil.objectFluff),
 
 			pFnGetFluff,
 
 			pageFilter,
 
-			listClass: "objects",
-
 			dataProps: ["object"],
 
 			listSyntax: new ListSyntaxObjects({fnGetDataList: () => this._dataList, pFnGetFluff}),
-
-			isMarkdownPopout: true,
 		});
 
-		this._$dispToken = null;
+		this._tokenDisplay = new ListPageTokenDisplay({
+			fnHasToken: Renderer.object.hasToken.bind(Renderer.object),
+			fnGetTokenUrl: Renderer.object.getTokenUrl.bind(Renderer.object),
+		});
 	}
 
 	getListItem (obj, obI, isExcluded) {
@@ -86,10 +78,10 @@ class ObjectsPage extends ListPage {
 		const hash = UrlUtil.autoEncodeHash(obj);
 		const size = Renderer.utils.getRenderedSize(obj.size);
 
-		eleLi.innerHTML = `<a href="#${hash}" class="lst--border lst__row-inner">
-			<span class="bold col-8 pl-0">${obj.name}</span>
-			<span class="col-2 ve-text-center">${size}</span>
-			<span class="col-2 ve-text-center ${Parser.sourceJsonToColor(obj.source)} pr-0" title="${Parser.sourceJsonToFull(obj.source)}" ${Parser.sourceJsonToStyle(obj.source)}>${source}</span>
+		eleLi.innerHTML = `<a href="#${hash}" class="lst__row-border lst__row-inner">
+			<span class="bold ve-col-8 pl-0 pr-1">${obj.name}</span>
+			<span class="ve-col-2 px-1 ve-text-center">${size}</span>
+			<span class="ve-col-2 ve-text-center ${Parser.sourceJsonToSourceClassname(obj.source)} pl-1 pr-0" title="${Parser.sourceJsonToFull(obj.source)}" ${Parser.sourceJsonToStyle(obj.source)}>${source}</span>
 		</a>`;
 
 		const listItem = new ListItem(
@@ -122,21 +114,15 @@ class ObjectsPage extends ListPage {
 
 		this._$pgContent.empty().append(RenderObjects.$getRenderedObject(ent));
 
-		(this._$dispToken = this._$dispToken || $(`#float-token`)).empty();
-
-		const hasToken = ent.tokenUrl || ent.hasToken;
-		if (hasToken) {
-			const imgLink = Renderer.object.getTokenUrl(ent);
-			this._$dispToken.append(`<a href="${imgLink}" target="_blank" rel="noopener noreferrer"><img src="${imgLink}" id="token_image" class="token" alt="Token Image: ${(ent.name || "").qq()}" ${ent.tokenCredit ? `title="Credit: ${ent.tokenCredit.qq()}"` : ""} loading="lazy"></a>`);
-		}
+		this._tokenDisplay.render(ent);
 	}
 
 	_renderStats_onTabChangeStats () {
-		this._$dispToken.showVe();
+		this._tokenDisplay.doShow();
 	}
 
 	_renderStats_onTabChangeFluff () {
-		this._$dispToken.hideVe();
+		this._tokenDisplay.doHide();
 	}
 }
 

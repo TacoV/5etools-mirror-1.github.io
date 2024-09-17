@@ -31,9 +31,9 @@ class _RenderableCollectionStatsCols extends RenderableCollectionGenericRows {
 
 		const $btnVisible = InitiativeTrackerUi.$getBtnPlayerVisible(
 			comp._state.isPlayerVisible,
-			() => comp._state.isPlayerVisible = $btnVisible.hasClass("btn-primary--half")
+			() => comp._state.isPlayerVisible = $btnVisible.hasClass("ve-btn-primary--half")
 				? IS_PLAYER_VISIBLE_PLAYER_UNITS_ONLY
-				: $btnVisible.hasClass("btn-primary")
+				: $btnVisible.hasClass("ve-btn-primary")
 					? IS_PLAYER_VISIBLE_ALL
 					: IS_PLAYER_VISIBLE_NONE,
 			true,
@@ -44,13 +44,13 @@ class _RenderableCollectionStatsCols extends RenderableCollectionGenericRows {
 		const $padDrag = this._utils.$getPadDrag({$wrpRow});
 
 		$$($wrpRow)`
-			<div class="col-5 pr-1">${meta.constructor.NAME}</div>
-			<div class="col-3 pr-1">${$iptAbv}</div>
-			<div class="col-1-5 ve-text-center">${$cbIsEditable}</div>
-			<div class="col-1-5 ve-text-center">${$btnVisible}</div>
+			<div class="ve-col-5 pr-1">${meta.constructor.NAME}</div>
+			<div class="ve-col-3 pr-1">${$iptAbv}</div>
+			<div class="ve-col-1-5 ve-text-center">${$cbIsEditable}</div>
+			<div class="ve-col-1-5 ve-text-center">${$btnVisible}</div>
 
-			<div class="col-0-5 ve-flex-vh-center">${$btnDelete}</div>
-			<div class="col-0-5 ve-flex-vh-center">${$padDrag}</div>
+			<div class="ve-col-0-5 ve-flex-vh-center">${$btnDelete}</div>
+			<div class="ve-col-0-5 ve-flex-vh-center">${$padDrag}</div>
 		`;
 	}
 }
@@ -175,15 +175,15 @@ export class InitiativeTrackerSettings extends BaseComponent {
 				}),
 		);
 
-		const $btnAddRow = $(`<button class="btn btn-default btn-xs bb-0 bbr-0 bbl-0" title="Add"><span class="glyphicon glyphicon-plus"></span></button>`)
+		const $btnAddRow = $(`<button class="ve-btn ve-btn-default ve-btn-xs bb-0 bbr-0 bbl-0" title="Add"><span class="glyphicon glyphicon-plus"></span></button>`)
 			.click(evt => ContextUtil.pOpenMenu(evt, menuAddStatsCol));
 
 		const $wrpTblStatsHead = $$`<div class="ve-flex-vh-center w-100 mb-2 bb-1p-trans">
-			<div class="col-5">Contains</div>
-			<div class="col-3">Abbreviation</div>
-			<div class="col-1-5 ve-text-center help" title="Only affects creatures. Players are always editable.">Editable</div>
-			<div class="col-1-5">&nbsp;</div>
-			<div class="col-1 ve-flex-v-center ve-flex-h-right">${$btnAddRow}</div>
+			<div class="ve-col-5">Contains</div>
+			<div class="ve-col-3">Abbreviation</div>
+			<div class="ve-col-1-5 ve-text-center help" title="Only affects creatures. Players are always editable.">Editable</div>
+			<div class="ve-col-1-5">&nbsp;</div>
+			<div class="ve-col-1 ve-flex-v-center ve-flex-h-right">${$btnAddRow}</div>
 		</div>`
 			.appendTo($modalInner);
 
@@ -191,7 +191,7 @@ export class InitiativeTrackerSettings extends BaseComponent {
 	}
 
 	_pGetShowModalResults_renderSection_additionalCols_body ({$modalInner}) {
-		const $wrpRows = $(`<div class="pr-1 h-120p ve-flex-col overflow-y-auto relative"></div>`).appendTo($modalInner);
+		const $wrpRows = $(`<div class="pr-1 h-120p ve-flex-col ve-overflow-y-auto relative"></div>`).appendTo($modalInner);
 		this._addHookBase("isStatsAddColumns", () => $wrpRows.toggleVe(this._state.isStatsAddColumns))();
 
 		const renderableCollectionStatsCols = new _RenderableCollectionStatsCols(
@@ -209,7 +209,7 @@ export class InitiativeTrackerSettings extends BaseComponent {
 	/* -------------------------------------------- */
 
 	_pGetShowModalResults_renderFooter ({$modalFooter, doClose}) {
-		const $btnSave = $(`<button class="btn btn-primary btn-sm w-100">Save</button>`)
+		const $btnSave = $(`<button class="ve-btn ve-btn-primary ve-btn-sm w-100">Save</button>`)
 			.click(() => doClose(true));
 
 		$$($modalFooter)`<div class="w-100 py-3 no-shrink">

@@ -1,27 +1,21 @@
-"use strict";
+import {RenderRaces} from "./render-races.js";
 
 class RacesSublistManager extends SublistManager {
-	constructor () {
-		super({
-			sublistClass: "subraces",
-		});
-	}
-
-	static get _ROW_TEMPLATE () {
+	static _getRowTemplate () {
 		return [
 			new SublistCellTemplate({
 				name: "Name",
-				css: "bold col-5 pl-0",
+				css: "bold ve-col-5 pl-0 pr-1",
 				colStyle: "",
 			}),
 			new SublistCellTemplate({
 				name: "Ability",
-				css: "col-5",
+				css: "ve-col-5 px-1",
 				colStyle: "",
 			}),
 			new SublistCellTemplate({
 				name: "Size",
-				css: "col-2 ve-text-center pr-0",
+				css: "ve-col-2 ve-text-center pl-1 pr-0",
 				colStyle: "text-center",
 			}),
 		];
@@ -35,7 +29,7 @@ class RacesSublistManager extends SublistManager {
 		];
 
 		const $ele = $(`<div class="lst__row lst__row--sublist ve-flex-col">
-				<a href="#${UrlUtil.autoEncodeHash(race)}" class="lst--border lst__row-inner">
+				<a href="#${UrlUtil.autoEncodeHash(race)}" class="lst__row-border lst__row-inner">
 					${this.constructor._getRowCellsHtml({values: cellsText})}
 				</a>
 			</div>
@@ -65,7 +59,6 @@ class RacesPage extends ListPage {
 		const pageFilter = new PageFilterRaces();
 		super({
 			dataSource: DataUtil.race.loadJSON.bind(DataUtil.race, {isAddBaseRaces: true}),
-			dataSourceFluff: DataUtil.raceFluff.loadJSON.bind(DataUtil.raceFluff),
 			prereleaseDataSource: DataUtil.race.loadPrerelease.bind(DataUtil.race),
 			brewDataSource: DataUtil.race.loadBrew.bind(DataUtil.race),
 
@@ -73,11 +66,7 @@ class RacesPage extends ListPage {
 
 			pageFilter,
 
-			listClass: "races",
-
 			dataProps: ["race"],
-
-			isMarkdownPopout: true,
 
 			bookViewOptions: {
 				namePlural: "races",
@@ -111,11 +100,11 @@ class RacesPage extends ListPage {
 		const size = (race.size || [Parser.SZ_VARIES]).map(sz => Parser.sizeAbvToFull(sz)).join("/");
 		const source = Parser.sourceJsonToAbv(race.source);
 
-		eleLi.innerHTML = `<a href="#${hash}" class="lst--border lst__row-inner">
-			<span class="bold col-4 pl-0">${race.name}</span>
-			<span class="col-4 ${race._slAbility === "Lineage (choose)" ? "italic" : ""}">${race._slAbility}</span>
-			<span class="col-2 ve-text-center">${size}</span>
-			<span class="col-2 ve-text-center ${Parser.sourceJsonToColor(race.source)} pr-0" title="${Parser.sourceJsonToFull(race.source)}" ${Parser.sourceJsonToStyle(race.source)}>${source}</span>
+		eleLi.innerHTML = `<a href="#${hash}" class="lst__row-border lst__row-inner">
+			<span class="bold ve-col-4 pl-0 pr-1">${race.name}</span>
+			<span class="ve-col-4 px-1 ${race._slAbility === "Lineage (choose)" ? "italic" : ""}">${race._slAbility}</span>
+			<span class="ve-col-2 px-1 ve-text-center">${size}</span>
+			<span class="ve-col-2 ve-text-center ${Parser.sourceJsonToSourceClassname(race.source)} pl-1 pr-0" title="${Parser.sourceJsonToFull(race.source)}" ${Parser.sourceJsonToStyle(race.source)}>${source}</span>
 		</a>`;
 
 		const listItem = new ListItem(

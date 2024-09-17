@@ -1,16 +1,17 @@
-"use strict";
+import {RenderBestiary} from "./render-bestiary.js";
+import {RenderSpells} from "./render-spells.js";
+import {RenderItems} from "./render-items.js";
 
-window.addEventListener("load", async () => {
-	Renderer.get().setBaseUrl("/");
-	const fullPage = `${_SEO_PAGE}.html`;
-	const it = await DataLoader.pCacheAndGet(fullPage, _SEO_SOURCE, _SEO_HASH);
+const onLoadSeo = async () => {
+	const fullPage = `${globalThis._SEO_PAGE}.html`;
+	const it = await DataLoader.pCacheAndGet(fullPage, globalThis._SEO_SOURCE, globalThis._SEO_HASH);
 
 	document.title = `${it.name} - 5etools`;
-	$(`.page__title`).text(`${_SEO_PAGE.toTitleCase()}: ${it.name}`);
+	$(`.page__title`).text(`${globalThis._SEO_PAGE.toTitleCase()}: ${it.name}`);
 
-	$(`<div class="col-12 ve-flex-vh-center my-2 pt-3">
-		<button class="btn btn-primary">
-			<a href="/${_SEO_PAGE}.html" style="font-size: 1.7em; color: white;">${_SEO_STYLE === 1 ? `View All` : `View Complete`} ${_SEO_PAGE.toTitleCase()}</a>
+	$(`<div class="ve-col-12 ve-flex-vh-center my-2 pt-3">
+		<button class="ve-btn ve-btn-primary">
+			<a href="/${globalThis._SEO_PAGE}.html" style="font-size: 1.7em; color: white;">${globalThis._SEO_STYLE === 1 ? `View All` : `View Complete`} ${globalThis._SEO_PAGE.toTitleCase()}</a>
 		</button>
 	</div>`).appendTo($(`#link-page`));
 
@@ -26,12 +27,11 @@ window.addEventListener("load", async () => {
 		if (href.startsWith("https://wiki.tercept.net")) $e.remove();
 	});
 
-	switch (_SEO_PAGE) {
-		case "spells": $content.append(RenderSpells.$getRenderedSpell(it, {})); break;
+	switch (globalThis._SEO_PAGE) {
+		case "spells": $content.append(RenderSpells.$getRenderedSpell(it)); break;
 		case "bestiary": {
 			Renderer.utils.bindPronounceButtons();
-			$content.append(RenderBestiary.$getRenderedCreature(it));
-			$(`.mon__name--token`).css({paddingRight: 5});
+			$content.append(RenderBestiary.$getRenderedCreature(it, {isSkipTokenRender: true}));
 			break;
 		}
 		case "items": $content.append(RenderItems.$getRenderedItem(it)); break;
@@ -43,12 +43,18 @@ window.addEventListener("load", async () => {
 		// }
 	}
 
-	if (_SEO_FLUFF) {
-		const fluff = await DataLoader.pCacheAndGet(`${fullPage}fluff`, _SEO_SOURCE, _SEO_HASH);
+	if (globalThis._SEO_FLUFF) {
+		const fluff = await DataLoader.pCacheAndGet(`${fullPage}fluff`, globalThis._SEO_SOURCE, globalThis._SEO_HASH);
 		if (fluff) {
 			$$`<div class="mt-5 py-2">
-				${Renderer.hover.$getHoverContent_fluff(_SEO_PAGE, fluff, null, {isSkipNameRow: true, isSkipPageRow: true}).addClass("shadow-big stats--book stats--book-large")}
+				${Renderer.hover.$getHoverContent_fluff(globalThis._SEO_PAGE, fluff, null, {isSkipNameRow: true, isSkipPageRow: true}).addClass("shadow-big stats--book stats--book-large")}
 			</div>`.insertAfter($wrpContent);
 		}
 	}
+};
+
+window.addEventListener("load", () => {
+	// Attempt to sneak this in before the navigation onload fires
+	Renderer.get().setBaseUrl("/");
+	onLoadSeo().then(null);
 });

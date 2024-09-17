@@ -43,7 +43,7 @@
 				"armor": [
 					"light",
 					"medium",
-					"{@item shield|phb|shields}"
+					"shield"
 				],
 				"weapons": [
 					"simple"
@@ -115,7 +115,9 @@
 					{
 						"_": [
 							"shield|phb",
-							"holy symbol|phb"
+							{
+								"equipmentType": "focusSpellcastingHoly"
+							}
 						]
 					}
 				]
@@ -128,7 +130,7 @@
 					"armor": [
 						"light",
 						"medium",
-						"{@item shield|phb|shields}"
+						"shield"
 					]
 				}
 			},
@@ -487,307 +489,8 @@
 				"Divine Intervention Improvement|Cleric||20"
 			],
 			"subclassTitle": "Divine Domain",
-			"fluff": [
-				{
-					"name": "Cleric",
-					"type": "section",
-					"entries": [
-						"Arms and eyes upraised toward the sun and a prayer on his lips, an elf begins to glow with an inner light that spills out to heal his battle-worn companions.",
-						"Chanting a song of glory, a dwarf swings his axe in wide swaths to cut through the ranks of orcs arrayed against him, shouting praise to the gods with every foe's fall.",
-						"Calling down a curse upon the forces of undeath, a human lifts her holy symbol as light pours from it to drive back the zombies crowding in on her companions.",
-						"Clerics are intermediaries between the mortal world and the distant planes of the gods. As varied as the gods they serve, clerics strive to embody the handiwork of their deities. No ordinary priest, a cleric is imbued with divine magic.",
-						{
-							"type": "entries",
-							"name": "Healers and Warriors",
-							"entries": [
-								"Divine magic, as the name suggests, is the power of the gods, flowing from them into the world. Clerics are conduits for that power, manifesting it as miraculous effects. The gods don't grant this power to everyone who seeks it, but only to those chosen to fulfill a high calling.",
-								"Harnessing divine magic doesn't rely on study or training. A cleric might learn formulaic prayers and ancient rites, but the ability to cast cleric spells relies on devotion and an intuitive sense of a deity's wishes.",
-								"Clerics combine the helpful magic of healing and inspiring their allies with spells that harm and hinder foes. They can provoke awe and dread, lay curses of plague or poison, and even call down flames from heaven to consume their enemies. For those evildoers who will benefit most from a mace to the head, clerics depend on their combat training to let them wade into melee with the power of the gods on their side."
-							]
-						},
-						{
-							"type": "entries",
-							"name": "Divine Agents",
-							"entries": [
-								"Not every acolyte or officiant at a temple or shrine is a cleric. Some priests are called to a simple life of temple service, carrying out their gods' will through prayer and sacrifice, not by magic and strength of arms. In some cities, priesthood amounts to a political office, viewed as a stepping stone to higher positions of authority and involving no communion with a god at all. True clerics are rare in most hierarchies.",
-								"When a cleric takes up an adventuring life, it is usually because his or her god demands it. Pursuing the goals of the gods often involves braving dangers beyond the walls of civilization, smiting evil or seeking holy relics in ancient tombs. Many clerics are also expected to protect their deities' worshipers, which can mean fighting rampaging orcs, negotiating peace between warring nations, or sealing a portal that would allow a demon prince to enter the world.",
-								"Most adventuring clerics maintain some connection to established temples and orders of their faiths. A temple might ask for a cleric's aid, or a high priest might be in a position to demand it."
-							]
-						},
-						{
-							"type": "entries",
-							"name": "Creating a Cleric",
-							"entries": [
-								"As you create a cleric, the most important question to consider is which deity to serve and what principles you want your character to embody. Appendix B includes lists of many of the gods of the multiverse. Check with your DM to learn which deities are in your campaign.",
-								"Once you've chosen a deity, consider your cleric's relationship to that god. Did you enter this service willingly? Or did the god choose you, impelling you into service with no regard for your wishes? How do the temple priests of your faith regard you: as a champion or a troublemaker? What are your ultimate goals? Does your deity have a special task in mind for you? Or are you striving to prove yourself worthy of a great quest?",
-								{
-									"type": "entries",
-									"name": "Quick Build",
-									"entries": [
-										"You can make a cleric quickly by following these suggestions. First, Wisdom should be your highest ability score, followed by Strength or Constitution. Second, choose the {@background acolyte} background."
-									]
-								}
-							]
-						}
-					],
-					"source": "PHB",
-					"page": 56
-				},
-				{
-					"type": "section",
-					"entries": [
-						{
-							"type": "quote",
-							"entries": [
-								"To become a cleric is to become a messenger of the gods. The power the divine offers is great, but it always comes with tremendous responsibility."
-							],
-							"by": "Riggby the patriarch"
-						},
-						"Almost all the folk in the world who revere a deity live their lives without ever being directly touched by a divine being. As such, they can never know what it feels like to be a cleric\u2014someone who is not only a devout worshiper, but who has also been invested with a measure of a deity's power.",
-						"The question has long been debated: Does a mortal become a cleric as a consequence of deep devotion to one's deity, thereby attracting the god's favor? Or is it the deity who sees the potential in a person and calls that individual into service? Ultimately, perhaps, the answer doesn't matter. However clerics come into being, the world needs clerics as much as clerics and deities need each other.",
-						"If you're playing a cleric character, the following sections offer ways to add some detail to that character's history and personality.",
-						{
-							"type": "entries",
-							"name": "Temple",
-							"entries": [
-								"Most clerics start their lives of service as priests in an order, then later realize that they have been blessed by their god with the qualities needed to become a cleric. To prepare for this new duty, candidates typically receive instruction from a cleric of a temple or another place of study devoted to their deity.",
-								"Some temples are cut off from the world so that their occupants can focus on devotions, while other temples open their doors to minister to and heal the masses. What is noteworthy about the temple you studied at?",
-								{
-									"type": "table",
-									"caption": "Temple",
-									"colLabels": [
-										"{@dice d6}",
-										"Temple"
-									],
-									"colStyles": [
-										"col-1 text-center",
-										"col-11"
-									],
-									"rows": [
-										[
-											{
-												"type": "cell",
-												"roll": {
-													"exact": 1
-												}
-											},
-											"Your temple is said to be the oldest surviving structure built to honor your god."
-										],
-										[
-											{
-												"type": "cell",
-												"roll": {
-													"exact": 2
-												}
-											},
-											"Acolytes of several like-minded deities all received instruction together in your temple."
-										],
-										[
-											{
-												"type": "cell",
-												"roll": {
-													"exact": 3
-												}
-											},
-											"You come from a temple famed for the brewery it operates. Some say you smell like one of its ales."
-										],
-										[
-											{
-												"type": "cell",
-												"roll": {
-													"exact": 4
-												}
-											},
-											"Your temple is a fortress and a proving ground that trains warrior-priests."
-										],
-										[
-											{
-												"type": "cell",
-												"roll": {
-													"exact": 5
-												}
-											},
-											"Your temple is a peaceful, humble place, filled with vegetable gardens and simple priests."
-										],
-										[
-											{
-												"type": "cell",
-												"roll": {
-													"exact": 6
-												}
-											},
-											"You served in a temple in the Outer Planes."
-										]
-									]
-								},
-								{
-									"type": "entries",
-									"name": "Keepsake",
-									"entries": [
-										"Many clerics have items among their personal gear that symbolize their faith, remind them of their vows, or otherwise help to keep them on their chosen paths. Even though such an item is not imbued with divine power, it is vitally important to its owner because of what it represents.",
-										{
-											"type": "table",
-											"caption": "Keepsake",
-											"colLabels": [
-												"{@dice d6}",
-												"Keepsake"
-											],
-											"colStyles": [
-												"col-1 text-center",
-												"col-11"
-											],
-											"rows": [
-												[
-													{
-														"type": "cell",
-														"roll": {
-															"exact": 1
-														}
-													},
-													"The finger bone of a saint"
-												],
-												[
-													{
-														"type": "cell",
-														"roll": {
-															"exact": 2
-														}
-													},
-													"A metal-bound book that tells how to hunt and destroy infernal creatures"
-												],
-												[
-													{
-														"type": "cell",
-														"roll": {
-															"exact": 3
-														}
-													},
-													"A pig's whistle that reminds you of your humble and beloved mentor"
-												],
-												[
-													{
-														"type": "cell",
-														"roll": {
-															"exact": 4
-														}
-													},
-													"A braid of hair woven from the tail of a unicorn"
-												],
-												[
-													{
-														"type": "cell",
-														"roll": {
-															"exact": 5
-														}
-													},
-													"A scroll that describes how best to rid the world of necromancers"
-												],
-												[
-													{
-														"type": "cell",
-														"roll": {
-															"exact": 6
-														}
-													},
-													"A runestone said to be blessed by your god"
-												]
-											]
-										}
-									]
-								},
-								{
-									"type": "entries",
-									"name": "Secret",
-									"entries": [
-										"No mortal soul is entirely free of second thoughts or doubt. Even a cleric must grapple with dark desires or the forbidden attraction of turning against the teachings of one's deity.",
-										"If you haven't considered this aspect of your character yet, see the table entries for some possibilities, or use them for inspiration. Your deep, dark secret might involve something you did (or are doing), or it could be rooted in the way you feel about the world and your role in it.",
-										{
-											"type": "table",
-											"caption": "Secret",
-											"colLabels": [
-												"{@dice d6}",
-												"Secret"
-											],
-											"colStyles": [
-												"col-1 text-center",
-												"col-11"
-											],
-											"rows": [
-												[
-													{
-														"type": "cell",
-														"roll": {
-															"exact": 1
-														}
-													},
-													"An imp offers you counsel. You try to ignore the creature, but sometimes its advice is helpful."
-												],
-												[
-													{
-														"type": "cell",
-														"roll": {
-															"exact": 2
-														}
-													},
-													"You believe that, in the final analysis, the gods are nothing more than ultrapowerful mortal creatures."
-												],
-												[
-													{
-														"type": "cell",
-														"roll": {
-															"exact": 3
-														}
-													},
-													"You acknowledge the power of the gods, but you think that most events are dictated by pure chance."
-												],
-												[
-													{
-														"type": "cell",
-														"roll": {
-															"exact": 4
-														}
-													},
-													"Even though you can work divine magic, you have never truly felt the presence of a divine essence within yourself."
-												],
-												[
-													{
-														"type": "cell",
-														"roll": {
-															"exact": 5
-														}
-													},
-													"You are plagued by nightmares that you believe are sent by your god as punishment for some unknown transgression."
-												],
-												[
-													{
-														"type": "cell",
-														"roll": {
-															"exact": 6
-														}
-													},
-													"In times of despair, you feel that you are but a plaything of the gods, and you resent their remoteness."
-												]
-											]
-										}
-									]
-								},
-								{
-									"type": "inset",
-									"name": "Serving a Pantheon, Philosophy, or Force",
-									"entries": [
-										"The typical cleric is an ordained servant of a particular god and chooses a Divine Domain associated with that deity. The cleric's magic flows from the god or the god's sacred realm, and often the cleric bears a holy symbol that represents that divinity.",
-										"Some clerics, especially in a world like Eberron, serve a whole pantheon, rather than a single deity. In certain campaigns, a cleric might instead serve a cosmic force, such as life or death, or a philosophy or concept, such as love, peace, or one of the nine alignments. Chapter 1 of the Dungeon Master's Guide explores options like these, in the section \"Gods of Your World.\"",
-										"Talk with your DM about the divine options available in your campaign, whether they're gods, pantheons, philosophies, or cosmic forces. Whatever being or thing your cleric ends up serving, choose a Divine Domain that is appropriate for it, and if it doesn't have a holy symbol, work with your DM to design one.",
-										"The cleric's class features often refer to your deity. If you are devoted to a pantheon, cosmic force, or philosophy, your cleric features still work for you as written. Think of the references to a god as references to the divine thing you serve that gives you your magic."
-									]
-								}
-							]
-						}
-					],
-					"source": "XGE",
-					"page": 17
-				}
-			]
+			"hasFluff": true,
+			"hasFluffImages": true
 		}
 	],
 	"subclass": [
@@ -1151,7 +854,8 @@
 				"Divine Strike|Cleric||Death|DMG|8",
 				"Blessed Strikes|Cleric||Death|DMG|8|TCE",
 				"Improved Reaper|Cleric||Death|DMG|17"
-			]
+			],
+			"hasFluffImages": true
 		},
 		{
 			"name": "Arcana Domain",
@@ -1217,7 +921,8 @@
 				"Potent Spellcasting|Cleric||Arcana|SCAG|8",
 				"Blessed Strikes|Cleric||Arcana|SCAG|8|TCE",
 				"Arcane Mastery|Cleric||Arcana|SCAG|17"
-			]
+			],
+			"hasFluffImages": true
 		},
 		{
 			"name": "Ambition Domain (PSA)",
@@ -1259,7 +964,8 @@
 				"Potent Spellcasting|Cleric||Ambition (PSA)|PSA|8",
 				"Blessed Strikes|Cleric||Ambition (PSA)|PSA|8|TCE",
 				"Improved Duplicity|Cleric||Ambition (PSA)|PSA|17"
-			]
+			],
+			"hasFluffImages": true
 		},
 		{
 			"name": "Knowledge Domain (PSA)",
@@ -1302,7 +1008,8 @@
 				"Potent Spellcasting|Cleric||Knowledge||8",
 				"Blessed Strikes|Cleric||Knowledge||8|TCE",
 				"Visions of the Past|Cleric||Knowledge||17"
-			]
+			],
+			"hasFluffImages": true
 		},
 		{
 			"name": "Solidarity Domain (PSA)",
@@ -1344,7 +1051,8 @@
 				"Divine Strike|Cleric||Solidarity (PSA)|PSA|8",
 				"Blessed Strikes|Cleric||Solidarity (PSA)|PSA|8|TCE",
 				"Supreme Healing|Cleric||Solidarity (PSA)|PSA|17"
-			]
+			],
+			"hasFluffImages": true
 		},
 		{
 			"name": "Strength Domain (PSA)",
@@ -1395,7 +1103,8 @@
 				"Divine Strike|Cleric||Strength (PSA)|PSA|8",
 				"Blessed Strikes|Cleric||Strength (PSA)|PSA|8|TCE",
 				"Avatar of Battle|Cleric||Strength (PSA)|PSA|17"
-			]
+			],
+			"hasFluffImages": true
 		},
 		{
 			"name": "Zeal Domain (PSA)",
@@ -1437,7 +1146,8 @@
 				"Divine Strike|Cleric||Zeal (PSA)|PSA|8",
 				"Blessed Strikes|Cleric||Zeal (PSA)|PSA|8|TCE",
 				"Blaze of Glory|Cleric||Zeal (PSA)|PSA|17"
-			]
+			],
+			"hasFluffImages": true
 		},
 		{
 			"name": "Forge Domain",
@@ -1479,7 +1189,8 @@
 				"Divine Strike|Cleric||Forge|XGE|8",
 				"Blessed Strikes|Cleric||Forge|XGE|8|TCE",
 				"Saint of Forge and Fire|Cleric||Forge|XGE|17"
-			]
+			],
+			"hasFluffImages": true
 		},
 		{
 			"name": "Grave Domain",
@@ -1526,6 +1237,89 @@
 				"Potent Spellcasting|Cleric||Grave|XGE|8",
 				"Blessed Strikes|Cleric||Grave|XGE|8|TCE",
 				"Keeper of Souls|Cleric||Grave|XGE|17"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "Community Domain",
+			"shortName": "Community",
+			"source": "HWCS",
+			"className": "Cleric",
+			"classSource": "PHB",
+			"page": 39,
+			"additionalSpells": [
+				{
+					"prepared": {
+						"1": [
+							"bless",
+							"goodberry"
+						],
+						"3": [
+							"aid",
+							"heroism"
+						],
+						"5": [
+							"beacon of hope",
+							"spirit guardians"
+						],
+						"7": [
+							"banishment",
+							"mordenkainen's faithful hound"
+						],
+						"9": [
+							"mass cure wounds",
+							"rary's telepathic bond"
+						]
+					}
+				}
+			],
+			"subclassFeatures": [
+				"Community Domain|Cleric||Community|HWCS|1",
+				"Channel Divinity: Magnificent Feast|Cleric||Community|HWCS|2",
+				"Channel Divinity: Community Watch|Cleric||Community|HWCS|6",
+				"Divine Strike|Cleric||Community|HWCS|8",
+				"Paragon of the People|Cleric||Community|HWCS|17"
+			]
+		},
+		{
+			"name": "Night Domain",
+			"shortName": "Night",
+			"source": "HWCS",
+			"className": "Cleric",
+			"classSource": "PHB",
+			"page": 40,
+			"additionalSpells": [
+				{
+					"prepared": {
+						"1": [
+							"sleep",
+							"veil of dusk|HWCS"
+						],
+						"3": [
+							"darkness",
+							"moonbeam"
+						],
+						"5": [
+							"nondetection",
+							"globe of twilight|HWCS"
+						],
+						"7": [
+							"divination",
+							"stellar bodies|HWCS"
+						],
+						"9": [
+							"dream",
+							"seeming"
+						]
+					}
+				}
+			],
+			"subclassFeatures": [
+				"Night Domain|Cleric||Night|HWCS|1",
+				"Channel Divinity: Invocation of Night|Cleric||Night|HWCS|2",
+				"Improved Ward|Cleric||Night|HWCS|6",
+				"Veil of Dreams|Cleric||Night|HWCS|8",
+				"Creature of the Night|Cleric||Night|HWCS|17"
 			]
 		},
 		{
@@ -1574,7 +1368,8 @@
 				"Divine Strike|Cleric||Order|TCE|8",
 				"Blessed Strikes|Cleric||Order|TCE|8|TCE",
 				"Order's Wrath|Cleric||Order|TCE|17"
-			]
+			],
+			"hasFluffImages": true
 		},
 		{
 			"name": "Peace Domain",
@@ -1616,7 +1411,8 @@
 				"Potent Spellcasting|Cleric||Peace|TCE|8",
 				"Blessed Strikes|Cleric||Peace|TCE|8|TCE",
 				"Expansive Bond|Cleric||Peace|TCE|17"
-			]
+			],
+			"hasFluffImages": true
 		},
 		{
 			"name": "Twilight Domain",
@@ -1658,7 +1454,8 @@
 				"Divine Strike|Cleric||Twilight|TCE|8",
 				"Blessed Strikes|Cleric||Twilight|TCE|8|TCE",
 				"Twilight Shroud|Cleric||Twilight|TCE|17"
-			]
+			],
+			"hasFluffImages": true
 		},
 		{
 			"name": "Blood Domain",
@@ -1702,7 +1499,8 @@
 				"Divine Strike (14th Level)|Cleric|PHB|Blood|TDCSR|14",
 				"Channel Divinity: Blood Puppet (17th Level)|Cleric|PHB|Blood|TDCSR|17",
 				"Vascular Corruption Aura|Cleric|PHB|Blood|TDCSR|17"
-			]
+			],
+			"hasFluffImages": true
 		},
 		{
 			"name": "Moon Domain",
@@ -1743,7 +1541,8 @@
 				"Channel Divinity: Mind of Two Moons|Cleric|PHB|Moon|TDCSR|6",
 				"Empowered Cantrips|Cleric|PHB|Moon|TDCSR|8",
 				"Eclipse of Ill Omen|Cleric|PHB|Moon|TDCSR|17"
-			]
+			],
+			"hasFluffImages": true
 		}
 	],
 	"classFeature": [
@@ -2304,6 +2103,276 @@
 			]
 		},
 		{
+			"name": "Community Domain",
+			"source": "HWCS",
+			"page": 39,
+			"className": "Cleric",
+			"classSource": "PHB",
+			"subclassShortName": "Community",
+			"subclassSource": "HWCS",
+			"level": 1,
+			"entries": [
+				"The community domain focuses on the ties that bind all people together. These are the ties of family and friendship, the ties to ancestors, as well as the ties between elders and the next generation with whom they share their wisdom. The power of the Gods of community is in the security of home and hearth, and the joy of good company. Many such gods teach the value of tradition and simple ways of living in harmony with the natural world. They also tend towards the rule of law, not as a kind of great bureaucracy, but as sacred traditions passed from generation to generation. Some gods advocate the removal of harsh or disruptive forces to this order, and proper sanctions for the violation of the goodwill that any community ought to provide.",
+				"Clerics of such gods value unity, and praise the strength that can be gained when people support each other.",
+				{
+					"type": "table",
+					"caption": "Community Domain Spells",
+					"colLabels": [
+						"Cleric Level",
+						"Spells"
+					],
+					"colStyles": [
+						"col-3 text-center",
+						"col-9"
+					],
+					"rows": [
+						[
+							"1st",
+							"{@spell Bless}, {@spell Goodberry}"
+						],
+						[
+							"3rd",
+							"{@spell Aid}, {@spell Heroism}"
+						],
+						[
+							"5th",
+							"{@spell Beacon of Hope}, {@spell Spirit Guardians}"
+						],
+						[
+							"7th",
+							"{@spell Banishment}, {@spell Mordenkainen's Faithful Hound}"
+						],
+						[
+							"9th",
+							"{@spell Mass Cure Wounds}, {@spell Rary's Telepathic Bond}"
+						]
+					]
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Blessing of the Hearth|Cleric||Community|HWCS|1"
+				}
+			]
+		},
+		{
+			"name": "Blessing of the Hearth",
+			"source": "HWCS",
+			"page": 39,
+			"className": "Cleric",
+			"classSource": "PHB",
+			"subclassShortName": "Community",
+			"subclassSource": "HWCS",
+			"level": 1,
+			"header": 1,
+			"entries": [
+				"From 1st level, you gain the ability to conjure a small flagstone hearth with a simple iron cooking pot whenever you rest. This hearth helps warm you and your companions, and can be used to prepare hearty and nutritious meals on the road. If you or any friendly creatures you make camp with would regain hit points at the end of a short rest by spending one or more hit dice, each of those creatures may choose to re-roll one of their resting dice, taking the higher roll between the two.",
+				"Additionally, you gain proficiency with {@item Cook's Utensils|PHB}."
+			]
+		},
+		{
+			"name": "Channel Divinity: Magnificent Feast",
+			"source": "HWCS",
+			"page": 39,
+			"className": "Cleric",
+			"classSource": "PHB",
+			"subclassShortName": "Community",
+			"subclassSource": "HWCS",
+			"level": 2,
+			"header": 2,
+			"entries": [
+				"Starting at 2nd level, you may use your Channel Divinity to conjure a magical feast for the rough road ahead. By spending 10 minutes, you may create a number of delicious, well-prepared, yet simple food items equal to your Wisdom modifier (minimum of 1). These food items will last up to 8 hours or until the end of a rest, and will never spoil. Eating food created in this way takes an action, providing whomever eats it with healing equal to {@dice 2d4} + your cleric level, and can remove either the {@condition frightened} or {@condition poisoned} condition from that creature (chosen by the creature when consumed)."
+			]
+		},
+		{
+			"name": "Channel Divinity: Community Watch",
+			"source": "HWCS",
+			"page": 39,
+			"className": "Cleric",
+			"classSource": "PHB",
+			"subclassShortName": "Community",
+			"subclassSource": "HWCS",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"Starting at 6th level, you can use your Channel Divinity to instill a feeling of vigilant protection in you and your allies. You grant yourself and a number of allies, up to your Wisdom modifier (minimum of 1), a boon from your deity. Allies must be able to see you and be within 30 feet to receive the boon. Once per round, a creature benefitting from this boon can roll a {@dice d6}, adding the result to a skill check, saving throw, or attack roll. This effect lasts for a number of rounds equal to your Wisdom modifier (minimum of 1 round). A creature can only benefit from this effect if it can see at least one of its allies."
+			]
+		},
+		{
+			"name": "Divine Strike",
+			"source": "HWCS",
+			"page": 39,
+			"className": "Cleric",
+			"classSource": "PHB",
+			"subclassShortName": "Community",
+			"subclassSource": "HWCS",
+			"level": 8,
+			"header": 2,
+			"entries": [
+				"At 8th level, you gain the ability to infuse your weapon with the power to punish wrongdoing. Once on each of your turns, when you hit a creature with a weapon attack, you can cause the attack to deal an extra {@dice 1d8} psychic damage to the target. Visions of the evil they have wrought upon others flash before their eyes. You choose whether any foe reduced to 0 hit points by this attack remains stable or dies. When you reach 14th level, the extra damage increases to {@dice 2d8}."
+			]
+		},
+		{
+			"name": "Paragon of the People",
+			"source": "HWCS",
+			"page": 39,
+			"className": "Cleric",
+			"classSource": "PHB",
+			"subclassShortName": "Community",
+			"subclassSource": "HWCS",
+			"level": 17,
+			"header": 2,
+			"entries": [
+				"At 17th level, your Community Watch grants an additional {@dice d6} to each affected ally. It also grants immunity to fear for the duration of the effect. Additionally, your Magnificent Feast produces twice as many foodstuffs, each of which can, when consumed, remove a single curse or disease affecting the target (including attunement to a cursed item)."
+			]
+		},
+		{
+			"name": "Night Domain",
+			"source": "HWCS",
+			"page": 40,
+			"className": "Cleric",
+			"classSource": "PHB",
+			"subclassShortName": "Night",
+			"subclassSource": "HWCS",
+			"level": 1,
+			"entries": [
+				"The night is mysterious, and conceals many unseen dangers. However, the cover of darkness also brings protection from predators and shadows within which one can conceal themselves. The gods of night are varied, encompassing those who would use the cover of darkness to protect others from threats, to those who would use the shadows for wrong doings. The motives of night gods are often shrouded in mystery. Many teach their followers that it is only by peering through the darkness and looking beyond what is hidden that one can attain truth. Clerics of night do their best to keep themselves and their companions safe while journeying through the darkness.",
+				{
+					"type": "table",
+					"caption": "Night Domain Spells",
+					"colLabels": [
+						"Cleric Level",
+						"Spells"
+					],
+					"colStyles": [
+						"col-3 text-center",
+						"col-9"
+					],
+					"rows": [
+						[
+							"1st",
+							"{@spell Sleep}, {@spell Veil of Dusk|HWCS}"
+						],
+						[
+							"3rd",
+							"{@spell Darkness}, {@spell Moonbeam}"
+						],
+						[
+							"5th",
+							"{@spell Nondetection}, {@spell Globe of Twilight|HWCS}"
+						],
+						[
+							"7th",
+							"{@spell Divination}, {@spell Stellar Bodies|HWCS}"
+						],
+						[
+							"9th",
+							"{@spell Dream}, {@spell Seeming}"
+						]
+					]
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Eye of Twilight|Cleric||Night|HWCS|1"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Ward of Shadows|Cleric||Night|HWCS|1"
+				}
+			]
+		},
+		{
+			"name": "Eye of Twilight",
+			"source": "HWCS",
+			"page": 40,
+			"className": "Cleric",
+			"classSource": "PHB",
+			"subclassShortName": "Night",
+			"subclassSource": "HWCS",
+			"level": 1,
+			"header": 1,
+			"entries": [
+				"Beginning at 1st level, a divine blessing grants you the ability to see more clearly in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in magical or nonmagical darkness as if it were only dim light. You can't discern color in the darkness, only shades of gray.",
+				"When you reach 6th level, you can see in dim light within 120 feet of you as if it were bright light, and in magical or nonmagical darkness as if it were dim light. You can't discern color in the darkness, only shades of gray.",
+				"At 8th level, you can see normally in darkness, both magical and nonmagical within 120 feet.",
+				"Finally, at 17th level, your eyes are able to see the truth hiding within darkness. You gain the ability to call upon the powers of your deity to grant yourself {@sense truesight} within 120 feet of you for a number of minutes equal to your Wisdom modifier (a minimum of 1 minute). Your {@sense truesight} only functions while in conditions of magical or nonmagical darkness. Once you have used this feature, you cannot use it again until you have completed a long rest."
+			]
+		},
+		{
+			"name": "Ward of Shadows",
+			"source": "HWCS",
+			"page": 40,
+			"className": "Cleric",
+			"classSource": "PHB",
+			"subclassShortName": "Night",
+			"subclassSource": "HWCS",
+			"level": 1,
+			"header": 1,
+			"entries": [
+				"At 1st level, you can create a ward of divine shadows to conceal yourself from an attacking enemy. When attacked by a creature you can see within 30 feet of you, you can use your reaction to impose disadvantage on the attack roll, as shadows envelop your form. An attacker that can't be {@condition blinded} is immune to this feature.",
+				"You can use this feature a number of times equal to your Wisdom modifier (a minimum of once), and regain all expended uses when you finish a long rest."
+			]
+		},
+		{
+			"name": "Channel Divinity: Invocation of Night",
+			"source": "HWCS",
+			"page": 40,
+			"className": "Cleric",
+			"classSource": "PHB",
+			"subclassShortName": "Night",
+			"subclassSource": "HWCS",
+			"level": 2,
+			"header": 2,
+			"entries": [
+				"Starting at 2nd level, you can use your Channel Divinity to harness the powers of night, clouding the vision of your foes in a shroud of darkness.",
+				"As an action, you present your holy symbol causing any source of mundane or magical light within 30 feet of you to be extinguished. Additionally, each hostile creature within 30 feet of you must make a Constitution saving throw. A creature who fails the saving throw is {@condition blinded} for a number of rounds equal to your cleric level. A creature blinded in this way gets a new saving throw at the end of each of its turns to remove the effect. A creature that has {@quickref Cover||3||total cover} from you is not affected."
+			]
+		},
+		{
+			"name": "Improved Ward",
+			"source": "HWCS",
+			"page": 40,
+			"className": "Cleric",
+			"classSource": "PHB",
+			"subclassShortName": "Night",
+			"subclassSource": "HWCS",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"At 6th level, you can use your Ward of Shadows feature whenever a creature you can see within 30 feet of you attacks a creature besides yourself."
+			]
+		},
+		{
+			"name": "Veil of Dreams",
+			"source": "HWCS",
+			"page": 40,
+			"className": "Cleric",
+			"classSource": "PHB",
+			"subclassShortName": "Night",
+			"subclassSource": "HWCS",
+			"level": 8,
+			"header": 2,
+			"entries": [
+				"When you reach 8th level, you gain mastery over magical sleep. When you cast the {@spell sleep} spell, add your cleric level to the dice you roll to determine how many hit points of creatures the spell can affect.",
+				"You may choose the order in which creatures within the spell's area are affected. If the first target chosen has too many hit points to be affected, the spell will instead target the next creature you have chosen that the spell could affect before affecting other targets.",
+				"Additionally, any creature you put to sleep cannot be woken until the start of your next turn. Otherwise, the {@spell sleep} spell acts as normal."
+			]
+		},
+		{
+			"name": "Creature of the Night",
+			"source": "HWCS",
+			"page": 40,
+			"className": "Cleric",
+			"classSource": "PHB",
+			"subclassShortName": "Night",
+			"subclassSource": "HWCS",
+			"level": 17,
+			"header": 2,
+			"entries": [
+				"Starting at 17th level, you can use your action to activate a supernatural aura of deep night. It lasts for 1 minute, or until you dismiss it using another action. You emit heavily obscuring darkness in a 30-foot radius and lightly obscuring shadows 50 feet beyond that. The darkness and shadows overlap and smother existing sources of light. Only light produced by a 9th level spell or similarly powerful effect can negate the darkness and shadows.",
+				"Enemies within the shadows constantly feel the presence of hungry predators watching them, and become {@condition frightened} as long as they remain inside the affected area. Enemies in the darkness are both {@condition blinded} and {@condition frightened} for as long as they remain within its area."
+			]
+		},
+		{
 			"name": "Knowledge Domain",
 			"source": "PHB",
 			"page": 59,
@@ -2750,7 +2819,7 @@
 			},
 			"entries": [
 				"Starting at 2nd level, you can use your Channel Divinity to harness sunlight, banishing darkness and dealing radiant damage to your foes.",
-				"As an action, you present your holy symbol, and any magical darkness within 30 feet of you is dispelled. Additionally, each hostile creature within 30 feet of you must make a Constitution saving throw. A creature takes radiant damage equal to {@dice 2d10} + your cleric level on a failed saving throw, and half as much damage on a successful one. A creature that has total cover from you is not affected."
+				"As an action, you present your holy symbol, and any magical darkness within 30 feet of you is dispelled. Additionally, each hostile creature within 30 feet of you must make a Constitution saving throw. A creature takes radiant damage equal to {@dice 2d10} + your cleric level on a failed saving throw, and half as much damage on a successful one. A creature that has {@quickref Cover||3||total cover} from you is not affected."
 			]
 		},
 		{
@@ -4968,7 +5037,7 @@
 			"header": 2,
 			"entries": [
 				"{@i 17th-level Twilight Domain feature}",
-				"The twilight that you summon offers a protective embrace: you and your allies have half cover while in the sphere created by your Twilight Sanctuary."
+				"The twilight that you summon offers a protective embrace: you and your allies have {@quickref Cover||3||half cover} while in the sphere created by your Twilight Sanctuary."
 			]
 		},
 		{
@@ -5088,7 +5157,7 @@
 				"name": "Channel Divinity"
 			},
 			"entries": [
-				"Starting at 2nd level, you can use your Channel Divinity to form a supernatural bond with a creature you can see, or with a creature for which you possess a blood sample. This bond lasts for 1 hour or until your {@condition concentration} is broken (as if concentrating on a spell).",
+				"Starting at 2nd level, you can use your Channel Divinity to form a supernatural bond with a creature you can see, or with a creature for which you possess a blood sample. This bond lasts for 1 hour or until your {@status concentration} is broken (as if concentrating on a spell).",
 				"While the bond is in effect, you can use an action to learn the target's approximate distance and direction from you, as well as its current hit points and any conditions affecting it, as long as the target is within 10 miles of you. Alternatively, you can use your action to attempt to connect with the target's senses. You take {@damage 2d6} necrotic damage and the target makes a Constitution {@quickref saving throws|PHB|2|1|saving throw} against your spell save DC. On a successful save, the bond ends. On a failure, you can choose to either see or hear through the target's senses for a number of minutes equal to your Wisdom modifier (minimum 1 minute). During this time, you are {@condition blinded} or {@condition deafened} (respectively) with regard to your own senses. When the connection ends, the bond is lost.",
 				"Regardless of the outcome, the target feels a wave of unease pass over it when it makes this save."
 			]
@@ -5118,7 +5187,7 @@
 					]
 				},
 				"An animated corpse or an {@condition unconscious} creature takes its turn immediately after yours, but can't move or take actions unless you command it to do so. Its statistics are the same as when it was alive or conscious.",
-				"An affected living creature makes a new {@quickref saving throws|PHB|2|1|saving throw} at the end of each of its turns, ending the effect on itself on a success. For any target, your control lasts for 1 minute or until your {@condition concentration} is broken (as if concentrating on a spell)."
+				"An affected living creature makes a new {@quickref saving throws|PHB|2|1|saving throw} at the end of each of its turns, ending the effect on itself on a success. For any target, your control lasts for 1 minute or until your {@status concentration} is broken (as if concentrating on a spell)."
 			]
 		},
 		{
@@ -5333,7 +5402,7 @@
 				"name": "Channel Divinity"
 			},
 			"entries": [
-				"Starting at 6th level, you can use your Channel Divinity to invoke the twofold arcana of Exandria's moons. By expending one use of Channel Divinity, you can cast a second {@condition concentration} spell while already concentrating on a first spell, as long as both spells are on your list of Moon Domain spells. If you need to make a Constitution {@quickref saving throws|PHB|2|1|saving throw} to maintain your {@condition concentration} on both spells, you make the save with {@quickref Advantage and Disadvantage|PHB|2|0|disadvantage}. On a failure, you lose {@condition concentration} on both spells."
+				"Starting at 6th level, you can use your Channel Divinity to invoke the twofold arcana of Exandria's moons. By expending one use of Channel Divinity, you can cast a second {@status concentration} spell while already concentrating on a first spell, as long as both spells are on your list of Moon Domain spells. If you need to make a Constitution {@quickref saving throws|PHB|2|1|saving throw} to maintain your {@status concentration} on both spells, you make the save with {@quickref Advantage and Disadvantage|PHB|2|0|disadvantage}. On a failure, you lose {@status concentration} on both spells."
 			]
 		},
 		{
@@ -5624,7 +5693,7 @@
 			"level": 1,
 			"header": 1,
 			"entries": [
-				"At 1st level, you gain the ability to occasionally sense the presence of the undead, whose existence is an insult to the natural cycle of life. As an action, you can open your awareness to magically detect undead. Until the end of your next turn, you know the location of any undead within 60 feet of you that isn't behind total cover and that isn't protected from divination magic. This sense doesn't tell you anything about a creature's capabilities or identity.",
+				"At 1st level, you gain the ability to occasionally sense the presence of the undead, whose existence is an insult to the natural cycle of life. As an action, you can open your awareness to magically detect undead. Until the end of your next turn, you know the location of any undead within 60 feet of you that isn't behind {@quickref Cover||3||total cover} and that isn't protected from divination magic. This sense doesn't tell you anything about a creature's capabilities or identity.",
 				"You can use this feature a number of times equal to your Wisdom modifier (minimum of once). You regain all expended uses when you finish a long rest."
 			]
 		},

@@ -1,6 +1,4 @@
-"use strict";
-
-import * as fs from "fs";
+import fs from "fs";
 import * as ut from "./util.js";
 
 import "../js/parser.js";
@@ -11,8 +9,6 @@ function cleanFolder (folder, {isFast = false} = {}) {
 	console.log(`Cleaning directory ${folder}...`);
 	const files = ut.listFiles({
 		dir: folder,
-		blocklistFilePrefixes: ut.FILE_PREFIX_BLOCKLIST
-			.filter(it => it !== "foundry-"),
 	});
 	files
 		.filter(file => file.endsWith(".json"))

@@ -20,12 +20,12 @@ changelog="$(
 )"
 
 if [[ -z "$changelog" ]]; then
-    echo "Changelog entry for version $version does not exist."
+    echo "_No changelogs are available for $version._"
     exit 1
 fi
 
 {
-    # The "hub" tool reads all text up to the first empty line as the release
+    # The "gh" tool reads all text up to the first empty line as the release
     # title.
     # * For changelog entries with a title, this is formatted as
     #   '<version>, "<title>" Edition' to match the format of the site's

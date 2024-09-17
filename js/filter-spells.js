@@ -5,7 +5,7 @@ class VariantClassFilter extends Filter {
 		super({
 			header: "Optional/Variant Class",
 			nests: {},
-			groupFn: it => it.userData.group,
+			groupFn: it => it.group,
 			...opts,
 		});
 
@@ -48,7 +48,7 @@ class MultiFilterClasses extends MultiFilter {
 			this,
 			"isVariantSplit",
 			{
-				ele: e_({tag: "button", clazz: "btn btn-default btn-xs", text: "Include Variants"}),
+				ele: e_({tag: "button", clazz: "ve-btn ve-btn-default ve-btn-xs", text: "Include Variants"}),
 				isInverted: true,
 				stateName: "meta",
 				stateProp: "_meta",
@@ -58,7 +58,7 @@ class MultiFilterClasses extends MultiFilter {
 
 		e_({
 			tag: "div",
-			clazz: `btn-group w-100 ve-flex-v-center mobile__m-1 mobile__mb-2`,
+			clazz: `ve-btn-group w-100 ve-flex-v-center mobile__m-1 mobile__mb-2`,
 			children: [
 				btnToggleVariantSplit,
 			],
@@ -66,14 +66,17 @@ class MultiFilterClasses extends MultiFilter {
 	}
 
 	getDefaultMeta () {
-		return {...MultiFilterClasses._DEFAULT_META, ...super.getDefaultMeta()};
+		// Key order is important, as @filter tags depend on it
+		return {
+			...MultiFilterClasses._DEFAULT_META,
+		};
 	}
 }
 MultiFilterClasses._DEFAULT_META = {
 	isVariantSplit: false,
 };
 
-class PageFilterSpells extends PageFilter {
+class PageFilterSpells extends PageFilterBase {
 	// toss these into the "Tags" section to save screen space
 	static _META_ADD_CONC = "Concentration";
 	static _META_ADD_V = "Verbal";
@@ -159,7 +162,7 @@ class PageFilterSpells extends PageFilter {
 		if ((!s.miscTags || (s.miscTags && !s.miscTags.includes("SCL"))) && s.entriesHigherLevel) out.push("SCL");
 		if (s.srd) out.push("SRD");
 		if (s.basicRules) out.push("Basic Rules");
-		if (SourceUtil.isLegacySourceWotc(s.source)) s._fMisc.push("Legacy");
+		if (SourceUtil.isLegacySourceWotc(s.source)) out.push("Legacy");
 		if (s.hasFluff || s.fluff?.entries) out.push("Has Info");
 		if (s.hasFluffImages || s.fluff?.images) out.push("Has Images");
 		return out;
@@ -214,6 +217,7 @@ class PageFilterSpells extends PageFilter {
 			case Parser.SP_TM_ROUND: multiplier = 6; break;
 			case Parser.SP_TM_MINS: multiplier = 60; break;
 			case Parser.SP_TM_HRS: multiplier = 3600; break;
+			case Parser.SP_TM_SPECIAL: multiplier = 1_000_000; break; // Arbitrary large number
 		}
 		if (time.length > 1) offset += 0.5;
 		return (multiplier * firstTime.number) + offset;
@@ -231,11 +235,12 @@ class PageFilterSpells extends PageFilter {
 			case Parser.RNG_POINT: this._getNormalisedRange_getAdjustedForDistance({range, state}); break;
 			case Parser.RNG_LINE: state.offset = 1; this._getNormalisedRange_getAdjustedForDistance({range, state}); break;
 			case Parser.RNG_CONE: state.offset = 2; this._getNormalisedRange_getAdjustedForDistance({range, state}); break;
-			case Parser.RNG_RADIUS: state.offset = 3; this._getNormalisedRange_getAdjustedForDistance({range, state}); break;
-			case Parser.RNG_HEMISPHERE: state.offset = 4; this._getNormalisedRange_getAdjustedForDistance({range, state}); break;
-			case Parser.RNG_SPHERE: state.offset = 5; this._getNormalisedRange_getAdjustedForDistance({range, state}); break;
-			case Parser.RNG_CYLINDER: state.offset = 6; this._getNormalisedRange_getAdjustedForDistance({range, state}); break;
-			case Parser.RNG_CUBE: state.offset = 7; this._getNormalisedRange_getAdjustedForDistance({range, state}); break;
+			case Parser.RNG_EMANATION: state.offset = 3; this._getNormalisedRange_getAdjustedForDistance({range, state}); break;
+			case Parser.RNG_RADIUS: state.offset = 4; this._getNormalisedRange_getAdjustedForDistance({range, state}); break;
+			case Parser.RNG_HEMISPHERE: state.offset = 5; this._getNormalisedRange_getAdjustedForDistance({range, state}); break;
+			case Parser.RNG_SPHERE: state.offset = 6; this._getNormalisedRange_getAdjustedForDistance({range, state}); break;
+			case Parser.RNG_CYLINDER: state.offset = 7; this._getNormalisedRange_getAdjustedForDistance({range, state}); break;
+			case Parser.RNG_CUBE: state.offset = 8; this._getNormalisedRange_getAdjustedForDistance({range, state}); break;
 		}
 
 		// value in inches, to allow greater granularity
@@ -288,6 +293,7 @@ class PageFilterSpells extends PageFilter {
 				}
 			case Parser.RNG_LINE:
 			case Parser.RNG_CONE:
+			case Parser.RNG_EMANATION:
 			case Parser.RNG_RADIUS:
 			case Parser.RNG_HEMISPHERE:
 			case Parser.RNG_SPHERE:
@@ -315,9 +321,7 @@ class PageFilterSpells extends PageFilter {
 		const name = `${r.name}${addSuffix ? ` (${Parser.sourceJsonToAbv(r.source)})` : ""}`;
 		const opts = {
 			item: name,
-			userData: {
-				group: SourceUtil.getFilterGroup(r.source || Parser.SRC_PHB),
-			},
+			group: SourceUtil.getFilterGroup(r.source || Parser.SRC_PHB),
 		};
 		if (r.baseName) opts.nest = r.baseName;
 		else opts.nest = "(No Subraces)";
@@ -325,17 +329,17 @@ class PageFilterSpells extends PageFilter {
 	}
 	// endregion
 
-	constructor () {
-		super();
+	constructor (opts) {
+		super(opts);
 
 		this._classFilter = new Filter({
 			header: "Class",
-			groupFn: it => it.userData.group,
+			groupFn: it => it.group,
 		});
 		this._subclassFilter = new Filter({
 			header: "Subclass",
 			nests: {},
-			groupFn: it => it.userData.group,
+			groupFn: it => it.group,
 		});
 		this._levelFilter = new Filter({
 			header: "Level",
@@ -353,7 +357,7 @@ class PageFilterSpells extends PageFilter {
 		this._raceFilter = new Filter({
 			header: "Race",
 			nests: {},
-			groupFn: it => it.userData.group,
+			groupFn: it => it.group,
 		});
 		this._backgroundFilter = new SearchableFilter({header: "Background"});
 		this._featFilter = new SearchableFilter({header: "Feat"});
@@ -415,6 +419,7 @@ class PageFilterSpells extends PageFilter {
 				Parser.SP_TM_ROUND,
 				Parser.SP_TM_MINS,
 				Parser.SP_TM_HRS,
+				Parser.SP_TM_SPECIAL,
 			],
 			displayFn: Parser.spTimeUnitToFull,
 			itemSortFn: null,
@@ -489,7 +494,7 @@ class PageFilterSpells extends PageFilter {
 		s._fClassesAndVariantClasses = [
 			...s._fClasses,
 			...s._fVariantClasses
-				.map(it => (it.userData.definedInSource && !SourceUtil.isNonstandardSource(it.userData.definedInSource)) ? new FilterItem({item: it.userData.equivalentClassName}) : null)
+				.map(it => (it.definedInSource && !SourceUtil.isNonstandardSource(it.definedInSource)) ? new FilterItem({item: it.equivalentClassName}) : null)
 				.filter(Boolean)
 				.filter(it => !s._fClasses.some(itCls => itCls.item === it.item)),
 		];
@@ -610,7 +615,7 @@ class PageFilterSpells extends PageFilter {
 
 globalThis.PageFilterSpells = PageFilterSpells;
 
-class ModalFilterSpells extends ModalFilter {
+class ModalFilterSpells extends ModalFilterBase {
 	/**
 	 * @param opts
 	 * @param opts.namespace
@@ -637,7 +642,7 @@ class ModalFilterSpells extends ModalFilter {
 			{sort: "range", text: "Range", width: "2"},
 			{sort: "source", text: "Source", width: "1"},
 		];
-		return ModalFilter._$getFilterColumnHeaders(btnMeta);
+		return ModalFilterBase._$getFilterColumnHeaders(btnMeta);
 	}
 
 	async _pInit () {
@@ -665,20 +670,20 @@ class ModalFilterSpells extends ModalFilter {
 		const concentration = spell._isConc ? "×" : "";
 		const range = Parser.spRangeToFull(spell.range);
 
-		eleRow.innerHTML = `<div class="w-100 ve-flex-vh-center lst--border veapp__list-row no-select lst__wrp-cells">
-			<div class="col-0-5 pl-0 ve-flex-vh-center">${this._isRadio ? `<input type="radio" name="radio" class="no-events">` : `<input type="checkbox" class="no-events">`}</div>
+		eleRow.innerHTML = `<div class="w-100 ve-flex-vh-center lst__row-border veapp__list-row no-select lst__wrp-cells">
+			<div class="ve-col-0-5 pl-0 ve-flex-vh-center">${this._isRadio ? `<input type="radio" name="radio" class="no-events">` : `<input type="checkbox" class="no-events">`}</div>
 
-			<div class="col-0-5 px-1 ve-flex-vh-center">
-				<div class="ui-list__btn-inline px-2" title="Toggle Preview (SHIFT to Toggle Info Preview)">[+]</div>
+			<div class="ve-col-0-5 px-1 ve-flex-vh-center">
+				<div class="ui-list__btn-inline px-2 no-select" title="Toggle Preview (SHIFT to Toggle Info Preview)">[+]</div>
 			</div>
 
-			<div class="col-3 ${spell._versionBase_isVersion ? "italic" : ""} ${this._getNameStyle()}">${spell._versionBase_isVersion ? `<span class="px-3"></span>` : ""}${spell.name}</div>
-			<div class="col-1-5 ve-text-center">${levelText}</div>
-			<div class="col-2 ve-text-center">${time}</div>
-			<div class="col-1 sp__school-${spell.school} ve-text-center" title="${Parser.spSchoolAndSubschoolsAbvsToFull(spell.school, spell.subschools)}" ${Parser.spSchoolAbvToStyle(spell.school)}>${school}</div>
-			<div class="col-0-5 ve-text-center" title="Concentration">${concentration}</div>
-			<div class="col-2 text-right">${range}</div>
-			<div class="col-1 pr-0 ve-flex-h-center ${Parser.sourceJsonToColor(spell.source)}" title="${Parser.sourceJsonToFull(spell.source)}" ${Parser.sourceJsonToStyle(spell.source)}>${source}${Parser.sourceJsonToMarkerHtml(spell.source)}</div>
+			<div class="ve-col-3 px-1 ${spell._versionBase_isVersion ? "italic" : ""} ${this._getNameStyle()}">${spell._versionBase_isVersion ? `<span class="px-3"></span>` : ""}${spell.name}</div>
+			<div class="ve-col-1-5 px-1 ve-text-center">${levelText}</div>
+			<div class="ve-col-2 px-1 ve-text-center">${time}</div>
+			<div class="ve-col-1 px-1 sp__school-${spell.school} ve-text-center" title="${Parser.spSchoolAndSubschoolsAbvsToFull(spell.school, spell.subschools)}" ${Parser.spSchoolAbvToStyle(spell.school)}>${school}</div>
+			<div class="ve-col-0-5 px-1 ve-text-center" title="Concentration">${concentration}</div>
+			<div class="ve-col-2 px-1 ve-text-right">${range}</div>
+			<div class="ve-col-1 pl-1 pr-0 ve-flex-h-center ${Parser.sourceJsonToSourceClassname(spell.source)}" title="${Parser.sourceJsonToFull(spell.source)}" ${Parser.sourceJsonToStyle(spell.source)}>${source}${Parser.sourceJsonToMarkerHtml(spell.source)}</div>
 		</div>`;
 
 		const btnShowHidePreview = eleRow.firstElementChild.children[1].firstElementChild;

@@ -1,4 +1,36 @@
-"use strict";
+import {UtilsFoundryItem} from "./utils-foundry.js";
+
+class FoundryOmnidexerUtils {
+	static getPackedFoundryExtras ({prop, ent}) {
+		switch (prop) {
+			case "spell": return this._getPackedFoundryExtras_spell({ent});
+
+			case "item":
+			case "baseitem": return this._getPackedFoundryExtras_item({ent});
+		}
+	}
+
+	static _getPackedFoundryExtras_spell ({ent}) {
+		return {l: ent.level};
+	}
+
+	static _getPackedFoundryExtras_item ({ent}) {
+		return {ft: UtilsFoundryItem.getFoundryItemType(ent)};
+	}
+
+	/* -------------------------------------------- */
+
+	static unpackFoundryExtras (packed) {
+		if (!packed) return null;
+
+		return {
+			level: packed.l,
+			foundryType: packed.ft,
+		};
+	}
+}
+
+globalThis.FoundryOmnidexerUtils = FoundryOmnidexerUtils;
 
 class Omnidexer {
 	constructor (id = 0) {
@@ -6,19 +38,24 @@ class Omnidexer {
 		 * Produces index of the form:
 		 * {
 		 *   n: "Display Name",
-		 *   b: "Base Name" // Optional; name is used if not specified
+		 *   [b: "Base Name"] // name is used if not specified
 		 *   s: "PHB", // source
+		 *   [sA: "PHB"], // source abbreviation
+		 *   [sF: "Player's Handbook"], // source full
+		 *   [sC: "ff00ff"], // source color
 		 *   u: "spell name_phb, // hash
 		 *   uh: "spell name_phb, // Optional; hash for href if the link should be different from the hover lookup hash.
 		 *   p: 110, // page number
 		 *   [q: "bestiary.html", // page; synthetic property only used by search widget]
 		 *   h: 1 // if isHover enabled, otherwise undefined
 		 *   r: 1 // if SRD
+		 *   [dP: 1] // if partnered
 		 *   c: 10, // category ID
 		 *   id: 123, // index ID
 		 *   [t: "spell"], // tag
 		 *   [uu: "fireball|phb"], // UID
-		 *   [m: "img/spell/Fireball.png"], // Image
+		 *   [m: "img/spell/Fireball.webp"], // Image
+		 *   [xF: {...}], // Foundry extras
 		 * }
 		 */
 		this._index = [];
@@ -46,13 +83,16 @@ class Omnidexer {
 			Object.entries(metadata[k]).forEach(([kk, vv]) => (lookup[k] = lookup[k] || {})[vv] = kk);
 		});
 
-		index.forEach(it => Object.keys(it).filter(k => props.has(k))
-			.forEach(k => it[k] = lookup[k][it[k]] ?? it[k]));
+		index.forEach(it => {
+			Object.keys(it).filter(k => props.has(k))
+				.forEach(k => it[k] = lookup[k][it[k]] ?? it[k]);
+		});
+
 		return index;
 	}
 
 	static getProperty (obj, withDots) {
-		return withDots.split(".").reduce((o, i) => o[i], obj);
+		return MiscUtil.get(obj, ...withDots.split("."));
 	}
 
 	/**
@@ -65,6 +105,7 @@ class Omnidexer {
 	 * @param [options.isIncludeTag]
 	 * @param [options.isIncludeUid]
 	 * @param [options.isIncludeImg]
+	 * @param [options.isIncludeExtendedSourceInfo]
 	 */
 	async pAddToIndex (arbiter, json, options) {
 		options = options || {};
@@ -110,7 +151,7 @@ class Omnidexer {
 		if ((options.isNoFilter || (!arbiter.include && !(arbiter.filter && arbiter.filter(ent))) || (!arbiter.filter && (!arbiter.include || arbiter.include(ent)))) && !arbiter.isOnlyDeep) index.push(toAdd);
 
 		const primary = {it: ent, ix: ix, parentName: name};
-		const deepItems = await arbiter.pGetDeepIndex(this, primary, ent);
+		const deepItems = await arbiter.pGetDeepIndex(this, primary, ent, {name});
 		for (const item of deepItems) {
 			const toAdd = await this._pAddToIndex_pGetToAdd(state, ent, item);
 			if (!arbiter.filter || !arbiter.filter(ent)) index.push(toAdd);
@@ -140,6 +181,8 @@ class Omnidexer {
 		if (ent.srd) indexDoc.r = 1;
 
 		if (src) {
+			if (SourceUtil.isPartneredSourceWotc(src)) indexDoc.dP = 1;
+
 			if (options.isIncludeTag) {
 				indexDoc.t = this.getMetaId("t", Parser.getPropTag(arbiter.listProp));
 			}
@@ -159,13 +202,27 @@ class Omnidexer {
 				if (!indexDoc.m) {
 					const fluff = await Renderer.hover.pGetHoverableFluff(arbiter.fluffBaseListProp || arbiter.listProp, src, hash, {isSilent: true});
 					if (fluff?.images?.length) {
-						indexDoc.m = Renderer.utils.getMediaUrl(fluff.images[0], "href", "img");
+						indexDoc.m = Renderer.utils.getEntryMediaUrl(fluff.images[0], "href", "img");
 					}
 				}
 
 				if (indexDoc.m) {
 					indexDoc.m = indexDoc.m.replace(/^img\//, "");
 				}
+			}
+
+			if (options.isIncludeExtendedSourceInfo) {
+				indexDoc.sA = this.getMetaId("sA", Parser.sourceJsonToAbv(src));
+
+				indexDoc.sF = this.getMetaId("sF", Parser.sourceJsonToFull(src));
+
+				const color = Parser.sourceJsonToColor(src);
+				if (color) indexDoc.sC = this.getMetaId("sC", color);
+			}
+
+			if (options.isIncludeFoundryExtras) {
+				const extras = FoundryOmnidexerUtils.getPackedFoundryExtras({prop: arbiter.listProp, ent});
+				if (extras) indexDoc.xF = extras;
 			}
 		}
 
@@ -200,6 +257,8 @@ class Omnidexer {
 		}
 	}
 }
+
+globalThis.Omnidexer = Omnidexer;
 
 class IndexableDirectory {
 	/**
@@ -246,7 +305,7 @@ class IndexableDirectoryBestiary extends IndexableDirectory {
 			baseUrl: "bestiary.html",
 			isHover: true,
 			fnGetToken: (ent) => {
-				if (!ent.tokenUrl && !ent.hasToken) return null;
+				if (!Renderer.monster.hasToken(ent)) return null;
 				return Renderer.monster.getTokenUrl(ent);
 			},
 		});
@@ -303,11 +362,13 @@ class IndexableDirectorySubclass extends IndexableDirectory {
 		});
 	}
 
-	pGetDeepIndex (indexer, primary, sc) {
+	pGetDeepIndex (indexer, primary, sc, {name}) {
+		name ||= sc.name;
+
 		return [
 			{
-				b: sc.name,
-				n: `${sc.name} (${sc.className})`,
+				b: name,
+				n: `${name} (${sc.className})`,
 				s: indexer.getMetaId("s", sc.source),
 				u: `${UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_CLASSES]({name: sc.className, source: sc.classSource})}${HASH_PART_SEP}${UrlUtil.getClassesPageStatePart({subclass: sc})}`,
 				p: sc.page,
@@ -462,6 +523,19 @@ class IndexableFileItemsBase extends IndexableFile {
 			fluffBaseListProp: "item",
 			baseUrl: "items.html",
 			isHover: true,
+		});
+	}
+}
+
+class IndexableFileItemMasteries extends IndexableFile {
+	constructor () {
+		super({
+			category: Parser.CAT_ID_ITEM_MASTERY,
+			file: "items-base.json",
+			listProp: "itemMastery",
+			baseUrl: "itemMastery",
+			isHover: true,
+			isFauxPage: true,
 		});
 	}
 }
@@ -860,7 +934,6 @@ class IndexableFileAdventures extends IndexableFile {
 		super({
 			category: Parser.CAT_ID_ADVENTURE,
 			file: "adventures.json",
-			source: "id",
 			listProp: "adventure",
 			baseUrl: "adventure.html",
 		});
@@ -872,7 +945,6 @@ class IndexableFileBooks extends IndexableFile {
 		super({
 			category: Parser.CAT_ID_BOOK,
 			file: "books.json",
-			source: "id",
 			listProp: "book",
 			baseUrl: "book.html",
 		});
@@ -896,8 +968,7 @@ class IndexableFileQuickReference extends IndexableFile {
 
 	static getChapterNameMetas (it, {isRequireQuickrefFlag = true} = {}) {
 		const trackedNames = [];
-		const renderer = Renderer.get().setDepthTracker(trackedNames);
-		renderer.render(it);
+		Renderer.get().withDepthTracker(trackedNames, ({renderer}) => renderer.render(it));
 
 		const nameCounts = {};
 		trackedNames.forEach(meta => {
@@ -954,6 +1025,8 @@ class IndexableFileQuickReference extends IndexableFile {
 	}
 }
 
+globalThis.IndexableFileQuickReference = IndexableFileQuickReference;
+
 class IndexableFileDeities extends IndexableFile {
 	constructor () {
 		super({
@@ -977,7 +1050,7 @@ class IndexableFileObjects extends IndexableFile {
 			baseUrl: "objects.html",
 			isHover: true,
 			fnGetToken: (ent) => {
-				if (!ent.tokenUrl && !ent.hasToken) return null;
+				if (!Renderer.object.hasToken(ent)) return null;
 				return Renderer.object.getTokenUrl(ent);
 			},
 		});
@@ -1080,7 +1153,7 @@ class IndexableFileVehicles extends IndexableFile {
 			baseUrl: "vehicles.html",
 			isHover: true,
 			fnGetToken: (ent) => {
-				if (!ent.tokenUrl && !ent.hasToken) return null;
+				if (!Renderer.vehicle.hasToken(ent)) return null;
 				return Renderer.vehicle.getTokenUrl(ent);
 			},
 		});
@@ -1253,6 +1326,7 @@ Omnidexer.TO_INDEX = [
 	new IndexableFileOptFeatures_AlchemicalFormula(),
 	new IndexableFileOptFeatures_Maneuver(),
 	new IndexableFileItemsBase(),
+	new IndexableFileItemMasteries(),
 
 	new IndexableFileItems(),
 	new IndexableFileItemGroups(),
@@ -1298,7 +1372,7 @@ class IndexableSpecial {
 class IndexableSpecialPages extends IndexableSpecial {
 	pGetIndex () {
 		return Object.entries(UrlUtil.PG_TO_NAME)
-			.filter(([page]) => ![UrlUtil.PG_CLASS_SUBCLASS_FEATURES].includes(page))
+			.filter(([page]) => !UrlUtil.FAUX_PAGES[page])
 			.map(([page, name]) => ({
 				n: name,
 				c: Parser.CAT_ID_PAGE,
@@ -1311,5 +1385,3 @@ class IndexableSpecialPages extends IndexableSpecial {
 Omnidexer.TO_INDEX__SPECIAL = [
 	new IndexableSpecialPages(),
 ];
-
-globalThis.Omnidexer = Omnidexer;

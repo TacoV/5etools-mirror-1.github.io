@@ -17,6 +17,15 @@ class _DataLoaderConst {
 	static SOURCE_BREW_ALL_CURRENT = Symbol("SOURCE_BREW_ALL_CURRENT");
 
 	static ENTITY_NULL = Symbol("ENTITY_NULL");
+
+	static _SOURCES_ALL_NON_SITE = new Set([
+		this.SOURCE_PRERELEASE_ALL_CURRENT,
+		this.SOURCE_BREW_ALL_CURRENT,
+	]);
+
+	static isSourceAllNonSite (source) {
+		return this._SOURCES_ALL_NON_SITE.has(source);
+	}
 }
 
 class _DataLoaderInternalUtil {
@@ -141,9 +150,12 @@ class _DataLoaderDereferencerBase {
 		if (page.toLowerCase().endsWith(".html")) throw new Error(`Could not dereference "${page}" content. Dereferencing is only supported for props!`);
 
 		// Prefer content from our active load, where available
-		return entriesWithoutRefs[page]?.[refHash]
+		const out = entriesWithoutRefs[page]?.[refHash]
 			? MiscUtil.copyFast(entriesWithoutRefs[page]?.[refHash])
 			: DataLoader.getFromCache(page, refUnpacked.source, refHash, {isCopy: true});
+		if (!out) return out;
+		out.type ||= "entries";
+		return out;
 	}
 }
 
@@ -171,22 +183,29 @@ class _DataLoaderDereferencerClassSubclassFeatures extends _DataLoaderDereferenc
 	}
 }
 
-class _DataLoaderDereferencerOptionalfeatures extends _DataLoaderDereferencerBase {
-	async _pPreloadRefContentSite () { await DataLoader.pCacheAndGetAllSite(UrlUtil.PG_OPT_FEATURES); }
-	async _pPreloadRefContentPrerelease () { await DataLoader.pCacheAndGetAllPrerelease(UrlUtil.PG_OPT_FEATURES); }
-	async _pPreloadRefContentBrew () { await DataLoader.pCacheAndGetAllBrew(UrlUtil.PG_OPT_FEATURES); }
+/**
+ * @abstract
+ */
+class _DataLoaderDereferencerGenericFeatures extends _DataLoaderDereferencerBase {
+	_page;
+	_tag;
+	_prop;
+
+	async _pPreloadRefContentSite () { await DataLoader.pCacheAndGetAllSite(this._page); }
+	async _pPreloadRefContentPrerelease () { await DataLoader.pCacheAndGetAllPrerelease(this._page); }
+	async _pPreloadRefContentBrew () { await DataLoader.pCacheAndGetAllBrew(this._page); }
 
 	dereference ({ent, entriesWithoutRefs, toReplaceMeta, ixReplace}) {
-		const refUnpacked = DataUtil.generic.unpackUid(toReplaceMeta.optionalfeature, "optfeature");
-		const refHash = UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_OPT_FEATURES](refUnpacked);
+		const refUnpacked = DataUtil.generic.unpackUid(toReplaceMeta[this._prop], this._tag);
+		const refHash = UrlUtil.URL_TO_HASH_BUILDER[this._page](refUnpacked);
 
 		// Skip blocklisted
-		if (ExcludeUtil.isInitialised && ExcludeUtil.isExcluded(refHash, "optionalfeature", refUnpacked.source, {isNoCount: true})) {
+		if (ExcludeUtil.isInitialised && ExcludeUtil.isExcluded(refHash, this._prop, refUnpacked.source, {isNoCount: true})) {
 			toReplaceMeta.array[toReplaceMeta.ix] = {};
 			return new this.constructor._DereferenceMeta({cntReplaces: 1});
 		}
 
-		const cpy = this._getCopyFromCache({page: "optionalfeature", entriesWithoutRefs, refUnpacked, refHash});
+		const cpy = this._getCopyFromCache({page: this._prop, entriesWithoutRefs, refUnpacked, refHash});
 		if (!cpy) return new this.constructor._DereferenceMeta({cntReplaces: 0});
 
 		delete cpy.featureType;
@@ -196,6 +215,18 @@ class _DataLoaderDereferencerOptionalfeatures extends _DataLoaderDereferencerBas
 
 		return new this.constructor._DereferenceMeta({cntReplaces: 1});
 	}
+}
+
+class _DataLoaderDereferencerOptionalfeatures extends _DataLoaderDereferencerGenericFeatures {
+	_page = UrlUtil.PG_OPT_FEATURES;
+	_tag = "optfeature";
+	_prop = "optionalfeature";
+}
+
+class _DataLoaderDereferencerFeats extends _DataLoaderDereferencerGenericFeatures {
+	_page = UrlUtil.PG_FEATS;
+	_tag = "feat";
+	_prop = "feat";
 }
 
 class _DataLoaderDereferencerItemEntries extends _DataLoaderDereferencerBase {
@@ -243,6 +274,9 @@ class _DataLoaderDereferencer {
 
 		this._REF_TYPE_TO_DEREFERENCER["refOptionalfeature"] =
 			new _DataLoaderDereferencerOptionalfeatures();
+
+		this._REF_TYPE_TO_DEREFERENCER["refFeat"] =
+			new _DataLoaderDereferencerFeats();
 
 		this._REF_TYPE_TO_DEREFERENCER["refItemEntry"] =
 			new _DataLoaderDereferencerItemEntries();
@@ -431,6 +465,7 @@ class _DataLoaderDereferencer {
 						case "refClassFeature": (missingRefSets["classFeature"] = missingRefSets["classFeature"] || new Set()).add(obj.classFeature); break;
 						case "refSubclassFeature": (missingRefSets["subclassFeature"] = missingRefSets["subclassFeature"] || new Set()).add(obj.subclassFeature); break;
 						case "refOptionalfeature": (missingRefSets["optionalfeature"] = missingRefSets["optionalfeature"] || new Set()).add(obj.optionalfeature); break;
+						case "refFeat": (missingRefSets["feat"] = missingRefSets["feat"] || new Set()).add(obj.feat); break;
 						case "refItemEntry": (missingRefSets["itemEntry"] = missingRefSets["itemEntry"] || new Set()).add(obj.itemEntry); break;
 					}
 				},
@@ -638,6 +673,7 @@ class _DataTypeLoader {
 	async _pPrePopulate ({data, isPrerelease, isBrew}) { /* Implement as required */ }
 
 	async pGetSiteData ({pageClean, sourceClean}) {
+		if (_DataLoaderConst.isSourceAllNonSite(sourceClean)) return {};
 		const propCache = this._getSiteIdent({pageClean, sourceClean});
 		this._cache_pSiteData[propCache] = this._cache_pSiteData[propCache] || this._pGetSiteData({pageClean, sourceClean});
 		return this._cache_pSiteData[propCache];
@@ -795,6 +831,12 @@ class _DataTypeLoaderLegendaryGroup extends _DataTypeLoaderSingleSource {
 	_filename = "bestiary/legendarygroups.json";
 }
 
+class _DataTypeLoaderItemProperty extends _DataTypeLoaderSingleSource {
+	static PROPS = ["itemProperty"];
+
+	_filename = "items-base.json";
+}
+
 class _DataTypeLoaderItemEntry extends _DataTypeLoaderSingleSource {
 	static PROPS = ["itemEntry"];
 
@@ -827,6 +869,22 @@ class _DataTypeLoaderFeatFluff extends _DataTypeLoaderSingleSource {
 	static IS_FLUFF = true;
 
 	_filename = "fluff-feats.json";
+}
+
+class _DataTypeLoaderOptionalfeatureFluff extends _DataTypeLoaderSingleSource {
+	static PROPS = ["optionalfeatureFluff"];
+	static PAGE = UrlUtil.PG_OPT_FEATURES;
+	static IS_FLUFF = true;
+
+	_filename = "fluff-optionalfeatures.json";
+}
+
+class _DataTypeLoaderRewardFluff extends _DataTypeLoaderSingleSource {
+	static PROPS = ["rewardFluff"];
+	static PAGE = UrlUtil.PG_REWARDS;
+	static IS_FLUFF = true;
+
+	_filename = "fluff-rewards.json";
 }
 
 class _DataTypeLoaderItemFluff extends _DataTypeLoaderSingleSource {
@@ -962,13 +1020,6 @@ class _DataTypeLoaderLanguage extends _DataTypeLoaderPredefined {
 	_loader = "language";
 }
 
-class _DataTypeLoaderRecipe extends _DataTypeLoaderPredefined {
-	static PROPS = ["recipe"];
-	static PAGE = UrlUtil.PG_RECIPES;
-
-	_loader = "recipe";
-}
-
 class _DataTypeLoaderMultiSource extends _DataTypeLoader {
 	_prop;
 
@@ -1006,7 +1057,7 @@ class _DataTypeLoaderCustomMonster extends _DataTypeLoaderMultiSource {
 	_prop = "monster";
 
 	async _pGetSiteData ({pageClean, sourceClean}) {
-		await DataUtil.monster.pPreloadMeta();
+		await DataUtil.monster.pPreloadLegendaryGroups();
 		return super._pGetSiteData({pageClean, sourceClean});
 	}
 
@@ -1042,6 +1093,28 @@ class _DataTypeLoaderCustomSpellFluff extends _DataTypeLoaderMultiSource {
 	static IS_FLUFF = true;
 
 	_prop = "spellFluff";
+}
+
+class _DataTypeLoaderClassSubclassFluff extends _DataTypeLoaderMultiSource {
+	static PROPS = ["classFluff", "subclassFluff"];
+	static PAGE = UrlUtil.PG_CLASSES;
+	static IS_FLUFF = true;
+
+	_getSiteIdent ({pageClean, sourceClean}) {
+		// use `.toString()` in case `sourceClean` is a `Symbol`
+		return `${this.constructor.PROPS.join("__")}__${sourceClean.toString()}`;
+	}
+
+	async _pGetSiteData ({pageClean, sourceClean}) {
+		return this._pGetSiteDataAll();
+	}
+
+	async _pGetSiteDataAll () {
+		const jsons = await this.constructor.PROPS.pMap(prop => DataUtil[prop].loadJSON());
+		const out = {};
+		jsons.forEach(json => Object.assign(out, {...json}));
+		return out;
+	}
 }
 
 /** @abstract */
@@ -1194,6 +1267,8 @@ class _DataTypeLoaderCustomClassesSubclass extends _DataTypeLoaderCustomRawable 
 				const feature = await DataLoader.pCacheAndGet(propFeature, source, hash, {isCopy: true, lockToken2});
 				// Skip over missing links
 				if (!feature) return notFoundUids.push(uid);
+
+				feature.type ||= "entries";
 
 				if (displayText) feature._displayName = displayText;
 				if (featureRef.tableDisplayName) feature._displayNameTable = featureRef.tableDisplayName;
@@ -1393,6 +1468,59 @@ class _DataTypeLoaderCustomDeck extends _DataTypeLoaderCustomRawable {
 		this._pGetDereferencedData_doNotifyFailed({ent: deck, uids: notFoundUids, prop: "card"});
 
 		return out;
+	}
+
+	async pGetPostCacheData ({siteData = null, prereleaseData = null, brewData = null, lockToken2}) {
+		return {
+			siteDataPostCache: await this._pGetPostCacheData_obj_withCache({obj: siteData, lockToken2, propCache: "site"}),
+			prereleaseDataPostCache: await this._pGetPostCacheData_obj({obj: prereleaseData, lockToken2}),
+			brewDataPostCache: await this._pGetPostCacheData_obj({obj: brewData, lockToken2}),
+		};
+	}
+}
+
+class _DataTypeLoaderRecipe extends _DataTypeLoaderCustomRawable {
+	static PROPS = ["raw_recipe", "recipe"];
+	static PAGE = UrlUtil.PG_RECIPES;
+
+	static _PROPS_RAWABLE = ["recipe"];
+
+	async _pGetRawSiteData () { return DataUtil.recipe.loadRawJSON(); }
+
+	async _pGetPostCacheData_obj ({obj, lockToken2}) {
+		if (!obj) return null;
+
+		const out = {};
+
+		if (obj.raw_recipe?.length) out.recipe = await obj.raw_recipe.pSerialAwaitMap(ent => this.constructor._pGetDereferencedRecipeData(ent, {lockToken2}));
+
+		return out;
+	}
+
+	static async _pGetDereferencedRecipeData (recipe, {lockToken2}) {
+		recipe = MiscUtil.copyFast(recipe);
+
+		Renderer.recipe.populateFullIngredients(recipe);
+
+		const fluff = await this._pGetDereferencedFluffData(recipe, {lockToken2});
+		if (fluff) recipe.fluff = fluff;
+
+		return recipe;
+	}
+
+	static async _pGetDereferencedFluffData (recipe, {lockToken2}) {
+		const fluff = await Renderer.utils.pGetFluff({
+			entity: recipe,
+			fluffProp: "recipeFluff",
+			lockToken2,
+		});
+		if (!fluff) return null;
+
+		const cpyFluff = MiscUtil.copyFast(fluff);
+		delete cpyFluff.name;
+		delete cpyFluff.source;
+
+		return cpyFluff;
 	}
 
 	async pGetPostCacheData ({siteData = null, prereleaseData = null, brewData = null, lockToken2}) {
@@ -1652,6 +1780,7 @@ class DataLoader {
 		_DataTypeLoaderCustomMonsterFluff.register({fnRegister});
 		_DataTypeLoaderCustomSpell.register({fnRegister});
 		_DataTypeLoaderCustomSpellFluff.register({fnRegister});
+		_DataTypeLoaderClassSubclassFluff.register({fnRegister});
 		// endregion
 
 		// region Predefined
@@ -1693,6 +1822,7 @@ class DataLoader {
 		_DataTypeLoaderSkill.register({fnRegister});
 		_DataTypeLoaderSense.register({fnRegister});
 		_DataTypeLoaderLegendaryGroup.register({fnRegister});
+		_DataTypeLoaderItemProperty.register({fnRegister});
 		_DataTypeLoaderItemEntry.register({fnRegister});
 		_DataTypeLoaderItemMastery.register({fnRegister});
 		_DataTypeLoaderCitation.register({fnRegister});
@@ -1701,6 +1831,8 @@ class DataLoader {
 		// region Fluff
 		_DataTypeLoaderBackgroundFluff.register({fnRegister});
 		_DataTypeLoaderFeatFluff.register({fnRegister});
+		_DataTypeLoaderOptionalfeatureFluff.register({fnRegister});
+		_DataTypeLoaderRewardFluff.register({fnRegister});
 		_DataTypeLoaderItemFluff.register({fnRegister});
 		_DataTypeLoaderRaceFluff.register({fnRegister});
 		_DataTypeLoaderLanguageFluff.register({fnRegister});
@@ -1867,7 +1999,7 @@ class DataLoader {
 	 */
 	static async pCacheAndGet (page, source, hash, {isCopy = false, isRequired = false, isSilent = false, lockToken2} = {}) {
 		const fromCache = this.getFromCache(page, source, hash, {isCopy, _isReturnSentinel: true});
-		if (fromCache === _DataLoaderConst.ENTITY_NULL) return null;
+		if (fromCache === _DataLoaderConst.ENTITY_NULL) return this._getVerifiedRequiredEntity({pageClean: page, sourceClean: source, hashClean: hash, ent: null, isRequired});
 		if (fromCache) return fromCache;
 
 		const {page: pageClean, source: sourceClean, hash: hashClean} = _DataLoaderInternalUtil.getCleanPageSourceHash({page, source, hash});
@@ -1886,11 +2018,15 @@ class DataLoader {
 		const {siteData = null, prereleaseData = null, brewData = null} = await this._pCacheAndGet_getCacheMeta({pageClean, sourceClean, dataLoader});
 		await this._pCacheAndGet_processCacheMeta({dataLoader, siteData, prereleaseData, brewData, lockToken2});
 
-		return this.getFromCache(page, source, hash, {isCopy, _isInsertSentinelOnMiss: true});
+		return this.getFromCache(page, source, hash, {isCopy, isRequired, _isInsertSentinelOnMiss: true});
 	}
 
 	static async pCacheAndGetHash (page, hash, opts) {
-		const source = UrlUtil.decodeHash(hash).last();
+		const {source} = await UrlUtil.pAutoDecodeHash(hash, {page});
+		if (!source) {
+			if (opts.isRequired) throw new Error(`Could not find entity for page "${page}" with hash "${hash}"`);
+			return null;
+		}
 		return DataLoader.pCacheAndGet(page, source, hash, opts);
 	}
 
@@ -1998,7 +2134,7 @@ class DataLoader {
 
 		static _isPossibleSource ({parent, sourceClean}) { return parent._isPrereleaseSource({sourceClean}) && !Parser.SOURCE_JSON_TO_FULL[Parser.sourceJsonToJson(sourceClean)]; }
 		static _getBrewUtil () { return typeof PrereleaseUtil !== "undefined" ? PrereleaseUtil : null; }
-		static _pGetSourceIndex () { return DataUtil.prerelease.pLoadSourceIndex(); }
+		static async _pGetSourceIndex () { return DataUtil.prerelease.pLoadSourceIndex(await PrereleaseUtil.pGetCustomUrl()); }
 	};
 
 	static _BrewPreloader = class extends this._PrereleaseBrewPreloader {
@@ -2009,7 +2145,7 @@ class DataLoader {
 
 		static _isPossibleSource ({parent, sourceClean}) { return !parent._isSiteSource({sourceClean}) && !parent._isPrereleaseSource({sourceClean}); }
 		static _getBrewUtil () { return typeof BrewUtil2 !== "undefined" ? BrewUtil2 : null; }
-		static _pGetSourceIndex () { return DataUtil.brew.pLoadSourceIndex(); }
+		static async _pGetSourceIndex () { return DataUtil.brew.pLoadSourceIndex(await BrewUtil2.pGetCustomUrl()); }
 	};
 
 	static async _pCacheAndGet_getCacheMeta ({pageClean, sourceClean, dataLoader}) {

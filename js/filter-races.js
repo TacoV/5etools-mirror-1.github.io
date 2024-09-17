@@ -1,6 +1,6 @@
 "use strict";
 
-class PageFilterRaces extends PageFilter {
+class PageFilterRaces extends PageFilterBase {
 	// region static
 	static getLanguageProficiencyTags (lProfs) {
 		if (!lProfs) return [];
@@ -71,7 +71,7 @@ class PageFilterRaces extends PageFilter {
 		this._vulnerableFilter = FilterCommon.getDamageVulnerableFilter();
 		this._resistFilter = FilterCommon.getDamageResistFilter();
 		this._immuneFilter = FilterCommon.getDamageImmuneFilter();
-		this._defenceFilter = new MultiFilter({header: "Damage", filters: [this._vulnerableFilter, this._resistFilter, this._immuneFilter]});
+		this._defenseFilter = new MultiFilter({header: "Damage", filters: [this._vulnerableFilter, this._resistFilter, this._immuneFilter]});
 		this._conditionImmuneFilter = FilterCommon.getConditionImmuneFilter();
 		this._languageFilter = new Filter({
 			header: "Languages",
@@ -142,8 +142,8 @@ class PageFilterRaces extends PageFilter {
 		if (r.srd) r._fMisc.push("SRD");
 		if (r.basicRules) r._fMisc.push("Basic Rules");
 		if (SourceUtil.isLegacySourceWotc(r.source)) r._fMisc.push("Legacy");
-		if (r.hasFluff || r.fluff?.entries) r._fMisc.push("Has Info");
-		if (r.hasFluffImages || r.fluff?.images) r._fMisc.push("Has Images");
+		if (this._hasFluff(r)) r._fMisc.push("Has Info");
+		if (this._hasFluffImages(r)) r._fMisc.push("Has Images");
 		if (r.lineage) r._fMisc.push("Lineage");
 		if (this._isReprinted({reprintedAs: r.reprintedAs, tag: "race", prop: "race", page: UrlUtil.PG_RACES})) r._fMisc.push("Reprinted");
 
@@ -182,7 +182,7 @@ class PageFilterRaces extends PageFilter {
 			this._sizeFilter,
 			this._speedFilter,
 			this._traitFilter,
-			this._defenceFilter,
+			this._defenseFilter,
 			this._conditionImmuneFilter,
 			this._languageFilter,
 			this._baseRaceFilter,
@@ -233,7 +233,7 @@ class PageFilterRaces extends PageFilter {
 
 globalThis.PageFilterRaces = PageFilterRaces;
 
-class ModalFilterRaces extends ModalFilter {
+class ModalFilterRaces extends ModalFilterBase {
 	/**
 	 * @param opts
 	 * @param opts.namespace
@@ -256,12 +256,12 @@ class ModalFilterRaces extends ModalFilter {
 			{sort: "size", text: "Size", width: "2"},
 			{sort: "source", text: "Source", width: "1"},
 		];
-		return ModalFilter._$getFilterColumnHeaders(btnMeta);
+		return ModalFilterBase._$getFilterColumnHeaders(btnMeta);
 	}
 
 	async _pLoadAllData () {
 		return [
-			...await DataUtil.race.loadJSON(),
+			...((await DataUtil.race.loadJSON()).race || []),
 			...((await DataUtil.race.loadPrerelease({isAddBaseRaces: false})).race || []),
 			...((await DataUtil.race.loadBrew({isAddBaseRaces: false})).race || []),
 		];
@@ -276,17 +276,17 @@ class ModalFilterRaces extends ModalFilter {
 		const size = (race.size || [Parser.SZ_VARIES]).map(sz => Parser.sizeAbvToFull(sz)).join("/");
 		const source = Parser.sourceJsonToAbv(race.source);
 
-		eleRow.innerHTML = `<div class="w-100 ve-flex-vh-center lst--border veapp__list-row no-select lst__wrp-cells">
-			<div class="col-0-5 pl-0 ve-flex-vh-center">${this._isRadio ? `<input type="radio" name="radio" class="no-events">` : `<input type="checkbox" class="no-events">`}</div>
+		eleRow.innerHTML = `<div class="w-100 ve-flex-vh-center lst__row-border veapp__list-row no-select lst__wrp-cells">
+			<div class="ve-col-0-5 pl-0 ve-flex-vh-center">${this._isRadio ? `<input type="radio" name="radio" class="no-events">` : `<input type="checkbox" class="no-events">`}</div>
 
-			<div class="col-0-5 px-1 ve-flex-vh-center">
-				<div class="ui-list__btn-inline px-2" title="Toggle Preview (SHIFT to Toggle Info Preview)">[+]</div>
+			<div class="ve-col-0-5 px-1 ve-flex-vh-center">
+				<div class="ui-list__btn-inline px-2 no-select" title="Toggle Preview (SHIFT to Toggle Info Preview)">[+]</div>
 			</div>
 
-			<div class="col-4 ${race._versionBase_isVersion ? "italic" : ""} ${this._getNameStyle()}">${race._versionBase_isVersion ? `<span class="px-3"></span>` : ""}${race.name}</div>
-			<div class="col-4">${ability.asTextShort}</div>
-			<div class="col-2 ve-text-center">${size}</div>
-			<div class="col-1 pr-0 ve-flex-h-center ${Parser.sourceJsonToColor(race.source)}" title="${Parser.sourceJsonToFull(race.source)}" ${Parser.sourceJsonToStyle(race.source)}>${source}${Parser.sourceJsonToMarkerHtml(race.source)}</div>
+			<div class="ve-col-4 px-1 ${race._versionBase_isVersion ? "italic" : ""} ${this._getNameStyle()}">${race._versionBase_isVersion ? `<span class="px-3"></span>` : ""}${race.name}</div>
+			<div class="ve-col-4 px-1">${ability.asTextShort}</div>
+			<div class="ve-col-2 px-1 ve-text-center">${size}</div>
+			<div class="ve-col-1 pl-1 pr-0 ve-flex-h-center ${Parser.sourceJsonToSourceClassname(race.source)}" title="${Parser.sourceJsonToFull(race.source)}" ${Parser.sourceJsonToStyle(race.source)}>${source}${Parser.sourceJsonToMarkerHtml(race.source)}</div>
 		</div>`;
 
 		const btnShowHidePreview = eleRow.firstElementChild.children[1].firstElementChild;

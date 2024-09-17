@@ -1093,7 +1093,8 @@
 							"imageType": "map",
 							"grid": {
 								"type": "none"
-							}
+							},
+							"id": "048"
 						}
 					],
 					"id": "041"
@@ -2207,6 +2208,22 @@
 				}
 			],
 			"id": "02d"
+		},
+		{
+			"type": "entries",
+			"name": "Credits",
+			"entries": [
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						"Written by James Wyatt",
+						"Cover art by Tyler Jacobson",
+						"Editing by Scott Fitzgerald Gray"
+					]
+				}
+			],
+			"id": "047"
 		}
 	]
 }

@@ -471,7 +471,7 @@
 										],
 										[
 											"2",
-											"Bored, retired adventurer, claims to have explored dungeon of note and can describe first few areas ({@chance 20|20 percent} chance of an accurate description)"
+											"Bored, retired adventurer, claims to have explored dungeon of note and can describe first few areas ({@chance 20} chance of an accurate description)"
 										],
 										[
 											"3",
@@ -479,7 +479,7 @@
 										],
 										[
 											"4",
-											"Con artist, selling fake treasure maps (but a {@chance 10|10 percent} chance that a map is genuine)"
+											"Con artist, selling fake treasure maps (but a {@chance 10} chance that a map is genuine)"
 										],
 										[
 											"5",
@@ -503,7 +503,7 @@
 										],
 										[
 											"10",
-											"Elminster, incognito; {@chance 10|10 percent} chance he is on an errand of cosmic importance; otherwise, he's pressing Durnan for gossip"
+											"Elminster, incognito; {@chance 10} chance he is on an errand of cosmic importance; otherwise, he's pressing Durnan for gossip"
 										]
 									]
 								}
@@ -2797,7 +2797,7 @@
 											"name": "Developments",
 											"page": 38,
 											"entries": [
-												"The orcs use the rock outcroppings on their side for shelter from attacks, gaining half cover. They throw their javelins at characters trying to cross the bridge, or at those who hang back to cast spells or make ranged attacks. A character on the bridge who is hit by an attack must make a saving throw to avoid a fall, just as if the character's Dexterity ({@skill Acrobatics}) check to move along the bridge had failed by 5 or more.",
+												"The orcs use the rock outcroppings on their side for shelter from attacks, gaining {@quickref Cover||3||half cover}. They throw their javelins at characters trying to cross the bridge, or at those who hang back to cast spells or make ranged attacks. A character on the bridge who is hit by an attack must make a saving throw to avoid a fall, just as if the character's Dexterity ({@skill Acrobatics}) check to move along the bridge had failed by 5 or more.",
 												"If an intruder gets at least two-thirds of the way across the bridge, one orc breaks cover to move through the double doors into {@adventure area 5|TftYP-TFoF|1|5. Orc Cave} and get help. The other tries to hinder the characters by chopping at the bridge's support ropes with its greataxe. Each rope has 8 hit points and AC 11. If one support rope is cut, the DC of the Dexterity ({@skill Acrobatics}) check to cross the bridge increases to 12, and characters on the bridge must immediately make a saving throw to avoid falling as described above. If both ropes are cut, the east end of the bridge drops into the crevasse and slams into the cliff wall on the west side. Any characters on the bridge take 7 ({@dice 2d6}) bludgeoning damage from the impact with the wall and must make successful DC 12 Strength or Dexterity saving throws to avoid losing their grip and falling if they aren't otherwise secured."
 											],
 											"id": "057"
@@ -2822,7 +2822,7 @@
 							"name": "4 and 4a. Archers' Stations",
 							"page": 39,
 							"entries": [
-								"The dwarves carved out chambers on either side of the entryway so they could rain arrows down on attackers that approached the front door of their stronghold. The arrow slits are 15 feet or more above the floor of {@adventure areas 1|TftYP-TFoF|1|1. End of the Trail} and {@adventure 2|TftYP-TFoF|1|2. The Dwarf-Door} and are impassible for creatures larger than Tiny. They grant three-quarters cover to the orcs stationed behind them.",
+								"The dwarves carved out chambers on either side of the entryway so they could rain arrows down on attackers that approached the front door of their stronghold. The arrow slits are 15 feet or more above the floor of {@adventure areas 1|TftYP-TFoF|1|1. End of the Trail} and {@adventure 2|TftYP-TFoF|1|2. The Dwarf-Door} and are impassible for creatures larger than Tiny. They grant {@quickref Cover||3||three-quarters cover} to the orcs stationed behind them.",
 								"The secret doors in area 3 provide access to these locations.",
 								{
 									"type": "insetReadaloud",
@@ -13400,7 +13400,7 @@
 											"page": 58,
 											"entries": [
 												"When Nightscale becomes aware of intruders, the {@creature young black dragon} slips into the water, quietly swimming to a point near the three stepping stones shown on the map. Any character watching the lake can make a Wisdom ({@skill Perception}) check contested by the dragon's Dexterity ({@skill Stealth}) check. On a successful check, the character catches a glimpse of a serpentine form moving in the darkness.",
-												"The dragon takes full advantage of her aquatic environment and never offers an easy target to enemies. She begins combat at a range of 20 to 30 feet, raising only her head and part of her neck above the water (granting her three-quarters cover) and breathing acid. Then she submerges and waits for her breath weapon to recharge. Nightscale doesn't resort to melee combat unless she is confronted underwater. If the dragon is reduced to 40 hit points or fewer, she tries to escape through the passage in {@adventure area 54|TftYP-TFoF|1|54. The Dragon's Passage}."
+												"The dragon takes full advantage of her aquatic environment and never offers an easy target to enemies. She begins combat at a range of 20 to 30 feet, raising only her head and part of her neck above the water (granting her {@quickref Cover||3||three-quarters cover}) and breathing acid. Then she submerges and waits for her breath weapon to recharge. Nightscale doesn't resort to melee combat unless she is confronted underwater. If the dragon is reduced to 40 hit points or fewer, she tries to escape through the passage in {@adventure area 54|TftYP-TFoF|1|54. The Dragon's Passage}."
 											],
 											"id": "157"
 										},
@@ -13625,6 +13625,459 @@
 				}
 			],
 			"id": "13e"
+		},
+		{
+			"type": "section",
+			"name": "Credits",
+			"entries": [
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"columns": 2,
+					"items": [
+						{
+							"type": "item",
+							"name": "Compilers",
+							"entries": [
+								"Kim Mohan, Mike Mearls"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Lead Rules Developer",
+							"entries": [
+								"Jeremy Crawford"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Fifth Edition Conversion",
+							"entries": [
+								"Chris Sims, Sean K Reynolds, Jennifer Clarke Wilkes"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Managing Editor",
+							"entries": [
+								"Jeremy Crawford"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Editors",
+							"entries": [
+								"Kim Mohan, Michele Carter"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Editorial Assistance",
+							"entries": [
+								"Chris Dupuis, Ben Petrisor, Matt Sernett"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Art Director",
+							"entries": [
+								"Kate Irwin"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Additional Art Direction",
+							"entries": [
+								"Shauna Narciso, Richard Whitters"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Graphic Designer",
+							"entries": [
+								"Emi Tanji"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Cover Illustrator",
+							"entries": [
+								"Tyler Jacobson"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Interior Illustrators",
+							"entries": [
+								"Mark Behm, Eric Belisle, Zoltan Boros, Noah Bradley, Sam Carr, Jedd Chevrier, Bud Cook, Olga Drebas, Wayne England, Lake Hurwitz, Izzy, Tyler Jacobson, Titus Lunter, Brynn Metheney, Scott Murphy, Claudio Pozas, Ned Rogers, Chris Seaman, Cory Trego-Erdner, Franz Vohwinkel, Mark Winters, Sam Wood, Ben Wootten"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Cartographers",
+							"entries": [
+								"Jason A. Engle, Rob Lazzaretti, Mike Schley, Ben Wootten"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Producer",
+							"entries": [
+								"Stan!"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Project Manager",
+							"entries": [
+								"Heather Fleming"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Product Engineer",
+							"entries": [
+								"Cynda Callaway"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Imaging Technicians",
+							"entries": [
+								"Sven Bolen, Carmen Cheung, Kevin Yee"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Art Administration",
+							"entries": [
+								"David Gershman"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Prepress Specialist",
+							"entries": [
+								"Jefferson Dunlap"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Other D&D Team Members",
+							"entries": [
+								"Bart Carroll, John Feil, Trevor Kidd, Adam Lee, Christopher Lindsay, Shelly Mazzanoble, Christopher Perkins, Hilary Ross, Liz Schuh, Nathan Stewart, Greg Tito, Shawn Wood"
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Credits from the Original Adventures",
+					"entries": [
+						{
+							"type": "list",
+							"style": "list-hang-notitle",
+							"columns": 2,
+							"items": [
+								{
+									"type": "entries",
+									"name": "Tomb of Horrors (1978)",
+									"entries": [
+										{
+											"type": "list",
+											"style": "list-hang-notitle",
+											"items": [
+												{
+													"type": "item",
+													"name": "Design",
+													"entries": [
+														"Gary Gygax"
+													]
+												}
+											]
+										}
+									],
+									"id": "16c"
+								},
+								{
+									"type": "entries",
+									"name": "White Plume Mountain (1979)",
+									"entries": [
+										{
+											"type": "list",
+											"style": "list-hang-notitle",
+											"items": [
+												{
+													"type": "item",
+													"name": "Design",
+													"entries": [
+														"Lawrence Schick"
+													]
+												},
+												{
+													"type": "item",
+													"name": "Editing and Suggestions",
+													"entries": [
+														"Mike Carr, Allen Hammack, Harold Johnson, Tim Jones, Jeff Leason, Dave Sutherland, Jean Wells"
+													]
+												},
+												{
+													"type": "item",
+													"name": "Art",
+													"entries": [
+														"Dave Sutherland, Erol Otus, Darlene Pekul, Jeff Dee, David S. LaForce, Jim Roslof, Bill Willingham"
+													]
+												}
+											]
+										}
+									],
+									"id": "16d"
+								},
+								{
+									"type": "entries",
+									"name": "The Hidden Shrine of Tamoachan (1980)",
+									"entries": [
+										{
+											"type": "list",
+											"style": "list-hang-notitle",
+											"items": [
+												{
+													"type": "item",
+													"name": "Design",
+													"entries": [
+														"Harold Johnson, Jeff R. Leason"
+													]
+												},
+												{
+													"type": "item",
+													"name": "Able Assistance",
+													"entries": [
+														"Dave Cook, Lawrence Schick"
+													]
+												},
+												{
+													"type": "item",
+													"name": "Editing",
+													"entries": [
+														"Harold Johnson"
+													]
+												},
+												{
+													"type": "item",
+													"name": "Editing and Production",
+													"entries": [
+														"Dave Cook, Jeff R. Leason, Lawrence Schick"
+													]
+												},
+												{
+													"type": "item",
+													"name": "Illustrations",
+													"entries": [
+														"Erol Otus, Jeff Dee, Gregory K. Fleming, David S. LaForce, David C. Sutherland III"
+													]
+												}
+											]
+										}
+									],
+									"id": "16e"
+								},
+								{
+									"type": "entries",
+									"name": "Against the Giants (1981)",
+									"entries": [
+										{
+											"type": "list",
+											"style": "list-hang-notitle",
+											"items": [
+												{
+													"type": "item",
+													"name": "Design",
+													"entries": [
+														"Gary Gygax"
+													]
+												},
+												{
+													"type": "item",
+													"name": "Editing",
+													"entries": [
+														"Mike Carr, Timothy Jones, Jon Pickens, Lawrence Schick"
+													]
+												},
+												{
+													"type": "item",
+													"name": "Art",
+													"entries": [
+														"David C. Sutherland III, David A. Trampier, Jeff Dee, David S. LaForce, Erol Otis, Bill Willingham"
+													]
+												}
+											]
+										}
+									],
+									"id": "16f"
+								},
+								{
+									"type": "entries",
+									"name": "The Sunless Citadel (2000)",
+									"entries": [
+										{
+											"type": "list",
+											"style": "list-hang-notitle",
+											"items": [
+												{
+													"type": "item",
+													"name": "Design",
+													"entries": [
+														"Bruce R. Cordell"
+													]
+												},
+												{
+													"type": "item",
+													"name": "Editing",
+													"entries": [
+														"Miranda Horner"
+													]
+												},
+												{
+													"type": "item",
+													"name": "Cartography",
+													"entries": [
+														"Todd Gamble"
+													]
+												},
+												{
+													"type": "item",
+													"name": "Illustrations",
+													"entries": [
+														"Dennis Cramer, Todd Lockwood"
+													]
+												}
+											]
+										}
+									],
+									"id": "170"
+								},
+								{
+									"type": "entries",
+									"name": "The Forge of Fury (2000)",
+									"entries": [
+										{
+											"type": "list",
+											"style": "list-hang-notitle",
+											"items": [
+												{
+													"type": "item",
+													"name": "Design",
+													"entries": [
+														"Richard Baker"
+													]
+												},
+												{
+													"type": "item",
+													"name": "Editing",
+													"entries": [
+														"Miranda Horner"
+													]
+												},
+												{
+													"type": "item",
+													"name": "Cartography",
+													"entries": [
+														"Todd Gamble"
+													]
+												},
+												{
+													"type": "item",
+													"name": "Illustrations",
+													"entries": [
+														"Dennis Cramer, Todd Lockwood"
+													]
+												}
+											]
+										}
+									],
+									"id": "171"
+								},
+								{
+									"type": "entries",
+									"name": "Dead in Thay (2014)",
+									"entries": [
+										{
+											"type": "list",
+											"style": "list-hang-notitle",
+											"items": [
+												{
+													"type": "item",
+													"name": "Design",
+													"entries": [
+														"Scott Fitzgerald Gray"
+													]
+												},
+												{
+													"type": "item",
+													"name": "Editing",
+													"entries": [
+														"Ray Vallese"
+													]
+												},
+												{
+													"type": "item",
+													"name": "Cartography",
+													"entries": [
+														"Mike Schley"
+													]
+												},
+												{
+													"type": "item",
+													"name": "Illustrations",
+													"entries": [
+														"Eric Belisle, Sam Carr, Tyler Jacobson, Miles Johnstone, Mark Winters"
+													]
+												}
+											]
+										}
+									],
+									"id": "172"
+								}
+							]
+						}
+					],
+					"id": "16b"
+				},
+				{
+					"type": "entries",
+					"name": "On the Cover",
+					"entries": [
+						{
+							"type": "gallery",
+							"images": [
+								{
+									"type": "image",
+									"href": {
+										"type": "internal",
+										"path": "adventure/TftYP/credits.webp"
+									},
+									"title": "As proprietor of the Yawning Portal, Durnan has heard amazing tales from adventurers of all sorts from across the multiverse, as seen in this array of characters by Tyler Jacobson.",
+									"width": 2560,
+									"height": 1690
+								},
+								{
+									"type": "image",
+									"href": {
+										"type": "internal",
+										"path": "adventure/TftYP/credits1.webp"
+									},
+									"title": "See if you can identify the face and the adventure found in {@i Tales from the Yawning Portal}.",
+									"width": 1397,
+									"height": 1200
+								}
+							]
+						},
+						"{@note (1. Gargoyle (Tomb of Horrors); 2. Tarul Var (Dead in Thay); 3. Mialee (Sunless Citadel); 4. Sir Bluto Sans Pite (White Plume Mountain); 5. Tordek (Forge of Fury); 6. Xipe, the Oni (Hidden Shrine of Tamoachan); 7. Manticore (White Plume Mountain); 8. Kieren, Chosen of Ilmater (Dead in Thay))}"
+					],
+					"id": "173"
+				}
+			],
+			"id": "16a"
 		}
 	]
 }

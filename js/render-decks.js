@@ -20,11 +20,11 @@ class RenderDecks {
 		}),
 	};
 
-	static getCardTextHtml ({card}) {
+	static getCardTextHtml ({card, deck = null}) {
 		const ptText = Renderer.get()
 			.setFirstSection(true)
 			.setPartPageExpandCollapseDisabled(true)
-			.render({name: card.name, entries: Renderer.card.getFullEntries(card)}, 1);
+			.render({name: card.name, entries: Renderer.card.getFullEntries(card, {backCredit: deck?.back?.credit})}, 1);
 		Renderer.get().setPartPageExpandCollapseDisabled(false);
 		return ptText;
 	}
@@ -45,13 +45,19 @@ class RenderDecks {
 			.map((card, ixCard) => {
 				const ptText = this.getCardTextHtml({card});
 
-				const $btnReplace = $(`<button class="btn btn-default btn-xs" title="Return Card to Deck"><i class="fas fa-arrow-rotate-left"></i></button>`)
+				const $btnMarkDrawn = $(`<button class="ve-btn ve-btn-default ve-btn-xs" title="Mark Card as Drawn"><i class="fas fa-fw fa-cards"></i></button>`)
+					.click(async evt => {
+						evt.stopPropagation();
+						await cardStateManager.pDrawCard(ent, card);
+					});
+
+				const $btnReplace = $(`<button class="ve-btn ve-btn-default ve-btn-xs" title="Return Card to Deck"><i class="fas fa-arrow-rotate-left"></i></button>`)
 					.click(async evt => {
 						evt.stopPropagation();
 						await cardStateManager.pReplaceCard(ent, card);
 					});
 
-				const $btnViewer = $(`<button class="btn btn-default btn-xs" title="Open Card Viewer"><span class="glyphicon glyphicon-eye-open"></span></button>`)
+				const $btnViewer = $(`<button class="ve-btn ve-btn-default ve-btn-xs" title="Open Card Viewer"><span class="glyphicon glyphicon-eye-open"></span></button>`)
 					.click(async evt => {
 						evt.stopPropagation();
 						try {
@@ -64,7 +70,8 @@ class RenderDecks {
 
 				const $wrpFace = $$`<div class="no-shrink px-1 decks__wrp-card-face relative">
 					<div class="absolute pt-2 pr-2 decks__wrp-btn-show-card">
-						<div class="btn-group ve-flex-v-center">
+						<div class="ve-btn-group ve-flex-v-center">
+							${$btnMarkDrawn}
 							${$btnReplace}
 							${$btnViewer}
 						</div>
@@ -72,12 +79,15 @@ class RenderDecks {
 					${Renderer.get().setFirstSection(true).render({...card.face, title: card.name, altText: card.name})}
 				</div>`;
 
+				const $imgFace = $wrpFace.find("img");
+				const title = $imgFace.closest(`[title]`).title();
 				const propCardDrawn = cardStateManager.getPropCardDrawn({hashDeck, ixCard});
 				const hkCardDrawn = cardStateManager.addHookBase(propCardDrawn, () => {
 					const isDrawn = !!cardStateManager.get(propCardDrawn);
+					$btnMarkDrawn.prop("disabled", isDrawn);
 					$btnReplace.prop("disabled", !isDrawn);
 					$wrpFace.toggleClass("decks__wrp-card-face--drawn", isDrawn);
-					$wrpFace.find("img").title(isDrawn ? `${card.name} (Drawn)` : card.name);
+					$imgFace.title(isDrawn ? `${title} (Drawn)` : title);
 				});
 				fnsCleanup.push(() => cardStateManager.removeHookBase(propCardDrawn, hkCardDrawn));
 				hkCardDrawn();
@@ -111,7 +121,7 @@ class RenderDecks {
 		${Renderer.utils.getExcludedTr({entity: ent, dataProp: "deck"})}
 		${Renderer.utils.getNameTr(ent, {page: UrlUtil.PG_DECKS})}
 
-		<tr class="text"><td colspan="6">
+		<tr><td colspan="6">
 			${Renderer.get().setFirstSection(true).render({entries: ent.entries}, 1)}
 			<hr class="hr-3">
 			${$ptCards}
@@ -126,8 +136,8 @@ class RenderDecks {
 	/* -------------------------------------------- */
 
 	static async pRenderStgCard ({deck, card}) {
-		const imgUrlBack = (card.back || deck.back) ? Renderer.utils.getMediaUrl(card.back || deck.back, "href", "img") : null;
-		const imgUrlCard = Renderer.utils.getMediaUrl(card.face, "href", "img");
+		const imgUrlBack = (card.back || deck.back) ? Renderer.utils.getEntryMediaUrl(card.back || deck.back, "href", "img") : null;
+		const imgUrlCard = Renderer.utils.getEntryMediaUrl(card.face, "href", "img");
 
 		const imgBack = imgUrlBack ? await AnimationUtil.pLoadImage(imgUrlBack) : null;
 		if (imgBack) {
@@ -172,8 +182,8 @@ class RenderDecks {
 		const metasSparkles = await [...new Array(8)]
 			.pSerialAwaitMap(async (_, i) => {
 				const imgSparkle = i % 2
-					? await AnimationUtil.pLoadImage(`${Renderer.get().baseUrl}img/decks/page/medium-2.webp`)
-					: await AnimationUtil.pLoadImage(`${Renderer.get().baseUrl}img/decks/page/medium-1.webp`);
+					? await AnimationUtil.pLoadImage(Renderer.get().getMediaUrl("img", "decks/page/medium-2.webp"))
+					: await AnimationUtil.pLoadImage(Renderer.get().getMediaUrl("img", "decks/page/medium-1.webp"));
 
 				e_({
 					ele: imgSparkle,
@@ -206,15 +216,21 @@ class RenderDecks {
 		const $wrpCardOuter = $$`<div class="ve-flex-col no-select relative">
 			${metasSparkles.map(it => it.wrpSparkleSway)}
 			${$wrpCardSway}
-		</div>`;
+		</div>`
+			.on("mouseup", evt => {
+				if (!EventUtil.isMiddleMouse(evt) || !imgBack) return;
+				wrpCardFlip.classList.toggle("decks-draw__wrp-card-flip--flipped");
+			});
 
-		const ptText = RenderDecks.getCardTextHtml({card});
+		const ptText = RenderDecks.getCardTextHtml({card, deck});
 
-		const $wrpInfo = $$`<div class="stats stats--book decks-draw__wrp-desc mobile__hidden px-2 ve-text-center mb-4">${ptText}</div>`
+		const $wrpInfo = $$`<div class="stats stats--book decks-draw__wrp-desc mobile__hidden px-2 ve-text-center mb-4 ve-overflow-y-auto">${ptText}</div>`
 			.click(evt => evt.stopPropagation());
 
+		Renderer.dice.bindOnclickListener($wrpInfo[0]);
+
 		const $btnFlip = imgBack
-			? $(`<button class="btn btn-default btn-xs px-3" title="Flip Card"><i class="fas fa-rotate"></i> Flip</button>`)
+			? $(`<button class="ve-btn ve-btn-default ve-btn-xs px-3" title="Flip Card"><i class="fas fa-rotate"></i> Flip</button>`)
 				.click(evt => {
 					evt.stopPropagation();
 					wrpCardFlip.classList.toggle("decks-draw__wrp-card-flip--flipped");

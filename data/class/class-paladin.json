@@ -32,7 +32,7 @@
 					"light",
 					"medium",
 					"heavy",
-					"{@item shield|phb|shields}"
+					"shield"
 				],
 				"weapons": [
 					"simple",
@@ -58,7 +58,7 @@
 				"additionalFromBackground": true,
 				"default": [
 					"(a) a {@filter martial weapon|items|source=phb|category=basic|type=martial weapon} and a {@item shield|phb} or (b) two {@filter martial weapons|items|source=phb|category=basic|type=martial weapon}",
-					"(a) five {@item javelin|phb|javelins} or (b) any {@filter simple melee weapon|items|source=phb|category=basic|type=simple weapon;melee weapon=u~u~sand}",
+					"(a) five {@item javelin|phb|javelins} or (b) any {@filter simple melee weapon|items|source=phb|category=basic|type=simple weapon;melee weapon=sand}",
 					"(a) a {@item priest's pack|phb} or (b) an {@item explorer's pack|phb}",
 					"{@item Chain mail|phb} and a {@item holy symbol|phb}"
 				],
@@ -102,7 +102,9 @@
 					{
 						"_": [
 							"Chain mail|phb",
-							"holy symbol|phb"
+							{
+								"equipmentType": "focusSpellcastingHoly"
+							}
 						]
 					}
 				]
@@ -116,7 +118,7 @@
 					"armor": [
 						"light",
 						"medium",
-						"{@item shield|phb|shields}"
+						"shield"
 					],
 					"weapons": [
 						"simple",
@@ -316,373 +318,8 @@
 				}
 			],
 			"subclassTitle": "Sacred Oath",
-			"fluff": [
-				{
-					"name": "Paladin",
-					"type": "section",
-					"entries": [
-						"Clad in plate armor that gleams in the sunlight despite the dust and grime of long travel, a human lays down her sword and shield and places her hands on a mortally wounded man. Divine radiance shines from her hands, the man's wounds knit closed, and his eyes open wide with amazement.",
-						"A dwarf crouches behind an outcrop, his black cloak making him nearly invisible in the night, and watches an orc war band celebrating its recent victory. Silently, he stalks into their midst and whispers an oath, and two orcs are dead before they even realize he is there.",
-						"Silver hair shining in a shaft of light that seems to illuminate only him, an elf laughs with exultation. His spear flashes like his eyes as he jabs again and again at a twisted giant, until at last his light overcomes its hideous darkness.",
-						"Whatever their origin and their mission, paladins are united by their oaths to stand against the forces of evil. Whether sworn before a god's altar and the witness of a priest, in a sacred glade before nature spirits and fey beings, or in a moment of desperation and grief with the dead as the only witness, a paladin's oath is a powerful bond. It is a source of power that turns a devout warrior into a blessed champion.",
-						{
-							"type": "entries",
-							"name": "The Cause of Righteousness",
-							"entries": [
-								"A paladin swears to uphold justice and righteousness, to stand with the good things of the world against the encroaching darkness, and to hunt the forces of evil wherever they lurk. Different paladins focus on various aspects of the cause of righteousness, but all are bound by the oaths that grant them power to do their sacred work. Although many paladins are devoted to gods of good, a paladin's power comes as much from a commitment to justice itself as it does from a god.",
-								"Paladins train for years to learn the skills of combat, mastering a variety of weapons and armor. Even so, their martial skills are secondary to the magical power they wield: power to heal the sick and injured, to smite the wicked and the undead, and to protect the innocent and those who join them in the fight for justice."
-							]
-						},
-						{
-							"type": "entries",
-							"name": "Beyond the Mundane Life",
-							"entries": [
-								"Almost by definition, the life of a paladin is an adventuring life. Unless a lasting injury has taken him or her away from adventuring for a time, every paladin lives on the front lines of the cosmic struggle against evil. Fighters are rare enough among the ranks of the militias and armies of the world, but even fewer people can claim the true calling of a paladin. When they do receive the call, these warriors turn from their former occupations and take up arms to fight evil. Sometimes their oaths lead them into the service of the crown as leaders of elite groups of knights, but even then their loyalty is first to the cause of righteousness, not to crown and country.",
-								"Adventuring paladins take their work seriously. A delve into an ancient ruin or dusty crypt can be a quest driven by a higher purpose than the acquisition of treasure. Evil lurks in dungeons and primeval forests, and even the smallest victory against it can tilt the cosmic balance away from oblivion."
-							]
-						},
-						{
-							"type": "entries",
-							"name": "Creating a Paladin",
-							"entries": [
-								"The most important aspect of a paladin character is the nature of his or her holy quest. Although the class features related to your oath don't appear until you reach 3rd level, plan ahead for that choice by reading the oath descriptions at the end of the class. Are you a devoted servant of good, loyal to the gods of justice and honor, a holy knight in shining armor venturing forth to smite evil? Are you a glorious champion of the light, cherishing everything beautiful that stands against the shadow, a knight whose oath descends from traditions older than many of the gods? Or are you an embittered loner sworn to take vengeance on those who have done great evil, sent as an angel of death by the gods or driven by your need for revenge? Appendix B lists many deities worshiped by paladins throughout the multiverse, such as Torm, Tyr, Heironeous, Paladine, Kiri-Jolith, Dol Arrah, the Silver Flame, Bahamut, Athena, Re-Horakhty, and Heimdall.",
-								"How did you experience your call to serve as a paladin? Did you hear a whisper from an unseen god or angel while you were at prayer? Did another paladin sense the potential within you and decide to train you as a squire? Or did some terrible event\u2014the destruction of your home, perhaps\u2014drive you to your quests? Perhaps you stumbled into a sacred grove or a hidden elven enclave and found yourself called to protect all such refuges of goodness and beauty. Or you might have known from your earliest memories that the paladin's life was your calling, almost as if you had been sent into the world with that purpose stamped on your soul.",
-								"As guardians against the forces of wickedness, paladins are rarely of any evil alignment. Most of them walk the paths of charity and justice. Consider how your alignment colors the way you pursue your holy quest and the manner in which you conduct yourself before gods and mortals. Your oath and alignment might be in harmony, or your oath might represent standards of behavior that you have not yet attained.",
-								{
-									"type": "entries",
-									"name": "Quick Build",
-									"entries": [
-										"You can make a paladin quickly by following these suggestions. First, Strength should be your highest ability score, followed by Charisma. Second, choose the {@background noble} background."
-									]
-								}
-							]
-						}
-					],
-					"page": 82,
-					"source": "PHB"
-				},
-				{
-					"type": "section",
-					"entries": [
-						{
-							"type": "quote",
-							"entries": [
-								"The true worth of a paladin is measured not in foes defeated or dungeons plundered. It is measured in lives saved and hearts turned to the causes of mercy and justice."
-							],
-							"by": "Isteval"
-						},
-						"A paladin is a living embodiment of an oath\u2014a promise or a vow made manifest in the person of a holy warrior who has the skill and the determination to see the cause through to the end. Some paladins devote themselves expressly to protecting the innocent and spreading justice in the world, while others resolve to attain that goal by conquering those who stand defiant and bringing them under the rule of law.",
-						"Although no paladin in the world could be described as typical, a number of them are narrow-minded do-gooders who refuse to tolerate even the smallest deviation from their own outlook. Paladins who take up the adventuring life, however, rarely remain so rigid in their attitudes\u2014if only to keep from alienating their companions.",
-						"You can flesh out your paladin character by using the suggestions below. It's important to keep in mind that most paladins aren't robots. They have doubts and prejudices and harbor contradictory thoughts just as any other character does. Some are compelled by an internal motivation that might sometimes be at odds with the principles of their oaths.",
-						{
-							"type": "entries",
-							"name": "Personal Goal",
-							"entries": [
-								"The precepts of a paladin's oath provide purpose to the character and dictate an ultimate goal or an overall intent that the paladin abides by and advances. Aside from that, some paladins are driven by a personal goal that either complements or transcends the dictates of their oaths. Paladins who swear different oaths might have the same personal goal, differing only in how they apply that goal to their actions when upholding their oaths.",
-								"If your paladin character has a personal goal, it might be drawn from some life event and thus not directly tied to the oath.",
-								{
-									"type": "table",
-									"caption": "Personal Goal",
-									"colLabels": [
-										"{@dice d6}",
-										"Personal Goal"
-									],
-									"colStyles": [
-										"col-1 text-center",
-										"col-11"
-									],
-									"rows": [
-										[
-											{
-												"type": "cell",
-												"roll": {
-													"exact": 1
-												}
-											},
-											"Peace. You fight so that future generations will not have to."
-										],
-										[
-											{
-												"type": "cell",
-												"roll": {
-													"exact": 2
-												}
-											},
-											"Revenge. Your oath is the vehicle through which you will right an ancient wrong."
-										],
-										[
-											{
-												"type": "cell",
-												"roll": {
-													"exact": 3
-												}
-											},
-											"Duty. You will live up to what you have sworn to do, or die trying."
-										],
-										[
-											{
-												"type": "cell",
-												"roll": {
-													"exact": 4
-												}
-											},
-											"Leadership. You will win a great battle that bards will sing about, and in so doing, you will become an example to inspire others."
-										],
-										[
-											{
-												"type": "cell",
-												"roll": {
-													"exact": 5
-												}
-											},
-											"Faith. You know your path is righteous, or else the gods would not have set you upon it."
-										],
-										[
-											{
-												"type": "cell",
-												"roll": {
-													"exact": 6
-												}
-											},
-											"Glory. You will lead the world into a grand new era, one that will be branded with your name."
-										]
-									]
-								}
-							]
-						},
-						{
-							"type": "entries",
-							"name": "Symbol",
-							"entries": [
-								"Paladins are mindful of the influence of symbols, and many of them adopt or design an artistic device that bears a distinctive image. Your symbol exemplifies the oath you have taken and communicates that message to those around you, friend and foe alike.",
-								"Your symbol might be displayed on a banner, a flag, or your clothing for all to see. Or it could be less obvious, such as a trinket or a token that you carry concealed on your person.",
-								{
-									"type": "table",
-									"caption": "Symbol",
-									"colLabels": [
-										"{@dice d6}",
-										"Symbol"
-									],
-									"colStyles": [
-										"col-1 text-center",
-										"col-11"
-									],
-									"rows": [
-										[
-											{
-												"type": "cell",
-												"roll": {
-													"exact": 1
-												}
-											},
-											"A dragon, emblematic of your nobility in peace and your ferocity in combat"
-										],
-										[
-											{
-												"type": "cell",
-												"roll": {
-													"exact": 2
-												}
-											},
-											"A clenched fist, because you are always ready to fight for your beliefs"
-										],
-										[
-											{
-												"type": "cell",
-												"roll": {
-													"exact": 3
-												}
-											},
-											"An upraised open hand, indicating your preference for diplomacy over combat"
-										],
-										[
-											{
-												"type": "cell",
-												"roll": {
-													"exact": 4
-												}
-											},
-											"A red heart, showing the world your commitment to justice"
-										],
-										[
-											{
-												"type": "cell",
-												"roll": {
-													"exact": 5
-												}
-											},
-											"A black heart, signifying that emotions such as pity do not sway your dedication to your oath"
-										],
-										[
-											{
-												"type": "cell",
-												"roll": {
-													"exact": 6
-												}
-											},
-											"An unblinking eye, meaning that you are ever alert to all threats against your cause"
-										]
-									]
-								}
-							]
-						},
-						{
-							"type": "entries",
-							"name": "Nemesis",
-							"entries": [
-								"Their adherence to a sacred oath demands that paladins take an active stance in carrying their beliefs into the world. This activity naturally leads to conflict with creatures or entities that oppose those beliefs. Among those opponents, one often stands out as a paladin's most persistent or most formidable foe\u2014a nemesis whose presence or influence is a constant factor in a paladin's life.",
-								"Your paladin character might have an enemy that dates from the days before you took up your path. Or you could be a target because when you became a paladin, you immediately attracted the attention of those that would do you in. If you have a nemesis, who or what is it? Whom among your enemies do you consider to be the biggest threat to achieving your goals?",
-								{
-									"type": "table",
-									"caption": "Nemesis",
-									"colLabels": [
-										"{@dice d6}",
-										"Nemesis"
-									],
-									"colStyles": [
-										"col-1 text-center",
-										"col-11"
-									],
-									"rows": [
-										[
-											{
-												"type": "cell",
-												"roll": {
-													"exact": 1
-												}
-											},
-											"A mighty orc war chief who threatens to overrun and destroy everything you hold sacred"
-										],
-										[
-											{
-												"type": "cell",
-												"roll": {
-													"exact": 2
-												}
-											},
-											"A fiend or a celestial, the agent of a power of the Outer Planes, who has been charged with corrupting or redeeming you, as appropriate"
-										],
-										[
-											{
-												"type": "cell",
-												"roll": {
-													"exact": 3
-												}
-											},
-											"A dragon whose servants dog your steps"
-										],
-										[
-											{
-												"type": "cell",
-												"roll": {
-													"exact": 4
-												}
-											},
-											"A high priest who sees you as a misguided fool and wants you to abandon your religion"
-										],
-										[
-											{
-												"type": "cell",
-												"roll": {
-													"exact": 5
-												}
-											},
-											"A rival paladin who trained with you but became an oath-breaker and holds you responsible"
-										],
-										[
-											{
-												"type": "cell",
-												"roll": {
-													"exact": 6
-												}
-											},
-											"A vampire who has sworn revenge against all paladins after being defeated by one"
-										]
-									]
-								}
-							]
-						},
-						{
-							"type": "entries",
-							"name": "Temptation",
-							"entries": [
-								"Although paladins are dedicated to their oaths, they are mortals, and thus they are flawed. Many of them exhibit a type of behavior or hold to an attitude that is not in keeping with the highest ideals of their calling.",
-								"What is the temptation that your character succumbs to or finds it difficult to resist?",
-								{
-									"type": "table",
-									"caption": "Temptation",
-									"colLabels": [
-										"{@dice d6}",
-										"Temptation"
-									],
-									"colStyles": [
-										"col-1 text-center",
-										"col-11"
-									],
-									"rows": [
-										[
-											{
-												"type": "cell",
-												"roll": {
-													"exact": 1
-												}
-											},
-											"Fury. When your anger is roused, you have trouble thinking straight, and you fear you might do something you'll regret."
-										],
-										[
-											{
-												"type": "cell",
-												"roll": {
-													"exact": 2
-												}
-											},
-											"Pride. Your deeds are noteworthy, and no one takes note of them more often than you."
-										],
-										[
-											{
-												"type": "cell",
-												"roll": {
-													"exact": 3
-												}
-											},
-											"Lust. You can't resist an attractive face and a pleasant smile."
-										],
-										[
-											{
-												"type": "cell",
-												"roll": {
-													"exact": 4
-												}
-											},
-											"Envy. You are mindful of what some famous folk have accomplished, and you feel inadequate when your deeds don't compare to theirs."
-										],
-										[
-											{
-												"type": "cell",
-												"roll": {
-													"exact": 5
-												}
-											},
-											"Despair. You consider the great strength of the enemies you must defeat, and at times you see no way to achieve final victory."
-										],
-										[
-											{
-												"type": "cell",
-												"roll": {
-													"exact": 6
-												}
-											},
-											"Greed. Regardless of how much glory and treasure you amass, it's never enough for you."
-										]
-									]
-								}
-							]
-						}
-					],
-					"source": "XGE",
-					"page": 36
-				}
-			]
+			"hasFluff": true,
+			"hasFluffImages": true
 		}
 	],
 	"subclass": [
@@ -925,7 +562,8 @@
 				"Aura of Conquest|Paladin||Conquest|XGE|7",
 				"Scornful Rebuke|Paladin||Conquest|XGE|15",
 				"Invincible Conqueror|Paladin||Conquest|XGE|20"
-			]
+			],
+			"hasFluffImages": true
 		},
 		{
 			"name": "Oath of Redemption",
@@ -965,7 +603,8 @@
 				"Aura of the Guardian|Paladin||Redemption|XGE|7",
 				"Protective Spirit|Paladin||Redemption|XGE|15",
 				"Emissary of Redemption|Paladin||Redemption|XGE|20"
-			]
+			],
+			"hasFluffImages": true
 		},
 		{
 			"name": "Oath of Glory",
@@ -1011,7 +650,8 @@
 				"Aura of Alacrity|Paladin||Glory|TCE|7",
 				"Glorious Defense|Paladin||Glory|TCE|15",
 				"Living Legend|Paladin||Glory|TCE|20"
-			]
+			],
+			"hasFluffImages": true
 		},
 		{
 			"name": "Oath of the Watchers",
@@ -1051,7 +691,8 @@
 				"Aura of the Sentinel|Paladin||Watchers|TCE|7",
 				"Vigilant Rebuke|Paladin||Watchers|TCE|15",
 				"Mortal Bulwark|Paladin||Watchers|TCE|20"
-			]
+			],
+			"hasFluffImages": true
 		},
 		{
 			"name": "Oath of the Open Sea",
@@ -1092,7 +733,8 @@
 				"Stormy Waters|Paladin|PHB|Open Sea|TDCSR|15",
 				"Aura of Liberation (18th Level)|Paladin|PHB|Open Sea|TDCSR|18",
 				"Mythic Swashbuckler|Paladin|PHB|Open Sea|TDCSR|20"
-			]
+			],
+			"hasFluffImages": true
 		}
 	],
 	"classFeature": [
@@ -1105,7 +747,7 @@
 			"classSource": "PHB",
 			"level": 1,
 			"entries": [
-				"The presence of strong evil registers on your senses like a noxious odor, and powerful good rings like heavenly music in your ears. As an action, you can open your awareness to detect such forces. Until the end of your next turn, you know the location of any celestial, fiend, or undead within 60 feet of you that is not behind total cover. You know the type (celestial, fiend, or undead) of any being whose presence you sense, but not its identity (the vampire Count Strahd von Zarovich, for instance). Within the same radius, you also detect the presence of any place or object that has been consecrated or desecrated, as with the {@spell hallow} spell.",
+				"The presence of strong evil registers on your senses like a noxious odor, and powerful good rings like heavenly music in your ears. As an action, you can open your awareness to detect such forces. Until the end of your next turn, you know the location of any celestial, fiend, or undead within 60 feet of you that is not behind {@quickref Cover||3||total cover}. You know the type (celestial, fiend, or undead) of any being whose presence you sense, but not its identity (the vampire Count Strahd von Zarovich, for instance). Within the same radius, you also detect the presence of any place or object that has been consecrated or desecrated, as with the {@spell hallow} spell.",
 				"You can use this feature a number of times equal to 1 + your Charisma modifier. When you finish a long rest, you regain all expended uses."
 			]
 		},
@@ -1703,9 +1345,6 @@
 			"subclassSource": "PHB",
 			"level": 3,
 			"header": 1,
-			"consumes": {
-				"name": "Channel Divinity"
-			},
 			"entries": [
 				"When you take this oath at 3rd level, you gain the following two Channel Divinity options.",
 				{
@@ -1728,6 +1367,9 @@
 			"subclassSource": "PHB",
 			"level": 3,
 			"header": 1,
+			"consumes": {
+				"name": "Channel Divinity"
+			},
 			"entries": [
 				"You can use your Channel Divinity to invoke primeval forces to ensnare a foe. As an action, you can cause spectral vines to spring up and reach for a creature within 10 feet of you that you can see. The creature must succeed on a Strength or Dexterity saving throw (its choice) or be {@condition restrained}. While {@condition restrained} by the vines, the creature repeats the saving throw at the end of each of its turns. On a success, it frees itself and the vines vanish."
 			]
@@ -1852,6 +1494,9 @@
 			"subclassSource": "PHB",
 			"level": 3,
 			"header": 1,
+			"consumes": {
+				"name": "Channel Divinity"
+			},
 			"entries": [
 				"You can use your Channel Divinity to utter ancient words that are painful for fey and fiends to hear. As an action, you present your holy symbol, and each fey or fiend within 30 feet of you that can hear you must make a Wisdom saving throw. On a failed save, the creature is turned for 1 minute or until it takes damage.",
 				"A turned creature must spend its turns trying to move as far away from you as it can, and it can't willingly move to a space within 30 feet of you. It also can't take reactions. For its action, it can use only the {@action Dash} action or try to escape from an effect that prevents it from moving. If there's nowhere to move, the creature can use the {@action Dodge} action.",
@@ -1949,9 +1594,6 @@
 			"subclassSource": "PHB",
 			"level": 3,
 			"header": 1,
-			"consumes": {
-				"name": "Channel Divinity"
-			},
 			"entries": [
 				"When you take this oath at 3rd level, you gain the following two Channel Divinity options.",
 				{
@@ -2024,6 +1666,9 @@
 			"subclassSource": "PHB",
 			"level": 3,
 			"header": 1,
+			"consumes": {
+				"name": "Channel Divinity"
+			},
 			"entries": [
 				"As an action, you can imbue one weapon that you are holding with positive energy, using your Channel Divinity. For 1 minute, you add your Charisma modifier to attack rolls made with that weapon (with a minimum bonus of +1). The weapon also emits bright light in a 20-foot radius and dim light 20 feet beyond that. If the weapon is not already magical, it becomes magical for the duration.",
 				"You can end this effect on your turn as part of any other action. If you are no longer holding or carrying this weapon, or if you fall {@condition unconscious}, this effect ends."
@@ -2115,6 +1760,9 @@
 			"subclassSource": "PHB",
 			"level": 3,
 			"header": 1,
+			"consumes": {
+				"name": "Channel Divinity"
+			},
 			"entries": [
 				"As an action, you present your holy symbol and speak a prayer censuring fiends and undead, using your Channel Divinity. Each fiend or undead that can see or hear you within 30 feet of you must make a Wisdom saving throw. If the creature fails its saving throw, it is turned for 1 minute or until it takes damage.",
 				"A turned creature must spend its turns trying to move as far away from you as it can, and it can't willingly move to a space within 30 feet of you. It also can't take reactions. For its action, it can use only the {@action Dash} action or try to escape from an effect that prevents it from moving. If there's nowhere to move, the creature can use the {@action Dodge} action."
@@ -2204,6 +1852,9 @@
 			"subclassSource": "PHB",
 			"level": 3,
 			"header": 1,
+			"consumes": {
+				"name": "Channel Divinity"
+			},
 			"entries": [
 				"As an action, you present your holy symbol and speak a prayer of denunciation, using your Channel Divinity. Choose one creature within 60 feet of you that you can see. That creature must make a Wisdom saving throw, unless it is immune to being {@condition frightened}. Fiends and undead have disadvantage on this saving throw.",
 				"On a failed save, the creature is {@condition frightened} for 1 minute or until it takes any damage. While {@condition frightened}, the creature's speed is 0, and it can't benefit from any bonus to its speed.",
@@ -2220,9 +1871,6 @@
 			"subclassSource": "PHB",
 			"level": 3,
 			"header": 1,
-			"consumes": {
-				"name": "Channel Divinity"
-			},
 			"entries": [
 				"When you take this oath at 3rd level, you gain the following two Channel Divinity options.",
 				{
@@ -2355,6 +2003,9 @@
 			"subclassSource": "PHB",
 			"level": 3,
 			"header": 1,
+			"consumes": {
+				"name": "Channel Divinity"
+			},
 			"entries": [
 				"As a bonus action, you can utter a vow of enmity against a creature you can see within 10 feet of you, using your Channel Divinity. You gain advantage on attack rolls against the creature for 1 minute or until it drops to 0 hit points or falls {@condition unconscious}."
 			]
@@ -2444,6 +2095,9 @@
 			"subclassSource": "SCAG",
 			"level": 3,
 			"header": 1,
+			"consumes": {
+				"name": "Channel Divinity"
+			},
 			"entries": [
 				"As a bonus action, you issue a challenge that compels other creatures to do battle with you. Each creature of your choice that you can see within 30 feet of you must make a Wisdom saving throw. On a failed save, a creature can't willingly move more than 30 feet away from you. This effect ends on the creature if you are {@condition incapacitated} or die or if the creature is more than 30 feet away from you."
 			]
@@ -2458,9 +2112,6 @@
 			"subclassSource": "SCAG",
 			"level": 3,
 			"header": 1,
-			"consumes": {
-				"name": "Channel Divinity"
-			},
 			"entries": [
 				"When you take this oath at 3rd level, you gain the following two Channel Divinity options.",
 				{
@@ -2593,6 +2244,9 @@
 			"subclassSource": "SCAG",
 			"level": 3,
 			"header": 1,
+			"consumes": {
+				"name": "Channel Divinity"
+			},
 			"entries": [
 				"As a bonus action, you can bolster injured creatures with your Channel Divinity. Each creature of your choice that can hear you within 30 feet of you regains hit points equal to {@dice 1d6} + your Charisma modifier (minimum of 1) if it has no more than half of its hit points."
 			]
@@ -2695,9 +2349,6 @@
 			"subclassSource": "TCE",
 			"level": 3,
 			"header": 1,
-			"consumes": {
-				"name": "Channel Divinity"
-			},
 			"entries": [
 				"{@i 3rd-level Oath of Glory feature}",
 				"You gain the following two Channel Divinity options. See the Sacred Oath class feature for how Channel Divinity works.",
@@ -2830,6 +2481,9 @@
 			"subclassSource": "TCE",
 			"level": 3,
 			"header": 2,
+			"consumes": {
+				"name": "Channel Divinity"
+			},
 			"entries": [
 				"Immediately after you deal damage to a creature with your Divine Smite feature, you can use your Channel Divinity as a bonus action and distribute temporary hit points to creatures of your choice within 30 feet of you, which can include you. The total number of temporary hit points equals {@dice 2d8} + your level in this class, divided among the chosen creatures however you like."
 			]
@@ -2850,6 +2504,9 @@
 			"subclassSource": "TCE",
 			"level": 3,
 			"header": 2,
+			"consumes": {
+				"name": "Channel Divinity"
+			},
 			"entries": [
 				"As a bonus action, you can use your Channel Divinity to augment your athleticism. For the next 10 minutes, you have advantage on Strength ({@skill Athletics}) and Dexterity ({@skill Acrobatics}) checks; you can carry, push, drag, and lift twice as much weight as normal; and the distance of your long and high jumps increases by 10 feet (this extra distance costs movement as normal)."
 			]
@@ -2964,26 +2621,16 @@
 			"subclassSource": "TCE",
 			"level": 3,
 			"header": 1,
-			"consumes": {
-				"name": "Channel Divinity"
-			},
 			"entries": [
 				"{@i 3rd-level Oath of the Watchers feature}",
 				"You gain the following Channel Divinity options. See the Sacred Oath class feature for how Channel Divinity works.",
 				{
-					"type": "entries",
-					"name": "Watcher's Will",
-					"entries": [
-						"You can use your Channel Divinity to invest your presence with the warding power of your faith. As an action, you can choose a number of creatures you can see within 30 feet of you, up to a number equal to your Charisma modifier (minimum of one creature). For 1 minute, you and the chosen creatures have advantage on Intelligence, Wisdom, and Charisma saving throws."
-					]
+					"type": "refSubclassFeature",
+					"subclassFeature": "Watcher's Will|Paladin||Watchers|TCE|3"
 				},
 				{
-					"type": "entries",
-					"name": "Abjure the Extraplanar",
-					"entries": [
-						"You can use your Channel Divinity to castigate unworldly beings. As an action, you present your holy symbol and each aberration, celestial, elemental, fey, or fiend within 30 feet of you that can hear you must make a Wisdom saving throw. On a failed save, the creature is turned for 1 minute or until it takes damage.",
-						"A turned creature must spend its turns trying to move as far away from you as it can, and it can't willingly end its move in a space within 30 feet of you. For its action, it can use only the {@action Dash} action or try to escape from an effect that prevents it from moving. If there's nowhere to move, the creature can take the {@action Dodge} action."
-					]
+					"type": "refSubclassFeature",
+					"subclassFeature": "Abjure the Extraplanar|Paladin||Watchers|TCE|3"
 				}
 			]
 		},
@@ -3069,6 +2716,41 @@
 						"You are the shield against the endless terrors that lie beyond the stars. Your blade must be forever sharp and your mind keen to survive what lies beyond."
 					]
 				}
+			]
+		},
+		{
+			"name": "Abjure the Extraplanar",
+			"source": "TCE",
+			"page": 54,
+			"className": "Paladin",
+			"classSource": "PHB",
+			"subclassShortName": "Watchers",
+			"subclassSource": "TCE",
+			"level": 3,
+			"header": 2,
+			"consumes": {
+				"name": "Channel Divinity"
+			},
+			"entries": [
+				"You can use your Channel Divinity to castigate unworldly beings. As an action, you present your holy symbol and each aberration, celestial, elemental, fey, or fiend within 30 feet of you that can hear you must make a Wisdom saving throw. On a failed save, the creature is turned for 1 minute or until it takes damage.",
+				"A turned creature must spend its turns trying to move as far away from you as it can, and it can't willingly end its move in a space within 30 feet of you. For its action, it can use only the {@action Dash} action or try to escape from an effect that prevents it from moving. If there's nowhere to move, the creature can take the {@action Dodge} action."
+			]
+		},
+		{
+			"name": "Watcher's Will",
+			"source": "TCE",
+			"page": 54,
+			"className": "Paladin",
+			"classSource": "PHB",
+			"subclassShortName": "Watchers",
+			"subclassSource": "TCE",
+			"level": 3,
+			"header": 2,
+			"consumes": {
+				"name": "Channel Divinity"
+			},
+			"entries": [
+				"You can use your Channel Divinity to invest your presence with the warding power of your faith. As an action, you can choose a number of creatures you can see within 30 feet of you, up to a number equal to your Charisma modifier (minimum of one creature). For 1 minute, you and the chosen creatures have advantage on Intelligence, Wisdom, and Charisma saving throws."
 			]
 		},
 		{
@@ -3163,26 +2845,15 @@
 			"subclassSource": "TDCSR",
 			"level": 3,
 			"header": 2,
-			"consumes": {
-				"name": "Channel Divinity"
-			},
 			"entries": [
 				"When you take this oath at 3rd level, you gain the following two Channel Divinity options.",
 				{
-					"type": "entries",
-					"name": "Marine Layer",
-					"page": 175,
-					"entries": [
-						"As an action, you channel the sea to create a thick cloud of fog that surrounds you for 20 feet in all directions. The fog moves with you, remaining centered on you and making its area heavily obscured. You and each creature within 5 feet of you instead treat the area as lightly obscured. This fog lasts for 10 minutes, spreads around corners, and cannot be dispersed unless you choose to end this effect (no action required)."
-					]
+					"type": "refSubclassFeature",
+					"subclassFeature": "Marine Layer|Paladin||Open Sea|TDCSR|3"
 				},
 				{
-					"type": "entries",
-					"name": "Fury of the Tides",
-					"page": 175,
-					"entries": [
-						"As a bonus action, you channel the powerful might of the waves to bolster your attacks for 1 minute. Once per turn for the duration, when you hit a creature with a weapon attack, you can choose to push the target 10 feet away from you. If pushed into an obstacle or another creature, the target takes bludgeoning damage equal to your Charisma modifier."
-					]
+					"type": "refSubclassFeature",
+					"subclassFeature": "Fury of the Tides|Paladin||Open Sea|TDCSR|3"
 				},
 				{
 					"type": "inset",
@@ -3193,6 +2864,40 @@
 						"Creatures in a lightly obscured area have {@quickref Advantage and Disadvantage|PHB|2|0|disadvantage} only on Wisdom ({@skill Perception}) checks that rely on sight. The rules for when your vision is obscured are described completely in the fifth edition core rules."
 					]
 				}
+			]
+		},
+		{
+			"name": "Fury of the Tides",
+			"source": "TDCSR",
+			"page": 175,
+			"className": "Paladin",
+			"classSource": "PHB",
+			"subclassShortName": "Open Sea",
+			"subclassSource": "TDCSR",
+			"level": 3,
+			"header": 2,
+			"consumes": {
+				"name": "Channel Divinity"
+			},
+			"entries": [
+				"As a bonus action, you channel the powerful might of the waves to bolster your attacks for 1 minute. Once per turn for the duration, when you hit a creature with a weapon attack, you can choose to push the target 10 feet away from you. If pushed into an obstacle or another creature, the target takes bludgeoning damage equal to your Charisma modifier."
+			]
+		},
+		{
+			"name": "Marine Layer",
+			"source": "TDCSR",
+			"page": 175,
+			"className": "Paladin",
+			"classSource": "PHB",
+			"subclassShortName": "Open Sea",
+			"subclassSource": "TDCSR",
+			"level": 3,
+			"header": 2,
+			"consumes": {
+				"name": "Channel Divinity"
+			},
+			"entries": [
+				"As an action, you channel the sea to create a thick cloud of fog that surrounds you for 20 feet in all directions. The fog moves with you, remaining centered on you and making its area heavily obscured. You and each creature within 5 feet of you instead treat the area as lightly obscured. This fog lasts for 10 minutes, spreads around corners, and cannot be dispersed unless you choose to end this effect (no action required)."
 			]
 		},
 		{
@@ -3391,9 +3096,6 @@
 			"subclassSource": "XGE",
 			"level": 3,
 			"header": 1,
-			"consumes": {
-				"name": "Channel Divinity"
-			},
 			"entries": [
 				"When you take this oath at 3rd level, you gain the following two Channel Divinity options.",
 				{
@@ -3416,6 +3118,9 @@
 			"subclassSource": "XGE",
 			"level": 3,
 			"header": 1,
+			"consumes": {
+				"name": "Channel Divinity"
+			},
 			"entries": [
 				"You can use your Channel Divinity to exude a terrifying presence. As an action, you force each creature of your choice that you can see within 30 feet of you to make a Wisdom saving throw. On a failed save, a creature becomes {@condition frightened} of you for 1 minute. The {@condition frightened} creature can repeat this saving throw at the end of each of its turns, ending the effect on itself on a success."
 			]
@@ -3430,6 +3135,9 @@
 			"subclassSource": "XGE",
 			"level": 3,
 			"header": 1,
+			"consumes": {
+				"name": "Channel Divinity"
+			},
 			"entries": [
 				"You can use your Channel Divinity to strike with supernatural accuracy. When you make an attack roll, you can use your Channel Divinity to gain a +10 bonus to the roll. You make this choice after you see the roll, but before the DM says whether the attack hits or misses."
 			]
@@ -3533,7 +3241,7 @@
 			"level": 7,
 			"header": 2,
 			"entries": [
-				"Starting at 7th level, you constantly emanate a menacing aura while you're not {@condition incapacitated}. The aura extends 10 feet from you in every direction, but not through total cover.",
+				"Starting at 7th level, you constantly emanate a menacing aura while you're not {@condition incapacitated}. The aura extends 10 feet from you in every direction, but not through {@quickref Cover||3||total cover}.",
 				"If a creature is {@condition frightened} of you, its speed is reduced to 0 while in the aura, and that creature takes psychic damage equal to half your paladin level if it starts its turn there.",
 				"At 18th level, the range of this aura increases to 30 feet."
 			]
@@ -3611,9 +3319,6 @@
 			"subclassSource": "XGE",
 			"level": 3,
 			"header": 1,
-			"consumes": {
-				"name": "Channel Divinity"
-			},
 			"entries": [
 				"When you take this oath at 3rd level, you gain the following two Channel Divinity options.",
 				{
@@ -3636,6 +3341,9 @@
 			"subclassSource": "XGE",
 			"level": 3,
 			"header": 1,
+			"consumes": {
+				"name": "Channel Divinity"
+			},
 			"entries": [
 				"You can use your Channel Divinity to augment your presence with divine power. As a bonus action, you grant yourself a +5 bonus to Charisma ({@skill Persuasion}) checks for the next 10 minutes."
 			]
@@ -3698,6 +3406,9 @@
 			"subclassSource": "XGE",
 			"level": 3,
 			"header": 1,
+			"consumes": {
+				"name": "Channel Divinity"
+			},
 			"entries": [
 				"You can use your Channel Divinity to rebuke those who use violence. Immediately after an attacker within 30 feet of you deals damage with an attack against a creature other than you, you can use your reaction to force the attacker to make a Wisdom saving throw. On a failed save, the attacker takes radiant damage equal to the damage it just dealt. On a successful save, it takes half as much damage."
 			]

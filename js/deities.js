@@ -1,26 +1,26 @@
 "use strict";
 
 class DeitiesSublistManager extends SublistManager {
-	static get _ROW_TEMPLATE () {
+	static _getRowTemplate () {
 		return [
 			new SublistCellTemplate({
 				name: "Name",
-				css: "bold col-4 pl-0",
+				css: "bold ve-col-4 pl-0",
 				colStyle: "",
 			}),
 			new SublistCellTemplate({
 				name: "Pantheon",
-				css: "col-2 ve-text-center",
+				css: "ve-col-2 ve-text-center",
 				colStyle: "text-center",
 			}),
 			new SublistCellTemplate({
 				name: "Alignment",
-				css: "col-2 ve-text-center",
+				css: "ve-col-2 ve-text-center",
 				colStyle: "text-center",
 			}),
 			new SublistCellTemplate({
 				name: "Domains",
-				css: "col-4",
+				css: "ve-col-4",
 				colStyle: "",
 			}),
 		];
@@ -32,7 +32,7 @@ class DeitiesSublistManager extends SublistManager {
 		const cellsText = [it.name, it.pantheon, alignment, domains];
 
 		const $ele = $(`<div class="lst__row lst__row--sublist ve-flex-col">
-			<a href="#${hash}" class="lst--border lst__row-inner">
+			<a href="#${hash}" class="lst__row-border lst__row-inner">
 				${this.constructor._getRowCellsHtml({values: cellsText})}
 			</a>
 		</div>`)
@@ -68,7 +68,7 @@ class DeitiesPage extends ListPage {
 
 			dataProps: ["deity"],
 
-			isMarkdownPopout: true,
+			listSyntax: new ListSyntaxDeities({fnGetDataList: () => this._dataList}),
 		});
 	}
 
@@ -83,12 +83,12 @@ class DeitiesPage extends ListPage {
 		const alignment = ent.alignment ? ent.alignment.join("") : "\u2014";
 		const domains = ent.domains.join(", ");
 
-		eleLi.innerHTML = `<a href="#${hash}" class="lst--border lst__row-inner">
-			<span class="bold col-3 pl-0">${ent.name}</span>
-			<span class="col-2 ve-text-center">${ent.pantheon}</span>
-			<span class="col-2 ve-text-center">${alignment}</span>
-			<span class="col-3 ${ent.domains[0] === VeCt.STR_NONE ? `list-entry-none` : ""}">${domains}</span>
-			<span class="col-2 ve-text-center ${Parser.sourceJsonToColor(ent.source)} pr-0" title="${Parser.sourceJsonToFull(ent.source)}" ${Parser.sourceJsonToStyle(ent.source)}>${source}</span>
+		eleLi.innerHTML = `<a href="#${hash}" class="lst__row-border lst__row-inner">
+			<span class="bold ve-col-3 pl-0 pr-1">${ent.name}</span>
+			<span class="ve-col-2 px-1 ve-text-center">${ent.pantheon}</span>
+			<span class="ve-col-2 px-1 ve-text-center">${alignment}</span>
+			<span class="ve-col-3 px-1 ${ent.domains[0] === VeCt.STR_NONE ? `italic` : ""}">${domains}</span>
+			<span class="ve-col-2 ve-text-center ${Parser.sourceJsonToSourceClassname(ent.source)} pl-1 pr-0" title="${Parser.sourceJsonToFull(ent.source)}" ${Parser.sourceJsonToStyle(ent.source)}>${source}</span>
 		</a>`;
 
 		const listItem = new ListItem(

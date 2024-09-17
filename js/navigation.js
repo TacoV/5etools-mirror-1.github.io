@@ -15,7 +15,7 @@ class NavBar {
 
 	static _onLoad () {
 		NavBar._dropdowns = [...NavBar._navbar.querySelectorAll(`li.dropdown--navbar`)];
-		document.addEventListener("click", () => NavBar._dropdowns.forEach(ele => ele.classList.remove("open")));
+		document.addEventListener("click", () => NavBar._closeAllDropdowns());
 
 		NavBar._clearAllTimers();
 
@@ -35,7 +35,7 @@ class NavBar {
 
 		// create mobile "Menu" button
 		const btnShowHide = document.createElement("button");
-		btnShowHide.className = "btn btn-default page__btn-toggle-nav";
+		btnShowHide.className = "ve-btn ve-btn-default page__btn-toggle-nav";
 		btnShowHide.innerHTML = "Menu";
 		btnShowHide.onclick = () => {
 			$(btnShowHide).toggleClass("active");
@@ -103,6 +103,33 @@ class NavBar {
 		this._addElement_li(NavBar._CAT_UTILITIES, "manageprerelease.html", "Prerelease Content Manager");
 		this._addElement_li(NavBar._CAT_UTILITIES, "makebrew.html", "Homebrew Builder");
 		this._addElement_li(NavBar._CAT_UTILITIES, "managebrew.html", "Homebrew Manager");
+		this._addElement_buttonSplit(
+			NavBar._CAT_UTILITIES,
+			{
+				metas: [
+					{
+						html: "Load All Partnered Content",
+						click: async evt => {
+							evt.stopPropagation();
+							evt.preventDefault();
+							const {ManageBrewUi} = await import("./utils-brew/utils-brew-ui-manage.js");
+							await ManageBrewUi.pOnClickBtnLoadAllPartnered();
+						},
+					},
+					{
+						html: `<span class="glyphicon glyphicon-link"></span>`,
+						title: `Export Prerelease Content/Homebrew List as URL`,
+						click: async evt => {
+							evt.stopPropagation();
+							evt.preventDefault();
+							const ele = evt.currentTarget;
+							const {ManageBrewUi} = await import("./utils-brew/utils-brew-ui-manage.js");
+							await ManageBrewUi.pOnClickBtnExportListAsUrl({ele});
+						},
+					},
+				],
+			},
+		);
 		this._addElement_divider(NavBar._CAT_UTILITIES);
 		this._addElement_li(NavBar._CAT_UTILITIES, "inittrackerplayerview.html", "Initiative Tracker Player View");
 		this._addElement_divider(NavBar._CAT_UTILITIES);
@@ -123,19 +150,11 @@ class NavBar {
 		this._addElement_button(
 			NavBar._CAT_SETTINGS,
 			{
-				html: styleSwitcher.getDayNightButtonText(),
-				click: (evt) => NavBar.InteractionManager._onClick_button_dayNight(evt),
-				context: (evt) => NavBar.InteractionManager._onContext_button_dayNight(evt),
-				className: "nightModeToggle",
-			},
-		);
-		this._addElement_button(
-			NavBar._CAT_SETTINGS,
-			{
-				html: styleSwitcher.getActiveWide() === true ? "Disable Wide Mode" : "Enable Wide Mode (Experimental)",
-				click: (evt) => NavBar.InteractionManager._onClick_button_wideMode(evt),
-				className: "wideModeToggle",
-				title: "This feature is unsupported. Expect bugs.",
+				html: "Preferences",
+				click: () => {
+					ConfigUi.show();
+					NavBar._closeAllDropdowns();
+				},
 			},
 		);
 		this._addElement_divider(NavBar._CAT_SETTINGS);
@@ -169,8 +188,8 @@ class NavBar {
 		this._addElement_button(
 			NavBar._CAT_CACHE,
 			{
-				html: "Preload Adventure Text <small>(25MB+)</small>",
-				click: (evt) => NavBar.InteractionManager._pOnClick_button_preloadOffline(evt, /data\/adventure/),
+				html: "Preload Adventure Text <small>(50MB+)</small>",
+				click: (evt) => NavBar.InteractionManager._pOnClick_button_preloadOffline(evt, {route: /data\/adventure/}),
 				title: "Preload adventure text for offline use.",
 			},
 		);
@@ -178,7 +197,7 @@ class NavBar {
 			NavBar._CAT_CACHE,
 			{
 				html: "Preload Book Images <small>(1GB+)</small>",
-				click: (evt) => NavBar.InteractionManager._pOnClick_button_preloadOffline(evt, /img\/book/),
+				click: (evt) => NavBar.InteractionManager._pOnClick_button_preloadOffline(evt, {route: /img\/book/, isRequireImages: true}),
 				title: "Preload book images offline use. Note that book text is preloaded automatically.",
 			},
 		);
@@ -186,7 +205,7 @@ class NavBar {
 			NavBar._CAT_CACHE,
 			{
 				html: "Preload Adventure Text and Images <small>(2GB+)</small>",
-				click: (evt) => NavBar.InteractionManager._pOnClick_button_preloadOffline(evt, /(?:data|img)\/adventure/),
+				click: (evt) => NavBar.InteractionManager._pOnClick_button_preloadOffline(evt, {route: /(?:data|img)\/adventure/, isRequireImages: true}),
 				title: "Preload adventure text and images for offline use.",
 			},
 		);
@@ -194,7 +213,7 @@ class NavBar {
 			NavBar._CAT_CACHE,
 			{
 				html: "Preload All Images <small>(4GB+)</small>",
-				click: (evt) => NavBar.InteractionManager._pOnClick_button_preloadOffline(evt, /img/),
+				click: (evt) => NavBar.InteractionManager._pOnClick_button_preloadOffline(evt, {route: /img/, isRequireImages: true}),
 				title: "Preload all images for offline use.",
 			},
 		);
@@ -202,7 +221,7 @@ class NavBar {
 			NavBar._CAT_CACHE,
 			{
 				html: "Preload All <small>(5GB+)</small>",
-				click: (evt) => NavBar.InteractionManager._pOnClick_button_preloadOffline(evt, /./),
+				click: (evt) => NavBar.InteractionManager._pOnClick_button_preloadOffline(evt, {route: /./, isRequireImages: true}),
 				title: "Preload everything for offline use.",
 			},
 		);
@@ -395,7 +414,7 @@ class NavBar {
 			a.setAttribute("target", "_blank");
 			a.classList.add("inline-split-v-center");
 			a.classList.add("w-100");
-			a.innerHTML = `<span>${aText}</span><span class="glyphicon glyphicon-new-window"/>`;
+			a.innerHTML = `<span>${aText}</span><span class="glyphicon glyphicon-new-window"></span>`;
 		}
 
 		li.appendChild(a);
@@ -462,15 +481,15 @@ class NavBar {
 		parentNode.children[category] = node;
 	}
 
-	static _addElement_getDatePrefix ({date, isAddDateSpacer}) { return `${(date != null || isAddDateSpacer) ? `<div class="ve-small mr-2 page__nav-date inline-block text-right inline-block">${date || ""}</div>` : ""}`; }
-	static _addElement_getSourcePrefix ({source}) { return `${source != null ? `<div class="nav2-list__disp-source ${Parser.sourceJsonToColor(source)}" ${Parser.sourceJsonToStyle(source)}></div>` : ""}`; }
+	static _addElement_getDatePrefix ({date, isAddDateSpacer}) { return `${(date != null || isAddDateSpacer) ? `<div class="ve-small mr-2 page__nav-date inline-block ve-text-right inline-block">${date || ""}</div>` : ""}`; }
+	static _addElement_getSourcePrefix ({source}) { return `${source != null ? `<div class="nav2-list__disp-source ${Parser.sourceJsonToSourceClassname(source)}" ${Parser.sourceJsonToStyle(source)}></div>` : ""}`; }
 
 	static _addElement_divider (parentCategory) {
 		const parentNode = this._getNode(parentCategory);
 
 		const li = document.createElement("li");
 		li.setAttribute("role", "presentation");
-		li.className = "divider";
+		li.className = "ve-dropdown-divider";
 
 		parentNode.body.appendChild(li);
 	}
@@ -506,7 +525,7 @@ class NavBar {
 		}
 
 		const a = document.createElement("a");
-		a.className = "dropdown-toggle";
+		a.className = "ve-dropdown-toggle";
 		a.href = "#";
 		a.setAttribute("role", "button");
 		a.onclick = function (event) { NavBar._handleDropdownClick(this, event, isSide); };
@@ -517,7 +536,7 @@ class NavBar {
 		a.innerHTML = `${category} <span class="caret ${isSide ? "caret--right" : ""}"></span>`;
 
 		const ul = document.createElement("ul");
-		ul.className = `dropdown-menu ${isSide ? "dropdown-menu--side" : "dropdown-menu--top"}`;
+		ul.className = `ve-dropdown-menu ${isSide ? "ve-dropdown-menu--side" : "ve-dropdown-menu--top"}`;
 		ul.onclick = function (event) { event.stopPropagation(); };
 
 		li.appendChild(a);
@@ -547,17 +566,53 @@ class NavBar {
 		const li = document.createElement("li");
 		li.setAttribute("role", "presentation");
 
-		const a = document.createElement("a");
-		a.href = "#";
-		if (options.className) a.className = options.className;
-		a.onclick = options.click;
-		a.innerHTML = options.html;
+		const eleSpan = document.createElement("span");
+		if (options.className) eleSpan.className = options.className;
+		eleSpan.onclick = options.click;
+		eleSpan.innerHTML = options.html;
 
-		if (options.context) a.oncontextmenu = options.context;
+		if (options.context) eleSpan.oncontextmenu = options.context;
 
 		if (options.title) li.setAttribute("title", options.title);
 
-		li.appendChild(a);
+		li.appendChild(eleSpan);
+		parentNode.body.appendChild(li);
+	}
+
+	/**
+	 * Special LI for button
+	 * @param parentCategory The element to append to.
+	 * @param options Options.
+	 * @param options.html
+	 * @param options.metas
+	 */
+	static _addElement_buttonSplit (parentCategory, options) {
+		const parentNode = this._getNode(parentCategory);
+
+		const li = document.createElement("li");
+		li.setAttribute("role", "presentation");
+		li.className = "ve-flex-v-center";
+
+		options.metas
+			.forEach(({className, click, html, title}, i) => {
+				const eleSpan = document.createElement("span");
+
+				eleSpan.className = [
+					className,
+					"inline-block",
+					i ? null : "w-100 min-w-0",
+				]
+					.filter(Boolean)
+					.join(" ");
+
+				eleSpan.onclick = click;
+				eleSpan.innerHTML = html;
+
+				if (title) eleSpan.setAttribute("title", title);
+
+				li.appendChild(eleSpan);
+			});
+
 		parentNode.body.appendChild(li);
 	}
 
@@ -618,6 +673,10 @@ class NavBar {
 		else NavBar._openDropdown(ele);
 	}
 
+	static _closeAllDropdowns () {
+		NavBar._dropdowns.forEach(ele => ele.classList.remove("open"));
+	}
+
 	static _openDropdown (ele) {
 		const lisOpen = [];
 
@@ -644,7 +703,7 @@ class NavBar {
 	 * @private
 	 */
 	static _openDropdown_mutAlignment ({liNavbar}) {
-		const uls = [...liNavbar.querySelectorAll("ul.dropdown-menu")];
+		const uls = [...liNavbar.querySelectorAll("ul.ve-dropdown-menu")];
 		const widthRequired = window.innerWidth < 1200
 			? Math.max(...uls.map(ul => ul.getBoundingClientRect().width))
 			: uls.map(ul => ul.getBoundingClientRect().width).reduce((a, b) => a + b, 0);
@@ -785,7 +844,7 @@ NavBar.InteractionManager = class {
 
 	static async _pOnClick_button_loadStateFile (evt) {
 		evt.preventDefault();
-		const {jsons, errors} = await DataUtil.pUserUpload({expectedFileTypes: ["5etools"]});
+		const {jsons, errors} = await InputUiUtil.pGetUserUploadJson({expectedFileTypes: ["5etools"]});
 
 		DataUtil.doHandleFileLoadErrorsGeneric(errors);
 
@@ -811,11 +870,19 @@ NavBar.InteractionManager = class {
 		}
 	}
 
-	static async _pOnClick_button_preloadOffline (evt, route) {
+	static async _pOnClick_button_preloadOffline (evt, {route, isRequireImages = false}) {
 		evt.preventDefault();
 
 		if (globalThis.swCacheRoutes === undefined) {
 			JqueryUtil.doToast(`The loader was not yet available! Reload the page and try again. If this problem persists, your browser may not support preloading.`);
+			return;
+		}
+
+		if (isRequireImages && globalThis.DEPLOYED_IMG_ROOT) {
+			JqueryUtil.doToast({
+				type: "danger",
+				content: `The "${evt.currentTarget.innerText.split("(")[0].trim()}" option is not currently supported on this site version. Try again some other time!`,
+			});
 			return;
 		}
 
@@ -879,7 +946,7 @@ NavBar.NodeLink = class extends NavBar.Node {
 };
 
 NavBar.NodeAccordion = class extends NavBar.Node {
-	static getDispToggleDisplayHtml (val) { return val ? `[\u2012]` : `[+]`; }
+	static getDispToggleDisplayHtml (val) { return val ? `[\u2212]` : `[+]`; }
 
 	constructor ({dispToggle, ...rest}) {
 		super(rest);

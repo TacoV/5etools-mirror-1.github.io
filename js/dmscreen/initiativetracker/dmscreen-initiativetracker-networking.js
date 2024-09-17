@@ -166,7 +166,7 @@ export class InitiativeTrackerNetworking {
 			$btnGetLink.prop("disabled", false);
 		};
 
-		const $btnStartServer = $(`<button class="btn btn-default mr-2"></button>`)
+		const $btnStartServer = $(`<button class="ve-btn ve-btn-default mr-2"></button>`)
 			.click(async () => {
 				const {isRunning} = await this.startServerV1({doUpdateExternalStates, $btnStartServer, $btnGetToken, $btnGetLink, fnDispServerStoppedState, fnDispServerRunningState});
 				if (!isRunning) return;
@@ -175,13 +175,13 @@ export class InitiativeTrackerNetworking {
 				showConnected();
 			});
 
-		const $btnGetToken = $(`<button class="btn btn-default mr-2" disabled><span class="glyphicon glyphicon-copy"></span> Copy Token</button>`).appendTo($wrpHelp)
+		const $btnGetToken = $(`<button class="ve-btn ve-btn-default mr-2" disabled><span class="glyphicon glyphicon-copy"></span> Copy Token</button>`).appendTo($wrpHelp)
 			.click(async () => {
 				await MiscUtil.pCopyTextToClipboard(this._p2pMetaV1.serverPeer.token);
 				JqueryUtil.showCopiedEffect($btnGetToken);
 			});
 
-		const $btnGetLink = $(`<button class="btn btn-default" disabled><span class="glyphicon glyphicon-link"></span> Copy Link</button>`).appendTo($wrpHelp)
+		const $btnGetLink = $(`<button class="ve-btn ve-btn-default" disabled><span class="glyphicon glyphicon-link"></span> Copy Link</button>`).appendTo($wrpHelp)
 			.click(async () => {
 				const cleanOrigin = window.location.origin.replace(/\/+$/, "");
 				const url = `${cleanOrigin}/inittrackerplayerview.html#v1:${this._p2pMetaV1.serverPeer.token}`;
@@ -193,7 +193,7 @@ export class InitiativeTrackerNetworking {
 		else fnDispServerStoppedState();
 
 		$$`<div class="row w-100">
-			<div class="col-12">
+			<div class="ve-col-12">
 				<p>
 				The Player View is part of a peer-to-peer system to allow players to connect to a DM's initiative tracker. Players should use the <a href="inittrackerplayerview.html">Initiative Tracker Player View</a> page to connect to the DM's instance. As a DM, the usage is as follows:
 				<ol>
@@ -324,10 +324,10 @@ export class InitiativeTrackerNetworking {
 		});
 
 		const $wrpHelp = UiUtil.$getAddModalRow($modalInner, "div");
-		const $btnAltGenAll = $(`<button class="btn btn-primary btn-text-insert">Generate All</button>`).click(() => $btnGenServerTokens.click());
-		const $btnAltCopyAll = $(`<button class="btn btn-primary btn-text-insert">Copy Server Tokens</button>`).click(() => $btnCopyServers.click());
+		const $btnAltGenAll = $(`<button class="ve-btn ve-btn-primary ve-btn-text-insert">Generate All</button>`).click(() => $btnGenServerTokens.click());
+		const $btnAltCopyAll = $(`<button class="ve-btn ve-btn-primary ve-btn-text-insert">Copy Server Tokens</button>`).click(() => $btnCopyServers.click());
 		$$`<div class="ve-flex w-100">
-			<div class="col-12">
+			<div class="ve-col-12">
 				<p>
 				The Player View is part of a peer-to-peer (i.e., serverless) system to allow players to connect to a DM's initiative tracker. Players should use the <a href="inittrackerplayerview.html">Initiative Tracker Player View</a> page to connect to the DM's instance. As a DM, the usage is as follows:
 				<ol>
@@ -350,9 +350,9 @@ export class InitiativeTrackerNetworking {
 
 		const $wrpTop = UiUtil.$getAddModalRow($modalInner, "div");
 
-		const $btnAddClient = $(`<button class="btn btn-xs btn-primary" title="Add Client">Add Player</button>`).click(() => addClientRow());
+		const $btnAddClient = $(`<button class="ve-btn ve-btn-xs ve-btn-primary" title="Add Client">Add Player</button>`).click(() => addClientRow());
 
-		const $btnCopyServers = $(`<button class="btn btn-xs btn-primary" title="Copy any available server tokens to the clipboard">Copy Server Tokens</button>`)
+		const $btnCopyServers = $(`<button class="ve-btn ve-btn-xs ve-btn-primary" title="Copy any available server tokens to the clipboard">Copy Server Tokens</button>`)
 			.click(async () => {
 				const targetRows = this._p2pMetaV0.rows.filter(it => !it.isDeleted && !it.$iptTokenClient.attr("disabled"));
 				if (!targetRows.length) {
@@ -366,14 +366,14 @@ export class InitiativeTrackerNetworking {
 				}
 			});
 
-		const $btnAcceptClients = $(`<button class="btn btn-xs btn-primary" title="Open a prompt into which text containing client tokens can be pasted">Accept Multiple Clients</button>`)
+		const $btnAcceptClients = $(`<button class="ve-btn ve-btn-xs ve-btn-primary" title="Open a prompt into which text containing client tokens can be pasted">Accept Multiple Clients</button>`)
 			.click(() => {
 				const {$modalInner, doClose} = UiUtil.getShowModal({title: "Accept Multiple Clients"});
 
 				const $iptText = $(`<textarea class="form-control dm-init-pl__textarea block mb-2"></textarea>`)
 					.keydown(() => $iptText.removeClass("error-background"));
 
-				const $btnAccept = $(`<button class="btn btn-xs btn-primary block ve-text-center" title="Add Client">Accept Multiple Clients</button>`)
+				const $btnAccept = $(`<button class="ve-btn ve-btn-xs ve-btn-primary block ve-text-center" title="Add Client">Accept Multiple Clients</button>`)
 					.click(async () => {
 						$iptText.removeClass("error-background");
 						const txt = $iptText.val();
@@ -401,7 +401,7 @@ export class InitiativeTrackerNetworking {
 
 		$$`
 			<div class="ve-flex w-100">
-				<div class="col-12">
+				<div class="ve-col-12">
 					<div class="ve-flex-inline-v-center mr-2">
 						<span class="mr-1">Add a player (client):</span>
 						${$btnAddClient}
@@ -420,16 +420,16 @@ export class InitiativeTrackerNetworking {
 
 		UiUtil.addModalSep($modalInner);
 
-		const $btnGenServerTokens = $(`<button class="btn btn-primary btn-xs">Generate All</button>`)
+		const $btnGenServerTokens = $(`<button class="ve-btn ve-btn-primary ve-btn-xs">Generate All</button>`)
 			.click(() => this._playerWindowV0_pGetServerTokens({rowMetas: this._p2pMetaV0.rows}));
 
 		UiUtil.$getAddModalRow($modalInner, "div")
 			.append($$`
 			<div class="ve-flex w-100">
-				<div class="col-2 bold">Player Name</div>
-				<div class="col-3-5 bold">Server Token</div>
-				<div class="col-1 ve-text-center">${$btnGenServerTokens}</div>
-				<div class="col-3-5 bold">Client Token</div>
+				<div class="ve-col-2 bold">Player Name</div>
+				<div class="ve-col-3-5 bold">Server Token</div>
+				<div class="ve-col-1 ve-text-center">${$btnGenServerTokens}</div>
+				<div class="ve-col-3-5 bold">Client Token</div>
 			</div>
 		`);
 
@@ -441,12 +441,12 @@ export class InitiativeTrackerNetworking {
 			$btnAcceptClientToken,
 			$btnDeleteClient,
 		) => $$`<div class="w-100 mb-2 ve-flex">
-			<div class="col-2 pr-1">${$iptName}</div>
-			<div class="col-3-5 px-1">${$iptTokenServer}</div>
-			<div class="col-1 px-1 ve-flex-vh-center">${$btnGenServerToken}</div>
-			<div class="col-3-5 px-1">${$iptTokenClient}</div>
-			<div class="col-1-5 px-1 ve-flex-vh-center">${$btnAcceptClientToken}</div>
-			<div class="col-0-5 pl-1 ve-flex-vh-center">${$btnDeleteClient}</div>
+			<div class="ve-col-2 pr-1">${$iptName}</div>
+			<div class="ve-col-3-5 px-1">${$iptTokenServer}</div>
+			<div class="ve-col-1 px-1 ve-flex-vh-center">${$btnGenServerToken}</div>
+			<div class="ve-col-3-5 px-1">${$iptTokenClient}</div>
+			<div class="ve-col-1-5 px-1 ve-flex-vh-center">${$btnAcceptClientToken}</div>
+			<div class="ve-col-0-5 pl-1 ve-flex-vh-center">${$btnDeleteClient}</div>
 		</div>`;
 
 		const clientRowMetas = [];
@@ -466,7 +466,7 @@ export class InitiativeTrackerNetworking {
 					JqueryUtil.showCopiedEffect($iptTokenServer);
 				}).disableSpellcheck();
 
-			const $btnGenServerToken = $(`<button class="btn btn-xs btn-primary" title="Generate Server Token">Generate</button>`)
+			const $btnGenServerToken = $(`<button class="ve-btn ve-btn-xs ve-btn-primary" title="Generate Server Token">Generate</button>`)
 				.click(() => this._playerWindowV0_pGetServerTokens({rowMetas: [rowMeta]}));
 
 			const $iptTokenClient = $(`<input class="form-control input-sm code" disabled>`)
@@ -475,7 +475,7 @@ export class InitiativeTrackerNetworking {
 					if (evt.key === "Enter") $btnAcceptClientToken.click();
 				}).disableSpellcheck();
 
-			const $btnAcceptClientToken = $(`<button class="btn btn-xs btn-primary" title="Accept Client Token" disabled>Accept Client</button>`)
+			const $btnAcceptClientToken = $(`<button class="ve-btn ve-btn-xs ve-btn-primary" title="Accept Client Token" disabled>Accept Client</button>`)
 				.click(async () => {
 					const token = $iptTokenClient.val();
 					if (PeerUtilV0.isValidToken(token)) {
@@ -495,7 +495,7 @@ export class InitiativeTrackerNetworking {
 					} else $iptTokenClient.addClass("error-background");
 				});
 
-			const $btnDeleteClient = $(`<button class="btn btn-xs btn-danger"><span class="glyphicon glyphicon-trash"></span></button>`)
+			const $btnDeleteClient = $(`<button class="ve-btn ve-btn-xs ve-btn-danger"><span class="glyphicon glyphicon-trash"></span></button>`)
 				.click(() => {
 					rowMeta.$row.remove();
 					rowMeta.isDeleted = true;

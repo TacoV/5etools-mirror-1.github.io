@@ -1,6 +1,6 @@
 "use strict";
 
-class PageFilterTrapsHazards extends PageFilter {
+class PageFilterTrapsHazards extends PageFilterBase {
 	// region static
 	static sortFilterType (a, b) {
 		return SortUtil.ascSortLower(Parser.trapHazTypeToFull(a.item), Parser.trapHazTypeToFull(b.item));
@@ -36,8 +36,8 @@ class PageFilterTrapsHazards extends PageFilter {
 		if (it.srd) it._fMisc.push("SRD");
 		if (it.basicRules) it._fMisc.push("Basic Rules");
 		if (SourceUtil.isLegacySourceWotc(it.source)) it._fMisc.push("Legacy");
-		if (it.hasFluff || it.fluff?.entries) it._fMisc.push("Has Info");
-		if (it.hasFluffImages || it.fluff?.images) it._fMisc.push("Has Images");
+		if (this._hasFluff(it)) it._fMisc.push("Has Info");
+		if (this._hasFluffImages(it)) it._fMisc.push("Has Images");
 	}
 
 	addToFilters (it, isExcluded) {

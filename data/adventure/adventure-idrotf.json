@@ -1097,7 +1097,7 @@
 											"page": 15,
 											"id": "03c",
 											"entries": [
-												"You might decide that the lost ring sought by this character is lodged inside Ol' Bitey (see \"{@area Ol' Bitey|09f|x}\"). Otherwise, the character can try to fish it out of Maer Dualdon (see {@area Fishing for Knucklehead Trout|022|x}). Each time a party member cuts open a trout pulled from this lake, there's a {@chance 1|1 percent} chance that the fish has the signet ring lodged inside it."
+												"You might decide that the lost ring sought by this character is lodged inside Ol' Bitey (see \"{@area Ol' Bitey|09f|x}\"). Otherwise, the character can try to fish it out of Maer Dualdon (see {@area Fishing for Knucklehead Trout|022|x}). Each time a party member cuts open a trout pulled from this lake, there's a {@chance 1} chance that the fish has the signet ring lodged inside it."
 											]
 										},
 										{
@@ -1827,7 +1827,7 @@
 									"page": 26,
 									"id": "06b",
 									"entries": [
-										"There are no chwingas in the adventurers' starting town, but each time they visit another town in Icewind Dale, there's a cumulative {@chance 25|25 percent} chance of chwingas being present. Searching a town for chwingas doesn't take long if the characters use the {@item lantern of tracking|IDRotF}, since the towns are small and compact.",
+										"There are no chwingas in the adventurers' starting town, but each time they visit another town in Icewind Dale, there's a cumulative {@chance 25} chance of chwingas being present. Searching a town for chwingas doesn't take long if the characters use the {@item lantern of tracking|IDRotF}, since the towns are small and compact.",
 										"If the characters ask the residents of a town about {@creature chwinga|IDRotF} sightings, people seem dismissive of the notion of elementals living among them. The occasional fisher reeking of dwarven ale might recall seeing \"a tiny figure riding a fox through town\" but can't remember where or when the sighting occurred."
 									]
 								}
@@ -2005,7 +2005,7 @@
 									"type": "image",
 									"href": {
 										"type": "internal",
-										"path": "adventure/IDRotF/013-map-1.1-bremen.jpg"
+										"path": "adventure/IDRotF/013-map-1.1-bremen.webp"
 									},
 									"title": "Map 1.1: Bremen",
 									"width": 2208,
@@ -2091,7 +2091,7 @@
 									"type": "image",
 									"href": {
 										"type": "internal",
-										"path": "adventure/IDRotF/014-map-1.1-bremen-player.jpg"
+										"path": "adventure/IDRotF/014-map-1.1-bremen-player.webp"
 									},
 									"title": "Player Version",
 									"width": 2208,
@@ -2302,7 +2302,7 @@
 										],
 										[
 											"15",
-											"A {@creature knucklehead trout|IDRotF} (see {@adventure appendix C|IDRotF|21}) leaps out of the lake, makes a tail attack against one random character in the boat, and dives back into the frigid water. A character with a passive Wisdom ({@skill Perception}) score of 13 or higher is not {@quickref Surprise|PHB|3|0|surprised} by the fish and can use its reaction to make an opportunity attack against it or try to grapple the fish as it dives back into the water."
+											"A {@creature knucklehead trout|IDRotF} (see {@adventure appendix C|IDRotF|21}) leaps out of the lake, makes a tail attack against one random character in the boat, and dives back into the frigid water. A character with a passive Wisdom ({@skill Perception}) score of 13 or higher is not {@status surprised} by the fish and can use its reaction to make an opportunity attack against it or try to grapple the fish as it dives back into the water."
 										],
 										[
 											"16\u201320",
@@ -2600,7 +2600,7 @@
 									"type": "image",
 									"href": {
 										"type": "internal",
-										"path": "adventure/IDRotF/018-map-1.2-bryn-shander.jpg"
+										"path": "adventure/IDRotF/018-map-1.2-bryn-shander.webp"
 									},
 									"title": "Map 1.2: Bryn Shander",
 									"width": 3000,
@@ -2707,7 +2707,7 @@
 									"type": "image",
 									"href": {
 										"type": "internal",
-										"path": "adventure/IDRotF/019-map-1.2-bryn-shander-player.jpg"
+										"path": "adventure/IDRotF/019-map-1.2-bryn-shander-player.webp"
 									},
 									"title": "Player Version",
 									"width": 3000,
@@ -2926,7 +2926,7 @@
 										},
 										"These goblins were rolling across the tundra when their advance scout, a trained {@creature hawk}, spotted the abandoned sled. The one-eared {@creature goblin boss}, Izobai, sent six {@creature Goblin||goblins} forth to seize the sled and its cargo, while she and two {@creature Goblin||goblins} stayed behind to guard the wagon and keep an eye on the two {@creature Polar Bear||polar bears} that pull it.",
 										"At the start of the encounter, the characters are 120 feet behind the sled, and the goblins' wagon is 120 feet farther still. The goblins hauling the sled are too distracted to notice they're being followed, so the characters have surprise.",
-										"The sled weighs 300 pounds, and the iron ingots add another 600 pounds of weight to it. A single goblin can push or drag 240 pounds, so it takes at least four of them to move the sled. If they come under attack, the goblins take cover behind the sled and retaliate with ranged attacks. On the goblins' first turn in combat, one of them blows a horn to alert Izobai, who climbs to the roof of the wagon with a lit torch in one hand and her hooded hawk perched on her other arm. From this perch, she watches the battle unfold. If she spots enemies within 60 feet of the wagon, she orders the two goblins inside the wagon to shoot arrows at these enemies through gaps in the wagon's walls. These two goblins have three-quarters cover.",
+										"The sled weighs 300 pounds, and the iron ingots add another 600 pounds of weight to it. A single goblin can push or drag 240 pounds, so it takes at least four of them to move the sled. If they come under attack, the goblins take cover behind the sled and retaliate with ranged attacks. On the goblins' first turn in combat, one of them blows a horn to alert Izobai, who climbs to the roof of the wagon with a lit torch in one hand and her hooded hawk perched on her other arm. From this perch, she watches the battle unfold. If she spots enemies within 60 feet of the wagon, she orders the two goblins inside the wagon to shoot arrows at these enemies through gaps in the wagon's walls. These two goblins have {@quickref Cover||3||three-quarters cover}.",
 										"If five or more goblins are killed, or if Izobai is killed or captured, the remaining goblins are willing to negotiate a truce, though it's up to the characters to initiate the negotiations. The goblins are prepared to give up the iron ingots in exchange for their lives and freedom.",
 										"The prolonged winter has made the goblins as miserable as everyone else in Icewind Dale. If the characters act kindly toward the goblins, by offering them a blanket or some other gift, the goblins give up the sled and the ingots and allow the characters to be on their way. The goblins hail from the fortress of Karkolohk (see \"{@area Karkolohk|389|x}\"). Their job is to scour the tundra for food and treasure, as well as creatures to enslave, but they are cold and eager to return home.",
 										"Izobai fights only in self-defense. If defeat seems inevitable, she uses her torch to set fire to the wagon and flees into the tundra with her hawk, her treasure (see below), and any goblins in the vehicle. The wagon contains goblin beds made of straw; they ignite quickly, turning the vehicle into a raging inferno by the start of Izobai's next turn.",
@@ -3135,7 +3135,7 @@
 									"type": "image",
 									"href": {
 										"type": "internal",
-										"path": "adventure/IDRotF/024-map-1.3-caer-dineval.jpg"
+										"path": "adventure/IDRotF/024-map-1.3-caer-dineval.webp"
 									},
 									"title": "Map 1.3: Caer-Dineval",
 									"width": 2202,
@@ -3242,7 +3242,7 @@
 									"type": "image",
 									"href": {
 										"type": "internal",
-										"path": "adventure/IDRotF/025-map-1.3-caer-dineval-player.jpg"
+										"path": "adventure/IDRotF/025-map-1.3-caer-dineval-player.webp"
 									},
 									"title": "Player Version",
 									"width": 2201,
@@ -3429,7 +3429,7 @@
 									"page": 40,
 									"id": "0c6",
 									"entries": [
-										"The snow-covered ground outside the castle is 10 feet lower than the castle's courtyard. Thus, the battlements and parapets that top the outer walls appear 20 feet high from the outside and are 10 feet high on the inside. Icy stone steps at either end of the courtyard climb to the tops of these walls, which are unmanned. Arrow slits in the outer walls of the guard towers and central keep provide three-quarters cover to those standing behind them.",
+										"The snow-covered ground outside the castle is 10 feet lower than the castle's courtyard. Thus, the battlements and parapets that top the outer walls appear 20 feet high from the outside and are 10 feet high on the inside. Icy stone steps at either end of the courtyard climb to the tops of these walls, which are unmanned. Arrow slits in the outer walls of the guard towers and central keep provide {@quickref Cover||3||three-quarters cover} to those standing behind them.",
 										"Most of the castle is lit by torches regardless of the time of day. Doors inside the castle aren't locked unless the text states otherwise."
 									]
 								},
@@ -3464,7 +3464,7 @@
 											"type": "image",
 											"href": {
 												"type": "internal",
-												"path": "adventure/IDRotF/027-map-1.4-caer-dineval-keep.jpg"
+												"path": "adventure/IDRotF/027-map-1.4-caer-dineval-keep.webp"
 											},
 											"title": "Map 1.4: Keep at Caer-Dineval",
 											"width": 4000,
@@ -5349,7 +5349,7 @@
 											"type": "image",
 											"href": {
 												"type": "internal",
-												"path": "adventure/IDRotF/028-map-1.4-caer-dineval-keep-player.jpg"
+												"path": "adventure/IDRotF/028-map-1.4-caer-dineval-keep-player.webp"
 											},
 											"title": "Player Version",
 											"width": 4000,
@@ -5992,7 +5992,7 @@
 									"type": "image",
 									"href": {
 										"type": "internal",
-										"path": "adventure/IDRotF/032-map-1.5-caer-konig.jpg"
+										"path": "adventure/IDRotF/032-map-1.5-caer-konig.webp"
 									},
 									"title": "Map 1.5: Caer-Konig",
 									"width": 2206,
@@ -6099,7 +6099,7 @@
 									"type": "image",
 									"href": {
 										"type": "internal",
-										"path": "adventure/IDRotF/033-map-1.5-caer-konig-player.jpg"
+										"path": "adventure/IDRotF/033-map-1.5-caer-konig-player.webp"
 									},
 									"title": "Player Version",
 									"width": 2206,
@@ -6312,7 +6312,7 @@
 											"type": "image",
 											"href": {
 												"type": "internal",
-												"path": "adventure/IDRotF/035-map-1.6-duergar-outpost.jpg"
+												"path": "adventure/IDRotF/035-map-1.6-duergar-outpost.webp"
 											},
 											"title": "Map 1.6: Duergar Outpost",
 											"width": 4000,
@@ -6725,7 +6725,7 @@
 											"type": "image",
 											"href": {
 												"type": "internal",
-												"path": "adventure/IDRotF/036-map-1.6-duergar-outpost-player.jpg"
+												"path": "adventure/IDRotF/036-map-1.6-duergar-outpost-player.webp"
 											},
 											"title": "Player Version",
 											"width": 4000,
@@ -6868,7 +6868,7 @@
 											"id": "122",
 											"entries": [
 												"When the lever is pulled, iron spikes spring out from the floor and ceiling to form barriers across each doorway. A creature in either opening must succeed on a DC 12 Dexterity saving throw or take 7 ({@dice 2d6}) piercing damage from the spikes and be {@condition restrained} until the spikes are retracted or the barrier is destroyed. The spikes can be retracted only by pulling the lever a second time.",
-												"This trap is designed to isolate a single enemy in the western part of the room, blocking it from its allies with the spikes. Creatures can see through the gaps between the spikes, but the gaps aren't big enough for a character to slip through. The barriers of spikes grant three-quarters cover to creatures behind them. Each barrier has AC 15, 18 hit points, and immunity to poison and psychic damage."
+												"This trap is designed to isolate a single enemy in the western part of the room, blocking it from its allies with the spikes. Creatures can see through the gaps between the spikes, but the gaps aren't big enough for a character to slip through. The barriers of spikes grant {@quickref Cover||3||three-quarters cover} to creatures behind them. Each barrier has AC 15, 18 hit points, and immunity to poison and psychic damage."
 											]
 										}
 									]
@@ -7142,7 +7142,7 @@
 									"type": "image",
 									"href": {
 										"type": "internal",
-										"path": "adventure/IDRotF/039-map-1.7-dougan.jpg"
+										"path": "adventure/IDRotF/039-map-1.7-dougan.webp"
 									},
 									"title": "Map 1.7: Dougan's Hole",
 									"width": 2202,
@@ -7207,7 +7207,7 @@
 									"type": "image",
 									"href": {
 										"type": "internal",
-										"path": "adventure/IDRotF/040-map-1.7-dougan-player.jpg"
+										"path": "adventure/IDRotF/040-map-1.7-dougan-player.webp"
 									},
 									"title": "Player Version",
 									"width": 2202,
@@ -7300,7 +7300,7 @@
 							"page": 54,
 							"id": "13f",
 							"entries": [
-								"The wilderness around Dougan's Hole is a frozen tundra. Snow falls frequently, adding to the snowpack and erasing tracks. There is a {@chance 50|50 percent} chance that the characters get caught in a blizzard on the way to the lodge (see \"{@area Blizzards|01e|x}\"). If Kanan and Koran are with the party, they protect the characters from the worst of the storm, using their bodies to shield the characters until it passes. The wolves' presence also prevents the characters from getting lost or separated.",
+								"The wilderness around Dougan's Hole is a frozen tundra. Snow falls frequently, adding to the snowpack and erasing tracks. There is a {@chance 50} chance that the characters get caught in a blizzard on the way to the lodge (see \"{@area Blizzards|01e|x}\"). If Kanan and Koran are with the party, they protect the characters from the worst of the storm, using their bodies to shield the characters until it passes. The wolves' presence also prevents the characters from getting lost or separated.",
 								"Also crossing the tundra are a pack of {@dice 1d6 + 1} {@creature Wolf||wolves}, prowling the white in search of food. Characters who make a successful DC 13 Intelligence ({@skill Nature}) check note that the wolves are gaunt from starvation. If the winter wolves are with the party, Kanan and Koran growl and bare their teeth, which deters the pack from approaching closer.",
 								{
 									"type": "image",
@@ -7346,7 +7346,7 @@
 											"type": "image",
 											"href": {
 												"type": "internal",
-												"path": "adventure/IDRotF/043-map-1.8-frost-giant.jpg"
+												"path": "adventure/IDRotF/043-map-1.8-frost-giant.webp"
 											},
 											"title": "Map 1.8: Frost Giant Ice Lodge",
 											"width": 4000,
@@ -8023,7 +8023,7 @@
 											"type": "image",
 											"href": {
 												"type": "internal",
-												"path": "adventure/IDRotF/044-map-1.8-frost-giant-player.jpg"
+												"path": "adventure/IDRotF/044-map-1.8-frost-giant-player.webp"
 											},
 											"title": "Player Version",
 											"width": 4000,
@@ -8397,7 +8397,7 @@
 									"type": "image",
 									"href": {
 										"type": "internal",
-										"path": "adventure/IDRotF/046-map-1.9-easthaven.jpg"
+										"path": "adventure/IDRotF/046-map-1.9-easthaven.webp"
 									},
 									"title": "Map 1.9: Easthaven",
 									"width": 3000,
@@ -8504,7 +8504,7 @@
 									"type": "image",
 									"href": {
 										"type": "internal",
-										"path": "adventure/IDRotF/047-map-1.9-easthaven-player.jpg"
+										"path": "adventure/IDRotF/047-map-1.9-easthaven-player.webp"
 									},
 									"title": "Player Version",
 									"width": 3000,
@@ -8666,7 +8666,7 @@
 					"entries": [
 						"The quest in Easthaven begins at the same time as the burning of the Red Wizard, Dzaan, who is described in the \"Arcane Brotherhood\" section of {@area appendix C|6fe|x}. Whether the characters are starting the adventure in Easthaven or have just arrived, they are present during Dzaan's fiery execution. They're too late to save Dzaan, but they might encounter a magical copy of him again in chapter 2 (see \"{@area Lost Spire of Netheril|3a8|x}\").",
 						"The captain of Easthaven's militia, Imdra Arlaggath, takes notice of the characters during the burning and offers them a quest. Some fishers have gone missing on Lac Dinneshere, and she wants the characters to take a boat and search for them. She knows where the fishers like to fish and urges the characters to search that part of the lake first. If they heed Imdra's advice, they find the fishers' boats pulled up on the ice within short walking distance from a frozen cave previously hidden under snow and ice. This cave, the characters soon discover, is the lair of a hag named Maud Chiselbone.",
-						"Characters who explore the cave complex find the bodies of the fishers, as well as Maud's {@item cauldron of plenty|IDRotF} (see {@adventure appendix D|IDRotF|22|{@item Cauldron of Plenty|IDRotF}}). The cauldron is a stunning discovery and a welcome one for the people of Ten-Towns, if the characters choose to part with it. If news of the cauldron spreads, the characters will quickly find themselves the center of attention as various towns strive to obtain it. With no end to winter in sight, the cauldron might be the last thing standing between one town's survival and another's extinction.",
+						"Characters who explore the cave complex find the bodies of the fishers, as well as Maud's {@item cauldron of plenty|IDRotF} (see {@adventure appendix D|IDRotF|22}). The cauldron is a stunning discovery and a welcome one for the people of Ten-Towns, if the characters choose to part with it. If news of the cauldron spreads, the characters will quickly find themselves the center of attention as various towns strive to obtain it. With no end to winter in sight, the cauldron might be the last thing standing between one town's survival and another's extinction.",
 						{
 							"type": "image",
 							"href": {
@@ -8807,7 +8807,7 @@
 											"type": "image",
 											"href": {
 												"type": "internal",
-												"path": "adventure/IDRotF/051-map-1.10-cauldron.jpg"
+												"path": "adventure/IDRotF/051-map-1.10-cauldron.webp"
 											},
 											"title": "Map 1.10: Cauldron Caves",
 											"width": 4000,
@@ -11782,7 +11782,7 @@
 											"type": "image",
 											"href": {
 												"type": "internal",
-												"path": "adventure/IDRotF/052-map-1.10-cauldron-player.jpg"
+												"path": "adventure/IDRotF/052-map-1.10-cauldron-player.webp"
 											},
 											"title": "Player Version",
 											"width": 4000,
@@ -11928,7 +11928,7 @@
 									"page": 66,
 									"id": "183",
 									"entries": [
-										"The lake hag, Maud Chiselbone (use the {@creature sea hag} stat block), and her {@creature will-o'-wisp} companion await characters in the middle of this cave. Maud stands between her {@item cauldron of plenty|IDRotF} (see {@adventure appendix D|IDRotF|22|{@item Cauldron of Plenty|IDRotF}}) and a stone block atop which she butchers whatever meat is destined for her stew. Heaped around this block are rusty hatchets and the flayed corpses of the four fishers from Easthaven. The will-o'-wisp is normally {@condition invisible} when its light is extinguished, but it brightens when it wants intruders to behold Maud's true, hideous form.",
+										"The lake hag, Maud Chiselbone (use the {@creature sea hag} stat block), and her {@creature will-o'-wisp} companion await characters in the middle of this cave. Maud stands between her {@item cauldron of plenty|IDRotF} (see {@adventure appendix D|IDRotF|22}) and a stone block atop which she butchers whatever meat is destined for her stew. Heaped around this block are rusty hatchets and the flayed corpses of the four fishers from Easthaven. The will-o'-wisp is normally {@condition invisible} when its light is extinguished, but it brightens when it wants intruders to behold Maud's true, hideous form.",
 										"Maud disguises herself as a decrepit old woman. In this form, she wears tattered furs to stave off the cold. In her natural form, Maud has sickly grayish-purple flesh, bulging eyes that seldom blink, and stringy black hair interwoven with fingerbones. If her disguise is pierced or the characters threaten her, Maud summons the frost giant skeleton in area U9 to fight on her behalf, but it takes two rounds to arrive. If the skeleton is destroyed, Maud assumes her true form and takes on the characters herself. She won't give up her lair or the magic cauldron without a fight.",
 										"If she is reduced to 9 hit points or fewer, Maud tries to make a deal. She agrees to surrender the cauldron and promises to deliver a chest filled with gold coins that lies in the muck at the bottom of Lac Dinneshere. If the deal is struck and the characters release her as promised, Maud returns to the lake to make good on her end of the bargain. As she departs, she tells the characters to wait in the caves until midnight, then head north along the shore for a mile. If they follow her instructions, they find a waterlogged wooden chest on the icy shore, its lock broken off. See \"Treasure\" below for information on the chest's contents.",
 										{
@@ -12076,7 +12076,7 @@
 											"type": "image",
 											"href": {
 												"type": "internal",
-												"path": "adventure/IDRotF/055-map-1.11-easthaven-town-hall.jpg"
+												"path": "adventure/IDRotF/055-map-1.11-easthaven-town-hall.webp"
 											},
 											"title": "Map 1.11: Easthaven Town Hall",
 											"width": 4000,
@@ -12532,7 +12532,7 @@
 											"type": "image",
 											"href": {
 												"type": "internal",
-												"path": "adventure/IDRotF/056-map-1.11-easthaven-town-hall-player.jpg"
+												"path": "adventure/IDRotF/056-map-1.11-easthaven-town-hall-player.webp"
 											},
 											"title": "Player Version",
 											"width": 4000,
@@ -12973,7 +12973,7 @@
 									"type": "image",
 									"href": {
 										"type": "internal",
-										"path": "adventure/IDRotF/059-map-1.12-good-mead.jpg"
+										"path": "adventure/IDRotF/059-map-1.12-good-mead.webp"
 									},
 									"title": "Map 1.12: Good Mead",
 									"width": 2196,
@@ -13059,7 +13059,7 @@
 									"type": "image",
 									"href": {
 										"type": "internal",
-										"path": "adventure/IDRotF/060-map-1.12-good-mead-player.jpg"
+										"path": "adventure/IDRotF/060-map-1.12-good-mead-player.webp"
 									},
 									"title": "Player Version",
 									"width": 2196,
@@ -13196,7 +13196,7 @@
 											"type": "image",
 											"href": {
 												"type": "internal",
-												"path": "adventure/IDRotF/062-map-1.13-verbeeg-lair.jpg"
+												"path": "adventure/IDRotF/062-map-1.13-verbeeg-lair.webp"
 											},
 											"title": "Map 1.13: Verbeeg Lair",
 											"width": 4000,
@@ -15490,7 +15490,7 @@
 											"type": "image",
 											"href": {
 												"type": "internal",
-												"path": "adventure/IDRotF/063-map-1.13-verbeeg-lair-player.jpg"
+												"path": "adventure/IDRotF/063-map-1.13-verbeeg-lair-player.webp"
 											},
 											"title": "Player Version",
 											"width": 4000,
@@ -15969,7 +15969,7 @@
 									"type": "image",
 									"href": {
 										"type": "internal",
-										"path": "adventure/IDRotF/066-map-1.14-lonelywood.jpg"
+										"path": "adventure/IDRotF/066-map-1.14-lonelywood.webp"
 									},
 									"title": "Map 1.14: Lonelywood",
 									"width": 2199,
@@ -16055,7 +16055,7 @@
 									"type": "image",
 									"href": {
 										"type": "internal",
-										"path": "adventure/IDRotF/067-map-1.14-lonelywood-player.jpg"
+										"path": "adventure/IDRotF/067-map-1.14-lonelywood-player.webp"
 									},
 									"title": "Player Version",
 									"width": 2199,
@@ -16269,7 +16269,7 @@
 											"type": "image",
 											"href": {
 												"type": "internal",
-												"path": "adventure/IDRotF/069-map-1.15-elven-tomb.jpg"
+												"path": "adventure/IDRotF/069-map-1.15-elven-tomb.webp"
 											},
 											"title": "Map 1.15: Elven Tomb",
 											"width": 4000,
@@ -17346,7 +17346,7 @@
 											"type": "image",
 											"href": {
 												"type": "internal",
-												"path": "adventure/IDRotF/070-map-1.15-elven-tomb-player.jpg"
+												"path": "adventure/IDRotF/070-map-1.15-elven-tomb-player.webp"
 											},
 											"title": "Player Version",
 											"width": 4000,
@@ -17793,7 +17793,7 @@
 									"type": "image",
 									"href": {
 										"type": "internal",
-										"path": "adventure/IDRotF/075-map-1.16-targos.jpg"
+										"path": "adventure/IDRotF/075-map-1.16-targos.webp"
 									},
 									"title": "Map 1.16: Targos",
 									"width": 2196,
@@ -17900,7 +17900,7 @@
 									"type": "image",
 									"href": {
 										"type": "internal",
-										"path": "adventure/IDRotF/076-map-1.16-targos-player.jpg"
+										"path": "adventure/IDRotF/076-map-1.16-targos-player.webp"
 									},
 									"title": "Player Version",
 									"width": 2196,
@@ -18038,7 +18038,7 @@
 											"type": "image",
 											"href": {
 												"type": "internal",
-												"path": "adventure/IDRotF/077-map-1.17-kelvins-cairn.jpg"
+												"path": "adventure/IDRotF/077-map-1.17-kelvins-cairn.webp"
 											},
 											"title": "Map 1.17: Kelvin's Cairn",
 											"width": 4000,
@@ -18889,7 +18889,7 @@
 											"type": "image",
 											"href": {
 												"type": "internal",
-												"path": "adventure/IDRotF/078-map-1.17-kelvins-cairn-player.jpg"
+												"path": "adventure/IDRotF/078-map-1.17-kelvins-cairn-player.webp"
 											},
 											"title": "Player Version",
 											"width": 4000,
@@ -18991,7 +18991,7 @@
 											"page": 90,
 											"id": "230",
 											"entries": [
-												"As the characters tend to Garret, two {@creature Crag Cat|SKT|crag cats} (see {@adventure appendix C|IDRotF|21}) move to within 20 feet of the party and attack, each one pouncing on a randomly determined party member. Known to Ten-Towners as \"Hunters of Men,\" the crag cats caught Garret's scent but failed to reach him before the characters showed up. Characters with passive Wisdom ({@skill Perception}) scores of 17 or higher are not {@quickref Surprise|PHB|3|0|surprised} by the crag cats. If one crag cat dies, the other one disengages from melee combat and tries to flee down the mountain on its next turn."
+												"As the characters tend to Garret, two {@creature Crag Cat|SKT|crag cats} (see {@adventure appendix C|IDRotF|21}) move to within 20 feet of the party and attack, each one pouncing on a randomly determined party member. Known to Ten-Towners as \"Hunters of Men,\" the crag cats caught Garret's scent but failed to reach him before the characters showed up. Characters with passive Wisdom ({@skill Perception}) scores of 17 or higher are not {@status surprised} by the crag cats. If one crag cat dies, the other one disengages from melee combat and tries to flee down the mountain on its next turn."
 											]
 										},
 										{
@@ -19303,7 +19303,7 @@
 									"type": "image",
 									"href": {
 										"type": "internal",
-										"path": "adventure/IDRotF/082-map-1.18-termalaine.jpg"
+										"path": "adventure/IDRotF/082-map-1.18-termalaine.webp"
 									},
 									"title": "Map 1.18: Termalaine",
 									"width": 2196,
@@ -19389,7 +19389,7 @@
 									"type": "image",
 									"href": {
 										"type": "internal",
-										"path": "adventure/IDRotF/083-map-1.18-termalaine-player.jpg"
+										"path": "adventure/IDRotF/083-map-1.18-termalaine-player.webp"
 									},
 									"title": "Player Version",
 									"width": 2196,
@@ -19562,7 +19562,7 @@
 											"type": "image",
 											"href": {
 												"type": "internal",
-												"path": "adventure/IDRotF/085-map-1.19-gem-mine.jpg"
+												"path": "adventure/IDRotF/085-map-1.19-gem-mine.webp"
 											},
 											"title": "Map 1.19: Gem Mine",
 											"width": 4000,
@@ -22403,7 +22403,7 @@
 											"type": "image",
 											"href": {
 												"type": "internal",
-												"path": "adventure/IDRotF/086-map-1.19-gem-mine-player.jpg"
+												"path": "adventure/IDRotF/086-map-1.19-gem-mine-player.webp"
 											},
 											"title": "Player Version",
 											"width": 4000,
@@ -22749,7 +22749,7 @@
 											"page": 99,
 											"id": "277",
 											"entries": [
-												"The crystal shard lodged inside the fossilized mind flayer skull is a {@item psi crystal|IDRotF} (see {@adventure appendix D|IDRotF|22|{@item Psi Crystal|IDRotF}}). The psychic trauma that the mind flayer endured when it died caused the crystal to form in its mind. A character can use a miner's pick to pry loose the psi crystal.",
+												"The crystal shard lodged inside the fossilized mind flayer skull is a {@item psi crystal|IDRotF} (see {@adventure appendix D|IDRotF|22}). The psychic trauma that the mind flayer endured when it died caused the crystal to form in its mind. A character can use a miner's pick to pry loose the psi crystal.",
 												"A character who attunes to this {@i psi crystal} gains a form of indefinite madness (see the {@table indefinite madness|| Indefinite Madness table} in the {@book Dungeon Master's Guide|DMG}). Determine the result secretly, then convey this information only to the character's player. The madness does not end until the character is no longer attuned to the {@i psi crystal}. While the madness lasts, the character can hear a repeating telepathic distress signal put out by an illithid ship that crashed in the mountains and track the signal to its source (see \"{@area Id Ascendant|346|x}\"). The only way to block the signal is by ending the character's attunement to the {@i psi crystal}."
 											]
 										}
@@ -23449,7 +23449,7 @@
 											"page": 108,
 											"id": "29d",
 											"entries": [
-												"Make one Dexterity ({@skill Stealth}) check for all the crag cats involved in the encounter and compare the result to the passive (Wisdom) {@skill Perception} scores of the party. Any character whose score equals or exceeds the crag cats' check result is not {@quickref Surprise|PHB|3|0|surprised} when the cats attack.",
+												"Make one Dexterity ({@skill Stealth}) check for all the crag cats involved in the encounter and compare the result to the passive (Wisdom) {@skill Perception} scores of the party. Any character whose score equals or exceeds the crag cats' check result is not {@status surprised} when the cats attack.",
 												"If one or two crag cats are encountered, they stalk the characters but keep their distance, hoping to pick off individuals who becomes separated from the rest of the party. These crag cats aren't brave or foolish enough to attack a group that outnumbers them.",
 												"If three or four crag cats are encountered, their numbers embolden them. They attack the adventuring party like a well-coordinated pack, focusing their attacks on the party member who looks the weakest and least armored. If two or more crag cats die, the others retreat."
 											]
@@ -23868,7 +23868,7 @@
 											"page": 112,
 											"id": "2b6",
 											"entries": [
-												"The perytons' keen eyesight enables them to spot prey from great heights, while the dark sky makes them harder to see. Characters who have a passive Wisdom ({@skill Perception}) score of 13 or lower are {@quickref Surprise|PHB|3|0|surprised} when the perytons attack.",
+												"The perytons' keen eyesight enables them to spot prey from great heights, while the dark sky makes them harder to see. Characters who have a passive Wisdom ({@skill Perception}) score of 13 or lower are {@status surprised} when the perytons attack.",
 												"As an action, a peryton can rip out the heart of a dead humanoid within 5 feet of it. Once they obtain such a prize, the perytons disengage from battle and return to their nest. The perytons won't break off their attack until they get a heart.",
 												{
 													"type": "image",
@@ -23949,7 +23949,7 @@
 											"page": 113,
 											"id": "2ba",
 											"entries": [
-												"To determine which party members are {@quickref Surprise|PHB|3|0|surprised}, have each character make a Wisdom ({@skill Perception}) check contested by the yetis' Dexterity ({@skill Stealth}) check. Characters can use their passive Wisdom ({@skill Perception}) scores instead of making the check. If multiple yetis are present, make one check\u2014with advantage\u2014for all of them.",
+												"To determine which party members are {@status surprised}, have each character make a Wisdom ({@skill Perception}) check contested by the yetis' Dexterity ({@skill Stealth}) check. Characters can use their passive Wisdom ({@skill Perception}) scores instead of making the check. If multiple yetis are present, make one check\u2014with advantage\u2014for all of them.",
 												"After gorging themselves on the humanoids they kill, adult yetis and abominable yetis like to bite off the victims' heads and keep them as trophies."
 											]
 										}
@@ -23974,7 +23974,7 @@
 									"type": "image",
 									"href": {
 										"type": "internal",
-										"path": "adventure/IDRotF/095-map-2.1-icewind-dale.png"
+										"path": "adventure/IDRotF/095-map-2.1-icewind-dale.webp"
 									},
 									"title": "Map 2.1: Icewind Dale",
 									"width": 2550,
@@ -24314,7 +24314,7 @@
 									"type": "image",
 									"href": {
 										"type": "internal",
-										"path": "adventure/IDRotF/096-map-2.1-icewind-dale-player.jpg"
+										"path": "adventure/IDRotF/096-map-2.1-icewind-dale-player.webp"
 									},
 									"title": "Player Version",
 									"width": 6000,
@@ -24351,7 +24351,7 @@
 											"type": "image",
 											"href": {
 												"type": "internal",
-												"path": "adventure/IDRotF/097-map-2.2-angajuks-bell.jpg"
+												"path": "adventure/IDRotF/097-map-2.2-angajuks-bell.webp"
 											},
 											"title": "Map 2.2: Angajuk's Bell",
 											"width": 2210,
@@ -24635,7 +24635,7 @@
 											"type": "image",
 											"href": {
 												"type": "internal",
-												"path": "adventure/IDRotF/098-map-2.2-angajuks-bell-player.jpg"
+												"path": "adventure/IDRotF/098-map-2.2-angajuks-bell-player.webp"
 											},
 											"title": "Player Version",
 											"width": 2210,
@@ -24803,7 +24803,7 @@
 									"id": "2ca",
 									"entries": [
 										"The Black Cabin was built by a ranger of the Far North long before the founding of Ten-Towns. When he moved on, the lodge became a refuge for others seeking sanctuary from the wind sweeping down from the Reghed Glacier.",
-										"Six months ago, Macreadus, a sage and devout follower of Lathander (god of the dawn and rebirth), formed a plan to end Auril's everlasting winter. He holed up in the Black Cabin, where he spent all his time assembling a weather-controlling magical device called the {@i Summer Star}, using knowledge he gleaned from a book about Netherese artifacts. Macreadus's device was similar in design to a {@i mythallar} (see {@adventure appendix D|IDRotF|22|{@item Ythryn Mythallar|IDRotF}}), but much smaller. Unfortunately for him, it had a serious design flaw. When Macreadus tried to use it three days ago, it malfunctioned, incinerating both him and his book. Characters who search the cabin can find the sage's charred skeleton and his deadly creation.",
+										"Six months ago, Macreadus, a sage and devout follower of Lathander (god of the dawn and rebirth), formed a plan to end Auril's everlasting winter. He holed up in the Black Cabin, where he spent all his time assembling a weather-controlling magical device called the {@i Summer Star}, using knowledge he gleaned from a book about Netherese artifacts. Macreadus's device was similar in design to a {@i mythallar} (see {@adventure appendix D|IDRotF|22}), but much smaller. Unfortunately for him, it had a serious design flaw. When Macreadus tried to use it three days ago, it malfunctioned, incinerating both him and his book. Characters who search the cabin can find the sage's charred skeleton and his deadly creation.",
 										"Since the mishap, Macreadus's restless spirit has lingered in the Border Ethereal, unwilling to depart until its work is complete. (For more information on the Border Ethereal, see the \"{@book Ethereal Plane|DMG|2|Ethereal Plane}\" section in the {@book Dungeon Master's Guide|DMG}.)",
 										{
 											"type": "entries",
@@ -24862,7 +24862,7 @@
 													"type": "image",
 													"href": {
 														"type": "internal",
-														"path": "adventure/IDRotF/100-map-2.3-black-cabin.jpg"
+														"path": "adventure/IDRotF/100-map-2.3-black-cabin.webp"
 													},
 													"title": "Map 2.3: Black Cabin",
 													"width": 2210,
@@ -25078,7 +25078,7 @@
 													"type": "image",
 													"href": {
 														"type": "internal",
-														"path": "adventure/IDRotF/101-map-2.3-black-cabin-player.jpg"
+														"path": "adventure/IDRotF/101-map-2.3-black-cabin-player.webp"
 													},
 													"title": "Player Version",
 													"width": 2210,
@@ -25438,7 +25438,7 @@
 													"type": "image",
 													"href": {
 														"type": "internal",
-														"path": "adventure/IDRotF/105-map-2.4-cackling-chasm.jpg"
+														"path": "adventure/IDRotF/105-map-2.4-cackling-chasm.webp"
 													},
 													"title": "Map 2.4: Cackling Chasm",
 													"width": 2210,
@@ -26890,7 +26890,7 @@
 													"type": "image",
 													"href": {
 														"type": "internal",
-														"path": "adventure/IDRotF/106-map-2.4-cackling-chasm-player.jpg"
+														"path": "adventure/IDRotF/106-map-2.4-cackling-chasm-player.webp"
 													},
 													"title": "Player Version",
 													"width": 2210,
@@ -27112,7 +27112,7 @@
 									"page": 124,
 									"id": "305",
 									"entries": [
-										"Once the characters get what they came for, there's little reason to stay. In fact, characters who stay too long run the risk of encountering six {@creature Gnoll||gnolls} returning from a hunt. There's a {@chance 20|20 percent} chance that the gnolls have brought food with them, such as a dead mountain goat or crag cat, in which case the gnolls gather in {@area area Z2|2f4|x} (along with any other gnolls left alive in the chasm) to feast on the fresh kill.",
+										"Once the characters get what they came for, there's little reason to stay. In fact, characters who stay too long run the risk of encountering six {@creature Gnoll||gnolls} returning from a hunt. There's a {@chance 20} chance that the gnolls have brought food with them, such as a dead mountain goat or crag cat, in which case the gnolls gather in {@area area Z2|2f4|x} (along with any other gnolls left alive in the chasm) to feast on the fresh kill.",
 										"If the characters turn the gnolls' animus toward Chyzka to their advantage, they can come and go without having to kill every gnoll in the chasm. Even so, any gnolls they leave alive remain a potential threat to Ten-Towns.",
 										{
 											"type": "entries",
@@ -27159,7 +27159,7 @@
 													"type": "image",
 													"href": {
 														"type": "internal",
-														"path": "adventure/IDRotF/107-map-2.5-berserkers.jpg"
+														"path": "adventure/IDRotF/107-map-2.5-berserkers.webp"
 													},
 													"title": "Map 2.5: Cave of the Berserkers",
 													"width": 2210,
@@ -29075,7 +29075,7 @@
 													"type": "image",
 													"href": {
 														"type": "internal",
-														"path": "adventure/IDRotF/108-map-2.5-berserkers-player.jpg"
+														"path": "adventure/IDRotF/108-map-2.5-berserkers-player.webp"
 													},
 													"title": "Player Version",
 													"width": 2210,
@@ -29315,7 +29315,7 @@
 															"type": "image",
 															"href": {
 																"type": "internal",
-																"path": "adventure/IDRotF/110-map-2.6-dark-duchess.jpg"
+																"path": "adventure/IDRotF/110-map-2.6-dark-duchess.webp"
 															},
 															"title": "Map 2.6: Dark Duchess",
 															"width": 4000,
@@ -30115,7 +30115,7 @@
 															"type": "image",
 															"href": {
 																"type": "internal",
-																"path": "adventure/IDRotF/111-map-2.6-dark-duchess-player.jpg"
+																"path": "adventure/IDRotF/111-map-2.6-dark-duchess-player.webp"
 															},
 															"title": "Player Version",
 															"width": 4000,
@@ -30441,7 +30441,7 @@
 									"id": "340",
 									"entries": [
 										"Arveiaturace, an {@creature ancient white dragon} whose vision is hampered by cataracts, carries the body of her former master, the wizard Meltharond, in a saddle on her back (see \"{@area Arveiaturace|290|x}\", for more information).",
-										"The dragon is out hunting when the characters first arrive at the {@i Dark Duchess}, but she checks on the ship regularly to make sure her hoard is undisturbed. At the end of each hour the characters spend in the {@i Dark Duchess}, there is a {@chance 20|20 percent} chance that Arveiaturace returns to the ship. Because she can see only out to a range of 60 feet, the dragon must get close to the ship to examine it.",
+										"The dragon is out hunting when the characters first arrive at the {@i Dark Duchess}, but she checks on the ship regularly to make sure her hoard is undisturbed. At the end of each hour the characters spend in the {@i Dark Duchess}, there is a {@chance 20} chance that Arveiaturace returns to the ship. Because she can see only out to a range of 60 feet, the dragon must get close to the ship to examine it.",
 										"If the characters are below decks when the White Wyrm arrives, use the following boxed text to describe her arrival:",
 										{
 											"type": "insetReadaloud",
@@ -30516,7 +30516,7 @@
 									"id": "347",
 									"entries": [
 										"Seven days ago, spacefaring mind flayers hoping to capture some interesting species for study crashed their ship\u2014a nautiloid called the {@i Id Ascendant}\u2014while trying to fly it through a blizzard. The ship's cocaptains, Vorryn Q'uuol and Dredavex Sinfiz, are chaotic neutral gnome ceremorphs, which are smaller-than-normal mind flayers spawned from gnome hosts. Their crew consists of three gnome squidlings named Rin, Rix, and Zglarrd. See the \"Mind Flayers\" entry in {@adventure appendix C|IDRotF|21} for more information about gnome ceremorphs and squidlings.",
-										"The illithids are stuck unless they can find a {@item psi crystal|IDRotF} (see {@adventure appendix D|IDRotF|22|{@item Psi Crystal|IDRotF}}) to jump-start the ship's propulsion system. Vorryn and Dredavex are expending considerable effort to keep their ship functional and thus cannot conduct the search themselves. They also can't trust the moronic squidlings to accomplish such a delicate task. For these reasons, the gnome ceremorphs need help. They have built a device that can detect the presence of {@item Psi Crystal|IDRotF|psi crystals} in a 5-mile radius but haven't found any. The characters might have harvested a {@item psi crystal|IDRotF} from the gem mine near Termalaine (see \"{@area A Beautiful Mine|24d|x}\"), in which case the gnome ceremorphs would be very interested in acquiring it.",
+										"The illithids are stuck unless they can find a {@item psi crystal|IDRotF} (see {@adventure appendix D|IDRotF|22}) to jump-start the ship's propulsion system. Vorryn and Dredavex are expending considerable effort to keep their ship functional and thus cannot conduct the search themselves. They also can't trust the moronic squidlings to accomplish such a delicate task. For these reasons, the gnome ceremorphs need help. They have built a device that can detect the presence of {@item Psi Crystal|IDRotF|psi crystals} in a 5-mile radius but haven't found any. The characters might have harvested a {@item psi crystal|IDRotF} from the gem mine near Termalaine (see \"{@area A Beautiful Mine|24d|x}\"), in which case the gnome ceremorphs would be very interested in acquiring it.",
 										"Complicating matters is the damage done by the crash to the nautiloid's life support system, for once this system shuts down, the illithids are at risk of freezing to death. If the shutdown occurs before they acquire a {@item psi crystal|IDRotF}, the gnome ceremorphs' back-up plan is to activate the nautiloid's self-destruct system (see {@area area N7|363|x}) before abandoning ship and making their way toward Ten-Towns with the gnome squidlings in tow.",
 										{
 											"type": "entries",
@@ -30580,7 +30580,7 @@
 														"As you trudge deeper into a mountain valley, an eerie glow betrays the monstrous outline of something stupendous and ominous. It looks like a cephalopod with slimy, ropey tentacles as thick as tree trunks that has tried and failed to bury its immense bulk in the snow."
 													]
 												},
-												"Two {@creature Carrion Crawler||carrion crawlers}, Vorryn's trained pets, scuttle through the snow near the ship. Characters who have passive Wisdom ({@skill Perception}) scores of 11 or higher are not {@quickref Surprise|PHB|3|0|surprised} when the creatures attack.",
+												"Two {@creature Carrion Crawler||carrion crawlers}, Vorryn's trained pets, scuttle through the snow near the ship. Characters who have passive Wisdom ({@skill Perception}) scores of 11 or higher are not {@status surprised} when the creatures attack.",
 												"Characters {@condition paralyzed} by the crawlers' tentacles are dragged toward the nautiloid. The crawlers' intent is not to eat the characters, but to deliver them to Vorryn for questioning."
 											]
 										},
@@ -30645,7 +30645,7 @@
 															"type": "image",
 															"href": {
 																"type": "internal",
-																"path": "adventure/IDRotF/114-map-2.7-id-ascendant.jpg"
+																"path": "adventure/IDRotF/114-map-2.7-id-ascendant.webp"
 															},
 															"title": "Map 2.7: Id Ascendant",
 															"width": 4000,
@@ -31650,7 +31650,7 @@
 															"type": "image",
 															"href": {
 																"type": "internal",
-																"path": "adventure/IDRotF/115-map-2.7-id-ascendant-player.jpg"
+																"path": "adventure/IDRotF/115-map-2.7-id-ascendant-player.webp"
 															},
 															"title": "Player Version",
 															"width": 4000,
@@ -31858,7 +31858,7 @@
 													"page": 136,
 													"id": "366",
 													"entries": [
-														"This 6-inch-long black metal rod has a button at the top. Using an action to press the button causes the rod to emit a chirp. Any creature within 30 feet of the rod that isn't {@condition deafened} and has an Intelligence of 3 or lower must succeed on a DC 13 Constitution saving throw or be {@condition incapacitated} for 1 minute. After each activation, there's a {@chance 25|25 percent} chance that the rod breaks and becomes inoperable."
+														"This 6-inch-long black metal rod has a button at the top. Using an action to press the button causes the rod to emit a chirp. Any creature within 30 feet of the rod that isn't {@condition deafened} and has an Intelligence of 3 or lower must succeed on a DC 13 Constitution saving throw or be {@condition incapacitated} for 1 minute. After each activation, there's a {@chance 25} chance that the rod breaks and becomes inoperable."
 													]
 												},
 												{
@@ -31956,7 +31956,7 @@
 													"page": 137,
 													"id": "36f",
 													"entries": [
-														"Amid the clutter on the table are two magic items (see \"Treasure\" below), which a character can find only by rooting through the junk. Any creature that does so has a {@chance 50|50 percent} chance of knocking two things together and triggering an electrical discharge. When such a discharge occurs, every creature within 5 feet of the table must make a DC 17 Dexterity saving throw. On a failed save, the creature takes 4 ({@dice 1d8}) lightning damage."
+														"Amid the clutter on the table are two magic items (see \"Treasure\" below), which a character can find only by rooting through the junk. Any creature that does so has a {@chance 50} chance of knocking two things together and triggering an electrical discharge. When such a discharge occurs, every creature within 5 feet of the table must make a DC 17 Dexterity saving throw. On a failed save, the creature takes 4 ({@dice 1d8}) lightning damage."
 													]
 												},
 												{
@@ -31989,7 +31989,7 @@
 											]
 										},
 										"Vorryn and Dredavex released a hostile {@creature bulette} into the wild after the crash because they didn't want to feed it. They have no control over the creature, and they have all but forgotten about it. They fail to warn the characters that it poses a threat to anyone approaching or leaving the ship.",
-										"The characters first notice the bulette when it's 120 feet away from them, and it has three-quarters cover under the snow. When it gets within 30 feet of the party, the bulette springs out of the snow and uses its Deadly Leap.",
+										"The characters first notice the bulette when it's 120 feet away from them, and it has {@quickref Cover||3||three-quarters cover} under the snow. When it gets within 30 feet of the party, the bulette springs out of the snow and uses its Deadly Leap.",
 										"If the characters don't kill it, the bulette gradually migrates toward Ten-Towns."
 									]
 								}
@@ -32011,7 +32011,7 @@
 											"type": "image",
 											"href": {
 												"type": "internal",
-												"path": "adventure/IDRotF/117-map-2.8-jarlmoot.jpg"
+												"path": "adventure/IDRotF/117-map-2.8-jarlmoot.webp"
 											},
 											"title": "Map 2.8: Jarlmoot",
 											"width": 2210,
@@ -32233,7 +32233,7 @@
 											"type": "image",
 											"href": {
 												"type": "internal",
-												"path": "adventure/IDRotF/118-map-2.8-jarlmoot-player.jpg"
+												"path": "adventure/IDRotF/118-map-2.8-jarlmoot-player.webp"
 											},
 											"title": "Player Version",
 											"width": 2210,
@@ -32629,7 +32629,7 @@
 															"type": "image",
 															"href": {
 																"type": "internal",
-																"path": "adventure/IDRotF/128-map-2.9-karkolohk.jpg"
+																"path": "adventure/IDRotF/128-map-2.9-karkolohk.webp"
 															},
 															"title": "Map 2.9: Karkolohk",
 															"width": 4000,
@@ -33477,7 +33477,7 @@
 															"type": "image",
 															"href": {
 																"type": "internal",
-																"path": "adventure/IDRotF/129-map-2.9-karkolohk-player.jpg"
+																"path": "adventure/IDRotF/129-map-2.9-karkolohk-player.webp"
 															},
 															"title": "Player Version",
 															"width": 4000,
@@ -33514,7 +33514,7 @@
 											"id": "38f",
 											"entries": [
 												"The fortress has three of these squat structures, two overlooking the eastern approach and a third perched atop the cliffs to the west. Each watchtower stands 20 feet tall and has a rickety wooden ladder leading to the top, where a thick column of smoke issues from a brazier that is kept lit at all times.",
-												"Four {@creature Goblin||goblins} dressed in cold weather clothing stand guard atop each tower. The rampart battlements grant them half cover against attacks from outside the fort. They are supposed to be looking outward for signs of trouble, but the goblins prefer to stand around the brazier for warmth. One goblin has a horn that it can blow to sound an alarm, putting the entire fortress on alert.",
+												"Four {@creature Goblin||goblins} dressed in cold weather clothing stand guard atop each tower. The rampart battlements grant them {@quickref Cover||3||half cover} against attacks from outside the fort. They are supposed to be looking outward for signs of trouble, but the goblins prefer to stand around the brazier for warmth. One goblin has a horn that it can blow to sound an alarm, putting the entire fortress on alert.",
 												"Since visitors aren't welcome at Karkolohk, the goblins shoot arrows at any they see. A character who wants to sneak past a watchtower or climb its ladder undetected must succeed on a DC 9 Dexterity ({@skill Stealth}) check. If multiple party members are attempting the same task, have them make a group check instead."
 											]
 										},
@@ -33849,7 +33849,7 @@
 																	"type": "image",
 																	"href": {
 																		"type": "internal",
-																		"path": "adventure/IDRotF/131-map-2.10-lost-spire.jpg"
+																		"path": "adventure/IDRotF/131-map-2.10-lost-spire.webp"
 																	},
 																	"title": "Map 2.10: Lost Spire of Netheril",
 																	"width": 4000,
@@ -34919,7 +34919,7 @@
 																	"type": "image",
 																	"href": {
 																		"type": "internal",
-																		"path": "adventure/IDRotF/132-map-2.10-lost-spire-player.jpg"
+																		"path": "adventure/IDRotF/132-map-2.10-lost-spire-player.webp"
 																	},
 																	"title": "Player Version",
 																	"width": 4000,
@@ -35553,7 +35553,7 @@
 																	"type": "image",
 																	"href": {
 																		"type": "internal",
-																		"path": "adventure/IDRotF/135-map-2.11-reghed-camp.jpg"
+																		"path": "adventure/IDRotF/135-map-2.11-reghed-camp.webp"
 																	},
 																	"title": "Map 2.11: Reghed Tribe Camp",
 																	"width": 2210,
@@ -35572,7 +35572,7 @@
 																	"type": "image",
 																	"href": {
 																		"type": "internal",
-																		"path": "adventure/IDRotF/136-map-2.11-reghed-camp-player.jpg"
+																		"path": "adventure/IDRotF/136-map-2.11-reghed-camp-player.webp"
 																	},
 																	"title": "Player Version",
 																	"width": 2210,
@@ -35788,7 +35788,7 @@
 													"type": "image",
 													"href": {
 														"type": "internal",
-														"path": "adventure/IDRotF/138-map-2.12-revels-end.jpg"
+														"path": "adventure/IDRotF/138-map-2.12-revels-end.webp"
 													},
 													"title": "Map 2.12: Revel's End",
 													"width": 3684,
@@ -36745,7 +36745,7 @@
 													"type": "image",
 													"href": {
 														"type": "internal",
-														"path": "adventure/IDRotF/139-map-2.12-revels-end-player.jpg"
+														"path": "adventure/IDRotF/139-map-2.12-revels-end-player.webp"
 													},
 													"title": "Player Version",
 													"width": 3684,
@@ -37260,7 +37260,7 @@
 													"type": "image",
 													"href": {
 														"type": "internal",
-														"path": "adventure/IDRotF/141-map-2.13-skytower-shelter.jpg"
+														"path": "adventure/IDRotF/141-map-2.13-skytower-shelter.webp"
 													},
 													"title": "Map 2.13: Skytower Shelter",
 													"width": 2210,
@@ -38619,7 +38619,7 @@
 													"type": "image",
 													"href": {
 														"type": "internal",
-														"path": "adventure/IDRotF/142-map-2.13-skytower-shelter-player.jpg"
+														"path": "adventure/IDRotF/142-map-2.13-skytower-shelter-player.webp"
 													},
 													"title": "Player Version",
 													"width": 2210,
@@ -39009,7 +39009,7 @@
 													"type": "image",
 													"href": {
 														"type": "internal",
-														"path": "adventure/IDRotF/144-map-2.14-wyrmdoom-crag.jpg"
+														"path": "adventure/IDRotF/144-map-2.14-wyrmdoom-crag.webp"
 													},
 													"title": "Map 2.14: Wyrmdoom Crag",
 													"width": 2210,
@@ -40193,7 +40193,7 @@
 													"type": "image",
 													"href": {
 														"type": "internal",
-														"path": "adventure/IDRotF/145-map-2.14-wyrmdoom-crag-player.jpg"
+														"path": "adventure/IDRotF/145-map-2.14-wyrmdoom-crag-player.webp"
 													},
 													"title": "Player Version",
 													"width": 2210,
@@ -40696,7 +40696,7 @@
 											"type": "image",
 											"href": {
 												"type": "internal",
-												"path": "adventure/IDRotF/148-map-3.1-sunblight.jpg"
+												"path": "adventure/IDRotF/148-map-3.1-sunblight.webp"
 											},
 											"title": "Map 3.1: Sunblight (Xardorok's Fortress)",
 											"width": 3684,
@@ -41356,7 +41356,7 @@
 											"type": "image",
 											"href": {
 												"type": "internal",
-												"path": "adventure/IDRotF/149-map-3.1-sunblight-player.jpg"
+												"path": "adventure/IDRotF/149-map-3.1-sunblight-player.webp"
 											},
 											"title": "Player Version",
 											"width": 3684,
@@ -41405,7 +41405,7 @@
 											"page": 173,
 											"id": "46f",
 											"entries": [
-												"A {@creature duergar} guard in area X6 watches the icy ledge through the arrow slit, which grants him three-quarters cover against attacks made from outside the fortress. If he sees the characters approaching on the ledge, the duergar turns {@condition invisible} and watches them without announcing his presence. If the characters are having trouble getting through the double door or the portcullis, the duergar opens them from area X6 without alerting the characters to his presence. This duergar is loyal to {@creature Grandolpha Muzgardt|IDRotF} (see \"{@area The Muzgardt Conspiracy|45e|x}\") and hopes the characters will dispose of Xardorok, or at least create a situation in which Xardorok can be killed by his fellow duergar."
+												"A {@creature duergar} guard in area X6 watches the icy ledge through the arrow slit, which grants him {@quickref Cover||3||three-quarters cover} against attacks made from outside the fortress. If he sees the characters approaching on the ledge, the duergar turns {@condition invisible} and watches them without announcing his presence. If the characters are having trouble getting through the double door or the portcullis, the duergar opens them from area X6 without alerting the characters to his presence. This duergar is loyal to {@creature Grandolpha Muzgardt|IDRotF} (see \"{@area The Muzgardt Conspiracy|45e|x}\") and hopes the characters will dispose of Xardorok, or at least create a situation in which Xardorok can be killed by his fellow duergar."
 											]
 										}
 									]
@@ -41429,7 +41429,7 @@
 											"page": 173,
 											"id": "472",
 											"entries": [
-												"A {@creature duergar} guard in area X3 watches this room through the arrow slit, which grants her three-quarters cover. If she sees or hears intruders inside the fortress, she shouts, \"To arms!\" in Undercommon. The nine {@creature duergar} guards in area X3 spend 1 round rallying before pouring out of the barracks to confront the foes."
+												"A {@creature duergar} guard in area X3 watches this room through the arrow slit, which grants her {@quickref Cover||3||three-quarters cover}. If she sees or hears intruders inside the fortress, she shouts, \"To arms!\" in Undercommon. The nine {@creature duergar} guards in area X3 spend 1 round rallying before pouring out of the barracks to confront the foes."
 											]
 										}
 									]
@@ -42093,7 +42093,7 @@
 											"id": "4b6",
 											"entries": [
 												"Any creature that touches the forge for the first time on a turn or starts its turn in contact with the forge takes 10 ({@dice 3d6}) fire damage.",
-												"Characters who get close enough to peer through the vents in the side of the forge can see that it contains a large, beating heart. A successful DC 15 Intelligence ({@skill Arcana}) check reveals that the heart belongs to a red dragon and is clearly kept alive by magic. The forge grants the heart three-quarters cover. The heart is a Large object with AC 13, 27 hit points, vulnerability to cold damage, and immunity to fire and psychic damage. The heart stops beating when reduced to 0 hit points, rendering the forge inoperable."
+												"Characters who get close enough to peer through the vents in the side of the forge can see that it contains a large, beating heart. A successful DC 15 Intelligence ({@skill Arcana}) check reveals that the heart belongs to a red dragon and is clearly kept alive by magic. The forge grants the heart {@quickref Cover||3||three-quarters cover}. The heart is a Large object with AC 13, 27 hit points, vulnerability to cold damage, and immunity to fire and psychic damage. The heart stops beating when reduced to 0 hit points, rendering the forge inoperable."
 											]
 										},
 										{
@@ -42664,7 +42664,7 @@
 									"type": "image",
 									"href": {
 										"type": "internal",
-										"path": "adventure/IDRotF/155-map-4.1-dragons-flight-path.png"
+										"path": "adventure/IDRotF/155-map-4.1-dragons-flight-path.webp"
 									},
 									"title": "Map 4.1: Dragons Flight Path",
 									"width": 1700,
@@ -42675,7 +42675,8 @@
 										"size": 236,
 										"distance": 8.48,
 										"units": "miles"
-									}
+									},
+									"id": "723"
 								},
 								{
 									"type": "entries",
@@ -43283,7 +43284,7 @@
 								"\"Using divination magic, the Arcane Brotherhood has learned that the city is buried deep inside the Reghed Glacier. But the glacier can be cracked open at a place where a waterfall once flowed down its side but has since frozen. We have already found the waterfall. All we need now is the magic to break open the glacier.\""
 							]
 						},
-						"Vellynne learned a few things from her {@item professor orb|WDMM} (see {@adventure appendix D|IDRotF|22|{@item Professor Orb|WDMM}}) before it was stolen from her. She shares the following information with characters who want to know more about Netheril:",
+						"Vellynne learned a few things from her {@item professor orb|WDMM} (see {@adventure appendix D|IDRotF|22}) before it was stolen from her. She shares the following information with characters who want to know more about Netheril:",
 						{
 							"type": "list",
 							"items": [
@@ -43340,7 +43341,7 @@
 												"\"The orb is a family heirloom that was stolen from me by a former colleague named Nass Lantomir. The orb has the personality of a scholar and is named Professor Skant. Its knowledge will help us once we descend into Ythryn. Nass is after {@i The Codicil of White}. Find Nass, and we find Professor Skant.\""
 											]
 										},
-										"Vellynne describes the {@i professor orb}'s properties (see {@adventure appendix D|IDRotF|22|{@item Professor Orb|WDMM}}) if the characters want to know more about it."
+										"Vellynne describes the {@i professor orb}'s properties (see {@adventure appendix D|IDRotF|22}) if the characters want to know more about it."
 									]
 								}
 							]
@@ -43453,7 +43454,7 @@
 									"entries": [
 										"The prison of Revel's End has easy access to the Sea of Moving Ice. On the downside, captains who are brave enough to take their ships into the Sea of Moving Ice expect to be well compensated; characters can expect to pay 1,000 gp or more for a one-way trip to Auril's island, or five times that amount if they expect the ship to wait for them and take them back to Revel's End.",
 										"One such captain is Sharlasta Stormsword, a retired pirate (lawful evil human {@creature bandit captain}) who commands the {@i Ravenous}, a sailing ship with a crew of twenty well-trained scalawags ({@creature Bandit||bandits}). The ship's port of call is the city of Neverwinter. Despite her checkered past, Captain Stormsword is one of the most reliable privateers working for the Lords' Alliance today, and she rarely turns down a chance to earn a little extra coin on the side. Each dawn, she tosses a barrel of fish and a cask of whiskey into the sea as offerings to Umberlee\u2014a practice that keeps the evil sea god on her side.",
-										"When the characters arrive at Revel's End, there's a {@chance 10|10 percent} chance that the {@i Ravenous} is moored at the pier and is in the process of offloading crates of supplies as well as {@dice 1d4} convicts in shackles. Characters who aren't so lucky must wait {@dice 1d10} days for the ship to arrive.",
+										"When the characters arrive at Revel's End, there's a {@chance 10} chance that the {@i Ravenous} is moored at the pier and is in the process of offloading crates of supplies as well as {@dice 1d4} convicts in shackles. Characters who aren't so lucky must wait {@dice 1d10} days for the ship to arrive.",
 										"The {@i Ravenous} can travel 50 miles a day. But finding Auril's island while avoiding close encounters with icebergs and ice floes takes five days. Under no circumstances will Captain Stormsword or her crew leave their ship to explore the island.",
 										"If you need a map of the {@i Ravenous}, use the ship map in {@book appendix C|DMG|11} of the {@book Dungeon Master's Guide|DMG}."
 									]
@@ -43529,7 +43530,7 @@
 											"type": "image",
 											"href": {
 												"type": "internal",
-												"path": "adventure/IDRotF/160-map-5.1-island-of-solstice.jpg"
+												"path": "adventure/IDRotF/160-map-5.1-island-of-solstice.webp"
 											},
 											"title": "Map 5.1: Island of Solstice",
 											"width": 3684,
@@ -43909,7 +43910,7 @@
 											"type": "image",
 											"href": {
 												"type": "internal",
-												"path": "adventure/IDRotF/161-map-5.1-island-of-solstice-player.jpg"
+												"path": "adventure/IDRotF/161-map-5.1-island-of-solstice-player.webp"
 											},
 											"title": "Player Version",
 											"width": 3684,
@@ -44006,7 +44007,7 @@
 												],
 												[
 													"7",
-													"The ship's hold contains {@dice 1d6} giant oysters, each of which has a {@chance 10|10 percent} chance of containing a {@item crystal ball}-sized white pearl (2,500 gp)."
+													"The ship's hold contains {@dice 1d6} giant oysters, each of which has a {@chance 10} chance of containing a {@item crystal ball}-sized white pearl (2,500 gp)."
 												],
 												[
 													"8",
@@ -44234,7 +44235,7 @@
 															"type": "image",
 															"href": {
 																"type": "internal",
-																"path": "adventure/IDRotF/164-map-5.2-grimskalle.jpg"
+																"path": "adventure/IDRotF/164-map-5.2-grimskalle.webp"
 															},
 															"title": "Map 5.2: Grimskalle",
 															"width": 3684,
@@ -46833,7 +46834,7 @@
 															"type": "image",
 															"href": {
 																"type": "internal",
-																"path": "adventure/IDRotF/165-map-5.2-grimskalle-player.jpg"
+																"path": "adventure/IDRotF/165-map-5.2-grimskalle-player.webp"
 															},
 															"title": "Player Version",
 															"width": 3684,
@@ -47631,7 +47632,7 @@
 											"page": 212,
 											"id": "592",
 											"entries": [
-												"The book on the lectern is {@item The Codicil of White|IDRotF} (see {@adventure appendix D|IDRotF|22|{@item The Codicil of White|IDRotF}}). No wards or creatures are guarding it. If she's still with the party, {@creature Vellynne Harpell|IDRotF} is eager to claim the book, if only to add the {@spell frost fingers|IDRotF} spell (see {@adventure appendix D|IDRotF|22|{@spell Frost Fingers|IDRotF}}) to her spellbook. If it's present in a host body, {@creature Nass Lantomir's ghost|IDRotF} is laid to rest as soon as its host picks up or grasps the book.",
+												"The book on the lectern is {@item The Codicil of White|IDRotF} (see {@adventure appendix D|IDRotF|22}). No wards or creatures are guarding it. If she's still with the party, {@creature Vellynne Harpell|IDRotF} is eager to claim the book, if only to add the {@spell frost fingers|IDRotF} spell (see {@adventure appendix D|IDRotF|22|{@spell Frost Fingers|IDRotF}}) to her spellbook. If it's present in a host body, {@creature Nass Lantomir's ghost|IDRotF} is laid to rest as soon as its host picks up or grasps the book.",
 												"A character who spends at least 10 minutes poring over {@item The Codicil of White|IDRotF} learns that the poem in its pages, \"Rime of the Frostmaiden\" (see {@adventure appendix E|IDRotF|23}), is an incantation that can be used to unlock Auril's secrets, including ones buried deep under the glacial ice. This, Vellynne says, is exactly what the characters need to reach the lost city of Ythryn under the Reghed Glacier. Once the characters have the poem or a transcription of it, they don't need the rest of the book.",
 												{
 													"type": "image",
@@ -47816,7 +47817,7 @@
 												"Suddenly, nearly two dozen figures burst out of the snow sixty feet away from you. They are spaced roughly ten feet apart and begin advancing in a line."
 											]
 										},
-										"Characters who have a passive Wisdom ({@skill Perception}) score of 15 or higher are not {@quickref Surprise|PHB|3|0|surprised} by the ambush, nor are members of the Elk Tribe who are traveling with the party.",
+										"Characters who have a passive Wisdom ({@skill Perception}) score of 15 or higher are not {@status surprised} by the ambush, nor are members of the Elk Tribe who are traveling with the party.",
 										{
 											"type": "entries",
 											"name": "Ambushers",
@@ -48051,7 +48052,7 @@
 											"type": "image",
 											"href": {
 												"type": "internal",
-												"path": "adventure/IDRotF/171-map-6.1-caves-of-hunger.jpg"
+												"path": "adventure/IDRotF/171-map-6.1-caves-of-hunger.webp"
 											},
 											"title": "Map 6.1: Caves of Hunger",
 											"width": 4421,
@@ -52573,7 +52574,7 @@
 											"type": "image",
 											"href": {
 												"type": "internal",
-												"path": "adventure/IDRotF/172-map-6.1-caves-of-hunger-player.jpg"
+												"path": "adventure/IDRotF/172-map-6.1-caves-of-hunger-player.webp"
 											},
 											"title": "Player Version",
 											"width": 4421,
@@ -53335,7 +53336,7 @@
 											"page": 226,
 											"id": "600",
 											"entries": [
-												"The source of the room's heat is a {@item thermal cube|IDRotF} (see {@adventure appendix D|IDRotF|22|{@item Thermal Cube|IDRotF}}) that Yilsebek found during his last foray into Ythryn.",
+												"The source of the room's heat is a {@item thermal cube|IDRotF} (see {@adventure appendix D|IDRotF|22}) that Yilsebek found during his last foray into Ythryn.",
 												"Yilsebek carries a spider silk satchel that contains his spellbook (described below), a spider-shaped brooch made of obsidian and engraved with the symbol of House Dalambra (25 gp), and a half-empty bottle of Elverquisst (a rare, ruby-colored elven liquor distilled from sunshine and rare summer fruits). {@item Professor Skant|IDRotF} recognizes Elverquisst on sight, since he is an expert on the making of it. Elf characters would also recognize it.",
 												"Yilsebek's spellbook has black leather covers and pages made from sheets of trillimac (an Underdark fungus). The book contains the following spells: {@spell alter self}, {@spell cloudkill}, {@spell comprehend languages}, {@spell detect magic}, {@spell Evard's black tentacles}, {@spell fabricate}, {@spell fly}, {@spell greater invisibility}, {@spell lightning bolt}, {@spell mage armor}, {@spell magic missile}, {@spell misty step}, {@spell sending}, {@spell shield}, {@spell suggestion}, {@spell web}, and {@spell witch bolt}."
 											]
@@ -53754,7 +53755,7 @@
 							"page": 231,
 							"id": "624",
 							"entries": [
-								"After using the {@item Ythryn mythallar|IDRotF} (see {@adventure appendix D|IDRotF|22|{@item Ythryn Mythallar|IDRotF}}) to lift the enclave of Ythryn into the sky, Iriolarthas and his apprentices traveled to the frozen north in search of relics of Ostoria, a bygone empire of magic-wielding giants that waged war against the dragons forty thousand years earlier. After many fruitless excavations, they found a large stone spindle bearing strange sigils at the bottom of the Sea of Moving Ice and brought it back to Ythryn for study in the fall of \u2212343 DR, the Year of Chilled Marrow. During one of their experiments, something went wrong\u2014a flash of power from the spindle caused the {@i Ythryn} {@i mythallar} to shut down, which in turn caused the city to fall out of the sky and crash into the ice below.",
+								"After using the {@item Ythryn mythallar|IDRotF} (see {@adventure appendix D|IDRotF|22}) to lift the enclave of Ythryn into the sky, Iriolarthas and his apprentices traveled to the frozen north in search of relics of Ostoria, a bygone empire of magic-wielding giants that waged war against the dragons forty thousand years earlier. After many fruitless excavations, they found a large stone spindle bearing strange sigils at the bottom of the Sea of Moving Ice and brought it back to Ythryn for study in the fall of \u2212343 DR, the Year of Chilled Marrow. During one of their experiments, something went wrong\u2014a flash of power from the spindle caused the {@i Ythryn} {@i mythallar} to shut down, which in turn caused the city to fall out of the sky and crash into the ice below.",
 								"The inhabitants of Ythryn had only a few moments to react as the city fell. Iriolarthas conjured a doorway to a magical demiplane and stepped through it just in time. As Ythryn settled into its icy grave, all magic in the city became undone for a brief time, as though something was trying to siphon it all away. The demiplane expelled Iriolarthas in that instant, trapping the lich in Ythryn, and became a living demiplane (see {@adventure appendix C|IDRotF|21}). Iriolarthas searched the ruins of the city for his spellbook and his phylactery, recovering only the former. He also found several magical servants in stasis that had survived the devastation, as well as a handful of apprentices who had used their spells in ingenious ways to escape death.",
 								"Some of those inside tried to flee Ythryn, but glacial ice blocked all conventional routes of escape, and attempts to leave by magic were thwarted by a troublesome intercessor: the mysterious spindle in Iriolarthas's citadel was still putting out magical pulses of energy to hinder spellcasting. By the time this disruption stopped some fifty years later, fear and madness had warped the minds of the apprentice mages, transforming them into nothics. Meanwhile, Iriolarthas grew increasingly feeble until, finally, the lich's skeletal body turned to dust.",
 								{
@@ -53798,7 +53799,7 @@
 									"type": "image",
 									"href": {
 										"type": "internal",
-										"path": "adventure/IDRotF/178-map-7.1-the-necropolis.jpg"
+										"path": "adventure/IDRotF/178-map-7.1-the-necropolis.webp"
 									},
 									"title": "Map 7.2: Necropolis of Ythryn",
 									"width": 5000,
@@ -54430,7 +54431,7 @@
 									"type": "image",
 									"href": {
 										"type": "internal",
-										"path": "adventure/IDRotF/179-map-7.1-the-necropolis-player.jpg"
+										"path": "adventure/IDRotF/179-map-7.1-the-necropolis-player.webp"
 									},
 									"title": "Player Version",
 									"width": 5000,
@@ -54832,7 +54833,7 @@
 												"A stone walkway leads to a tower that claws upward and inward, its pointed roof leaning menacingly overhead. Narrow windows pierce its walls, gargoyles cling to its eaves, and a doorway at the tower's base gapes open."
 											]
 										},
-										"Two of the outer spires have broken off. One crashed in Icewind Dale (see {@area chapter 2|3a8|x}), and the other is buried elsewhere in the glacier (see {@adventure chapter 6|IDRotF|16}). The remaining twelve spires are intact, though two are almost buried in ice. There is a {@chance 20|20 percent} chance per tower that {@dice 1d3 + 1} {@creature Gargoyle||gargoyles} cling to the outside of it. (The other gargoyles clinging to the tower are inanimate statues.) Living gargoyles swoop down to attack anyone who crosses the gantry approaching the tower.",
+										"Two of the outer spires have broken off. One crashed in Icewind Dale (see {@area chapter 2|3a8|x}), and the other is buried elsewhere in the glacier (see {@adventure chapter 6|IDRotF|16}). The remaining twelve spires are intact, though two are almost buried in ice. There is a {@chance 20} chance per tower that {@dice 1d3 + 1} {@creature Gargoyle||gargoyles} cling to the outside of it. (The other gargoyles clinging to the tower are inanimate statues.) Living gargoyles swoop down to attack anyone who crosses the gantry approaching the tower.",
 										"These towers were once occupied by mages and contained laboratories, libraries, and living quarters. Now they lie in ruins. {@adventure Map 2.10|IDRotF|12|Map 2.10: Lost Spire of NetherilView Player Version} gives you an idea of how the interior of each spire is laid out."
 									]
 								},
@@ -54957,7 +54958,7 @@
 											"page": 239,
 											"id": "643",
 											"entries": [
-												"The anvil has the power to destroy any magic item that isn't an artifact. When a character holds the anvil's hammer for the first time, a voice inside their head, seeming to come from the anvil, says, \"Bring me your items of power, and together we shall destroy them.\" To destroy an item, the character must place it on the anvil and strike it three times with the hammer. Each hammer strike takes one action. On the third strike, the item disintegrates in a flash of blue light. Every time a character uses the anvil, there is a {@chance 25|25 percent} chance that a {@creature tomb tapper|IDRotF} (see {@adventure appendix C|IDRotF|21}) burrows its way into the tower to attack them (this happens only once). The anvil is anchored here and cannot be moved by any means. Removing the hammer from the tower causes it to teleport atop the anvil."
+												"The anvil has the power to destroy any magic item that isn't an artifact. When a character holds the anvil's hammer for the first time, a voice inside their head, seeming to come from the anvil, says, \"Bring me your items of power, and together we shall destroy them.\" To destroy an item, the character must place it on the anvil and strike it three times with the hammer. Each hammer strike takes one action. On the third strike, the item disintegrates in a flash of blue light. Every time a character uses the anvil, there is a {@chance 25} chance that a {@creature tomb tapper|IDRotF} (see {@adventure appendix C|IDRotF|21}) burrows its way into the tower to attack them (this happens only once). The anvil is anchored here and cannot be moved by any means. Removing the hammer from the tower causes it to teleport atop the anvil."
 											]
 										},
 										{
@@ -55611,7 +55612,7 @@
 															"type": "image",
 															"href": {
 																"type": "internal",
-																"path": "adventure/IDRotF/184-map-7.3-spire-of-iriolarthas.jpg"
+																"path": "adventure/IDRotF/184-map-7.3-spire-of-iriolarthas.webp"
 															},
 															"title": "Map 7.3: Spire of Iriolarthas",
 															"width": 4000,
@@ -56592,7 +56593,7 @@
 															"type": "image",
 															"href": {
 																"type": "internal",
-																"path": "adventure/IDRotF/185-map-7.3-spire-of-iriolarthas-player.jpg"
+																"path": "adventure/IDRotF/185-map-7.3-spire-of-iriolarthas-player.webp"
 															},
 															"title": "Player Version",
 															"width": 4000,
@@ -56794,7 +56795,7 @@
 											"page": 249,
 											"id": "68d",
 											"entries": [
-												"The chest is an {@item abracadabrus|IDRotF} (see {@adventure appendix D|IDRotF|22|{@item Abracadabrus|IDRotF}}) that Iriolarthas and his guests used to produce food and drink."
+												"The chest is an {@item abracadabrus|IDRotF} (see {@adventure appendix D|IDRotF|22}) that Iriolarthas and his guests used to produce food and drink."
 											]
 										}
 									]
@@ -56941,7 +56942,7 @@
 										{
 											"type": "entries",
 											"name": "Draconic Inscription",
-											"page": 241,
+											"page": 251,
 											"id": "69d",
 											"entries": [
 												"The inscription reads \"Speak thy master's name and enter.\""
@@ -56950,7 +56951,7 @@
 										{
 											"type": "entries",
 											"name": "Eight Doors",
-											"page": 241,
+											"page": 251,
 											"id": "69e",
 											"entries": [
 												"A character who succeeds on a DC 10 Intelligence ({@skill Arcana}) check recognizes that the symbols on the doors represent the eight schools of magic. Opening any of the eight doors reveals utter darkness beyond. A creature that has {@sense darkvision} can't see into or through this magical darkness, but a warlock with Devil's Sight can. Magical light, as well as light created by spells of 8th level or lower, can't illuminate it. This darkness fills the tunnels south of the doors and can't be dispelled. To pass through safely, a character must speak the name of one of Iriolarthas's eight apprentices and then step through the door associated with that wizard's school of magic. The eight apprentices were:",
@@ -57068,7 +57069,7 @@
 											"page": 252,
 											"id": "6a7",
 											"entries": [
-												"Lying among the ruined documents are two useful items: a {@item scroll of the comet|IDRotF} (see {@adventure appendix D|IDRotF|22|{@item Scroll of the Comet|IDRotF}}) and an adamantine key. The key is nonmagical and unlocks the double door to the balcony (area Y19p).",
+												"Lying among the ruined documents are two useful items: a {@item scroll of the comet|IDRotF} (see {@adventure appendix D|IDRotF|22}) and an adamantine key. The key is nonmagical and unlocks the double door to the balcony (area Y19p).",
 												{
 													"type": "image",
 													"href": {
@@ -57586,7 +57587,7 @@
 												"When the cultist dies, its corpse freezes for 9 days, during which time it can't be thawed, harmed by fire, animated, or raised from the dead.",
 												"{@creature Avarice|IDRotF} and her retinue enter the necropolis 12 hours after the party arrives. {@creature Avarice|IDRotF} immediately claims the floating chamber above Skydock Spire ({@area area Y28|6cd|x}) as her base of operations, using her {@spell fly} spell to reach it, while the cult fanatics encamp around the base of the tower. {@creature Avarice|IDRotF}'s goal is simple: conquer Ythryn and claim its treasures for herself.",
 												"From her refuge, {@creature Avarice|IDRotF} divides her expedition into four hunting parties of five cult fanatics each, and sends them off to explore the ruins, using her raven familiar and the gargoyles as aerial scouts. The party can meet {@creature Avarice|IDRotF}'s minions anywhere in the necropolis (including inside the spire if the force field surrounding it is deactivated or suppressed). They have orders to attack the characters on sight.",
-												"Each time the party explores a new building, there is a {@chance 20|20 percent} chance that one of {@creature Avarice|IDRotF}'s hunting parties is already inside or arrives while the party is searching its interior."
+												"Each time the party explores a new building, there is a {@chance 20} chance that one of {@creature Avarice|IDRotF}'s hunting parties is already inside or arrives while the party is searching its interior."
 											]
 										}
 									]
@@ -57638,7 +57639,7 @@
 							"page": 260,
 							"id": "6e1",
 							"entries": [
-								"If the characters defeat most of Auril's minions, the god's cool voice echoes across the city from the high balcony of the Spire of Iriolarthas, demanding that they leave Ythryn or face her wrath. One hour after making this announcement, Auril leaves the tower and prowls through the streets in search of the characters. For every hour that passes, there is a {@chance 20|20 percent} chance that she catches up with them. Only characters who flee the city and return to Icewind Dale are spared her wrath."
+								"If the characters defeat most of Auril's minions, the god's cool voice echoes across the city from the high balcony of the Spire of Iriolarthas, demanding that they leave Ythryn or face her wrath. One hour after making this announcement, Auril leaves the tower and prowls through the streets in search of the characters. For every hour that passes, there is a {@chance 20} chance that she catches up with them. Only characters who flee the city and return to Icewind Dale are spared her wrath."
 							]
 						}
 					]
@@ -57945,7 +57946,7 @@
 				{
 					"type": "section",
 					"name": "Owlbear Whisperer",
-					"page": 319,
+					"page": 264,
 					"id": "6f4",
 					"entries": [
 						{
@@ -58562,6 +58563,267 @@
 		},
 		{
 			"type": "section",
+			"name": "Credits",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "list",
+							"style": "list-hang-notitle",
+							"items": [
+								{
+									"type": "item",
+									"name": "Story Creator & Lead Writer",
+									"entries": [
+										"Christopher Perkins"
+									]
+								},
+								{
+									"type": "item",
+									"name": "Writing Team",
+									"entries": [
+										"Stacey Allan, Bill Benham, H.H. Carlan, Celeste Conowitch, Dan Dillon, Will Doyle, Mikayla Ebel, Anne Gregersen, Chad Quandt, Morrigan Robbins, Ashley Warren"
+									]
+								},
+								{
+									"type": "item",
+									"name": "Rules Development",
+									"entries": [
+										"Jeremy Crawford, Dan Dillon, Ben Petrisor, Taymoor Rehman"
+									]
+								},
+								{
+									"type": "item",
+									"name": "World Building",
+									"entries": [
+										"John Francis Daley, Crystal Frasier, Jonathan Goldstein, Ed Greenwood, Amanda Hamon, Adam Lee, Ari Levitch, Mike Mearls, Christopher Perkins, Jessica Price, R.A. Salvatore, Kate Welch, Shawn Wood"
+									]
+								},
+								{
+									"type": "item",
+									"name": "Editor",
+									"entries": [
+										"Kim Mohan"
+									]
+								},
+								{
+									"type": "item",
+									"name": "Art Director",
+									"entries": [
+										"Kate Irwin"
+									]
+								},
+								{
+									"type": "item",
+									"name": "Senior Graphic Designer",
+									"entries": [
+										"Trish Yochum"
+									]
+								},
+								{
+									"type": "item",
+									"name": "Graphic Designer",
+									"entries": [
+										"Trystan Falcone"
+									]
+								},
+								{
+									"type": "item",
+									"name": "Cover Illustrators",
+									"entries": [
+										"Hydro74, Tyler Jacobson"
+									]
+								},
+								{
+									"type": "item",
+									"name": "Interior Illustrators",
+									"entries": [
+										"Mark Behm, Eric Belisle, Zoltan Boros, Christopher Burdett, Paul Scott Canavan, Sidharth Chaturvedi, Jedd Chevrier, David René Christensen, CoupleOfKooks, Nikki Dawes, Axel Defois, Olga Drebas, Jesper Ejsing, Jason A. Engle, Caroline Gariba, Lars Grant- West, Leesha Hannigan, Sam Keiser, Julian Kok, Olly Lawson, Titus Lunter, Andrew Mar, Marcela Medeiros, Robson Michel, Scott Murphy, Irina Nordsol, Stephen Oakley, Robin Olausson, Claudio Pozas, Livia Prima, April Prime, David Sladek, Craig J Spearing, Brian Valeza, Svetlin Velinov, Richard Whitters, Shawn Wood, Zuzanna Wuzyk"
+									]
+								},
+								{
+									"type": "item",
+									"name": "Cartographers",
+									"entries": [
+										"Stacey Allan, Will Doyle, Mike Schley"
+									]
+								},
+								{
+									"type": "item",
+									"name": "Concept Art Director",
+									"entries": [
+										"Shawn Wood"
+									]
+								},
+								{
+									"type": "item",
+									"name": "Concept Illustrators",
+									"entries": [
+										"Olga Drebas, Titus Lunter, April Prime, Chris Rahn, Jenn Ravenna, Richard Whitters, Shawn Wood, Kieran Yanner"
+									]
+								},
+								{
+									"type": "item",
+									"name": "Senior Producer",
+									"entries": [
+										"Dan Tovar"
+									]
+								},
+								{
+									"type": "item",
+									"name": "Producers",
+									"entries": [
+										"Bill Benham, Robert Hawkey, Lea Heleotis"
+									]
+								},
+								{
+									"type": "item",
+									"name": "Project Engineer",
+									"entries": [
+										"Cynda Callaway"
+									]
+								},
+								{
+									"type": "item",
+									"name": "Imaging Technicians",
+									"entries": [
+										"Sven Bolen, Carmen Cheung, Kevin Yee"
+									]
+								},
+								{
+									"type": "item",
+									"name": "Art Administrator",
+									"entries": [
+										"David Gershman"
+									]
+								},
+								{
+									"type": "item",
+									"name": "Prepress Specialist",
+									"entries": [
+										"Jefferson Dunlap"
+									]
+								},
+								{
+									"type": "item",
+									"name": "Franchise & Global Brand Strategy",
+									"entries": [
+										"Nathan Stewart"
+									]
+								},
+								{
+									"type": "item",
+									"name": "Executive Producer",
+									"entries": [
+										"Ray Winninger"
+									]
+								},
+								{
+									"type": "item",
+									"name": "Director of Licensing & Publishing",
+									"entries": [
+										"Liz Schuh"
+									]
+								},
+								{
+									"type": "item",
+									"name": "Licensing Manager",
+									"entries": [
+										"Hilary Ross"
+									]
+								},
+								{
+									"type": "item",
+									"name": "Marketing & Communications",
+									"entries": [
+										"Bart Carroll, Pelham Greene, Shauna Narciso, Emi Tanji, Greg Tito, Anna Vo"
+									]
+								},
+								{
+									"type": "item",
+									"name": "Product Marketing Manager",
+									"entries": [
+										"Chris Lindsay"
+									]
+								},
+								{
+									"type": "item",
+									"name": "Brand Manager",
+									"entries": [
+										"Shelly Mazzanoble"
+									]
+								},
+								{
+									"type": "item",
+									"name": "Editorial Assistance",
+									"entries": [
+										"Orion D. Black"
+									]
+								},
+								{
+									"type": "item",
+									"name": "Special Thanks",
+									"entries": [
+										"Holly Barbacovi, Jason Barbacovi, Bianca Bickford, Cassidy Borger, Chris Cocks, Tony Craven, Jonathan Cruz, Soren Danielson, Jonathan Doran, Eugene Evans, Jay Gellerman, Chad Gokey, Andrew Harasymiw, Emily Johnson, Omega \"Critical Bard\" Jones, Ty Koebernick, Erin Kramer, Dan LaValby, Randy Lenius, Joshua Mendenhall, Connor Miller, Glen Miller, Nick Mitchell, Tim O'Hara, Michele Picard, Bob Pursley, Jeff Rebbeck, Bill Rose, David Schwartz, Rebecca A. Smith, Jayson Thiry, and the hundreds of play- testers who helped make this adventure more fun"
+									]
+								}
+							]
+						}
+					],
+					"id": "722"
+				},
+				{
+					"type": "gallery",
+					"images": [
+						{
+							"type": "image",
+							"href": {
+								"type": "internal",
+								"path": "adventure/IDRotF/credits.webp"
+							},
+							"title": "On the Cover: Auril the Frostmaiden claims her latest victim in Tyler Jacobson's chillingly macabre cover illustration. On the back, an elemental spirit called a chwinga comes out to play.",
+							"width": 1140,
+							"height": 750
+						},
+						{
+							"type": "image",
+							"href": {
+								"type": "internal",
+								"path": "adventure/IDRotF/credits2.webp"
+							},
+							"title": "On the Alt-Cover: Hydro74 shows the doom of Ten-Towns: Auril the Frostmaiden, the god of winter's wrath. Adorning the back cover is the Frostmaiden's holy symbol.",
+							"width": 1140,
+							"height": 750
+						}
+					]
+				},
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "The following D&D books provided text and inspiration:",
+							"entries": [
+								"",
+								"Carroll, Bart and others. {@adventure Lost Laboratory of Kwalish|LLK}. 2018.",
+								"Greenwood, Ed and Tim Beach. {@i Pages from the Mages}. 1995.",
+								"James, Brian R. and Ed Greenwood. {@i The Grand History of the Realms}. 2007.",
+								"Perkins, Christopher. {@adventure Storm King's Thunder|SKT}. 2016.",
+								"Perkins, Christopher, Will Doyle, and Steve Winter. {@adventure Tomb of Annihilation|ToA}. 2017.",
+								"Perkins, Christopher and others. {@adventure Waterdeep: Dungeon of the Mad Mage|WDMM}. 2018.",
+								"Salvatore, R.A., Jeffrey Ludwig, James Wyatt, and Matthew Sernett. {@i Legacy of the Crystal Shard.} 2013.",
+								"slade with Jim Butler. {@i Netheril: Empire of Magic}. 1996."
+							]
+						}
+					]
+				}
+			],
+			"id": "691"
+		},
+		{
+			"type": "section",
 			"name": "Maps",
 			"page": 319,
 			"entries": [
@@ -58569,7 +58831,7 @@
 					"type": "image",
 					"href": {
 						"type": "internal",
-						"path": "adventure/IDRotF/263-icewind-dale.jpg"
+						"path": "adventure/IDRotF/263-icewind-dale.webp"
 					},
 					"title": "Poster Map: Icewind Dale",
 					"width": 6000,
@@ -58580,13 +58842,14 @@
 						"size": 63,
 						"distance": 1,
 						"units": "miles"
-					}
+					},
+					"id": "724"
 				},
 				{
 					"type": "image",
 					"href": {
 						"type": "internal",
-						"path": "adventure/IDRotF/264-ten-towns.jpg"
+						"path": "adventure/IDRotF/264-ten-towns.webp"
 					},
 					"title": "Poster Map: Ten Towns",
 					"width": 6000,
@@ -58596,7 +58859,8 @@
 						"type": "none",
 						"size": 122,
 						"distance": 250
-					}
+					},
+					"id": "725"
 				}
 			],
 			"id": "01f"

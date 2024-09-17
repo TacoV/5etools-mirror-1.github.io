@@ -1,11 +1,13 @@
 /*
 Shared UI components
  */
+@use "sass:color";
 
-@import "vars";
+@use "../vars/vars";
+@use "../vars/vars-night";
 
 /* region Misc/Shared */
-.night-mode .ui__ {
+.ve-night-mode .ui__ {
 	&ipt-color {
 		&::-webkit-color-swatch {
 			border: 0;
@@ -15,16 +17,16 @@ Shared UI components
 /* endregion */
 
 /* region List */
-.night-mode .ui-list__ {
+.ve-night-mode .ui-list__ {
 	&wrp-preview {
-		background: $rgb-bg--night;
+		background: vars-night.$rgb-bg--night;
 	}
 
 	&btn-inline {
-		color: $rgb-font--night;
+		color: vars-night.$rgb-font--night;
 
 		&:hover {
-			color: lighten($rgb-font--night, 10%);
+			color: color.adjust(vars-night.$rgb-font--night, $lightness: 10%);
 			background: #ffffff30;
 		}
 	}
@@ -32,33 +34,33 @@ Shared UI components
 /* endregion */
 
 /* region Source overlay */
-.night-mode .ui-source__ {
+.ve-night-mode .ui-source__ {
 	&divider {
-		background: $rgb-border-grey--night;
+		background: vars-night.$rgb-border-grey--night;
 	}
 }
 /* endregion */
 
 /* region Modals */
-.night-mode .ui-modal__ {
+.ve-night-mode .ui-modal__ {
 	&header {
 		&--border {
-			border-color: $rgb-border-grey--trans-night;
+			border-color: vars-night.$rgb-border-grey--trans-night;
 		}
 	}
 
 	&footer {
-		border-color: $rgb-border-grey--trans-night;
+		border-color: vars-night.$rgb-border-grey--trans-night;
 	}
 
 	&overlay-blind {
-		background-color: $rgb-bg--night;
+		background-color: vars-night.$rgb-bg--night;
 	}
 
 	&inner {
-		background: $rgb-bg--night;
-		box-shadow: 0 6px 12px rgba(0, 0, 0, 0.56);
-		border-color: $rgb-border-grey--trans-night;
+		background: vars-night.$rgb-bg--night;
+		box-shadow: 0 6px 12px rgb(0 0 0 / 56%);
+		border-color: vars-night.$rgb-border-grey--trans-night;
 
 		&--mode-fullscreen {
 			box-shadow: none;
@@ -66,168 +68,170 @@ Shared UI components
 	}
 
 	&row--cb:hover {
-		background: $rgb-bg--alt-night;
+		background: vars-night.$rgb-bg--alt-night;
 	}
 }
 /* endregion */
 
 /* region Search */
-.night-mode .ui-search__ {
+.ve-night-mode .ui-search__ {
 	&row {
-		border-color: $rgb-border-grey--night;
+		border-color: vars-night.$rgb-border-grey--night;
 
 		&:hover {
-			background: $rgb-off-black;
+			background: vars.$rgb-off-black;
 		}
 	}
 
 	&ipt-search-sub-wrp {
-		border-color: $rgb-border-grey--night;
+		border-color: vars-night.$rgb-border-grey--night;
 	}
 }
 /* endregion */
 
 /* region Tabs */
-.night-mode .ui-tab__ {
+.ve-night-mode .ui-tab__ {
 	&btn-tab-head {
 		&--active,
 		&--active:focus,
 		&--active:hover,
-		&--active:active, {
-			background-color: $rgb-btn-default-active--night;
+		&--active:active {
+			background-color: vars-night.$rgb-btn-default-active--night;
 		}
 	}
 
 	&wrp-tab-body {
 		&--background {
-			background: $rgb-bg--night;
-			border-color: $rgb-border-grey--trans-night;
-			border-bottom-color: darken($rgb-border-grey--trans-night, 15%);
+			background: vars-night.$rgb-bg--night;
+			border-color: vars-night.$rgb-border-grey--trans-night;
+			border-bottom-color: color.adjust(vars-night.$rgb-border-grey--trans-night, $lightness: - 15%);
 		}
 	}
 
 	&wrp-tab-heads--border {
-		border-color: $rgb-border-grey--night;
+		border-color: vars-night.$rgb-border-grey--night;
 		border-width: 2px;
 	}
 }
 
-.night-mode .ui-tab-side__ {
+.ve-night-mode .ui-tab-side__ {
 	&wrp-tab {
-		background: $rgb-bg--night;
-		border-color: $rgb-border-grey--trans-night;
+		background: vars-night.$rgb-bg--night;
+		border-color: vars-night.$rgb-border-grey--trans-night;
 	}
 }
 /* endregion */
 
 /* region Proficiency */
-.night-mode .ui-prof__ {
+.ve-night-mode .ui-prof__ {
 	&btn-cycle {
-		border-color: $rgb-border-grey--night;
+		border-color: vars-night.$rgb-border-grey--night;
 
 		&:active {
-			@include shadow-active--night();
+			@include vars-night.mix-shadow-active--night;
 		}
 
 		&[data-state="0"] {
-			background: $rgb-bg--night;
+			background: vars-night.$rgb-bg--night;
 		}
 
 		&[data-state="1"] {
-			background: $rgb-border-grey--night;
-			border-color: lighten($rgb-border-grey--night, 10%);
+			background: vars-night.$rgb-border-grey--night;
+			border-color: color.adjust(vars-night.$rgb-border-grey--night, $lightness: 10%);
 		}
 
 		&[data-state="2"] {
-			background: $rgb-border-grey--night;
-			border-color: lighten($rgb-border-grey--night, 10%);
+			background: vars-night.$rgb-border-grey--night;
+			border-color: color.adjust(vars-night.$rgb-border-grey--night, $lightness: 10%);
 
 			&::before {
-				color: $rgb-bg--night;
+				color: vars-night.$rgb-bg--night;
 			}
 		}
 
 		&[data-state="3"] {
-			background: repeating-linear-gradient(135deg, $rgb-bg--night, $rgb-bg--night 10px, $rgb-border-grey--night 10px, $rgb-border-grey--night 20px);
-			border-color: lighten($rgb-border-grey--night, 10%);
+			background: repeating-linear-gradient(135deg, vars-night.$rgb-bg--night, vars-night.$rgb-bg--night 10px, vars-night.$rgb-border-grey--night 10px, vars-night.$rgb-border-grey--night 20px);
+			border-color: color.adjust(vars-night.$rgb-border-grey--night, $lightness: 10%);
 		}
 	}
 }
 /* endregion */
 
 /* region Direction picker */
-.night-mode .ui-dir__ {
+.ve-night-mode .ui-dir__ {
 	&face {
-		background: $rgb-bg--night;
-		border-color: $rgb-border-grey--night;
+		background: vars-night.$rgb-bg--night;
+		border-color: vars-night.$rgb-border-grey--night;
 	}
 
 	&arm {
-		background: $rgb-font--night;
+		background: vars-night.$rgb-font--night;
 		box-shadow: none;
 	}
 }
 /* endregion */
 
 /* region Hover tips */
-.night-mode .ui-tip__ {
+.ve-night-mode .ui-tip__ {
 	&child {
-		border-color: $rgb-border-grey--night;
-		background: $rgb-bg--night;
+		border-color: vars-night.$rgb-border-grey--night;
+		background: vars-night.$rgb-bg--night;
 	}
 }
 /* endregion */
 
 /* region Context menu */
-.night-mode .ui-ctx {
+.ve-night-mode .ui-ctx {
 	&__wrp {
-		background: $rgb-bg--night;
-		border: 1px solid $rgb-border-grey--trans-night;
-		border-top-color: $rgb-border-grey--night;
+		background: vars-night.$rgb-bg--night;
+		border: 1px solid vars-night.$rgb-border-grey--trans-night;
+		border-top-color: vars-night.$rgb-border-grey--night;
 	}
 
 	&__divider {
-		background: $rgb-border-grey--night;
+		background: vars-night.$rgb-border-grey--night;
 	}
 
 	&__btn {
+		color: vars-night.$rgb-font--night;
+
 		&:hover {
-			background: $rgb-bg--alt-night;
-			color: white;
+			background: vars-night.$rgb-bg--alt-night;
+			color: #fff;
 		}
 
 		&.disabled,
 		&.disabled:hover {
-			background: $rgb-bg--night;
-			color: $rgb-font--night;
+			background: vars-night.$rgb-bg--night;
+			color: vars-night.$rgb-font--night;
 		}
 	}
 }
 /* endregion */
 
 /* region Picker */
-.night-mode .ui-pick {
+.ve-night-mode .ui-pick {
 	&__ {
 		&disp-text {
-			border-color: $rgb-border-grey--night;
+			border-color: vars-night.$rgb-border-grey--night;
 		}
 	}
 }
 /* endregion */
 
 /* region "Copied" tooltip */
-.night-mode .clp__ {
+.ve-night-mode .clp__ {
 	&disp-copied {
-		background: radial-gradient(ellipse at center, $rgb-bg--night 0%, $rgb-bg--night 35%, transparent 75%, transparent 100%);
+		background: radial-gradient(ellipse at center, vars-night.$rgb-bg--night 0%, vars-night.$rgb-bg--night 35%, transparent 75%, transparent 100%);
 	}
 }
 /* endregion */
 
 /* region Decorated inputs */
-.night-mode .ui-ideco__ {
+.ve-night-mode .ui-ideco__ {
 	&btn-ticker {
-		background: $rgb-border-grey--night;
-		color: white;
+		background: vars-night.$rgb-border-grey--night;
+		color: #fff;
 
 		&:hover,
 		&:active,
@@ -238,79 +242,78 @@ Shared UI components
 		}
 
 		&:hover {
-			background: darken($rgb-border-grey--night, $pct-darken-hover);
-			color: white;
+			background: color.adjust(vars-night.$rgb-border-grey--night, $lightness: - vars.$pct-darken-hover);
+			color: #fff;
 		}
 
 		&:active,
 		&:focus,
 		&:active:focus {
-			background: darken($rgb-border-grey--night, $pct-darken-active);
-			color: white;
+			background: color.adjust(vars-night.$rgb-border-grey--night, $lightness: - vars.$pct-darken-active);
+			color: #fff;
 		}
 	}
 }
 /* endregion */
 
 /* region Select2 */
-.night-mode .ui-sel2__ {
+.ve-night-mode .ui-sel2__ {
 	&ipt-search {
-		background: transparent;
+		background: vars-night.$rgb-bg--night;
 	}
 
 	&wrp-options {
-		background-color: $rgb-bg--night;
-		border-color: $rgb-border-grey--night;
+		background-color: vars-night.$rgb-bg--night;
+		border-color: vars-night.$rgb-border-grey--night;
 	}
 
 	&disp-option {
 		&.active,
 		&:focus,
 		&:hover {
-			background: $rgb-bg--alt-night;
+			background: vars-night.$rgb-bg--alt-night;
 		}
 
 		&:focus.active,
 		&:hover.active {
-			background: lighten($rgb-bg--alt-night, $pct-darken-active);
+			background: color.adjust(vars-night.$rgb-bg--alt-night, $lightness: vars.$pct-darken-active);
 		}
 	}
 }
 /* endregion */
 
 /* region Range Slider */
-.night-mode .ui-slidr {
+.ve-night-mode .ui-slidr {
 	&__ {
 		&thumb {
-			background: $rgb-border-grey--trans;
-			border-color: $rgb-font--night;
+			background: vars.$rgb-border-grey--trans;
+			border-color: vars-night.$rgb-font--night;
 
 			&--hover,
 			&:hover {
-				background: lighten($rgb-border-grey--trans, 10%);
-				border-color: $rgb-font--night;
+				background: color.adjust(vars.$rgb-border-grey--trans, $lightness: 10%);
+				border-color: vars-night.$rgb-font--night;
 			}
 		}
 
 		&track-outer {
-			border-color: $rgb-border-grey--night;
+			border-color: vars-night.$rgb-border-grey--night;
 		}
 
 		&track-inner {
-			background: $rgb-border-grey--trans-night;
+			background: vars-night.$rgb-border-grey--trans-night;
 		}
 
 		&disp-value {
 			&--visible {
-				border-color: $rgb-border-grey--night;
-				background: $rgb-bg--night;
+				border-color: vars-night.$rgb-border-grey--night;
+				background: vars-night.$rgb-bg--night;
 			}
 		}
 
 		&pip {
-			background: $rgb-font--night;
+			background: vars-night.$rgb-font--night;
 		}
 	}
 }
 /* endregion */
-

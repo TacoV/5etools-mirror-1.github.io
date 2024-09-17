@@ -139,7 +139,23 @@
 						{
 							"key": "system.attributes.hp.bonuses.overall",
 							"mode": "ADD",
-							"value": "+ (2 * @details.level)"
+							"value": "+(2 * @details.level)"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "War Caster",
+			"source": "PHB",
+			"effects": [
+				{
+					"transfer": true,
+					"changes": [
+						{
+							"key": "system.attributes.concentration.roll.mode",
+							"mode": "OVERRIDE",
+							"value": "1"
 						}
 					]
 				}

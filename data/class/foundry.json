@@ -72,6 +72,62 @@
 					"title": "Sorcery Points"
 				}
 			]
+		},
+		{
+			"name": "Artificer",
+			"source": "TCE",
+			"advancement": [
+				{
+					"type": "ScaleValue",
+					"configuration": {
+						"identifier": "infused",
+						"type": "number",
+						"scale": {
+							"2": {
+								"value": 2
+							},
+							"6": {
+								"value": 3
+							},
+							"10": {
+								"value": 4
+							},
+							"14": {
+								"value": 5
+							},
+							"18": {
+								"value": 6
+							}
+						}
+					},
+					"title": "Infused Items"
+				},
+				{
+					"type": "ScaleValue",
+					"configuration": {
+						"identifier": "infusions",
+						"type": "number",
+						"scale": {
+							"2": {
+								"value": 4
+							},
+							"6": {
+								"value": 6
+							},
+							"10": {
+								"value": 8
+							},
+							"14": {
+								"value": 10
+							},
+							"18": {
+								"value": 12
+							}
+						}
+					},
+					"title": "Infusions Known"
+				}
+			]
 		}
 	],
 	"subclass": [
@@ -210,6 +266,33 @@
 						}
 					},
 					"title": "Divine Strike"
+				}
+			]
+		},
+		{
+			"name": "Alchemist",
+			"source": "TCE",
+			"className": "Artificer",
+			"classSource": "TCE",
+			"advancement": [
+				{
+					"type": "ScaleValue",
+					"configuration": {
+						"identifier": "elixir",
+						"type": "string",
+						"scale": {
+							"3": {
+								"value": "1"
+							},
+							"6": {
+								"value": "2"
+							},
+							"15": {
+								"value": "3"
+							}
+						}
+					},
+					"title": "Max Elixir Creations"
 				}
 			]
 		},
@@ -532,27 +615,27 @@
 						{
 							"key": "data.attributes.movement.walk",
 							"mode": "ADD",
-							"value": "+ (sign(@attributes.movement.walk) * @scale.monk.unarmored-movement)"
+							"value": "+(sign(@attributes.movement.walk) * @scale.monk.unarmored-movement)"
 						},
 						{
 							"key": "data.attributes.movement.burrow",
 							"mode": "ADD",
-							"value": "+ (sign(@attributes.movement.burrow) * @scale.monk.unarmored-movement)"
+							"value": "+(sign(@attributes.movement.burrow) * @scale.monk.unarmored-movement)"
 						},
 						{
 							"key": "data.attributes.movement.climb",
 							"mode": "ADD",
-							"value": "+ (sign(@attributes.movement.climb) * @scale.monk.unarmored-movement)"
+							"value": "+(sign(@attributes.movement.climb) * @scale.monk.unarmored-movement)"
 						},
 						{
 							"key": "data.attributes.movement.fly",
 							"mode": "ADD",
-							"value": "+ (sign(@attributes.movement.fly) * @scale.monk.unarmored-movement)"
+							"value": "+(sign(@attributes.movement.fly) * @scale.monk.unarmored-movement)"
 						},
 						{
 							"key": "data.attributes.movement.swim",
 							"mode": "ADD",
-							"value": "+ (sign(@attributes.movement.swim) * @scale.monk.unarmored-movement)"
+							"value": "+(sign(@attributes.movement.swim) * @scale.monk.unarmored-movement)"
 						}
 					]
 				}
@@ -639,6 +722,14 @@
 			}
 		},
 		{
+			"name": "Fighting Style",
+			"source": "PHB",
+			"className": "Ranger",
+			"classSource": "PHB",
+			"level": 2,
+			"isIgnored": true
+		},
+		{
 			"name": "Favored Enemy and Natural Explorer improvements",
 			"source": "PHB",
 			"className": "Ranger",
@@ -665,14 +756,6 @@
 					}
 				]
 			}
-		},
-		{
-			"name": "Fighting Style",
-			"source": "PHB",
-			"className": "Ranger",
-			"classSource": "PHB",
-			"level": 2,
-			"isIgnored": true
 		},
 		{
 			"name": "Expertise",
@@ -853,6 +936,21 @@
 			"isIgnored": true
 		},
 		{
+			"name": "Infuse Item",
+			"source": "TCE",
+			"className": "Artificer",
+			"classSource": "TCE",
+			"level": 2,
+			"system": {
+				"target.value": "1",
+				"target.type": "object",
+				"range.units": "touch",
+				"uses.value": 0,
+				"uses.max": "@scale.artificer.infused",
+				"uses.per": "charges"
+			}
+		},
+		{
 			"name": "Infusions Known",
 			"source": "TCE",
 			"className": "Artificer",
@@ -867,6 +965,11 @@
 			"classSource": "TCE",
 			"level": 1,
 			"entryData": {
+				"skillProficiencies": [
+					{
+						"any": 5
+					}
+				],
 				"armorProficiencies": [
 					{
 						"light": true
@@ -882,11 +985,6 @@
 							],
 							"count": 1
 						}
-					}
-				],
-				"skillProficiencies": [
-					{
-						"any": 5
 					}
 				]
 			}
@@ -926,23 +1024,6 @@
 			"classSource": "TCE",
 			"level": 1,
 			"entryData": {
-				"armorProficiencies": [
-					{
-						"light": true
-					}
-				],
-				"savingThrowProficiencies": [
-					{
-						"choose": {
-							"from": [
-								"wis",
-								"int",
-								"cha"
-							],
-							"count": 1
-						}
-					}
-				],
 				"skillProficiencies": [
 					{
 						"choose": {
@@ -959,6 +1040,23 @@
 							"count": 2
 						}
 					}
+				],
+				"armorProficiencies": [
+					{
+						"light": true
+					}
+				],
+				"savingThrowProficiencies": [
+					{
+						"choose": {
+							"from": [
+								"wis",
+								"int",
+								"cha"
+							],
+							"count": 1
+						}
+					}
 				]
 			}
 		},
@@ -969,6 +1067,22 @@
 			"classSource": "TCE",
 			"level": 1,
 			"entryData": {
+				"skillProficiencies": [
+					{
+						"choose": {
+							"from": [
+								"acrobatics",
+								"animal handling",
+								"athletics",
+								"intimidation",
+								"nature",
+								"perception",
+								"survival"
+							],
+							"count": 2
+						}
+					}
+				],
 				"armorProficiencies": [
 					{
 						"light": true,
@@ -985,22 +1099,6 @@
 								"con"
 							],
 							"count": 1
-						}
-					}
-				],
-				"skillProficiencies": [
-					{
-						"choose": {
-							"from": [
-								"acrobatics",
-								"animal handling",
-								"athletics",
-								"intimidation",
-								"nature",
-								"perception",
-								"survival"
-							],
-							"count": 2
 						}
 					}
 				]
@@ -1055,7 +1153,6 @@
 			"subclassShortName": "Zealot",
 			"subclassSource": "XGE",
 			"level": 3,
-			"isChooseSystemRenderEntries": true,
 			"system": {
 				"activation.type": "special",
 				"activation.condition": "While you're raging, the first creature you hit on each of your turns with a weapon attack"
@@ -1083,7 +1180,8 @@
 						]
 					}
 				}
-			]
+			],
+			"isChooseSystemRenderEntries": true
 		},
 		{
 			"name": "Bonus Proficiencies",
@@ -1110,15 +1208,15 @@
 			"subclassSource": "PHB",
 			"level": 3,
 			"entryData": {
-				"armorProficiencies": [
-					{
-						"medium": true,
-						"shield|phb": true
-					}
-				],
 				"weaponProficiencies": [
 					{
 						"martial": true
+					}
+				],
+				"armorProficiencies": [
+					{
+						"medium": true,
+						"shield": true
 					}
 				]
 			}
@@ -1150,7 +1248,8 @@
 				"target.value": 1,
 				"target.type": "object",
 				"range.value": 30,
-				"range.units": "ft"
+				"range.units": "ft",
+				"actionType": "summ"
 			}
 		},
 		{
@@ -1237,14 +1336,14 @@
 			"subclassSource": "XGE",
 			"level": 3,
 			"entryData": {
-				"armorProficiencies": [
-					{
-						"medium": true
-					}
-				],
 				"weaponProficiencies": [
 					{
 						"scimitar|phb": true
+					}
+				],
+				"armorProficiencies": [
+					{
+						"medium": true
 					}
 				]
 			}
@@ -1366,6 +1465,11 @@
 			"subclassSource": "PHB",
 			"level": 1,
 			"entryData": {
+				"languageProficiencies": [
+					{
+						"any": 2
+					}
+				],
 				"skillProficiencies": [
 					{
 						"choose": {
@@ -1377,11 +1481,6 @@
 							],
 							"count": 2
 						}
-					}
-				],
-				"languageProficiencies": [
-					{
-						"any": 2
 					}
 				]
 			}
@@ -1592,14 +1691,14 @@
 			"subclassSource": "PHB",
 			"level": 1,
 			"entryData": {
-				"armorProficiencies": [
-					{
-						"heavy": true
-					}
-				],
 				"weaponProficiencies": [
 					{
 						"martial": true
+					}
+				],
+				"armorProficiencies": [
+					{
+						"heavy": true
 					}
 				]
 			}
@@ -1645,14 +1744,14 @@
 			"subclassSource": "PHB",
 			"level": 1,
 			"entryData": {
-				"armorProficiencies": [
-					{
-						"heavy": true
-					}
-				],
 				"weaponProficiencies": [
 					{
 						"martial": true
+					}
+				],
+				"armorProficiencies": [
+					{
+						"heavy": true
 					}
 				]
 			}
@@ -1813,14 +1912,14 @@
 			"subclassSource": "TCE",
 			"level": 1,
 			"entryData": {
-				"armorProficiencies": [
-					{
-						"heavy": true
-					}
-				],
 				"weaponProficiencies": [
 					{
 						"martial": true
+					}
+				],
+				"armorProficiencies": [
+					{
+						"heavy": true
 					}
 				]
 			}
@@ -1833,6 +1932,11 @@
 			"subclassShortName": "Twilight",
 			"subclassSource": "TCE",
 			"level": 1,
+			"system": {
+				"target.type": "creature",
+				"range.value": 10,
+				"range.units": "ft"
+			},
 			"actorTokenMod": {
 				"dimSight": [
 					{
@@ -1840,11 +1944,6 @@
 						"value": 300
 					}
 				]
-			},
-			"system": {
-				"target.type": "creature",
-				"range.value": 10,
-				"range.units": "ft"
 			}
 		},
 		{
@@ -1994,6 +2093,18 @@
 			}
 		},
 		{
+			"name": "Fungal Infestation",
+			"source": "TCE",
+			"className": "Druid",
+			"classSource": "PHB",
+			"subclassShortName": "Spores",
+			"subclassSource": "TCE",
+			"level": 6,
+			"system": {
+				"actionType": "summ"
+			}
+		},
+		{
 			"name": "Spreading Spores",
 			"source": "TCE",
 			"className": "Druid",
@@ -2039,7 +2150,20 @@
 			"system": {
 				"target.type": "space",
 				"range.value": 30,
-				"range.units": "ft"
+				"range.units": "ft",
+				"actionType": "summ"
+			}
+		},
+		{
+			"name": "Call of the Shadowseeds",
+			"source": "TDCSR",
+			"className": "Druid",
+			"classSource": "PHB",
+			"subclassShortName": "Blighted",
+			"subclassSource": "TDCSR",
+			"level": 6,
+			"system": {
+				"actionType": "summ"
 			}
 		},
 		{
@@ -2159,6 +2283,11 @@
 			"subclassShortName": "Battle Master",
 			"subclassSource": "PHB",
 			"level": 3,
+			"system": {
+				"activation.type": null,
+				"uses.value": null,
+				"uses.max": null
+			},
 			"entryData": {
 				"resources": [
 					{
@@ -2170,11 +2299,6 @@
 						"faces": "8 + (sign(ceil((<$level$> - 2) / 8) - 1) * 2)"
 					}
 				]
-			},
-			"system": {
-				"activation.type": null,
-				"uses.value": null,
-				"uses.max": null
 			}
 		},
 		{
@@ -2467,14 +2591,14 @@
 			"subclassSource": "TCE",
 			"level": 3,
 			"entryData": {
-				"toolProficiencies": [
-					{
-						"smith's tools": true
-					}
-				],
 				"languageProficiencies": [
 					{
 						"giant": true
+					}
+				],
+				"toolProficiencies": [
+					{
+						"smith's tools": true
 					}
 				]
 			}
@@ -2943,6 +3067,11 @@
 			"subclassSource": "TDCSR",
 			"level": 6,
 			"entryData": {
+				"languageProficiencies": [
+					{
+						"any": 1
+					}
+				],
 				"skillProficiencies": [
 					{
 						"choose": {
@@ -2955,11 +3084,6 @@
 							],
 							"count": 1
 						}
-					}
-				],
-				"languageProficiencies": [
-					{
-						"any": 1
 					}
 				]
 			}
@@ -2973,6 +3097,11 @@
 			"subclassSource": "TDCSR",
 			"level": 11,
 			"entryData": {
+				"languageProficiencies": [
+					{
+						"any": 1
+					}
+				],
 				"skillProficiencies": [
 					{
 						"choose": {
@@ -2985,11 +3114,6 @@
 							],
 							"count": 1
 						}
-					}
-				],
-				"languageProficiencies": [
-					{
-						"any": 1
 					}
 				]
 			}
@@ -3003,6 +3127,11 @@
 			"subclassSource": "TDCSR",
 			"level": 17,
 			"entryData": {
+				"languageProficiencies": [
+					{
+						"any": 1
+					}
+				],
 				"skillProficiencies": [
 					{
 						"choose": {
@@ -3015,11 +3144,6 @@
 							],
 							"count": 1
 						}
-					}
-				],
-				"languageProficiencies": [
-					{
-						"any": 1
 					}
 				]
 			}
@@ -3081,9 +3205,9 @@
 						"source": "XGE",
 						"page": 35,
 						"type": "R",
-						"range": "30",
 						"rarity": "none",
 						"weaponCategory": "simple",
+						"range": "30",
 						"entries": [
 							"This special attack is a ranged spell attack with a range of 30 feet. You are proficient with it, and you add your Dexterity modifier to its attack and damage rolls.",
 							"When you take the {@action Attack} action on your turn and use this special attack as part of it, you can spend 1 ki point to make this special attack twice as a bonus action. When you gain the Extra Attack feature, this special attack can be used for any of the attacks you make as part of the {@action Attack} action."
@@ -3371,6 +3495,42 @@
 			}
 		},
 		{
+			"name": "Drake Companion",
+			"source": "FTD",
+			"className": "Ranger",
+			"classSource": "PHB",
+			"subclassShortName": "Drakewarden",
+			"subclassSource": "FTD",
+			"level": 3,
+			"system": {
+				"actionType": "summ"
+			}
+		},
+		{
+			"name": "Primal Companion",
+			"source": "TCE",
+			"className": "Ranger",
+			"classSource": "PHB",
+			"subclassShortName": "Beast Master",
+			"subclassSource": "PHB",
+			"level": 3,
+			"system": {
+				"actionType": "summ"
+			}
+		},
+		{
+			"name": "Ranger's Companion",
+			"source": "PHB",
+			"className": "Ranger",
+			"classSource": "PHB",
+			"subclassShortName": "Beast Master",
+			"subclassSource": "PHB",
+			"level": 3,
+			"system": {
+				"actionType": "summ"
+			}
+		},
+		{
 			"name": "Otherworldly Glamour",
 			"source": "TCE",
 			"className": "Ranger",
@@ -3571,16 +3731,16 @@
 			"subclassSource": "XGE",
 			"level": 3,
 			"entryData": {
+				"languageProficiencies": [
+					{
+						"any": 2
+					}
+				],
 				"toolProficiencies": [
 					{
 						"disguise kit": true,
 						"forgery kit": true,
 						"gaming set": true
-					}
-				],
-				"languageProficiencies": [
-					{
-						"any": 2
 					}
 				]
 			}
@@ -3662,7 +3822,7 @@
 					"transfer": true,
 					"changes": [
 						{
-							"key": "data.attributes.hp.max",
+							"key": "system.attributes.hp.bonuses.overall",
 							"mode": "ADD",
 							"value": "+ @classes.sorcerer.levels"
 						}
@@ -3805,6 +3965,7 @@
 			"subclassSource": "XGE",
 			"level": 6,
 			"system": {
+				"actionType": "summ",
 				"target.value": 1,
 				"target.type": "creature",
 				"range.value": 120,
@@ -3850,16 +4011,16 @@
 			"subclassShortName": "Storm",
 			"subclassSource": "XGE",
 			"level": 6,
+			"system": {
+				"target.value": 10,
+				"target.units": "ft",
+				"target.type": "sphere"
+			},
 			"entryData": {
 				"resist": [
 					"lightning",
 					"thunder"
 				]
-			},
-			"system": {
-				"target.value": 10,
-				"target.units": "ft",
-				"target.type": "sphere"
 			}
 		},
 		{
@@ -4053,15 +4214,15 @@
 			"subclassShortName": "Undead",
 			"subclassSource": "VRGR",
 			"level": 10,
-			"entryData": {
-				"resist": [
-					"necrotic"
-				]
-			},
 			"system": {
 				"target.value": 30,
 				"target.units": "ft",
 				"target.type": "radius"
+			},
+			"entryData": {
+				"resist": [
+					"necrotic"
+				]
 			}
 		},
 		{
@@ -4108,10 +4269,22 @@
 				],
 				"armorProficiencies": [
 					{
-						"shield|phb": true,
+						"shield": true,
 						"medium": true
 					}
 				]
+			}
+		},
+		{
+			"name": "Accursed Specter",
+			"source": "XGE",
+			"className": "Warlock",
+			"classSource": "PHB",
+			"subclassShortName": "Hexblade",
+			"subclassSource": "XGE",
+			"level": 6,
+			"system": {
+				"actionType": "summ"
 			}
 		},
 		{
@@ -4335,16 +4508,16 @@
 						"performance": true
 					}
 				],
-				"armorProficiencies": [
-					{
-						"light": true
-					}
-				],
 				"weaponProficiencies": [
 					{
 						"choose": {
 							"fromFilter": "type=melee weapon|property=!two-handed|rarity=none"
 						}
+					}
+				],
+				"armorProficiencies": [
+					{
+						"light": true
 					}
 				]
 			}
@@ -4475,9 +4648,9 @@
 						"type": "R",
 						"rarity": "none",
 						"weaponCategory": "simple",
+						"range": "90/300",
 						"dmg1": "1d6",
 						"dmgType": "L",
-						"range": "90/300",
 						"entries": [
 							"This weapon is part of the Infiltrator armor model. When you attack with that weapon, you can add your Intelligence modifier, instead of Strength or Dexterity, to the attack and damage rolls.",
 							"Once on each of your turns when you hit a creature with the launcher, you can deal an extra {@damage 1d6} lightning damage to that target."
@@ -4648,6 +4821,18 @@
 						"martial": true
 					}
 				]
+			}
+		},
+		{
+			"name": "Steel Defender",
+			"source": "TCE",
+			"className": "Artificer",
+			"classSource": "TCE",
+			"subclassShortName": "Battle Smith",
+			"subclassSource": "TCE",
+			"level": 3,
+			"system": {
+				"actionType": "summ"
 			}
 		},
 		{

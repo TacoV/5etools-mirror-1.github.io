@@ -350,6 +350,7 @@ globalThis.ScaleCreatureDamageExpression = class {
 					ScaleCreatureUtils.getDiceExpressionAverage(
 						state.getDiceExpression({
 							numDice: numDiceTemp,
+							diceFaces: diceFacesTemp,
 						}),
 					),
 				)
@@ -435,7 +436,7 @@ globalThis.ScaleCreatureDamageExpression = class {
 		});
 
 		const avgDamOut = Math.floor(ScaleCreatureUtils.getDiceExpressionAverage(diceExpOut));
-		if (avgDamOut <= 0 || diceExpOut === "1") return `1 ${suffix.replace(/^\W+/, " ").replace(/ +/, " ")}`;
+		if (avgDamOut <= 0 || diceExpOut === "1") return `1 ${state.suffix.replace(/^\W+/, " ").replace(/ +/, " ")}`;
 
 		const expression = [
 			Math.floor(ScaleCreatureUtils.getDiceExpressionAverage(diceExpOut)),
@@ -1764,10 +1765,35 @@ globalThis.ScaleCreature = {
 
 		const guessMod = () => {
 			name = name.toLowerCase();
-			content = content.replace(/{@atk ([A-Za-z,]+)}/gi, (_, p1) => Renderer.attackTagToFull(p1)).toLowerCase();
 
-			const isMeleeOrRangedWep = content.includes("melee or ranged weapon attack:");
-			if (isMeleeOrRangedWep) {
+			let isMeleeOrRangedWeapon = false;
+			let isMeleeWeapon = false;
+			let isRangedWeapon = false;
+
+			const mutTypeFlags = (tags) => {
+				if (tags.includes("m") && tags.includes("r")) return isMeleeOrRangedWeapon = true;
+				if (tags.includes("m")) return isMeleeWeapon = true;
+				if (tags.includes("r")) return isRangedWeapon = true;
+			};
+
+			content
+				.replace(/{@atk (?<tags>[^}]+)}/g, (...m) => {
+					const {tags} = m.at(-1);
+					if (!tags.includes("w")) return;
+
+					mutTypeFlags(tags);
+				})
+				.replace(/{@atkr (?<tags>[^}]+)}/g, (...m) => {
+					const {tags} = m.at(-1);
+					// Note that for `@atkr` tags, "Weapon" is not generally included, so treat everything as a weapon
+					//   during this initial pass.
+					mutTypeFlags(tags);
+				})
+			;
+
+			content = content.toLowerCase();
+
+			if (isMeleeOrRangedWeapon) {
 				const wtf = this._wepThrownFinesse.find(it => content.includes(it));
 				if (wtf) return "dex";
 
@@ -1780,15 +1806,13 @@ globalThis.ScaleCreature = {
 				return null;
 			}
 
-			const isMeleeWep = content.includes("melee weapon attack:");
-			if (isMeleeWep) {
+			if (isMeleeWeapon) {
 				const wf = this._wepFinesse.find(it => content.includes(it));
 				if (wf) return "dex";
 				return "str";
 			}
 
-			const isRangedWep = content.includes("ranged weapon attack:");
-			if (isRangedWep) {
+			if (isRangedWeapon) {
 				const wt = this._wepThrown.find(it => content.includes(it));
 				if (wt) return "str"; // this should realistically only catch Nets
 				return "dex";

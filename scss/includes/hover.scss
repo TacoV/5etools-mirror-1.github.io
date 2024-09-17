@@ -1,27 +1,17 @@
-@import "vars";
-
-@keyframes kf-fade-in {
-	from {
-		opacity: 0;
-	}
-
-	to {
-		opacity: 1;
-	}
-}
+@use "../vars/vars";
 
 .hwin {
 	position: fixed;
 	width: 600px;
 	max-width: 92vw;
 	min-width: 150px;
-	z-index: $z-hwin;
-	box-shadow: 0 0 12px 0 black;
+	z-index: vars.$z-hwin;
+	box-shadow: 0 0 12px 0 #000;
 	animation-name: kf-fade-in;
 	animation-duration: 150ms;
 	display: flex;
 	flex-direction: column;
-	background: $rgb-bg--alt;
+	background: vars.$rgb-bg--alt;
 
 	&--minified {
 		.hoverborder {
@@ -48,7 +38,7 @@
 		max-height: initial;
 	}
 
-	@media (max-width: 1023px) {
+	@media screen and (width <= #{vars.$width-screen-md}) {
 		max-width: 95vw;
 	}
 
@@ -64,7 +54,7 @@
 		max-height: 92vh;
 		min-height: 20px;
 		overflow-y: auto;
-		background: $rgb-bg--alt;
+		background: vars.$rgb-bg--alt;
 		transform: translateZ(0);
 	}
 
@@ -72,13 +62,13 @@
 		margin-bottom: 5px;
 	}
 
-	.rnd-name {
+	.stats__th-name {
 		font-size: 22.4px;
 	}
 
 	td div.border {
 		height: 2px;
-		background-color: $rgb-name-red;
+		background-color: vars.$rgb-name-red;
 		margin: 0 3px;
 		padding: 0;
 		border-right: 5px transparent;
@@ -91,10 +81,6 @@
 	max-height: 16px;
 	text-align: right;
 
-	&--btm {
-		cursor: ns-resize;
-	}
-
 	&--top {
 		cursor: move;
 		user-select: none;
@@ -106,7 +92,7 @@
 		display: none;
 	}
 
-	&[data-perm=true] .hwin__top-border-icon {
+	&[data-perm="true"] .hwin__top-border-icon {
 		display: block;
 	}
 
@@ -123,7 +109,7 @@
 		font-weight: bold;
 	}
 
-	&[data-perm=true] .window-title {
+	&[data-perm="true"] .window-title {
 		display: block;
 	}
 
@@ -169,6 +155,7 @@
 		right: 4px;
 		left: 4px;
 		height: 2px;
+		cursor: ns-resize;
 	}
 
 	&__resize-sw {
@@ -199,7 +186,7 @@
 	}
 }
 
-.hoverborder[data-display-title=true] ~ .hwin__wrp-table,
-.hoverborder[data-display-title=true] ~ .hoverborder {
+.hoverborder[data-display-title="true"] ~ .hwin__wrp-table,
+.hoverborder[data-display-title="true"] ~ .hoverborder {
 	display: none;
 }

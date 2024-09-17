@@ -111,7 +111,7 @@ class InitTrackerPlayerViewV1 {
 
 		if (token) $iptServerToken.val(token);
 
-		const $btnConnect = $(`<button class="btn btn-xs btn-primary">Connect</button>`)
+		const $btnConnect = $(`<button class="ve-btn ve-btn-xs ve-btn-primary">Connect</button>`)
 			.click(async () => {
 				if (!$iptPlayerName.val().trim()) return $iptPlayerName.addClass("form-control--error");
 				if (!$iptServerToken.val().trim()) return $iptServerToken.addClass("form-control--error");
@@ -130,7 +130,7 @@ class InitTrackerPlayerViewV1 {
 
 		$$(tabMeta.$wrpTab)`<div class="ve-flex-col initp__content px-2 py-3 min-h-0">
 			<div class="initp__initial row">
-				<div class="col-12">
+				<div class="ve-col-12">
 					<p>
 						The Player View is part of a peer-to-peer (i.e., serverless) system to allow players to connect to a DM's <a href="dmscreen.html">DM Screen</a> initiative tracker. As a player, the usage is as follows:
 					<ol>
@@ -145,14 +145,14 @@ class InitTrackerPlayerViewV1 {
 			<hr class="initp__initial">
 
 			<div class="initp__initial row w-100 ve-flex">
-				<div class="col-5 bold mr-4">Player Name</div>
-				<div class="col-5 bold">Server Token</div>
-				<div class="col-2 ve-text-center"></div>
+				<div class="ve-col-5 bold mr-4">Player Name</div>
+				<div class="ve-col-5 bold">Server Token</div>
+				<div class="ve-col-2 ve-text-center"></div>
 			</div>
 			<div class="initp__initial row w-100 ve-flex mb-4">
-				<div class="col-5 bold mr-4">${$iptPlayerName}</div>
-				<div class="col-5 bold">${$iptServerToken}</div>
-				<div class="col-2 ve-flex-vh-center">${$btnConnect}</div>
+				<div class="ve-col-5 bold mr-4">${$iptPlayerName}</div>
+				<div class="ve-col-5 bold">${$iptServerToken}</div>
+				<div class="ve-col-2 ve-flex-vh-center">${$btnConnect}</div>
 			</div>
 
 			<div class="initp__wrp_active">
@@ -219,7 +219,7 @@ class InitTrackerPlayerViewV0 {
 
 		if (token) $iptServerToken.val(token);
 
-		const $btnGenClientToken = $(`<button class="btn btn-xs btn-primary">Generate Client Token</button>`)
+		const $btnGenClientToken = $(`<button class="ve-btn ve-btn-xs ve-btn-primary">Generate Client Token</button>`)
 			.click(() => $dispWarning.remove());
 
 		const $iptClientToken = $(`<input class="form-control code copyable" readonly disabled>`).disableSpellcheck();
@@ -235,7 +235,7 @@ class InitTrackerPlayerViewV0 {
 			${$dispWarning}
 
 			<div class="initp__initial ve-flex">
-				<div class="col-12">
+				<div class="ve-col-12">
 					<p>
 						The Player View is part of a peer-to-peer (i.e., serverless) system to allow players to connect to a DM's DM Screen initiative tracker. As a player, the usage is as follows:
 					<ol>
@@ -249,14 +249,14 @@ class InitTrackerPlayerViewV0 {
 			<hr class="initp__initial">
 
 			<div class="initp__initial ve-flex-h-center w-100">
-				<div class="col-5 bold">Server Token</div>
-				<div class="col-2 ve-text-center"></div>
-				<div class="col-5 bold">Client Token</div>
+				<div class="ve-col-5 bold">Server Token</div>
+				<div class="ve-col-2 ve-text-center"></div>
+				<div class="ve-col-5 bold">Client Token</div>
 			</div>
 			<div class="initp__initial ve-flex-h-center w-100 flex mb-4">
-				<div class="col-5 bold">${$iptServerToken}</div>
-				<div class="col-2 ve-flex-vh-center">${$btnGenClientToken}</div>
-				<div class="col-5 bold">${$iptClientToken}</div>
+				<div class="ve-col-5 bold">${$iptServerToken}</div>
+				<div class="ve-col-2 ve-flex-vh-center">${$btnGenClientToken}</div>
+				<div class="ve-col-5 bold">${$iptClientToken}</div>
 			</div>
 
 			<div class="initp__wrp_active">

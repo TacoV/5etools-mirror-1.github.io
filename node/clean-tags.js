@@ -1,11 +1,14 @@
 "use strict";
 
-import * as fs from "fs";
+import fs from "fs";
 import * as ut from "./util.js";
 import "../js/utils.js";
 
 const BLOCKLIST_FILE_PREFIXES = [
 	...ut.FILE_PREFIX_BLOCKLIST,
+
+	"foundry-",
+	"foundry.json",
 
 	// specific files
 	"demo.json",

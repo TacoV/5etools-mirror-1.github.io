@@ -132,7 +132,7 @@
 													"type": "image",
 													"href": {
 														"type": "internal",
-														"path": "adventure/RMBRE/003-ram_map.jpg"
+														"path": "adventure/RMBRE/003-ram_map.webp"
 													},
 													"title": "Map 1.1: The Lost Dungeon of Rickedness",
 													"width": 5100,
@@ -1388,7 +1388,7 @@
 													"type": "image",
 													"href": {
 														"type": "internal",
-														"path": "adventure/RMBRE/004-ram_map-player.jpg"
+														"path": "adventure/RMBRE/004-ram_map-player.webp"
 													},
 													"title": "Player Version",
 													"width": 4709,
@@ -1510,7 +1510,7 @@
 										"type": "internal",
 										"path": "adventure/RMBRE/005-ddvram-pregen-01.webp"
 									},
-									"title": "{@comic {@5etools Meatface|pdf/adventure/RMBRE/Meatface.pdf}: Human Fighter}",
+									"title": "{@comic {@5etoolsImg Meatface|pdf/RMBRE/Meatface.pdf}: Human Fighter}",
 									"width": 240,
 									"height": 300,
 									"credit": "Troy Little"
@@ -1521,7 +1521,7 @@
 										"type": "internal",
 										"path": "adventure/RMBRE/006-ddvram-pregen-02.webp"
 									},
-									"title": "{@comic {@5etools Lyan Amaranthia|pdf/adventure/RMBRE/Lyan Amaranthia.pdf}: Wood Elf Cleric}",
+									"title": "{@comic {@5etoolsImg Lyan Amaranthia|pdf/RMBRE/Lyan Amaranthia.pdf}: Wood Elf Cleric}",
 									"width": 240,
 									"height": 300,
 									"credit": "Troy Little"
@@ -1532,7 +1532,7 @@
 										"type": "internal",
 										"path": "adventure/RMBRE/007-ddvram-pregen-03.webp"
 									},
-									"title": "{@comic {@5etools Keth Silverson|pdf/adventure/RMBRE/Keth Silverson.pdf}: Half-orc Rogue}",
+									"title": "{@comic {@5etoolsImg Keth Silverson|pdf/RMBRE/Keth Silverson.pdf}: Half-orc Rogue}",
 									"width": 240,
 									"height": 300,
 									"credit": "Troy Little"
@@ -1543,7 +1543,7 @@
 										"type": "internal",
 										"path": "adventure/RMBRE/008-ddvram-pregen-04.webp"
 									},
-									"title": "{@comic {@5etools Kiir Bravan|pdf/adventure/RMBRE/Kiir Bravan.pdf}: Half-elf Wizard}",
+									"title": "{@comic {@5etoolsImg Kiir Bravan|pdf/RMBRE/Kiir Bravan.pdf}: Half-elf Wizard}",
 									"width": 240,
 									"height": 300,
 									"credit": "Troy Little"
@@ -1554,7 +1554,7 @@
 										"type": "internal",
 										"path": "adventure/RMBRE/009-ddvram-pregen-05.webp"
 									},
-									"title": "{@comic {@5etools Ari Strongbow|pdf/adventure/RMBRE/Ari Strongbow.pdf}: Half-elf Fighter}",
+									"title": "{@comic {@5etoolsImg Ari Strongbow|pdf/RMBRE/Ari Strongbow.pdf}: Half-elf Fighter}",
 									"width": 240,
 									"height": 300,
 									"credit": "Troy Little"
@@ -2246,7 +2246,7 @@
 											"page": 11,
 											"id": "04f",
 											"entries": [
-												"A humanoid creature has a {@chance 20|20 percent} chance to be afflicted with the curse of lycanthropickling after being wounded by a {@creature Lycanthropickle|RMBRE|lycanthropickles}. The curse lasts for 3 days. Each long rest the creature spends in a vat or jar of pickling brine prolongs the curse by 1 day.",
+												"A humanoid creature has a {@chance 20} chance to be afflicted with the curse of lycanthropickling after being wounded by a {@creature Lycanthropickle|RMBRE|lycanthropickles}. The curse lasts for 3 days. Each long rest the creature spends in a vat or jar of pickling brine prolongs the curse by 1 day.",
 												"A {@creature lycanthropickle|RMBRE} can either resist its curse or embrace it. By resisting the curse, a {@creature lycanthropickle|RMBRE} retains its normal alignment and personality while in humanoid form. It lives its boring life as it always has, burying deep its raging, murderous urges just like the rest of us.",
 												"Some individuals see little point in fighting the curse and accept what they are. They can assume pickle form or hybrid form at will. Most {@creature Lycanthropickle|RMBRE|lycanthropickles} that embrace their briny natures succumb to bloodlust, becoming evil, opportunistic creatures that prey on the weak. In hybrid form, a {@creature lycanthropickle|RMBRE} has the same statistics as a {@creature twig blight} with the altered ability noted in {@area area 9|04b|x}. In pickle form, a {@creature lycanthropickle|RMBRE} has no statistics and is indistinguishable from a pickle... because it's a pickle."
 											]
@@ -2522,7 +2522,7 @@
 									"page": 14,
 									"id": "066",
 									"entries": [
-										"After the destruction of the tiny adventuring party, one of the miniature treasure chests pops open. Inside is an unbelievably tiny {@item wand of magic missiles}. It works normally, but a character has a {@chance 50|50 percent} chance of losing it each time it is used or put away. A {@spell detect magic} spell can help find it again."
+										"After the destruction of the tiny adventuring party, one of the miniature treasure chests pops open. Inside is an unbelievably tiny {@item wand of magic missiles}. It works normally, but a character has a {@chance 50} chance of losing it each time it is used or put away. A {@spell detect magic} spell can help find it again."
 									]
 								}
 							]
@@ -2992,7 +2992,7 @@
 									"entries": [
 										"With the churd cannon assembled, {@creature Tommy Two-Butts|RMBRE|Tommy} asks the party to help him destroy the evil butt trap in {@area area 10|051|x}. Not only has the trap stolen countless butts, it's also brainwashed Tommy's friends, who joined the Order of the Buttless.",
 										"If the characters agree to accompany Tommy, Greeble, and Flerp to complete their mission, Tommy entrusts the churd cannon to one party member with a solemn reminder: \"Remember. It's one shot for all the butts.\" It's unclear exactly what this means.",
-										"When the characters arrive at the butt room ({@area area 10|051|x}), there's a {@chance 75|75 percent} chance that they encounter the Order of the Buttless there unless that group has been {@condition incapacitated} in some way (see {@area area 32|0c5|x}). The buttless have caught wind of {@creature Tommy Two-Butts|RMBRE}'s plan and intend to stop his blasphemy. The characters might well have to choose sides between {@creature Tommy Two-Butts|RMBRE} or the Buttless.",
+										"When the characters arrive at the butt room ({@area area 10|051|x}), there's a {@chance 75} chance that they encounter the Order of the Buttless there unless that group has been {@condition incapacitated} in some way (see {@area area 32|0c5|x}). The buttless have caught wind of {@creature Tommy Two-Butts|RMBRE}'s plan and intend to stop his blasphemy. The characters might well have to choose sides between {@creature Tommy Two-Butts|RMBRE} or the Buttless.",
 										{
 											"type": "entries",
 											"name": "Firing the Churd Cannon",
@@ -5043,6 +5043,217 @@
 					]
 				}
 			]
+		},
+		{
+			"type": "section",
+			"name": "Credits",
+			"entries": [
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Lead Designer",
+							"entries": [
+								"Kate Welch"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Adventure Designers and Rulebook Commenters",
+							"entries": [
+								"Ryan Hartman, Adam Lee, Ari Levitch, Jim Zub"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Adventure Developer",
+							"entries": [
+								"Ben Petrisor"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Playtest Coordinator",
+							"entries": [
+								"Bill Benham"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Editors",
+							"entries": [
+								"F. Wesley Schneider, Jeremy Crawford, Dan Dillon, Scott Fitzgerald Gray, Christopher Perkins"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Art Directors",
+							"entries": [
+								"Kate Irwin, Shauna Narciso, Richard Whitters"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Graphic Designer",
+							"entries": [
+								"Emi Tanji"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Cover Illustrator",
+							"entries": [
+								"Troy Little"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Illustrators",
+							"entries": [
+								"Eric Belisle, Conceptopolis, Wayne England, Randy Gallegos, Troy Little, Brynn Metheney, Ryan Pancoast, Steve Prescott, Richard Sardinha, Ilya Shkipin, Matt Stawicki, Autumn Rain Turkel, Kieran Yanner"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Cartographers",
+							"entries": [
+								"Kate Welch, Richard Whitters"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Original Rulebook Designer",
+							"entries": [
+								"Jeremy Crawford"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Original 5th Edition Designers",
+							"entries": [
+								"Jeremy Crawford, Mike Mearls, Christopher Perkins, James Wyatt, Rodney Thompson, Robert J. Schwalb, Peter Lee, Steve Townshend, Bruce R. Cordell"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Original 5th Edition Editors",
+							"entries": [
+								"Chris Sims, Michele Carter, Scott Fitzgerald Gray, Kim Mohan"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Based on the Griginal D&D Game By",
+							"entries": [
+								"E. Gary Gygax and Dave Arneson"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Producer",
+							"entries": [
+								"Dan Tovar"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Project Manager",
+							"entries": [
+								"Bill Benham"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Brand Manager",
+							"entries": [
+								"Shelly Mazzanoble"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Production Services",
+							"entries": [
+								"Cynda Callaway, Kevin Yee, David Gershman, Jefferson Dunlap"
+							]
+						},
+						{
+							"type": "item",
+							"name": "VP, Franchise & Global Brand Strategy",
+							"entries": [
+								"Nathan Stewart"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Director Licensing & Publishing",
+							"entries": [
+								"Liz Schuh"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Franchise Creative Director",
+							"entries": [
+								"Mike Mearls"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Licensing Manager",
+							"entries": [
+								"Hilary Ross"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Marketing and Communications",
+							"entries": [
+								"Bart Carroll, Pelham Greene, Greg Tito, Anna Vo"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Product Specialist",
+							"entries": [
+								"Christopher Lindsay"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Game Designer",
+							"entries": [
+								"Dan Dillon"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Senior Graphic Designer",
+							"entries": [
+								"Trish Yochum"
+							]
+						},
+						{
+							"type": "item",
+							"name": "Associate Producer",
+							"entries": [
+								"Lea Heleotis"
+							]
+						}
+					]
+				},
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "book/RMR/152-ram-condition-stunned.webp"
+					},
+					"width": 321,
+					"height": 508
+				}
+			],
+			"id": "10c"
 		}
 	]
 }
